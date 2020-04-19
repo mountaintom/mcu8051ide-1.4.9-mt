@@ -2,7 +2,7 @@
 
 A place to experiment, and possibility update and add some processors to this amazing app 
 
-#### Check dev branche(s) for updated code.
+#### Check dev branch(es) for updated code.
 
 ---- Orginal Readme for MCU8051ide ----
 
