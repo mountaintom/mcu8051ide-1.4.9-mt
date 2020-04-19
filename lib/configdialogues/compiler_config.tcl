@@ -540,11 +540,14 @@ namespace eval compiler {
 				foreach name {
 						{--std-c89}	{--std-sdcc89}
 						{--std-c99}	{--std-sdcc99}
+						{--std-sdcc11}	{--std-sdcc2x}
 					} helptext {
 						{Use C89 standard only}
 						{Use C89 standard with SDCC extensions}
 						{Use C99 standard only (incomplete)}
 						{Use C99 standard with SDCC extensions (incomplete)}
+						{Use C11 standard with SDCC extensions **Experimental**}
+						{Use C2x standard with SDCC extensions **Experimental**}
 					} \
 				{
 					grid [radiobutton $local_frame.chb_${local_row}_$col	\
