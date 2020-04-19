@@ -1,5 +1,8 @@
 # mcu8051ide-1.4.9-mt
-A place to experiment, and possibility update and add some processors to this amazing app 
+
+A place to experiment, and possibility update and add some processors to this amazing app.
+
+This version has the option for the c11 code standard added to the compilier configuration menu.
 
 ---- Orginal Readme for MCU8051ide ----
 
