@@ -19,7 +19,7 @@ INSTALLATION:
 At first make sure than you have all dependencies installed and install the missing ones.
 
 1) DEPENDENCIES
-
+```
 	-----------------------------------------------------------------------------------------------------
 	Package		min. Version	Where it's available
 	-----------------------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ At first make sure than you have all dependencies installed and install the miss
 	hunspell
 			(If you want the spelling checker function available.)
 	-----------------------------------------------------------------------------------------------------
-
+```
 	NOTE:
 		If you had any problems with installation of any of these packages
 		please mention it at http://mcu8051ide.sourceforge.net/dependencies .
