@@ -1,0 +1,275 @@
+Change log for MCU 8051 IDE
+
+1.4.7 -> 1.4.9
+	* Fixed compatibility issues with Tcl-8.6 and its Itcl-4.0
+	* Added AppData file
+	* Bug fixes
+
+1.4.7 -> 1.4.8
+	* Bug fixes
+
+1.4.6 -> 1.4.7
+	* Bug fixes
+
+1.4.5 -> 1.4.6
+	* Bug fixes
+	* Added support for SDCC configuration on Windows
+	* Added support for ASEM-51 on Windows
+	* Added a few new shortcuts in the editor
+
+1.4.4 -> 1.4.5
+	* Bug fixes
+
+1.4.3 -> 1.4.4
+	* Bug fixes
+
+1.4.2 -> 1.4.3
+	* Bug fixes
+	* Added support for configurable width of tabulator character
+	* Minor improvements
+	* A little more modern look (or at least I hope)
+
+1.4.1 -> 1.4.2
+	* Bug fixes
+	* Added support for watching for modifications made to the opened files by other programs
+	* Improved handling of memory segmentation directives by the native assembler
+	* Minor improvements
+
+1.4 -> 1.4.1
+	* Bug fixes
+	* Added support for 0x.. notation as radix specifier for hexadecimal numbers
+	* Added support for makefiles
+
+1.3.11 -> 1.4
+	* Bug fixes
+	* Added new Virtual HW component: LCD display controlled by HD44780
+	* Added new Virtual HW component: simulated DS1620 temperature sensor
+	* Added new Virtual HW component: File interface
+	* Added AT89S51
+	* Improved performance of Virtual HW
+	* Added support for spelling checker (Hunspell)
+	* Added 8051 Instruction table
+	* Improved table of symbols on the right panel
+	* Final draft of the handbook
+
+1.3.10 -> 1.3.11
+	* Bug fixes
+	* New interface for hardware control plug-ins
+	* Added new assembler directives: ELSEIF ELSEIFN ELSEIFDEF ELSEIFNDEF
+	* Removed assembler directive: EXITM
+
+1.3.9 -> 1.3.10
+	* Bug fixes
+	* Extended help menu
+	* Extended global configuration dialog
+	* Added support for multiple widget styles and GUI background colors
+	* Added draft of handbook
+	* Added basic support for assembler and simulator regression testing
+	* Added regular support for i18n (internationalization)
+	* Modified welcome dialog
+	* Added support for external links in the GUI
+
+1.3.8 -> 1.3.9
+	* Bug fixes
+
+1.3.7 -> 1.3.8
+	* Bug fixes
+	* Added feature "Global Font Size Factor" (see MCU 8051 IDE configuration dialog)
+	* Added breakpoint validation
+
+1.3.6 -> 1.3.7
+	* Bug fixes
+
+1.3.5 -> 1.3.6
+	* Bug fixes
+
+1.3.4 -> 1.3.5
+	* Bug fixes
+
+1.3.3 -> 1.3.4
+	* "Modernized" GUI
+	* Bug fixes
+
+1.3.1 -> 1.3.3
+	* Bug fixes
+
+1.3.1 -> 1.3.2
+	* Bug fixes
+
+1.3 -> 1.3.1
+	* Dependency on TclX is now only optional
+	* Important chage !: Native assembler now expands macro instructions before doing conditional assembly and before defining constants and variables ! Control sequence $NOMACROSFIRST can be used to change this behavior to the state of previous versions.
+	* Added support for AS31 assembler
+	* Added files notepad
+	* Improved instruction help panel
+	* Native assembler was extended to support these directives: "IFN IFDEF IFNDEF BYTE FLAG REPT TIMES" and these constrol sequences: "$NOXR $NOXREF $XR $XREF $NOSB $SB $RESTORE $RS $SA $SAVE $PHILIPS $NOPI $PI $NOTABS $NOMOD51 $NOBUILTIN $NOMO $MO $MOD51 $NOMACRO $NOMR $LI $NOLI $GENONLY $GO $NOGEN $NOGE $GEN $GE $ $EJ $NODB $NODEBUG $DB $DEBUG $CONDONLY $NOCOND $COND $TT $PW $PL $MR $MACRO $INC $WARNING $ERROR $DA $NOMACROSFIRST"
+	* Added stack monitor
+	* Various bug fixes
+
+1.2 -> 1.3
+	* New dependency: TclX (tested with v8.4)
+	* Added RS232/UART debugger
+	* A few changes in assembler
+	* Bug fixes (Thanks to Miroslav Hradílek for many useful bug reports)
+
+1.1.1 -> 1.2
+	* Bug fixes
+	* Added tab bar
+
+1.1 -> 1.1.1
+	* Added "Special calculator"
+	* Added "Base converter"
+	* Many tiny improvements
+
+1.0.9 -> 1.1
+	* Added support for new MCUs from Intel®: 8031, 8751, 8032, 8752, 80C31, 87C51, 80C52, 87C52, 80C32, 80C54, 87C54, 80C58, 87C58
+	* Added support for simulating virtual hardware
+	* Improved simulator (Implemented UART (experimental support), improved support for timers, etc.)
+	* Improved register watches
+	* Improved editor (improved autocompletion and many other things)
+	* Improved panel "Instruction details"
+	* Improved 8-segment editor
+	* Bug fixes in assembler, disassembler and simulator engine
+	* Some other bug fixes
+	* Added utility "Scribble notepad"
+	* Improved graph panel
+
+1.0.7 -> 1.0.9
+	* Added support for C language
+	* Added map of bit addressable area
+
+1.0.6 -> 1.0.7
+	* Added Stopwatch
+	* Improved code editor
+	* Some bug fixes
+
+1.0.5 -> 1.0.6
+	* Fixed critical bug in Assembler v1.0.5 (related to peephole code optimization)
+	* Added 8 segment LED display editor
+	* Added ASCII chart
+	* Added Assembly symbol table viewer
+
+1.0 -> 1.0.5
+	* Added support for external assemblers ("ASEM-51" and  "ASL")
+	* Added support for external editors ("emacs", "gvim", "kwrite" and "gedit")
+	* Added support for embedded editors ("emacs", "vim", "nano", "dav" and "le")
+	* Added embedded terminal emulator (rxvt-unicode)
+	* Added function "File statistics"
+	* Improved assembler
+	* Added syntax highlight for code listing (*.lst)
+	* Added search bars for "Messages" and "Todo"
+	* Removed dependency on "tcl-thread" and "tclxml"
+	* Added dependency on "TkImg" and "tdom"
+	* Improved hex editor
+	* Improved simulator (especially simulation across multiple files)
+	* Added panel "Find in files"
+	* Modified GUI
+	* New error handling dialog
+	* Some bug fixes (especially critical bug in disassembler and a few bugs in assembler)
+	* All images are now in PNG (Portable Network Graphics) (Requires TkImg)
+	* Some more improvements
+
+0.9.5 -> 1.0
+	* MANY BUG FIXES ! (including critical)
+	* Added support for some new MCUs (
+		AT89S52,	AT89LS51,	AT89LS52,	AT89S8253,	AT89S2051,	AT89S4051,
+		T87C5101,	T83C5101,	T83C5102,	TS80C32X2,	TS80C52X2,	TS87C52X2,
+		AT80C32X2,	AT80C52X2,	AT87C52X2,	AT80C54X2,	AT80C58X2,	AT87C54X2,
+		AT87C58X2,	TS80C54X2,	TS80C58X2,	TS87C54X2,	TS87C58X2,	TS80C31X2,
+		AT80C31X2
+	)
+	* Added support for peephole optimization
+	* Faster project opening
+	* Added interrupt monitor
+	* Added subprograms monitor
+	* Added SFR map
+	* Added SFR watches
+	* Extended command line interface
+	* Compiler now checks for valid memory addressing (new CLI options --iram-size, --eram-size, --xram-size, --code-size)
+	* Added program hibernation capability
+	* Added editor commands hibernate, resume, switch-mcu, set-xcode and set-xdata
+	* Added desktop file and application icon
+	* Some more improvements
+
+0.9.1 -> 0.9.5
+	* Implemented support for 80C51, 8052, AT89C2051, AT89C4051, AT89C51, AT89C51RC, AT89C52, AT89C55WD, AT89LV51, AT89LV52 and AT89LV55
+	* Simulator can now step back
+	* Added popup-based completion for editor
+	* Added tool tips for bits in simulator control panel
+	* Added simulator configuration dialog
+	* Added auto save function
+	* Manual page
+	* Added support for multi-view (editor can be now splitted vertically or horizontally)
+	* Many bug fixes (in compiler, editor, file selection dialog, syntax highlight, simulator, etc.)
+	* Some minor improvements (graph, disassembler, etc.)
+	* Thread extension is no longer required to run this program (but custom commands will won't work without it)
+
+0.9.0 -> 0.9.1
+	* New hexadecimal editor
+	* New file selection dialog
+	* Added file system browser tab on left panel
+	* Added tips on start-up
+	* Added editor command line
+	* Improved editor configuration dialog
+	* A few bug fixes
+	* Removed dependency on IWidgets and Tix
+	* Some minor improvements
+
+0.8.7 -> 0.9.0
+	* Implemented graph
+	* Many bug fixes (GUI, compiler, memory leaks)
+	* Editable shortcuts
+	* Bookmarks for opened and project files
+	* Search panels in left and right panel
+	* Modified GUI (checkboxes, radio buttons ...)
+	* Support for various encodings and EOLs
+	* Added "Tools" -> "Change letter case", "Normalize HEX" and "SIM -> BIN"
+	* Added editor functions "Lowercase", "Uppercase" and "Capitalize"
+	* Added help windows for opened and project files and opened projects
+	* Added pop-up menus for entry and text widgets (globally)
+	* Fixed problem with fonts (bad sizes)
+	* Implemented support for line wrapping (experimental)
+	* Added new command line options (see `mcu8051ide --help')
+	* More status tips and tool tips
+	* Added welcome dialog
+	* Added demonstration project
+	* Cleaner, faster and safer compiler
+	* Some more minor improvements
+
+0.8.5 -> 0.8.7
+	* Implemented code validation
+	* Added tab "Instruction details" (on the right panel)
+	* Added Clean Up dialog
+	* Added Right Panel configuration dialog
+	* Added Toolbar configuration dialog
+	* Added support for custom commands
+	* Fixed some bugs (in GUI)
+	* Fixed many memory leaks
+	* Cleaner code
+
+0.8.4 -> 0.8.5
+	* Fixed many bugs in GUI
+	* Improved editor
+	* Extended calculator
+	* Redesigned editor configuration dialog
+	* Added functions "Tools -> Reformat code" and "Tools -> Sim2Hex"
+	* Extended CLI (--reset-user-settings, --config-file, --compile, --hex2bin ...)
+
+0.8.1 -> 0.8.4
+	* Fixed many bugs ... (including critical)
+	* Added compiler configuration dialog
+	* Added calculator timers preset
+	* Added dialog about
+	* Added support for exporting highlighted source code to LaTeX source
+	* Added many ToolTips
+	* Added StatusBar tips
+	* Added splash screen
+	* Added support for command line options
+	* All images are now *.XPM (X PixMap) (require Tix package)
+	* Changed installation procedure
+
+0.8.0 -> 0.8.1
+	* Fixed some bugs in compiler (not critical)
+	* Fixed bug in to do list (saving text as SGML)
+	* Fixed bug in project management
+	* Added pop-up menu to to do list

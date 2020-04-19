@@ -1,0 +1,15 @@
+# Watches definition file -- MCU 8051 IDE v1.3.1
+# Date: 10/27/2009
+  FF Register watches
+00FF Some XRAM reg
+ 0FF Some ERAM reg
+  00 ----------------
+  80 IDATA reg not SFR
+  90 IDATA reg not SFR
+  A0 IDATA reg not SFR
+  B0 IDATA reg not SFR
+  D0 ----------------
+ .20 Some bit
+ .21 Another bit
+  20 DATA_PTR
+  0F COUNTER

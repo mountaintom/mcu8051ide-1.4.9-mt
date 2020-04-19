@@ -1,0 +1,47 @@
+#!/usr/bin/tclsh
+
+############################################################################
+#    Copyright (C) <Year> by <Your Name>                                   #
+#    <your_email@example.com>                                              #
+############################################################################
+
+# --------------------------------------------------------------------------
+# DESCRIPTION
+#
+# --------------------------------------------------------------------------
+
+set AUTHOR	"<Your Name>"
+set EMAIL	"<your_email@example.com>"
+set P_VERSION	"0.1"
+set MIN_IDE_VER	"1.3"
+
+## Free resources occupied by this plug-in
+ # @return void
+proc dispose {} {
+}
+
+## Initialize the plug-in
+ # @parm Widget main_frame		- Frame for this plugin assigned by MCU 8051 IDE HW plugin manager
+ # @parm Object project_object		- Reference to MCU 8051 IDE project object
+ # @parm String current_namespace	- Namespace for this plugin assigned by MCU 8051 IDE HW plugin manager
+ # @parm String directory		- Directory location of this file (not all plugin files)
+ # @return void
+proc init {main_frame project_object current_namespace directory} {
+}
+
+## Restore previous session
+ # @parm String session_data - Data returned by function save_session
+ # @return void
+proc restore_session {session_data} {
+}
+
+## Save plug-in session
+ # @return String - Session data for function restore_session
+proc save_session {} {
+}
+
+## Is plugin busy ?
+ # @return Bool - 1 == Yes; 0 == No
+proc is_busy {} {
+	return 0
+}

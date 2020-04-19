@@ -1,0 +1,2013 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE mcus [
+	<!-- Root element -->
+	<!ELEMENT mcus (mcu)*>
+	<!--
+		lastupdate	- Date of the last update of this file (format: %D, e.g. 11/18/07)
+	-->
+	<!ATTLIST mcus
+		lastupdate	CDATA	#IMPLIED
+	>
+
+	<!-- MCU definition tag -->
+	<!ELEMENT mcu (timers, more, bits, writeonly, sfr)>
+
+	<!-- Detailed specification of MCU parameters (all of them must not be an empty string)
+		vendor		- Vendor name
+		name		- Processor type
+		xdata		- External data memory connectable
+		xcode		- External program memoryconnectable
+		code		- Capacity of internal program memory in kilo bytes (not bytes !)
+		frequency	- Operating oscilator frequency (e.g "0 to 24 MHz")
+		ram		- Capacity of internal data memory in bytes
+		portbits	- Number of IO lines
+		uart		- UART available
+		interrupts	- Number of interrupts
+		voltage		- Oprating voltage (e.g "2.7 to 5.5 V")
+		timer2		- Timer 2 available
+		watchdog	- Watchdog timer available
+		eram		- Size of ERAM (0 means no eram available) (> 0 requires intelpe="no")
+		dualdtpr	- Dual Data Pointer (includes register AUXR1 if wdtcon="no")
+		auxr		- Register AUXR
+		t2mod		- Register T2MOD
+		portN		- Implemented bits for port N (N < 6) (empty list means port is not implemented)
+				  0 - Bit not implemented
+				  1 - Bit implemented
+				  e.g. port0="11110011" means:
+					P0.0 - implemented
+					P0.1 - implemented
+					P0.2 - implemented
+					P0.3 - implemented
+					P0.4 - not implemented
+					P0.5 - not implemented
+					P0.6 - implemented
+					P0.7 - implemented
+		pof		- Power Off Flag implemented
+		gf0		- PCON.3 (General purpose flag) implemented
+		gf1		- PCON.4 (General purpose flag) implemented
+		pd		- Power Down flag implemented
+		idl		- IDLe mode flag implemented
+		smod0		- PCON.6 (SMOD0) implemented (requires uart="yes")
+		iph		- IPH register implemented
+		acomparator	- Analog comparator
+		euart		- Extended UART (registers SADDR and SADEN)
+		clkreg		- Register CLKREG implemented
+		pwdex		- Bit PWDEX (CLKREG.1) implemented (requires clkreg="yes")
+		spi		- SPI controller implemented
+		wdtcon		- Register WDTCON implemented (removes AUXR.WDIDLE and AUXR.DISRTO) (requires watchdog="yes")
+		eeprom		- Size of internal data EEPROM in bytes
+		intelpe		- Register Intel_Pwd_Exit (AUXR.1) implemented (requires eram="0")
+		pwm		- Pulse with modulation controller implemented (PCON.PWMEN)
+		x2reset		- Is CLKREG.X2 untouched by reset (requires clkreg="yes" or ckcon="yes")
+		ckcon		- SFR 0x8F is CKCON instead of CLKREG (requires clkreg="no")
+		auxr1gf3	- Bit GF3 in AUXR1 present
+		ao		- Use AUXR.AO instead of AUXR.DISALE (requires auxr="yes")
+		wdtprg		- WDTPRG (T4 T3 T2 T1 T0 S2 S1 S0) 0xA7 (requires watchdog="yes")
+		hddptr		- Hidden Dual Data PoiTeR (That means than there is no DP0L, DP0H and DP1L, DP1H) (requires dualdtpr="yes")
+		auxrwdidle	- Bit WDIDLE in register AUXR (requires auxr="yes")
+		auxrdisrto	- Bit DISRTO in register AUXR (requires auxr="yes")
+	-->
+	<!ATTLIST mcu
+		vendor		CDATA		#REQUIRED
+		name		NMTOKEN		#REQUIRED
+		xdata		(yes|no)	#REQUIRED
+		xcode		(yes|no)	#REQUIRED
+		code		CDATA		#REQUIRED
+		frequency	CDATA		#REQUIRED
+		ram		CDATA		#REQUIRED
+		portbits	CDATA		#REQUIRED
+		uart		(yes|no)	#REQUIRED
+		interrupts	CDATA		#REQUIRED
+		voltage		CDATA		#REQUIRED
+		timer2		(yes|no)	#REQUIRED
+		watchdog	(yes|no)	#REQUIRED
+		eram		CDATA		#REQUIRED
+		dualdtpr	(yes|no)	#REQUIRED
+		auxr		(yes|no)	#REQUIRED
+		t2mod		(yes|no)	#REQUIRED
+		port0		CDATA		#REQUIRED
+		port1		CDATA		#REQUIRED
+		port2		CDATA		#REQUIRED
+		port3		CDATA		#REQUIRED
+		port4		CDATA		#REQUIRED
+		pof		(yes|no)	#REQUIRED
+		gf0		(yes|no)	#REQUIRED
+		gf1		(yes|no)	#REQUIRED
+		pd		(yes|no)	#REQUIRED
+		idl		(yes|no)	#REQUIRED
+		smod0		(yes|no)	#REQUIRED
+		iph		(yes|no)	#REQUIRED
+		acomparator	(yes|no)	#REQUIRED
+		euart		(yes|no)	#REQUIRED
+		clkreg		(yes|no)	#REQUIRED
+		pwdex		(yes|no)	#REQUIRED
+		spi		(yes|no)	#REQUIRED
+		wdtcon		(yes|no)	#REQUIRED
+		eeprom		CDATA		#REQUIRED
+		intelpe		(yes|no)	#REQUIRED
+		pwm		(yes|no)	#REQUIRED
+		x2reset		(yes|no)	#REQUIRED
+		ckcon		(yes|no)	#REQUIRED
+		auxr1gf3	(yes|no)	#REQUIRED
+		ao		(yes|no)	#REQUIRED
+		wdtprg		(yes|no)	#REQUIRED
+		hddptr		(yes|no)	#REQUIRED
+		auxrwdidle	(yes|no)	#REQUIRED
+		auxrdisrto	(yes|no)	#REQUIRED
+	>
+
+	<!-- Details about timers/counters (for slection dialog only) -->
+	<!ELEMENT timers	(#PCDATA)>
+
+	<!-- More informations about uC (for slection dialog only) -->
+	<!ELEMENT more		(#PCDATA)>
+
+	<!-- Map of implemented SFR bits (register not mentionded here have mask "FF")
+		AAMM AAMM ...
+		| |
+		| +- Mask (2 hex digits, 1 == implemented; 0 == not implemented (WRITE ONLY) )
+		+- Address (2 hex digits)
+	-->
+	<!ELEMENT bits		(#PCDATA)>
+
+	<!-- Hexadecimal addresses of write only registers (e.g. AF 85 4B) -->
+	<!ELEMENT writeonly	(#PCDATA)>
+
+	<!-- List of SFR and SFB which are available on the choosen MCU
+	     Implicit SFR and SFB:
+		B	ACC	A	TMOD	TH0	TH1	SP	DPL	DPH	PCON
+		TL0	TL1	AB
+
+		PSW		C CY	AC	F0	RS1	RS0	OV		P
+		IE		EA				ET1	EX1	ET0	EX0
+		IP						PT1	PX1	PT0	PX0
+		TCON		TF1	TR1	TF0	TR0	IE1	IT1	IE0	IT0
+	-->
+	<!ELEMENT sfr	(#PCDATA)>
+]>
+<mcus lastupdate="11/02/11">
+	<mcu
+		vendor="Intel"		name="8051"
+		xdata="yes"		xcode="yes"
+		code="4"		frequency="0 to 12 MHz"
+		ram="128"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage=" "		timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="no"
+		gf1="no"		pd="no"
+		idl="no"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+		</more><bits>
+			878F B81F A89F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="8031"
+		xdata="yes"		xcode="yes"
+		code="0"		frequency="0 to 12 MHz"
+		ram="128"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage=" "		timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="no"
+		gf1="no"		pd="no"
+		idl="no"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+		</more><bits>
+			878F B81F A89F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="8751"
+		xdata="yes"		xcode="yes"
+		code="4"		frequency="0 to 12 MHz"
+		ram="128"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage=" "		timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="no"
+		gf1="no"		pd="no"
+		idl="no"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+		</more><bits>
+			878F B81F A89F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="80C51"
+		xdata="yes"		xcode="yes"
+		code="4"		frequency="0 to 12 MHz"
+		ram="128"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage=" "		timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+		</more><bits>
+			878F B81F A89F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="80C31"
+		xdata="yes"		xcode="yes"
+		code="0"		frequency="0 to 12 MHz"
+		ram="128"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage=" "		timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+		</more><bits>
+			878F B81F A89F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="87C51"
+		xdata="yes"		xcode="yes"
+		code="4"		frequency="0 to 12 MHz"
+		ram="128"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage=" "		timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+		</more><bits>
+			878F B81F A89F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="8052"
+		xdata="yes"		xcode="yes"
+		code="8"		frequency="0 to 12 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="8"
+		voltage=" "		timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="no"
+		gf1="no"		pd="no"
+		idl="no"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+			Low-power Idle and Power-down Modes
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			RCAP2L	RCAP2H	TL2	TH2
+
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="8032"
+		xdata="yes"		xcode="yes"
+		code="0"		frequency="0 to 12 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="8"
+		voltage=" "		timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="no"
+		gf1="no"		pd="no"
+		idl="no"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+			Low-power Idle and Power-down Modes
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			RCAP2L	RCAP2H	TL2	TH2
+
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="8752"
+		xdata="yes"		xcode="yes"
+		code="8"		frequency="0 to 12 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="8"
+		voltage=" "		timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="no"
+		gf1="no"		pd="no"
+		idl="no"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+			Low-power Idle and Power-down Modes
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			RCAP2L	RCAP2H	TL2	TH2
+
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="80C52"
+		xdata="yes"		xcode="yes"
+		code="8"		frequency="0 to 12 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage=" "		timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Timer 2
+			— CaptureTimer/Counter
+			— Up/Down Timer/Counter
+			— Baud Rate Generator
+			Full-Duplex Programma Serial Interface with
+			— Framing Error Detection
+			— Automatic Address Recognition
+			6 InterruptSources
+			Enhanced Power Down Mode
+			Power Off Flag
+			ONCE Mode
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			SADEN	SADDR	RCAP2L	RCAP2H	TL2	TH2	T2MOD	IPH	FE
+
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		  vendor="Intel"	name="87C52"
+		  xdata="yes"		xcode="yes"
+		  code="8"		frequency="0 to 12 MHz"
+		  ram="256"		portbits="32"
+		  uart="yes"		interrupts="6"
+		  voltage=" "		timer2="yes"
+		  watchdog="no"		eram="0"
+		  dualdtpr="no"		auxr="no"
+		  t2mod="yes"		port0="11111111"
+		  port1="11111111"	port2="11111111"
+		  port3="11111111"	port4=""
+		  pof="yes"		gf0="yes"
+		  gf1="yes"		pd="yes"
+		  idl="yes"		smod0="yes"
+		  iph="yes"		acomparator="no"
+		  euart="yes"		clkreg="no"
+		  pwdex="no"		spi="no"
+		  wdtcon="no"		eeprom="0"
+		  intelpe="no"		pwm="no"
+		  x2reset="no"		ckcon="no"
+		  auxr1gf3="no"		ao="no"
+		  wdtprg="no"		hddptr="no"
+		  auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Timer 2
+			— CaptureTimer/Counter
+			— Up/Down Timer/Counter
+			— Baud Rate Generator
+			Full-Duplex Programma Serial Interface with
+			— Framing Error Detection
+			— Automatic Address Recognition
+			6 InterruptSources
+			Enhanced Power Down Mode
+			Power Off Flag
+			ONCE Mode
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			SADEN	SADDR	RCAP2L	RCAP2H	TL2	TH2	T2MOD	IPH	FE
+
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="80C32"
+		xdata="yes"		xcode="yes"
+		code="0"		frequency="0 to 12 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage=" "		timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Timer 2
+			— CaptureTimer/Counter
+			— Up/Down Timer/Counter
+			— Baud Rate Generator
+			Full-Duplex Programma Serial Interface with
+			— Framing Error Detection
+			— Automatic Address Recognition
+			6 InterruptSources
+			Enhanced Power Down Mode
+			Power Off Flag
+			ONCE Mode
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			SADEN	SADDR	RCAP2L	RCAP2H	TL2	TH2	T2MOD	IPH	FE
+
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="80C54"
+		xdata="yes"		xcode="yes"
+		code="16"		frequency="0 to 12 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage=" "		timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Timer 2
+			— CaptureTimer/Counter
+			— Up/Down Timer/Counter
+			— Baud Rate Generator
+			Full-Duplex Programma Serial Interface with
+			— Framing Error Detection
+			— Automatic Address Recognition
+			6 InterruptSources
+			Enhanced Power Down Mode
+			Power Off Flag
+			ONCE Mode
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			SADEN	SADDR	RCAP2L	RCAP2H	TL2	TH2	T2MOD	IPH	FE
+
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="87C54"
+		xdata="yes"		xcode="yes"
+		code="16"		frequency="0 to 12 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage=" "		timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Timer 2
+			— CaptureTimer/Counter
+			— Up/Down Timer/Counter
+			— Baud Rate Generator
+			Full-Duplex Programma Serial Interface with
+			— Framing Error Detection
+			— Automatic Address Recognition
+			6 InterruptSources
+			Enhanced Power Down Mode
+			Power Off Flag
+			ONCE Mode
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			SADEN	SADDR	RCAP2L	RCAP2H	TL2	TH2	T2MOD	IPH	FE
+
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="80C58"
+		xdata="yes"		xcode="yes"
+		code="32"		frequency="0 to 12 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage=" "		timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Timer 2
+			— CaptureTimer/Counter
+			— Up/Down Timer/Counter
+			— Baud Rate Generator
+			Full-Duplex Programma Serial Interface with
+			— Framing Error Detection
+			— Automatic Address Recognition
+			6 InterruptSources
+			Enhanced Power Down Mode
+			Power Off Flag
+			ONCE Mode
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			SADEN	SADDR	RCAP2L	RCAP2H	TL2	TH2	T2MOD	IPH	FE
+
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Intel"		name="87C58"
+		xdata="yes"		xcode="yes"
+		code="32"		frequency="0 to 12 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage=" "		timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Timer 2
+			— CaptureTimer/Counter
+			— Up/Down Timer/Counter
+			— Baud Rate Generator
+			Full-Duplex Programma Serial Interface with
+			— Framing Error Detection
+			— Automatic Address Recognition
+			6 InterruptSources
+			Enhanced Power Down Mode
+			Power Off Flag
+			ONCE Mode
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			SADEN	SADDR	RCAP2L	RCAP2H	TL2	TH2	T2MOD	IPH	FE
+
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89C2051"
+		xdata="no"		xcode="no"
+		code="2"		frequency="0 to 24 MHz"
+		ram="128"		portbits="15"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 6 V"	timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0=""
+		port1="11111111"	port2=""
+		port3="11111101"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			Direct LED Drive Outputs
+			On-chip Analog Comparator
+			Low-power Idle and Power-down Modes
+			Two-level Program Memory Lock
+		</more><bits>
+			878F B81F A89F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P1	P3	SBUF	ES	PS
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89C4051"
+		xdata="no"		xcode="no"
+		code="4"		frequency="0 to 24 MHz"
+		ram="128"		portbits="15"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 6 V"	timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0=""
+		port1="11111111"	port2=""
+		port3="11111101"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			Direct LED Drive Outputs
+			On-chip Analog Comparator
+			Low-power Idle and Power-down Modes
+			Two-level Program Memory Lock
+		</more><bits>
+			878F B81F A89F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P1	P3	SBUF	ES	PS
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89C51"
+		xdata="yes"		xcode="yes"
+		code="4"		frequency="0 to 24 MHz"
+		ram="128"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage="max. 6.6 V"	timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+			Low-power Idle and Power-down Modes
+		</more><bits>
+			878F B81F A89F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89C51RC"
+		xdata="yes"		xcode="yes"
+		code="32"		frequency="0 to 33 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="8"
+		voltage="4 to 5.5 V"	timer2="yes"
+		watchdog="yes"		eram="256"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="yes"	auxrdisrto="yes">
+		<timers>Three 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+			Low-power Idle and Power-down Modes
+			Interrupt Recovery from Power-down Mode
+			Hardware Watchdog Timer
+			Dual Data Pointer
+			Power-off Flag
+		</more><bits>
+			C903 B83F A8BF A201 8E1B 878F
+		</bits><writeonly>
+			A6
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	AUXR	AUXR1	WDTRST	RCAP2L	RCAP2H	TL2	TH2
+			DP0H	DP0L	DP1H	DP1L
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89C52"
+		xdata="yes"		xcode="yes"
+		code="8"		frequency="0 to 24 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="8"
+		voltage="max. 6.6 V"	timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+			Low-power Idle and Power-down Modes
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	RCAP2L	RCAP2H	TL2	TH2
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89C55WD"
+		xdata="yes"		xcode="yes"
+		code="20"		frequency="0 to 33 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="8"
+		voltage="4 to 5.5 V"	timer2="yes"
+		watchdog="yes"		eram="256"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="yes"	auxrdisrto="yes">
+		<timers>Three 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+			Low-power Idle and Power-down Modes
+			Interrupt Recovery from Power-down Mode
+			Hardware Watchdog Timer
+			Dual Data Pointer
+			Power-off Flag
+		</more><bits>
+			C903 B83F A8BF A201
+			8E1B 878F
+		</bits><writeonly>
+			A6
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	AUXR	AUXR1	WDTRST	RCAP2L	RCAP2H	TL2	TH2
+			DP0H	DP0L	DP1H	DP1L
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89LV51"
+		xdata="yes"		xcode="yes"
+		code="4"		frequency="0 to 12 MHz"
+		ram="128"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 6 V"	timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			Three-Level Program Memory Lock
+			Low Power Idle and Power Down Modes
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89LV52"
+		xdata="yes"		xcode="yes"
+		code="8"		frequency="0 to 12 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="8"
+		voltage="2.7 to 6"	timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Three-Level Program Memory Lock
+			Low Power Idle and Power Down Modes
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2	T2MOD
+			RCAP2L	RCAP2H	TL2	TH2
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89LV55"
+		xdata="yes"		xcode="yes"
+		code="20"		frequency="0 to 12 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="8"
+		voltage="2.7 to 6"	timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+			Low-power Idle and Power-down Modes
+		</more><bits>
+			C903 B83F A8BF 878F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	RCAP2L	RCAP2H	TL2	TH2
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89S51"
+		xdata="yes"		xcode="yes"
+		code="4"		frequency="0 to 33 MHz"
+		ram="128"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage="4.0 to 5.5"	timer2="no"
+		watchdog="yes"		eram="0"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="no"
+		idl="no"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="yes"	auxrdisrto="yes">
+		<timers>Two 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+			Low-power Idle and Power-down Modes
+			Interrupt Recovery from Power-down Mode
+			Watchdog Timer
+			Dual Data Pointer
+			Power-off Flag
+			Fast Programming Time
+			Flexible ISP Programming (Byte and Page Mode)
+		</more><bits>
+			B83F A8BF A201 8E19 878F
+		</bits><writeonly>
+			A6
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF
+			T2MOD	AUXR	AUXR1	WDTRST
+			DP0H	DP0L	DP1H	DP1L
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89S52"
+		xdata="yes"		xcode="yes"
+		code="8"		frequency="0 to 33 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="8"
+		voltage="4 to 5.5 V"	timer2="yes"
+		watchdog="yes"		eram="0"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="yes"	auxrdisrto="yes">
+		<timers>Three 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+			Low-power Idle and Power-down Modes
+			Interrupt Recovery from Power-down Mode
+			Watchdog Timer
+			Dual Data Pointer
+			Power-off Flag
+			Fast Programming Time
+			Flexible ISP Programming (Byte and Page Mode)
+		</more><bits>
+			C903 B83F A8BF A201 8E19 878F
+		</bits><writeonly>
+			A6
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	AUXR	AUXR1	WDTRST	RCAP2L	RCAP2H	TL2	TH2
+			DP0H	DP0L	DP1H	DP1L
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89LS51"
+		xdata="yes"		xcode="yes"
+		code="4"		frequency="0 to 16 MHz"
+		ram="128"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 4"	timer2="no"
+		watchdog="yes"		eram="0"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="yes"	auxrdisrto="yes">
+		<timers>Two 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+			Low-power Idle and Power-down Modes
+			Interrupt Recovery from Power-down Mode
+			Watchdog Timer
+			Dual Data Pointer
+			Power-off Flag
+			Flexible ISP Programming (Byte and Page Mode)
+		</more><bits>
+			B83F A8BF A201 8E19 878F
+		</bits><writeonly>
+			A6
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS
+			DP0H	DP0L	DP1H	DP1L	AUXR	AUXR1	WDTRST
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89LS52"
+		xdata="yes"		xcode="yes"
+		code="8"		frequency="0 to 16 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="8"
+		voltage="2.7 to 4"	timer2="yes"
+		watchdog="yes"		eram="0"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="no"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="no"
+		iph="no"		acomparator="no"
+		euart="no"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="yes"	auxrdisrto="yes">
+		<timers>Three 16-bit</timers>
+		<more>
+			Three-level Program Memory Lock
+			Low-power Idle and Power-down Modes
+			Interrupt Recovery from Power-down Mode
+			Watchdog Timer
+			Dual Data Pointer
+			Power-off Flag
+			Flexible ISP Programming (Byte and Page Modes)
+		</more><bits>
+			C903 B83F A8BF A201 8E19 878F
+		</bits><writeonly>
+			A6
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	AUXR	AUXR1	WDTRST	RCAP2L	RCAP2H	TL2	TH2
+			DP0H	DP0L	DP1H	DP1L
+			SCON		SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89S2051"
+		xdata="no"		xcode="no"
+		code="2"		frequency="0 to 24 MHz"
+		ram="256"		portbits="15"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0=""
+		port1="11111111"	port2=""
+		port3="11111101"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="yes"
+		euart="yes"		clkreg="yes"
+		pwdex="yes"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="yes"
+		x2reset="yes"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			Two-level Program Memory Lock
+			Direct LED Drive Outputs
+			On-chip Analog Comparator with Selectable Interrupt
+			8-bit PWM (Pulse-width Modulation)
+			Low Power Idle and Power-down Modes
+			Brownout Reset
+			Enhanced UART Serial Port with Framing Error Detection and Automatic
+			Address Recognition
+			Internal Power-on Reset
+			Interrupt Recovery from Power-down Mode
+			Programmable and Fuseable x2 Clock Option
+			Four-level Enhanced Interrupt Controller
+			Power-off Flag
+			Flexible Programming (Byte and Page Modes)
+			User Serviceable Signature Page (32 Bytes)
+		</more><bits>
+			8F03 971F A8DF B75F B85F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P1	P3	IPH	ACSR	CLKREG	SADEN	SADDR	SBUF
+			EC	PC	ES	PS	FE
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89S4051"
+		xdata="no"		xcode="no"
+		code="4"		frequency="0 to 24 MHz"
+		ram="256"		portbits="15"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="no"		auxr="no"
+		t2mod="no"		port0=""
+		port1="11111111"	port2=""
+		port3="11111101"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="yes"
+		euart="yes"		clkreg="yes"
+		pwdex="yes"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="yes"
+		x2reset="yes"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			Two-level Program Memory Lock
+			Direct LED Drive Outputs
+			On-chip Analog Comparator with Selectable Interrupt
+			8-bit PWM (Pulse-width Modulation)
+			Low Power Idle and Power-down Modes
+			Brownout Reset
+			Enhanced UART Serial Port with Framing Error Detection and Automatic
+			Address Recognition
+			Internal Power-on Reset
+			Interrupt Recovery from Power-down Mode
+			Programmable and Fuseable x2 Clock Option
+			Four-level Enhanced Interrupt Controller
+			Power-off Flag
+			Flexible Programming (Byte and Page Modes)
+			User Serviceable Signature Page (32 Bytes)
+		</more><bits>
+			8F03 971F A8DF B75F B85F
+		</bits><writeonly>
+		</writeonly><sfr>
+			P1	P3	IPH	ACSR	CLKREG	SADEN	SADDR	SBUF
+			EC	PC	ES	PS	FE
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="AT89S8253"
+		xdata="yes"		xcode="yes"
+		code="12"		frequency="0 to 24 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="9"
+		voltage="2.7 to 5.5V"	timer2="yes"
+		watchdog="yes"		eram="0"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="yes"
+		pwdex="no"		spi="yes"
+		wdtcon="yes"		eeprom="2048"
+		intelpe="yes"		pwm="no"
+		x2reset="no"		ckcon="no"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="no"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			2K Bytes EEPROM Data Memory
+			64-byte User Signature Array
+			Three-level Program Memory Lock
+			Enhanced UART Serial Port with Framing Error Detection and Automatic Address Recognition
+			Enhanced SPI (Double Write/Read Buffered) Serial Interface
+			Low-power Idle and Power-down Modes
+			Interrupt Recovery from Power-down Mode
+			Programmable Watchdog Timer
+			Dual Data Pointer
+			Power-off Flag
+			Flexible ISP Programming (Byte and Page Modes)
+			Four-level Enhanced Interrupt Controller
+			Programmable and Fuseable x2 Clock Option
+			Internal Power-on Reset
+			42-pin PDIP Package Option for Reduced EMC Emission
+		</more><bits>
+			87DF 8E01 8F01 963F AAE3 B73F C903
+		</bits><writeonly>
+			A6
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	IPH	SADEN	SADDR	SPSD	AUXR	WDTRST	EECON	SPCR
+			SPSR	WDTCON	CLKREG	RCAP2L	RCAP2H	TL2	TH2	SPDR	FE
+			DP0H	DP0L	DP1H	DP1L
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="T87C5101"
+		xdata="no"		xcode="no"
+		code="16"		frequency="0 to 66 MHz"
+		ram="256"		portbits="16"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="yes"
+		watchdog="no"		eram="256"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0=""
+		port1="11111111"	port2=""
+		port3="11111100"	port4="00000011"
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="yes"
+		auxr1gf3="yes"		ao="yes"
+		wdtprg="no"		hddptr="yes"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Program memory: EEPROM
+			High-speed Architecture
+			Dual Data Pointer
+			On-chip eXpanded RAM (256 bytes)
+			Programmable Clock Out and Up/Down Timer/Counter 2
+			Asynchronous Port Reset
+			4-Level Priority Interrupt System
+			Full-duplex Enhanced UART
+			Low EMI (no ALE)
+			Idle Mode
+			Power-down Mode
+		</more><bits>
+			C903 C03F B83F B73F A8BF A209 8E03 8F01 87DF
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	SADEN	SADDR	AUXR	AUXR1	IPH	CKCON	FE
+			RCAP2L	RCAP2H	TL2	TH2	DP0H	DP0L	DP1H	DP1L
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="T83C5101"
+		xdata="no"		xcode="no"
+		code="8"		frequency="0 to 66 MHz"
+		ram="256"		portbits="16"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="yes"
+		watchdog="no"		eram="256"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0=""
+		port1="11111111"	port2=""
+		port3="11111100"	port4="00000011"
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="yes"
+		auxr1gf3="yes"		ao="yes"
+		wdtprg="no"		hddptr="yes"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Program memory: ROM
+			High-speed Architecture
+			Dual Data Pointer
+			On-chip eXpanded RAM (256 bytes)
+			Programmable Clock Out and Up/Down Timer/Counter 2
+			Asynchronous Port Reset
+			4-Level Priority Interrupt System
+			Full-duplex Enhanced UART
+			Low EMI (no ALE)
+			Idle Mode
+			Power-down Mode
+		</more><bits>
+			C903 C03F B83F B73F A8BF A209 8E03 8F01 87DF
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	SADEN	SADDR	AUXR	AUXR1	IPH	CKCON	FE
+			RCAP2L	RCAP2H	TL2	TH2
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="T83C5102"
+		xdata="no"		xcode="no"
+		code="8"		frequency="0 to 66 MHz"
+		ram="256"		portbits="16"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="yes"
+		watchdog="no"		eram="256"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0=""
+		port1="11111111"	port2=""
+		port3="11111100"	port4="00000011"
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="yes"
+		auxr1gf3="yes"		ao="yes"
+		wdtprg="no"		hddptr="yes"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Program memory: ROM
+			High-speed Architecture
+			Dual Data Pointer
+			On-chip eXpanded RAM (256 bytes)
+			Programmable Clock Out and Up/Down Timer/Counter 2
+			Asynchronous Port Reset
+			4-Level Priority Interrupt System
+			Full-duplex Enhanced UART
+			Low EMI (no ALE)
+			Idle Mode
+			Power-down Mode
+		</more><bits>
+			C903 C03F B83F B73F A8BF A209 8E03 8F01 87DF
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	SADEN	SADDR	AUXR	AUXR1	IPH	CKCON	FE
+			RCAP2L	RCAP2H	TL2	TH2
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="80C32X2"
+		xdata="yes"		xcode="yes"
+		code="0"		frequency="20 - 60 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="yes"
+		auxr1gf3="yes"		ao="yes"
+		wdtprg="no"		hddptr="yes"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			ROMLess
+			High-speed Architecture
+			X2 Speed Improvement Capability
+			Dual Data Pointer
+			Programmable Clock Out and Up/Down Timer/Counter 2
+			Asynchronous Port Reset
+			4 Level Priority Interrupt System
+			Full Duplex Enhanced UART
+			Low EMI (Inhibit ALE)
+			Idle Mode
+			Power-down Mode
+			Power-off Flag
+			Once Mode (On-chip Emulation)
+		</more><bits>
+			C903 B83F B73F A8BF A209 8E01 8F01 87DF
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	SADEN	SADDR	AUXR	AUXR1	IPH	CKCON	FE
+			RCAP2L	RCAP2H	TL2	TH2
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="80C52X2"
+		xdata="yes"		xcode="yes"
+		code="8"		frequency="20 - 60 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="yes"
+		auxr1gf3="yes"		ao="yes"
+		wdtprg="no"		hddptr="yes"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Program memory: ROM
+			High-speed Architecture
+			X2 Speed Improvement Capability
+			Dual Data Pointer
+			Programmable Clock Out and Up/Down Timer/Counter 2
+			Asynchronous Port Reset
+			4 Level Priority Interrupt System
+			Full Duplex Enhanced UART
+			Low EMI (Inhibit ALE)
+			Idle Mode
+			Power-down Mode
+			Power-off Flag
+			Once Mode (On-chip Emulation)
+		</more><bits>
+			C903 B83F B73F A8BF A209 8E01 8F01 87DF
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	SADEN	SADDR	AUXR	AUXR1	IPH	CKCON	FE
+			RCAP2L	RCAP2H	TL2	TH2
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="87C52X2"
+		xdata="yes"		xcode="yes"
+		code="8"		frequency="20 - 60 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="yes"
+		watchdog="no"		eram="0"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="yes"
+		auxr1gf3="yes"		ao="yes"
+		wdtprg="no"		hddptr="yes"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Program memory: OTP
+			High-speed Architecture
+			X2 Speed Improvement Capability
+			Dual Data Pointer
+			Programmable Clock Out and Up/Down Timer/Counter 2
+			Asynchronous Port Reset
+			4 Level Priority Interrupt System
+			Full Duplex Enhanced UART
+			Low EMI (Inhibit ALE)
+			Idle Mode
+			Power-down Mode
+			Power-off Flag
+			Once Mode (On-chip Emulation)
+		</more><bits>
+			C903 B83F B73F A8BF A209 8E01 8F01 87DF
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	SADEN	SADDR	AUXR	AUXR1	IPH	CKCON	FE
+			RCAP2L	RCAP2H	TL2	TH2
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="80C31X2"
+		xdata="yes"		xcode="yes"
+		code="0"		frequency="20 - 40 MHz"
+		ram="128"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="no"
+		watchdog="no"		eram="0"
+		dualdtpr="yes"		auxr="no"
+		t2mod="no"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="yes"
+		auxr1gf3="no"		ao="no"
+		wdtprg="no"		hddptr="yes"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Two 16-bit</timers>
+		<more>
+			ROMLess
+			High-Speed Architecture
+			X2 Speed Improvement capability
+			Dual Data Pointer
+			Asynchronous port reset
+			4 priority level interrupt system
+			Full duplex Enhanced UART
+			Framing error detection
+			Automatic address recognition
+			Idle mode
+			Power-down mode
+			Power-off Flag
+			Once mode (On-chip Emulation)
+		</more><bits>
+			B81F B71F A89F A201 8E01 8F01 87DF
+		</bits><writeonly>
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	FE
+			SADEN	SADDR	AUXR1	IPH	CKCON
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="80C54X2"
+		xdata="yes"		xcode="yes"
+		code="16"		frequency="20 - 60 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="yes"
+		watchdog="yes"		eram="0"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="yes"
+		auxr1gf3="yes"		ao="yes"
+		wdtprg="yes"		hddptr="yes"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Program memory: ROM
+			High-Speed Architecture
+			X2 Speed Improvement capability
+			Dual Data Pointer
+			Programmable Clock Out and Up/Down Timer/Counter 2
+			Hardware Watchdog Timer
+			Asynchronous port reset
+			4 level priority interrupt system
+			Full duplex Enhanced UART
+			Framing error detection
+			Automatic address recognition
+			Low EMI (inhibit ALE)
+			Idle mode
+			Power-down mode
+			Power-off Flag
+			Once mode (On-chip Emulation)
+		</more><bits>
+			C903 B83F B73F A8BF A209 A707 8E01 8F01 87DF
+		</bits><writeonly>
+			A6
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	SADEN	SADDR	AUXR	AUXR1	IPH	CKCON	WDTPRG	WDTRST
+			RCAP2L	RCAP2H	TL2	TH2	FE
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="80C58X2"
+		xdata="yes"		xcode="yes"
+		code="32"		frequency="20 - 60 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="yes"
+		watchdog="yes"		eram="0"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="yes"
+		auxr1gf3="yes"		ao="yes"
+		wdtprg="yes"		hddptr="yes"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Program memory: ROM
+			High-Speed Architecture
+			X2 Speed Improvement capability
+			Dual Data Pointer
+			Programmable Clock Out and Up/Down Timer/Counter 2
+			Hardware Watchdog Timer
+			Asynchronous port reset
+			4 level priority interrupt system
+			Full duplex Enhanced UART
+			Framing error detection
+			Automatic address recognition
+			Low EMI (inhibit ALE)
+			Idle mode
+			Power-down mode
+			Power-off Flag
+			Once mode (On-chip Emulation)
+		</more><bits>
+			C903 B83F B73F A8BF A209 A707 8E01 8F01 87DF
+		</bits><writeonly>
+			A6
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	SADEN	SADDR	AUXR	AUXR1	IPH	CKCON	WDTPRG	WDTRST
+			RCAP2L	RCAP2H	TL2	TH2	FE
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="87C54X2"
+		xdata="yes"		xcode="yes"
+		code="16"		frequency="20 - 60 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="yes"
+		watchdog="yes"		eram="0"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="yes"
+		auxr1gf3="yes"		ao="yes"
+		wdtprg="yes"		hddptr="yes"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Program memory: EPROM
+			High-Speed Architecture
+			X2 Speed Improvement capability
+			Dual Data Pointer
+			Programmable Clock Out and Up/Down Timer/Counter 2
+			Hardware Watchdog Timer
+			Asynchronous port reset
+			4 level priority interrupt system
+			Full duplex Enhanced UART
+			Framing error detection
+			Automatic address recognition
+			Low EMI (inhibit ALE)
+			Idle mode
+			Power-down mode
+			Power-off Flag
+			Once mode (On-chip Emulation)
+		</more><bits>
+			C903 B83F B73F A8BF A209 A707 8E01 8F01 87DF
+		</bits><writeonly>
+			A6
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	SADEN	SADDR	AUXR	AUXR1	IPH	CKCON	WDTPRG	WDTRST
+			RCAP2L	RCAP2H	TL2	TH2	FE
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu><mcu
+		vendor="Atmel"		name="87C58X2"
+		xdata="yes"		xcode="yes"
+		code="32"		frequency="20 - 60 MHz"
+		ram="256"		portbits="32"
+		uart="yes"		interrupts="6"
+		voltage="2.7 to 5.5V"	timer2="yes"
+		watchdog="yes"		eram="0"
+		dualdtpr="yes"		auxr="yes"
+		t2mod="yes"		port0="11111111"
+		port1="11111111"	port2="11111111"
+		port3="11111111"	port4=""
+		pof="yes"		gf0="yes"
+		gf1="yes"		pd="yes"
+		idl="yes"		smod0="yes"
+		iph="yes"		acomparator="no"
+		euart="yes"		clkreg="no"
+		pwdex="no"		spi="no"
+		wdtcon="no"		eeprom="0"
+		intelpe="no"		pwm="no"
+		x2reset="no"		ckcon="yes"
+		auxr1gf3="yes"		ao="yes"
+		wdtprg="yes"		hddptr="yes"
+		auxrwdidle="no"		auxrdisrto="no">
+		<timers>Three 16-bit</timers>
+		<more>
+			Program memory: EPROM
+			High-Speed Architecture
+			X2 Speed Improvement capability
+			Dual Data Pointer
+			Programmable Clock Out and Up/Down Timer/Counter 2
+			Hardware Watchdog Timer
+			Asynchronous port reset
+			4 level priority interrupt system
+			Full duplex Enhanced UART
+			Framing error detection
+			Automatic address recognition
+			Low EMI (inhibit ALE)
+			Idle mode
+			Power-down mode
+			Power-off Flag
+			Once mode (On-chip Emulation)
+		</more><bits>
+			C903 B83F B73F A8BF A209 A707 8E01 8F01 87DF
+		</bits><writeonly>
+			A6
+		</writeonly><sfr>
+			P0	P1	P2	P3	SBUF	ES	PS	ET2	PT2
+			T2MOD	SADEN	SADDR	AUXR	AUXR1	IPH	CKCON	WDTPRG	WDTRST
+			RCAP2L	RCAP2H	TL2	TH2	FE
+			SCON		FE SM0	SM1	SM2	REN	TB8	RB8	TI	RI
+			T2CON		TF2	EXF2	RCLK	TCLK	EXEN2	TR2	CT2	CPRL2
+		</sfr>
+	</mcu>
+</mcus>

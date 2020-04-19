@@ -1,0 +1,13729 @@
+#
+# Translation file from English language to Chinese
+# by:Yayi (China) <yz@yayi.biz>;asmwarrior <asmwarrior@gmail.com>
+#
+# Created:	2010.12.20.
+# Last update:	2012.7.29
+# Notes to translation: 如果遇到翻译错误或者建议更改请发邮件给我
+#
+set l [file tail [file rootname [info script]]]
+# main.tcl
+# ==============================================================================
+namespace eval :: {
+  ##ID:000001##
+  mcset $l "Translated into _Language_ by _Name_ (_country_) <_email_>" \
+           "Translated into chinese by Yayi (China) <yz@yayi.biz>\n如果遇到翻译错误或者建议更改请发邮件给我."
+  ##ID:000002##
+  mcset $l "Initializing" \
+           "正在初始化"
+  ##ID:000003##
+  mcset $l "\tLoading libraries" \
+           "\t正在加载库"
+  ##ID:000004##
+  mcset $l "\tLoading program sources" \
+           "\t正在加载程序源"
+  ##ID:000005##
+  mcset $l "FATAL ERROR" \
+           "致命错误"
+  ##ID:000006##
+  mcset $l "MCUs database file is corrupted,\nthis program cannot run without it.\nPlease reinstall MCU 8051 IDE." \
+           "MCU的数据库已损坏,\n此程序离开它无法运行.\n请重新安装 MCU 8051 IDE."
+  ##ID:000007##
+  mcset $l "\tOpening last session" \
+           "\t打开最后一次会话"
+  ##ID:000008##
+  mcset $l "File not found" \
+           "文件没有找到"
+  ##ID:000009##
+  mcset $l "Unable to open project file:\n\"%s\"" \
+           "无法打开项目文件:\n\"%s\""
+  ##ID:000010##
+  mcset $l "%s is now operational\n" \
+           "%s目前正在运行\n"
+  ##ID:000011##
+  mcset $l "Initializing %s" \
+           "正在初始化%s"
+  ##ID:000012##
+  mcset $l "\nInitializing MCU 8051 IDE %s" \
+           "\n正在初始化 MCU 8051 IDE %s"
+  ##ID:000013##
+  mcset $l "\nInitializing \033\[1mMCU 8051 IDE \033\[32m%s\033\[m" \
+           "\n正在初始化 \033\[1mMCU 8051 IDE \033\[32m%s\033\[m"
+  ##ID:000014##
+  mcset $l "\nExiting on signal %s" \
+           "\n正在退出 %s"
+  ##ID:000015##
+  mcset $l "\nERROR: Unable to exit the program correctly -- TERMINATING NOW!" \
+           "\n错误: 无法正常退出程序 -- 正在结束" ;
+}
+# environment.tcl
+# ==============================================================================
+namespace eval :: {
+  ##ID:000016##
+  mcset $l "Permission denied" \
+           "没有权限"
+  ##ID:000017##
+  mcset $l "Unable to save configuration file" \
+           "无法保存配置文件"
+  ##ID:000018##
+  mcset $l "      * Restoring default settings" \
+           "        *  恢复默认设置"
+  ##ID:000019##
+  mcset $l "Change level of syntax validation" \
+           "更改语法检查级别"
+  ##ID:000020##
+  mcset $l "Configure spell checker" \
+           "配置拼写检查"
+  ##ID:000021##
+  mcset $l "Spell checker (hunspell) is not available." \
+           "拼写检查（hunspell）不可用"
+  ##ID:000022##
+  mcset $l "Show status bar history" \
+           "显示历史状态条"
+  ##ID:000023##
+  mcset $l "MCU chosen for simulation" \
+           "选择用于仿真的单片机"
+  ##ID:000024##
+  mcset $l "Syntax validation disabled" \
+           "关闭语法检查"
+  ##ID:000025##
+  mcset $l "Current validation level: %s" \
+           "当前语法检查级别: %s"
+  ##ID:000026##
+  mcset $l "Custom command %s: %s" \
+           "自定义命令 %s: %s"
+  ##ID:000027##
+  mcset $l "Clear" \
+           "清除"
+  # Main menu / File
+  ##ID:000028##
+  mcset $l "File" \
+           "文件"
+  ##ID:000029##
+  mcset $l "New" \
+           "新建"
+  ##ID:000030##
+  mcset $l "Create new file" \
+           "创建新文件"
+  ##ID:000031##
+  mcset $l "Open" \
+           "打开"
+  ##ID:000032##
+  mcset $l "Open an existing file" \
+           "打开文件"
+  ##ID:000033##
+  mcset $l "Open recent" \
+           "最近打开"
+  ##ID:000034##
+  mcset $l "Save" \
+           "保存"
+  ##ID:000035##
+  mcset $l "Save the current file" \
+           "保存当前文件"
+  ##ID:000036##
+  mcset $l "Save as" \
+           "另存为"
+  ##ID:000037##
+  mcset $l "Save under a different name" \
+           "根据不同的名称保存"
+  ##ID:000038##
+  mcset $l "Save all" \
+           "保存所有"
+  ##ID:000039##
+  mcset $l "Save the current file under a different name" \
+           "根据不同的名称保存当前文件"
+  ##ID:000040##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:000041##
+  mcset $l "Close the current file" \
+           "关闭当前文件"
+  ##ID:000042##
+  mcset $l "Close all" \
+           "关闭全部"
+  ##ID:000043##
+  mcset $l "Close all opened files" \
+           "关闭所有打开的文件"
+  ##ID:000044##
+  mcset $l "File statistics" \
+           "文件统计"
+  ##ID:000045##
+  mcset $l "Display file statistics" \
+           "显示统计文件"
+  ##ID:000046##
+  mcset $l "Save session" \
+           "保存会话"
+  ##ID:000047##
+  mcset $l "Save current session. Session file contains list of opened project, sizes of panels, etc." \
+           "保存当前会话.项目中打开的会话文件,面板尺寸等"
+  ##ID:000048##
+  mcset $l "Quit" \
+           "退出"
+  ##ID:000049##
+  mcset $l "Exit program" \
+           "退出程序"
+  # Main menu / Edit
+  ##ID:000050##
+  mcset $l "Edit" \
+           "编辑"
+  ##ID:000051##
+  mcset $l "Undo" \
+           "撤销"
+  ##ID:000052##
+  mcset $l "Take back last operation" \
+           "返回到最后操作"
+  ##ID:000053##
+  mcset $l "Redo" \
+           "取消撤销"
+  ##ID:000054##
+  mcset $l "Take back last undo" \
+           "取消最后的撤销"
+  ##ID:000055##
+  mcset $l "Cut" \
+           "剪切"
+  ##ID:000056##
+  mcset $l "Move selected text into the clipboard" \
+           "剪切选定的文本到剪贴板"
+  ##ID:000057##
+  mcset $l "Copy" \
+           "复制"
+  ##ID:000058##
+  mcset $l "Copy selected text into the clipboard" \
+           "复制选定的文本到剪贴板"
+  ##ID:000059##
+  mcset $l "Paste" \
+           "粘帖"
+  ##ID:000060##
+  mcset $l "Paste text from clipboard" \
+           "粘贴剪贴板中的文本"
+  ##ID:000061##
+  mcset $l "Select all" \
+           "选择所有"
+  ##ID:000062##
+  mcset $l "Select all text in the editor" \
+           "在编辑器中选择所有文本"
+  ##ID:000063##
+  mcset $l "Find" \
+           "查找"
+  ##ID:000064##
+  mcset $l "Find a string in the text" \
+           "在文本中查找"
+  ##ID:000065##
+  mcset $l "Find next" \
+           "查找下一个"
+  ##ID:000066##
+  mcset $l "Find next occurrence of search string" \
+           "查找下一个搜索字符"
+  ##ID:000067##
+  mcset $l "Find previous" \
+           "查找上一个"
+  ##ID:004514##
+  mcset $l "Fill with pseudo-random values" \
+           "伪随机值填充"
+  ##ID:000068##
+  mcset $l "Find previous occurrence of search string" \
+           "查找上一个搜索字符"
+  ##ID:000069##
+  mcset $l "Replace" \
+           "替换"
+  ##ID:000070##
+  mcset $l "Replace some string with another" \
+           "替换其他的字符"
+  ##ID:000071##
+  mcset $l "Go to line" \
+           "到达指定的行目"
+  ##ID:000072##
+  mcset $l "Jump to line" \
+           "转跳到指定的行目"
+  ##ID:000073##
+  mcset $l "Comment" \
+           "注释"
+  ##ID:000074##
+  mcset $l "Comment selected text" \
+           "注释选定的文本"
+  ##ID:000075##
+  mcset $l "Uncomment" \
+           "取消注释"
+  ##ID:000076##
+  mcset $l "Uncomment selected text" \
+           "取消指定文本的注释"
+  ##ID:000077##
+  mcset $l "Indent" \
+           "缩进"
+  ##ID:000078##
+  mcset $l "Indent selected text" \
+           "缩进指定的文本"
+  ##ID:000079##
+  mcset $l "Unindent" \
+           "取消缩进"
+  ##ID:000080##
+  mcset $l "Unindent selected text" \
+           "取消指定文本的缩进"
+  # Main menu / View
+  ##ID:000081##
+  mcset $l "View" \
+           "查看"
+  ##ID:000082##
+  mcset $l "Read only mode" \
+           "只读模式"
+  ##ID:000083##
+  mcset $l "Set current editor to read only/normal mode" \
+           "当前编辑器设置为只读/正常模式"
+  ##ID:000084##
+  mcset $l "Switch to command line" \
+           "切换至命令行"
+  ##ID:000085##
+  mcset $l "Switch to editor command line" \
+           "切换至编辑器命令行"
+  ##ID:000086##
+  mcset $l "Show/Hide icon border" \
+           "显示/隐藏图标栏"
+  ##ID:000087##
+  mcset $l "Show/Hide editor's icon border (bookmark icons)" \
+           "显示/隐藏编辑器的图标栏(书签图标)"
+  ##ID:000088##
+  mcset $l "Show/Hide line numbers" \
+           "显示/隐藏行目"
+  ##ID:000089##
+  mcset $l "Show/Hide editor's line numbers" \
+           "显示/隐藏编辑器行目"
+  ##ID:000090##
+  mcset $l "Reload" \
+           "刷新"
+  ##ID:000091##
+  mcset $l "Reload current file" \
+           "刷新当前文件"
+  ##ID:000092##
+  mcset $l "Highlight" \
+           "高亮"
+  ##ID:000093##
+  mcset $l "None" \
+           "无"
+  ##ID:000094##
+  mcset $l "Assembly language" \
+           "汇编语言模式"
+  ##ID:000095##
+  mcset $l "Assembler ASX8051" \
+           "ASX8051汇编模式"
+  ##ID:000096##
+  mcset $l "Reallocable assembler from SDCC project" \
+           "从SDCC项目中分配汇编器"
+  ##ID:000097##
+  mcset $l "C language" \
+           "C语言模式"
+  ##ID:000098##
+  mcset $l "Code listing" \
+           "代码列表模式"
+  ##ID:000099##
+  mcset $l "Full screen mode" \
+           "全屏模式"
+  ##ID:000100##
+  mcset $l "Toggle full screen mode" \
+           "切换到全屏模式"
+  ##ID:000101##
+  mcset $l "Clear messages panel" \
+           "清除信息面板"
+  # Main menu / Project
+  ##ID:000102##
+  mcset $l "Project" \
+           "项目"
+  ##ID:000103##
+  mcset $l "Create new project" \
+           "创建新项目"
+  ##ID:000104##
+  mcset $l "Open an existing project" \
+           "打开已有的项目"
+  ##ID:000105##
+  mcset $l "Save the current project" \
+           "保存当前项目"
+  ##ID:000106##
+  mcset $l "Edit project" \
+           "编辑项目"
+  ##ID:000107##
+  mcset $l "Edit project details" \
+           "编辑项目详情"
+  ##ID:000108##
+  mcset $l "Save and close" \
+           "保存关闭"
+  ##ID:000109##
+  mcset $l "Save the current project and close it" \
+           "保存并关闭当前项目"
+  ##ID:000110##
+  mcset $l "Close without saving" \
+           "不保存关闭"
+  ##ID:000111##
+  mcset $l "Close current project" \
+           "关闭当前项目"
+  # Main menu / Simulator
+  ##ID:000112##
+  mcset $l "Simulator" \
+           "模拟器"
+  ##ID:000113##
+  mcset $l "Start / Shutdown" \
+           "启动 / 关闭"
+  ##ID:000114##
+  mcset $l "Start simulator engine" \
+           "启动模拟器引擎"
+  ##ID:000115##
+  mcset $l "Debug this file only" \
+           "只调试这个文件"
+  ##ID:000116##
+  mcset $l "Start simulator engine and load current file only" \
+           "启动模拟器引擎和只加载当前文件"
+  ##ID:000117##
+  mcset $l "Step back" \
+           "后退"
+  ##ID:000118##
+  mcset $l "Step program back by 1 instruction" \
+           "后退一条程序指令"
+  ##ID:000119##
+  mcset $l "Step" \
+           "单步"
+  ##ID:000120##
+  mcset $l "Step program by 1 instruction" \
+           "步测一条程序指令"
+  ##ID:000121##
+  mcset $l "Step over" \
+           "跟踪"
+  ##ID:000122##
+  mcset $l "Step program by 1 line of code" \
+           "步测每一行代码(进入函数)"
+  ##ID:000123##
+  mcset $l "Animate" \
+           "模式动画"
+  ##ID:000124##
+  mcset $l "Run program and show results after each change" \
+           "运行程序,并显示在每次更改后的结果"
+  ##ID:000125##
+  mcset $l "Run" \
+           "运行"
+  ##ID:000126##
+  mcset $l "Run program and show results periodically in some interval" \
+           "运行程序，并显示结果在指定的期间"
+  ##ID:000127##
+  mcset $l "Hiberante program" \
+           "冬眠程序"
+  ##ID:000128##
+  mcset $l "Save current state of simulator engine to a file for future resumption" \
+           "保存模拟器引擎的当前状态，以备将来恢复文件"
+  ##ID:000129##
+  mcset $l "Resume hibernated program" \
+           "恢复已冬眠的程序"
+  ##ID:000130##
+  mcset $l "Interrupt monitor" \
+           "中断监控"
+  ##ID:000131##
+  mcset $l "Dialog in which you can control MCU interrupts" \
+           "您可以在对话中控制单片机的中断"
+  ##ID:000132##
+  mcset $l "Stopwatch" \
+           "秒表"
+  ##ID:000133##
+  mcset $l "Configurable stopwatch timer which can stop simulation on various conditions" \
+           "配置的秒表定时器，可用模拟各种条件下停止"
+  ##ID:000134##
+  mcset $l "Find cursor" \
+           "查找指示器"
+  ##ID:000135##
+  mcset $l "Find simulator cursor in the editor" \
+           "在编辑器中找到模拟指示器"
+  ##ID:000136##
+  mcset $l "Translate line number to address in program memory and set PC to that address" \
+           "把寄存器地址翻译成PC行号地址"
+  ##ID:000137##
+  mcset $l "Clear highlight" \
+           "清除高亮"
+  ##ID:000138##
+  mcset $l "Clear highlight for changed values" \
+           "清除变动值的高亮"
+  ##ID:000139##
+  mcset $l "Allow breakpoints" \
+           "允许断点"
+  ##ID:000140##
+  mcset $l "Enable simulator breakpoints (marks, where to stop program in animate or run mode)" \
+           "启用模拟器断点(标记在哪里停止运行模式动画或程序)"
+  # Main menu / Virtual MCU
+  ##ID:000141##
+  mcset $l "Virtual MCU" \
+           "虚拟单片机"
+  ##ID:000142##
+  mcset $l "Show SFR map" \
+           "显示SFR映射"
+  ##ID:000143##
+  mcset $l "Show map of special function registers area" \
+           "显示特殊功能寄存器区的地图"
+  ##ID:000144##
+  mcset $l "Show bit area" \
+           "显示位区域"
+  ##ID:000145##
+  mcset $l "Show bit addressable area" \
+           "显示位寻址区"
+  ##ID:000146##
+  mcset $l "Show stack" \
+           "显示堆栈"
+  ##ID:000147##
+  mcset $l "Invoke MCU stack monitor" \
+           "调用单片机堆栈监视器"
+  ##ID:000148##
+  mcset $l "Show Code memory" \
+           "显示代码存储器"
+  ##ID:000149##
+  mcset $l "Invoke hex editor with program code" \
+           "调用程序代码的十六进制编辑器"
+  ##ID:000150##
+  mcset $l "Show XDATA memory" \
+           "显示XDATA存储器"
+  ##ID:000151##
+  mcset $l "Invoke hex editor with external data memory" \
+           "调用与外部数据存储器的十六进制编辑器"
+  ##ID:000152##
+  mcset $l "Show ERAM" \
+           "显示ERAM"
+  ##ID:000153##
+  mcset $l "Invoke hex editor with expanded RAM" \
+           "调用扩展RAM的十六进制编辑器"
+  ##ID:000154##
+  mcset $l "Show Data EEPROM" \
+           "显示EEPROM数据"
+  ##ID:000155##
+  mcset $l "Invoke hex editor with data EEPROM" \
+           "调用EEPROM数据的十六进制编辑器"
+  ##ID:000156##
+  mcset $l "Show EEPROM write buffer" \
+           "显示EEPROM写入缓冲区"
+  ##ID:000157##
+  mcset $l "Invoke hex editor editor with data EEPROM write buffer" \
+           "调用编辑器与EEPROM数据写入缓冲区的十六进制编辑器"
+  ##ID:000158##
+  mcset $l "Reset" \
+           "复位"
+  ##ID:000159##
+  mcset $l "Only SFR" \
+           "只复位SFR"
+  ##ID:000160##
+  mcset $l "Reset Special Function Registers only" \
+           "只复位特殊功能寄存器"
+  ##ID:000161##
+  mcset $l "All zeros" \
+           "全部为0"
+  ##ID:000162##
+  mcset $l "Reset all internal registers to zeroes" \
+           "复位所有内部寄存器为零"
+  ##ID:000163##
+  mcset $l "All ones" \
+           "所有"
+  ##ID:000164##
+  mcset $l "Reset all internal registers to ones (0xFF)" \
+           "复位所有的内部寄存器(0xFF)"
+  ##ID:000165##
+  mcset $l "Random values" \
+           "随机值"
+  ##ID:000166##
+  mcset $l "Reset all internal registers to random values" \
+           "复位所有内部寄存器的随机值"
+  ##ID:000167##
+  mcset $l "Virtual UART terminal" \
+           "虚拟 UART 终端" ;
+  ##ID:000168##
+  mcset $l "Simulated UART terminal connected to the MCU simulator" \
+           "模拟UART终端连接到MCU的模拟器"
+  # Main menu / Virtual HW
+  ##ID:000169##
+  mcset $l "Virtual HW" \
+           "虚拟硬件"
+  ##ID:000170##
+  mcset $l "LED Panel" \
+           "LED面板"
+  ##ID:000171##
+  mcset $l "LED Display" \
+           "数码管"
+  ##ID:000172##
+  mcset $l "LED Matrix" \
+           "矩阵LED"
+  ##ID:000173##
+  mcset $l "LCD display (HD44780)" \
+           "LCD 显示屏 (HD44780)"
+  ##ID:000174##
+  mcset $l "Multiplexed LED Display" \
+           "复用数码管"
+  ##ID:000175##
+  mcset $l "LCD display controlled by HD44780" \
+           "LCD HD44780 显示屏控制"
+  ##ID:000176##
+  mcset $l "DS1620 thermometer" \
+           "DS1620 温度计"
+  ##ID:000177##
+  mcset $l "DS1620 temperature sensor" \
+           "DS1620 温度计传感器"
+  ##ID:000178##
+  mcset $l "Simple Keypad" \
+           "简单按键"
+  ##ID:000179##
+  mcset $l "Matrix Keypad" \
+           "矩阵按键"
+  ##ID:000180##
+  mcset $l "Load VHW connections from a file" \
+           "从文件中载入VHW连接"
+  ##ID:000181##
+  mcset $l "Load" \
+           "加载"
+  ##ID:000182##
+  mcset $l "Import VHW connections from a file" \
+           "从文件加载VHW连接"
+  ##ID:000183##
+  mcset $l "Load recent" \
+           "最近的加载"
+  ##ID:000184##
+  mcset $l "Save current VHW connections to a file" \
+           "保存当前VHW连接到一个文件"
+  ##ID:000185##
+  mcset $l "Save current VHW connections under a different name" \
+           "根据不同的名称保存当前虚拟硬件连接"
+  ##ID:000186##
+  mcset $l "Remove all" \
+           "全部删除"
+  ##ID:000187##
+  mcset $l "Remove all VHW" \
+           "删除全部虚拟硬件"
+  # Main menu / Tools
+  ##ID:000188##
+  mcset $l "Tools" \
+           "工具"
+  ##ID:000189##
+  mcset $l "Compile" \
+           "编译"
+  ##ID:000190##
+  mcset $l "Compile the source code" \
+           "编译的源代码"
+  ##ID:000191##
+  mcset $l "Compile this file" \
+           "编译当前文件"
+  ##ID:000192##
+  mcset $l "Compile current file only" \
+           "仅编译当前文件"
+  ##ID:000193##
+  mcset $l "Disassemble" \
+           "反汇编"
+  ##ID:000194##
+  mcset $l "Disassemble object code and open new editor with the result" \
+           "反汇编目标代码并在新的编辑器窗口打开反汇编结果"
+  ##ID:000195##
+  mcset $l "Encoding" \
+           "编码"
+  ##ID:000196##
+  mcset $l "End of line" \
+           "尾行"
+  ##ID:000197##
+  mcset $l "Auto indent" \
+           "自动缩进"
+  ##ID:000198##
+  mcset $l "Reformat source code (Indention level etc.)" \
+           "格式化源代码(缩进水平等)"
+  ##ID:000199##
+  mcset $l "Change letter case" \
+           "变更字母大小写"
+  ##ID:000200##
+  mcset $l "Change letter case in source code (with options)" \
+           "变动源代码的字母大小写(选项)"
+  ##ID:000201##
+  mcset $l "Export as XHTML" \
+           "导出为XHTML"
+  ##ID:000202##
+  mcset $l "Export highlighted code as XHTML file" \
+           "导出为XHTML代码文件"
+  ##ID:000203##
+  mcset $l "Export as LaTeX" \
+           "导出为LaTeX"
+  ##ID:000204##
+  mcset $l "Export highlighted code as LaTeX source, using package color" \
+           "导出着色的LaTeX源代码,采用color宏包"
+  ##ID:000205##
+  mcset $l "Document current function" \
+           "当前函数的文件"
+  ##ID:000206##
+  mcset $l "Create doxygen documentation for function on current line" \
+           "对当前行函数创建doxygen的文档"
+  ##ID:000207##
+  mcset $l "Run doxywizard" \
+           "运行doxywizard"
+  ##ID:000208##
+  mcset $l "Run doxygen front-end" \
+           "运行doxygen的前端"
+  ##ID:000209##
+  mcset $l "Clear C API documentation" \
+           "清除C语言API的文档"
+  ##ID:000210##
+  mcset $l "Remove C API documentation created by doxygen" \
+           "使用doxygen删除C语言API的文档"
+  ##ID:000211##
+  mcset $l "Build C API documentation" \
+           "构建C语言的API文档"
+  ##ID:000212##
+  mcset $l "Run doxygen to create C API documentation" \
+           "运行doxygen创建C语言的API文档"
+  ##ID:000213##
+  mcset $l "Clean up project folder" \
+           "清理项目文件夹"
+  ##ID:000214##
+  mcset $l "Invoke dialog to remove needless files the project directory" \
+           "删除不必要的文件对话框项目目录"
+  ##ID:000215##
+  mcset $l "Custom command 0" \
+           "自定义命令0"
+  ##ID:000216##
+  mcset $l "Custom command 1" \
+           "自定义命令1"
+  ##ID:000217##
+  mcset $l "Custom command 2" \
+           "自定义命令2"
+  # Main menu / Utilities / Encoding
+  ##ID:000218##
+  mcset $l "Unicode" \
+           "Unicode" ;# <-- NOT TRANSLATED YET
+  ##ID:000219##
+  mcset $l "Western European" \
+           "Western European" ;# <-- NOT TRANSLATED YET
+  ##ID:000220##
+  mcset $l "Central European" \
+           "Central European" ;# <-- NOT TRANSLATED YET
+  ##ID:000221##
+  mcset $l "Baltic" \
+           "Baltic" ;# <-- NOT TRANSLATED YET
+  ##ID:000222##
+  mcset $l "Cyrillic" \
+           "Cyrillic" ;# <-- NOT TRANSLATED YET
+  ##ID:000223##
+  mcset $l "Arabic" \
+           "Arabic" ;# <-- NOT TRANSLATED YET
+  ##ID:000224##
+  mcset $l "Greek" \
+           "Greek" ;# <-- NOT TRANSLATED YET
+  ##ID:000225##
+  mcset $l "Hebrew" \
+           "Hebrew" ;# <-- NOT TRANSLATED YET
+  ##ID:000226##
+  mcset $l "Turkish" \
+           "Turkish" ;# <-- NOT TRANSLATED YET
+  ##ID:000227##
+  mcset $l "Northern European" \
+           "Northern European" ;# <-- NOT TRANSLATED YET
+  ##ID:000228##
+  mcset $l "South-Eastern Europe" \
+           "South-Eastern Europe" ;# <-- NOT TRANSLATED YET
+  ##ID:000229##
+  mcset $l "Vietnamese" \
+           "Vietnamese" ;# <-- NOT TRANSLATED YET
+  # Main menu / Utilities
+  ##ID:000230##
+  mcset $l "Utilities" \
+           "实用工具集"
+  ##ID:000231##
+  mcset $l "Hex -> Bin" \
+           "Hex -> Bin" ;# <-- NOT TRANSLATED YET
+  ##ID:000232##
+  mcset $l "Bin -> Hex" \
+           "Bin -> Hex" ;# <-- NOT TRANSLATED YET
+  ##ID:000233##
+  mcset $l "Sim -> Hex" \
+           "Sim -> Hex" ;# <-- NOT TRANSLATED YET
+  ##ID:000234##
+  mcset $l "Sim -> Bin" \
+           "Sim -> Bin" ;# <-- NOT TRANSLATED YET
+  ##ID:000235##
+  mcset $l "Convert Intel HEX 8 file to binary file" \
+           "八进制文件转换为二进制文件"
+  ##ID:000236##
+  mcset $l "Convert binary file to Intel HEX 8 file" \
+           "二进制文件转换为八进制文件"
+  ##ID:000237##
+  mcset $l "Convert simulator file to Intel HEX 8 file" \
+           "模拟器文件转换为八进制文件"
+  ##ID:000238##
+  mcset $l "Convert simulator file to binary file" \
+           "模拟器文件转换为二进制文件"
+  ##ID:000239##
+  mcset $l "Normalize Intel 8 hex file" \
+           "Normalize Intel 8 hex file" ;# <-- NOT TRANSLATED YET
+  ##ID:000240##
+  mcset $l "Reformat the given IHEX8" \
+           "Reformat the given IHEX8" ;# <-- NOT TRANSLATED YET
+  ##ID:000241##
+  mcset $l "Hex Editor" \
+           "HEX编辑器"
+  ##ID:000242##
+  mcset $l "Invoke project independent hexadecimal editor with capacity of 64KB" \
+           "Invoke project independent hexadecimal editor with capacity of 64KB" ;# <-- NOT TRANSLATED YET
+  ##ID:000243##
+  mcset $l "Symbol Table" \
+           "符号表"
+  ##ID:000244##
+  mcset $l "Assembly language symbol table viewer" \
+           "汇编语言的符号表查看器"
+  ##ID:000245##
+  mcset $l "8-Segment Editor" \
+           "8段LED编辑器"
+  ##ID:000246##
+  mcset $l "8-Segment LED Display Editor" \
+           "8段LED编辑器"
+  ##ID:000247##
+  mcset $l "ASCII Chart" \
+           "ASCII表"
+  ##ID:000248##
+  mcset $l "8051 Instruction Table" \
+           "8051指令表" ;
+  ##ID:000249##
+  mcset $l "Interactive table of 8051 instructions" \
+           "交互式8051指令表"
+  ##ID:000250##
+  mcset $l "Scribble Notepad" \
+           "便利贴"
+  ##ID:000251##
+  mcset $l "Base Converter" \
+           "进制转换"
+  ##ID:000252##
+  mcset $l "Special Calculator" \
+           "特殊计算器"
+  ##ID:000253##
+  mcset $l "UART/RS232 Debugger" \
+           "UART/RS232调试器"
+  # Main menu / Configure
+  ##ID:000254##
+  mcset $l "Configure" \
+           "配置"
+  ##ID:000255##
+  mcset $l "Configure Editor" \
+           "配置编辑器"
+  ##ID:000256##
+  mcset $l "Editor configuration (colors, fonts, highlighting, etc.)" \
+           "编辑器配置(颜色,字体,高亮,等等)"
+  ##ID:000257##
+  mcset $l "Configure Compiler" \
+           "配置编译器"
+  ##ID:000258##
+  mcset $l "Various compilation options" \
+           "不同的编译选项"
+  ##ID:000259##
+  mcset $l "Configure Simulator" \
+           "配置模拟器"
+  ##ID:000260##
+  mcset $l "Opens simulator configuration dialog" \
+           "打开模拟器配置对话框"
+  ##ID:000261##
+  mcset $l "Configure Right Panel" \
+           "配置右侧面板"
+  ##ID:000262##
+  mcset $l "Right panel configuration (instruction details colors)" \
+           "右面板配置(指令颜色)"
+  ##ID:000263##
+  mcset $l "Configure Main Toolbar" \
+           "配置主工具栏"
+  ##ID:000264##
+  mcset $l "Adjust content of the main toolbar (under main menu)" \
+           "调整的主要工具栏的内容(主菜单)"
+  ##ID:000265##
+  mcset $l "Edit custom commands" \
+           "编辑自定义命令"
+  ##ID:000266##
+  mcset $l "Set or modify user defined commands" \
+           "设置或修改用户定义的命令"
+  ##ID:000267##
+  mcset $l "Configure shortcuts" \
+           "配置快捷键"
+  ##ID:000268##
+  mcset $l "Set or modify key shortcuts" \
+           "设置或修改快捷键"
+  ##ID:000269##
+  mcset $l "Configure terminal emulator" \
+           "配置终端仿真器"
+  ##ID:000270##
+  mcset $l "Configure embedded terminal emulator -- RXVT-UNICODE" \
+           "配置嵌入式终端模拟器 -- RXVT-UNICODE"
+  ##ID:000271##
+  mcset $l "Configure MCU 8051 IDE" \
+           "配置8051单片机IDE"
+  ##ID:000272##
+  mcset $l "Invoke global configuration dialog" \
+           "调用全局配置对话框"
+  # Main menu / Help
+  ##ID:000273##
+  mcset $l "Help" \
+           "帮助"
+  ##ID:000274##
+  mcset $l "About" \
+           "关于"
+  ##ID:000275##
+  mcset $l "About MCU 8051 IDE" \
+           "关于 MCU 8051 IDE"
+  ##ID:000276##
+  mcset $l "Display the documentation for MCU 8051 IDE" \
+           "打开MCU 8051 IDE文档"
+  ##ID:000277##
+  mcset $l "Welcome Dialog" \
+           "欢迎界面"
+  ##ID:000278##
+  mcset $l "Invoke dialog which you have seen on the first start" \
+           "调用您在第一次启动程序时看到的对话框"
+  ##ID:000279##
+  mcset $l "Tip of the Day" \
+           "每日提示"
+  ##ID:000280##
+  mcset $l "Some tips about how to use this program more efficiently" \
+           "关于如何更有效地使用这个程序的一些小技巧"
+  ##ID:000281##
+  mcset $l "Project web page" \
+           "项目主页"
+  ##ID:000282##
+  mcset $l "Report a bug" \
+           "报告bug"
+  ##ID:000283##
+  mcset $l "ASEM-51 manual" \
+           "ASEM-51手册"
+  ##ID:000284##
+  mcset $l "SDCC manual" \
+           "SDCC手册"
+  ##ID:000285##
+  mcset $l "Handbook" \
+           "手册"
+  # Toolbar
+  ##ID:000286##
+  mcset $l "Hide toolbar" \
+           "隐藏工具栏"
+  ##ID:000287##
+  mcset $l "Show toolbar" \
+           "显示工具栏"
+  ##ID:000288##
+  mcset $l "Configure Toolbar" \
+           "配置工具栏"
+  ##ID:000289##
+  mcset $l "Configure main toolbar" \
+           "配置主工具栏"
+  ##ID:000290##
+  mcset $l "Hide main toolbar" \
+           "隐藏主工具栏"
+  ##ID:000291##
+  mcset $l "Configure custom commands" \
+           "配置自定义命令"
+  ##ID:000292##
+  mcset $l "Invoke custom commands configuration dialog" \
+           "调用自定义命令配置对话框"
+  set ::TOOLBAR_TRANSLATIONS {
+    ##ID:000293##
+    mcset $l "Open file" \
+             "打开文件"
+    ##ID:000294##
+    mcset $l "Save all opened files (in this project)" \
+             "保存所有打开的文件(在本项目)"
+    ##ID:000295##
+    mcset $l "Exit" \
+             "退出"
+    ##ID:000296##
+    mcset $l "Exit application" \
+             "退出应用程序"
+    ##ID:000297##
+    mcset $l "Reload the current file" \
+             "刷新当前文件"
+    ##ID:000298##
+    mcset $l "Open project" \
+             "打开项目"
+    ##ID:000299##
+    mcset $l "Save project" \
+             "保存项目"
+    ##ID:000300##
+    mcset $l "Save and close project" \
+             "保存并关闭项目"
+    ##ID:000301##
+    mcset $l "Close project without saving" \
+             "不保存关闭"
+    ##ID:000302##
+    mcset $l "Show CODE memory" \
+             "显示代码存储器"
+    ##ID:000303##
+    mcset $l "Show data EEPROM" \
+             "显示EEPROM数据"
+    ##ID:000304##
+    mcset $l "Start / Shutdown simulator" \
+             "启动/关机模拟器"
+    ##ID:000305##
+    mcset $l "Load debug file into simulator engine" \
+             "加载调试文件到模拟器引擎"
+    ##ID:000306##
+    mcset $l "Perform HW reset" \
+             "执行硬件复位"
+    ##ID:000307##
+    mcset $l "Step program" \
+             "单步"
+    ##ID:000308##
+    mcset $l "Step by 1 instruction" \
+             "步测一条程序指令"
+    ##ID:000309##
+    mcset $l "Step by 1 line of code" \
+             "步测每一行代码(进入函数)"
+    ##ID:000310##
+    mcset $l "Animate program" \
+             "动画程序"
+    ##ID:000311##
+    mcset $l "Run program and show results after each instruction" \
+             "运行程序,并显示在每次更改后的结果"
+    ##ID:000312##
+    mcset $l "Run program" \
+             "运行程序"
+    ##ID:000313##
+    mcset $l "Run program in simulator" \
+             "运行程序，并显示结果在指定的期间"
+    ##ID:000314##
+    mcset $l "Hibernate program" \
+             "冬眠程序"
+    ##ID:000315##
+    mcset $l "Hibernate running program to a file" \
+             "冬眠正在运行的程序到一个文件"
+    ##ID:000316##
+    mcset $l "Resume program" \
+             "恢复已冬眠程序"
+    ##ID:000317##
+    mcset $l "Configurable stopwatch timer which stop simulation on various conditions" \
+             "配置的秒表定时器，可用模拟各种条件下停止"
+    ##ID:000318##
+    mcset $l "Compile source code" \
+             "编译源代码"
+    ##ID:000319##
+    mcset $l "Symbol table" \
+             "符号表"
+    ##ID:000320##
+    mcset $l "8-segment editor" \
+             "8段LED编辑器"
+    ##ID:000321##
+    mcset $l "8-segment LED display editor" \
+             "8段LED编辑器"
+    ##ID:000322##
+    mcset $l "ASCII chart" \
+             "ASCII表"
+    ##ID:000323##
+    mcset $l "Reformat source code (Indention level ...)" \
+             "重新格式化源代码(缩进)"
+    ##ID:000324##
+    mcset $l "Switch to the next editor" \
+             "切换到下一个编辑器"
+    ##ID:000325##
+    mcset $l "Switch to the previous editor" \
+             "切换到上一个编辑器"
+    ##ID:000326##
+    mcset $l "Tip of the day" \
+             "每日提示"
+    ##ID:000327##
+    mcset $l "Scribble notepad" \
+             "便利贴"
+    ##ID:000328##
+    mcset $l "LED panel" \
+             "LED面板"
+    ##ID:000329##
+    mcset $l "LED display" \
+             "数码管"
+    ##ID:000330##
+    mcset $l "LED matrix" \
+             "矩阵LED"
+    ##ID:000331##
+    mcset $l "Multiplexed LED display" \
+             "复用数码管"
+    ##ID:000332##
+    mcset $l "Simple keypad" \
+             "简单按键"
+    ##ID:000333##
+    mcset $l "Matrix keypad" \
+             "矩阵按键"
+    ##ID:000334##
+    mcset $l "VHW Open" \
+             "打开VHW"
+    ##ID:000335##
+    mcset $l "VHW Load" \
+             "加载VHW"
+    ##ID:000336##
+    mcset $l "VHW Save" \
+             "保存VHW"
+    ##ID:000337##
+    mcset $l "VHW Save as" \
+             "VHW另存为"
+    ##ID:000338##
+    mcset $l "VHW Remove all" \
+             "VHW全部删除"
+    ##ID:000339##
+    mcset $l "Special calculator" \
+             "特殊计算器"
+  }
+  namespace eval toolbar {
+    eval ${::TOOLBAR_TRANSLATIONS}
+  }
+}
+# asciichart.tcl
+# ==============================================================================
+namespace eval AsciiChart {
+  ##ID:000340##
+  mcset $l "ASCII chart" \
+           "ASCII码表"
+  ##ID:000341##
+  mcset $l "Exit" \
+           "退出"
+  ##ID:000342##
+  mcset $l "Character: " \
+           "字符: "
+  ##ID:000343##
+  mcset $l "Hex address" \
+           "Hex地址"
+  ##ID:000344##
+  mcset $l "Dec address" \
+           "Dec地址"
+  ##ID:000345##
+  mcset $l "Oct address" \
+           "Oct地址"
+  ##ID:000346##
+  mcset $l "Bin address" \
+           "Bin地址"
+  ##ID:000347##
+  mcset $l "Caret notation" \
+           "插入符号表示法"
+  ##ID:000348##
+  mcset $l "C Escape Code" \
+           "C转义代码"
+  ##ID:000349##
+  mcset $l "%s - Copy contents of entrybox to clipboard" \
+           "%s - 对entrybox的内容复制到剪贴板"
+  ##ID:000350##
+  mcset $l "Copy to clipboard" \
+           "复制到剪贴板"
+}
+# baseconverter.tcl
+# ==============================================================================
+namespace eval BaseConverter {
+  ##ID:000351##
+  mcset $l "Converter" \
+           "转换器"
+  ##ID:000352##
+  mcset $l "Enlarge" \
+           "放大"
+  ##ID:000353##
+  mcset $l "More" \
+           "更多"
+  ##ID:000354##
+  mcset $l "Shrink" \
+           "缩小"
+  ##ID:000355##
+  mcset $l "Less" \
+           "更少"
+  ##ID:000356##
+  mcset $l "Bits" \
+           "Bits" ;# <-- NOT TRANSLATED YET
+  ##ID:000357##
+  mcset $l "BCD" \
+           "BCD" ;# <-- NOT TRANSLATED YET
+  ##ID:000358##
+  mcset $l "ASCII" \
+           "ASCII" ;# <-- NOT TRANSLATED YET
+  ##ID:000359##
+  mcset $l "HEX" \
+           "HEX" ;# <-- NOT TRANSLATED YET
+  ##ID:000360##
+  mcset $l "DEC" \
+           "DEC" ;# <-- NOT TRANSLATED YET
+  ##ID:000361##
+  mcset $l "BIN" \
+           "BIN" ;# <-- NOT TRANSLATED YET
+  ##ID:000362##
+  mcset $l "OCT" \
+           "OCT" ;# <-- NOT TRANSLATED YET
+}
+# bitmap.tcl
+# ==============================================================================
+namespace eval BitMap {
+  ##ID:000363##
+  mcset $l "Log. 0" \
+           "Log. 0" ;# <-- NOT TRANSLATED YET
+  ##ID:000364##
+  mcset $l "Log. 1" \
+           "Log. 1" ;# <-- NOT TRANSLATED YET
+  ##ID:000365##
+  mcset $l "Bit addr." \
+           "Bit addr." ;# <-- NOT TRANSLATED YET
+  ##ID:000366##
+  mcset $l "Reg. addr." \
+           "Reg. addr." ;# <-- NOT TRANSLATED YET
+  ##ID:000367##
+  mcset $l "Register: " \
+           "Register: " ;# <-- NOT TRANSLATED YET
+  ##ID:000368##
+  mcset $l "   Bit address: " \
+           "   Bit address: " ;# <-- NOT TRANSLATED YET
+  ##ID:000369##
+  mcset $l "Bit addressable area - %s - %s - %s" \
+           "Bit addressable area - %s - %s - %s" ;# <-- NOT TRANSLATED YET
+}
+# bottomnotebook.tcl
+# ==============================================================================
+namespace eval BottomNoteBook {
+  ##ID:000370##
+  mcset $l "Simulator" \
+           "模拟器"
+  ##ID:000371##
+  mcset $l "C variables" \
+           "C变量"
+  ##ID:000372##
+  mcset $l "IO Ports" \
+           "IO端口"
+  ##ID:000373##
+  mcset $l "Messages" \
+           "消息"
+  ##ID:000374##
+  mcset $l "Calculator" \
+           "计算器"
+  ##ID:000375##
+  mcset $l "Notes" \
+           "注释"
+  ##ID:000376##
+  mcset $l "Terminal" \
+           "终端"
+  ##ID:000377##
+  mcset $l "Find in files" \
+           "在文件中查找"
+  ##ID:000378##
+  mcset $l "Show" \
+           "显示"
+  ##ID:000379##
+  mcset $l "Hide" \
+           "隐藏"
+  ##ID:000380##
+  mcset $l "Simulator panel %s" \
+           "模拟器面板 %s"
+  ##ID:000381##
+  mcset $l "Variables from C source code %s" \
+           "从C源代码中的变量 %s"
+  ##ID:000382##
+  mcset $l "Graph showing state of MCU ports %s" \
+           "显示MCU端口状态图表 %s"
+  ##ID:000383##
+  mcset $l "Compiler messages %s" \
+           "编译器消息 %s"
+  ##ID:000384##
+  mcset $l "Personal to do list & notepad %s" \
+           "私人待办事&记事本 %s"
+  ##ID:000385##
+  mcset $l "Scientific calculator %s" \
+           "科学计算器 %s"
+  ##ID:000386##
+  mcset $l "Terminal emulator %s" \
+           "终端仿真器 %s"
+  ##ID:000387##
+  mcset $l "Find in files %s" \
+           "在文件中查找 %s"
+  ##ID:000388##
+  mcset $l "Hide this panel" \
+           "隐藏这个面板"
+  ##ID:000389##
+  mcset $l "Show this panel" \
+           "显示这个面板"
+  ##ID:000390##
+  mcset $l "Simulator panel" \
+           "模拟器"
+  ##ID:000391##
+  mcset $l "List of variables defined in C program" \
+           "C程序里定义的变量列表"
+  ##ID:000392##
+  mcset $l "Graph showing voltage levels" \
+           "图表显示电压等级"
+  ##ID:000393##
+  mcset $l "Compiler messages" \
+           "编译器消息"
+  ##ID:000394##
+  mcset $l "Editable notepad" \
+           "可编辑记事本"
+  ##ID:000395##
+  mcset $l "Scientific calculator" \
+           "科学计算器"
+  ##ID:000396##
+  mcset $l "Linux terminal emulator" \
+           "Linux终端模拟器"
+  ##ID:000397##
+  mcset $l "Search string in files" \
+           "在文件中搜索"
+  ##ID:000398##
+  mcset $l "Hide the panel" \
+           "隐藏面板"
+  ##ID:000399##
+  mcset $l "Show the panel" \
+           "显示面板"
+}
+# calculator.tcl
+# ==============================================================================
+namespace eval Calculator {
+  ##ID:000400##
+  mcset $l "Save" \
+           "保存"
+  ##ID:000401##
+  mcset $l "Load" \
+           "加载"
+  ##ID:000402##
+  mcset $l "Calculator: M%s saved" \
+           "计算器: M%s 保存"
+  ##ID:000403##
+  mcset $l "Calculator: Unable to evaluate, missing argument" \
+           "计算器: 无法评估,缺少参数"
+  ##ID:000404##
+  mcset $l "Calculator: Unable to evaluate, missing operator" \
+           "计算器: 无法评估，缺少操作符"
+  ##ID:000405##
+  mcset $l "Calculator: WARNING result is +/- infinity => operation terminated !" \
+           "计算器: 警告的结果是+/-无穷=>操作终止!"
+  ##ID:000406##
+  mcset $l "Calculator: This value is too high to invert (max. 0xFFFFFFFF)" \
+           "计算器: 此值倒置太高(max. 0xFFFFFFFF)"
+  ##ID:000407##
+  mcset $l "Calculator: ERROR (result value is out of allowed range)" \
+           "计算器: 错误(结果值超出允许的范围内)"
+  ##ID:000408##
+  mcset $l "Calculator: Unable to evaluate, result value is too high" \
+           "计算器:无法评估，结果值过高"
+  ##ID:000409##
+  mcset $l "Calculator: UNDO: previous state was: %s %s %s" \
+           "计算器: 撤消:以前的状态: %s %s %s"
+  ##ID:000410##
+  mcset $l "Calculator: REDO: previous state was: %s %s %s" \
+           "计算器: 重做: 以前的状态: %s %s %s"
+  ##ID:000411##
+  mcset $l "Calculator: Value is too high to convert, value deleted !" \
+           "计算器: 值过高转换,删除值!"
+  ##ID:000412##
+  mcset $l "Calculator: ERROR, result is too high (cannot be displayed)" \
+           "计算器: 错误,结果是太高(无法显示)"
+  ##ID:000413##
+  mcset $l "Calculator: ERROR, value is too high" \
+           "计算器: 错误,值过高"
+  ##ID:000414##
+  mcset $l "Buffer display" \
+           "显示缓冲区"
+  ##ID:000415##
+  mcset $l "Calculator buffer" \
+           "计算器缓冲区"
+  ##ID:000416##
+  mcset $l "Selected operation" \
+           "所选操作"
+  ##ID:000417##
+  mcset $l "Main display" \
+           "主萤幕"
+  ##ID:000418##
+  mcset $l "Numeric base" \
+           "Numeric base" ;# <-- NOT TRANSLATED YET
+  ##ID:000419##
+  mcset $l "Angle unit" \
+           "角度单位"
+  ##ID:000420##
+  mcset $l "Clear both displays" \
+           "清除两个显示器"
+  ##ID:000421##
+  mcset $l "Clear main display" \
+           "清除主显示器"
+  ##ID:000422##
+  mcset $l "Negate value in main display" \
+           "在主显示屏显示否定值"
+  ##ID:000423##
+  mcset $l "Memory bank %s" \
+           "记忆库 %s"
+  ##ID:000424##
+  mcset $l "Save content of main display to this memory bank %s" \
+           "主要展示内容保存这个记忆库 %s"
+  ##ID:000425##
+  mcset $l "Load content of this bank into main display" \
+           "主要展示加载内容的记忆库"
+  ##ID:000426##
+  mcset $l "Load content of memory bank %s into calculator main display" \
+           "加载内容的记忆库 %s 到计算器主显示屏"
+  ##ID:000427##
+  mcset $l "Timers preset" \
+           "预设定时器"
+  ##ID:000428##
+  mcset $l "Invalid numerical base: '%s'" \
+           "无效的数值基地: '%s'"
+  ##ID:000429##
+  mcset $l "Invalid angle unit: '%s'" \
+           "无效的角度单位: '%s'"
+  ##ID:000430##
+  mcset $l "Calculator - timers preset: you are trying to insert an invalid value" \
+           "计算器-定时器预设:您尝试插入一个无效值"
+  ##ID:000431##
+  mcset $l "Frequency \[kHz\]" \
+           "频率 \[kHz\]"
+  ##ID:000432##
+  mcset $l "Mode" \
+           "模式"
+  ##ID:000433##
+  mcset $l "Time \[us\]" \
+           "时间 \[us\]"
+  ##ID:000434##
+  mcset $l "DEC" \
+           "DEC" ;# <-- NOT TRANSLATED YET
+  ##ID:000435##
+  mcset $l "HEX" \
+           "HEX" ;# <-- NOT TRANSLATED YET
+  ##ID:000436##
+  mcset $l "OCT" \
+           "OCT" ;# <-- NOT TRANSLATED YET
+  ##ID:000437##
+  mcset $l "Repeats" \
+           "重复数" ;
+  ##ID:000438##
+  mcset $l "Correction" \
+           "Correction" ;# <-- NOT TRANSLATED YET
+  ##ID:000439##
+  mcset $l "Bit-wise AND" \
+           "Bit-wise AND" ;# <-- NOT TRANSLATED YET
+  ##ID:000440##
+  mcset $l "Bit-wise AND. Valid for integer operands only." \
+           "Bit-wise AND.唯一有效的操作数为整数."
+  ##ID:000441##
+  mcset $l "Sine" \
+           "正弦"
+  ##ID:000442##
+  mcset $l "Cosine" \
+           "余弦"
+  ##ID:000443##
+  mcset $l "Tangent" \
+           "正切"
+  ##ID:000444##
+  mcset $l "Bit-wise OR" \
+           "Bit-wise OR" ;# <-- NOT TRANSLATED YET
+  ##ID:000445##
+  mcset $l "Bit-wise OR. Valid for integer operands only." \
+           "Bit-wise OR. 唯一有效的操作数为整数."
+  ##ID:000446##
+  mcset $l "Arc sine" \
+           "Arc sine" ;# <-- NOT TRANSLATED YET
+  ##ID:000447##
+  mcset $l "Arc sine. Argument should be in the range \[-1,1\]." \
+           "Arc sine. 参数应该是在范围 \[-1,1\]."
+  ##ID:000448##
+  mcset $l "Arc cosine" \
+           "Arc cosine" ;# <-- NOT TRANSLATED YET
+  ##ID:000449##
+  mcset $l "Arc cosine. Argument should be in the range \[-1,1\]." \
+           "Arc cosine. 参数应该是在范围 \[-1,1\]."
+  ##ID:000450##
+  mcset $l "Arc tangent" \
+           "Arc tangent" ;# <-- NOT TRANSLATED YET
+  ##ID:000451##
+  mcset $l "Bit-wise NOT" \
+           "Bit-wise NOT" ;# <-- NOT TRANSLATED YET
+  ##ID:000452##
+  mcset $l "Bit-wise NOT. Valid for integer operands only." \
+           "Bit-wise NOT. 唯一有效的操作数为整数."
+  ##ID:000453##
+  mcset $l "Exponential of argument (e**arg)" \
+           "Exponential of argument (e**arg)" ;# <-- NOT TRANSLATED YET
+  ##ID:000454##
+  mcset $l "Square root" \
+           "Square root" ;# <-- NOT TRANSLATED YET
+  ##ID:000455##
+  mcset $l "Square root. Argument must be non-negative." \
+           "Square root. 参数必须为非负值."
+  ##ID:000456##
+  mcset $l "Power" \
+           "Power" ;# <-- NOT TRANSLATED YET
+  ##ID:000457##
+  mcset $l "Computes the value of x raised to the power y. If x is negative, y must be an integer value." \
+           "Computes the value of x raised to the power y. If x is negative, y must be an integer value." ;# <-- NOT TRANSLATED YET
+  ##ID:000458##
+  mcset $l "Bit-wise exclusive OR" \
+           "Bit-wise exclusive OR" ;# <-- NOT TRANSLATED YET
+  ##ID:000459##
+  mcset $l "Bit-wise exclusive OR. Valid for integer operands only." \
+           "Bit-wise exclusive OR. 唯一有效的操作数为整数."
+  ##ID:000460##
+  mcset $l "Base 10 logarithm" \
+           "Base 10 logarithm" ;# <-- NOT TRANSLATED YET
+  ##ID:000461##
+  mcset $l "Returns the base 10 logarithm of argument. Argument must be a positive value." \
+           "Returns the base 10 logarithm of argument. Argument must be a positive value." ;# <-- NOT TRANSLATED YET
+  ##ID:000462##
+  mcset $l "Natural logarithm" \
+           "取自然对数"
+  ##ID:000463##
+  mcset $l "Returns the natural logarithm of argument. Argument must be a positive value." \
+           "Returns the natural logarithm of argument. Argument must be a positive value." ;# <-- NOT TRANSLATED YET
+  ##ID:000464##
+  mcset $l "Constant Pi" \
+           "Pi常数"
+  ##ID:000465##
+  mcset $l "Right shift" \
+           "右移位"
+  ##ID:000466##
+  mcset $l "Right shift. Valid for integer operands only. A right shift always propagates the sign bit." \
+           "Right shift. Valid for integer operands only. A right shift always propagates the sign bit." ;# <-- NOT TRANSLATED YET
+  ##ID:000467##
+  mcset $l "Modulo" \
+           "取模"
+  ##ID:000468##
+  mcset $l "Computes remainder of integer division" \
+           "计算整数除法的余数"
+  ##ID:000469##
+  mcset $l "Undo last operation" \
+           "撤消最后一次操作"
+  ##ID:000470##
+  mcset $l "Undo last operation. Not all operations are supported." \
+           "撤消最后一次操作. 并非所有操作都支持."
+  ##ID:000471##
+  mcset $l "Take back last undo operation" \
+           "重做上次撤销的操作"
+  ##ID:000472##
+  mcset $l "Take back last undo operation. Not all operations are supported." \
+           "重做上次撤销的操作.并非所有操作都支持."
+}
+# innerwindow.tcl
+# ==============================================================================
+namespace eval InnerWindow {
+  ##ID:000473##
+  mcset $l "Shade/Unshade" \
+           "色彩/取消色彩"
+  ##ID:000474##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:000475##
+  mcset $l "Shade" \
+           "阴影"
+}
+# configdialogues.tcl
+# ==============================================================================
+namespace eval ::configDialogues::editor {
+  ##ID:000476##
+  mcset $l "Editor configuration - %s" \
+           "编辑器配置 - %s"
+  ##ID:000477##
+  mcset $l "Editor configuration" \
+           "编辑器配置"
+  ##ID:000478##
+  mcset $l "Editor" \
+           "编辑器"
+  ##ID:000479##
+  mcset $l "Editor selection" \
+           "编辑器选择"
+  ##ID:000480##
+  mcset $l "General" \
+           "常规"
+  ##ID:000481##
+  mcset $l "General configuration" \
+           "常规配置"
+  ##ID:000482##
+  mcset $l "Colors" \
+           "颜色"
+  ##ID:000483##
+  mcset $l "Various colors in editor" \
+           "多种颜色编辑器"
+  ##ID:000484##
+  mcset $l "Fonts" \
+           "字体"
+  ##ID:000485##
+  mcset $l "Fonts used by editor" \
+           "编辑器中使用的字体"
+  ##ID:000486##
+  mcset $l "Syntax highlight" \
+           "语法高亮"
+  ##ID:000487##
+  mcset $l "Source code highlighting" \
+           "源代码高亮"
+  ##ID:000488##
+  mcset $l "Apply" \
+           "应用"
+  ##ID:000489##
+  mcset $l "Ok" \
+           "确认"
+  ##ID:000490##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:000491##
+  mcset $l "Preferred editor:" \
+           "常用编辑器:"
+  ##ID:000492##
+  mcset $l "Native editor" \
+           "本机编辑器"
+  ##ID:000493##
+  mcset $l "(This change will take effect upon next start.)" \
+           "(此更改将在下次启动的效果.)"
+  ##ID:000494##
+  mcset $l "Editing" \
+           "正在编辑"
+  ##ID:000495##
+  mcset $l "File opening, saving, etc." \
+           "文件正在打开,保存等."
+  ##ID:000496##
+  mcset $l "Command line" \
+           "命令行"
+  ##ID:000497##
+  mcset $l "Auto brackets" \
+           "自动括号"
+  ##ID:000498##
+  mcset $l "When you type a left bracket, editor\nwill automatically insert right bracket" \
+           "当您输入一个左括号，编辑器\n会自动插入右括号"
+  ##ID:000499##
+  mcset $l "Indentation mode" \
+           "缩进模式"
+  ##ID:000500##
+  mcset $l "none" \
+           "无"
+  ##ID:000501##
+  mcset $l "normal" \
+           "正常"
+  ##ID:000502##
+  mcset $l "What to do when you press enter\n\tnone\t- start on the beginning of the next line\n\tnormal\t- keep indention of the previous line" \
+           "What to do when you press enter\n\tnone\t- start on the beginning of the next line\n\tnormal\t- keep indention of the previous line" ;# <-- NOT TRANSLATED YET
+  ##ID:004467##
+  mcset $l "Tab width" \
+           "Tab符宽度"
+  ##ID:004468##
+  mcset $l "Maximum width of the tab character, measured in number of spaces" \
+           "最大的TAB宽度,用空格数表示"
+  ##ID:000503##
+  mcset $l "Insert spaces instead of tabs" \
+           "插入空格以替代TAB符"
+  ##ID:000504##
+  mcset $l "Use spaces instead of tabs" \
+           "使用空格代替制表符"
+  ##ID:000505##
+  mcset $l "Number of spaces" \
+           "空格的数量"
+  ##ID:000506##
+  mcset $l "Number of spaces to use instead of tabs" \
+           "空格数，而不是使用制表符"
+  ##ID:000507##
+  mcset $l "Enable autocompletion" \
+           "启用自动完成功能"
+  ##ID:000508##
+  mcset $l "Enable popup-based autocompletion" \
+           "启用自动完成弹出"
+  ##ID:000509##
+  mcset $l "Highlight trailing space" \
+           "突出尾随空格"
+  ##ID:000510##
+  mcset $l "Show tab bar" \
+           "显示标签栏"
+  ##ID:000511##
+  mcset $l "Default encoding" \
+           "默认编码方式"
+  ##ID:000512##
+  mcset $l "When you open file with unknown encoding\nthis encoding will be used" \
+           "当您打开未知编码\n该文件将用于编码"
+  ##ID:000513##
+  mcset $l "Default EOL" \
+           "默认EOL"
+  ##ID:000514##
+  mcset $l "When you open file with unknown\nEOL (End Of Line) this EOL will be used" \
+           "当您打开未知\n EOL(行结束)文件将被用于这个停产"
+  ##ID:000515##
+  mcset $l "Autosave interval \[minutes\]" \
+           "自动保存时间间隔 \[分钟\]"
+  ##ID:000516##
+  mcset $l "Autosave interval in minutes (0 means disabled)" \
+           "自动保存时间间隔以分钟为单位 (0 means disabled)"
+  ##ID:000517##
+  mcset $l "Text area background" \
+           "文本区域的背景"
+  ##ID:000518##
+  mcset $l "Normal text" \
+           "普通文本"
+  ##ID:000519##
+  mcset $l "Selected text" \
+           "选定的文本"
+  ##ID:000520##
+  mcset $l "Current line" \
+           "当前行"
+  ##ID:000521##
+  mcset $l "Bookmark" \
+           "书签"
+  ##ID:000522##
+  mcset $l "Simulator line" \
+           "Simulator line" ;# <-- NOT TRANSLATED YET
+  ##ID:000523##
+  mcset $l "Breakpoint" \
+           "断点"
+  ##ID:000524##
+  mcset $l "Invalid breakpoint" \
+           "无效的断点"
+  ##ID:000525##
+  mcset $l "Line with an error" \
+           "行有错误"
+  ##ID:000526##
+  mcset $l "Trailing space" \
+           "后缘空白"
+  ##ID:000527##
+  mcset $l "Additional elements" \
+           "其他要素"
+  ##ID:000528##
+  mcset $l "Icon border background" \
+           "Icon border background" ;# <-- NOT TRANSLATED YET
+  ##ID:000529##
+  mcset $l "Line numbers background" \
+           "Line numbers background" ;# <-- NOT TRANSLATED YET
+  ##ID:000530##
+  mcset $l "Line numbers foreground" \
+           "Line numbers foreground" ;# <-- NOT TRANSLATED YET
+  ##ID:000531##
+  mcset $l "The Quick Brown Fox Jumps Over The Lazy Dog" \
+           "The Quick Brown Fox Jumps Over The Lazy Dog" ;# <-- NOT TRANSLATED YET
+  ##ID:000532##
+  mcset $l "Searching for available fonts ..." \
+           "正在搜索可用字体 ..."
+  ##ID:000533##
+  mcset $l "Assembler" \
+           "汇编器"
+  ##ID:000534##
+  mcset $l "C language" \
+           "C 语言"
+  ##ID:000535##
+  mcset $l "Code listing" \
+           "代码清单"
+  # Keep string length here!
+  ##ID:000536##
+  mcset $l {Color} \
+           {颜色}
+  # Keep string length here!
+  ##ID:000537##
+  mcset $l {Content} \
+           {内容}
+  ##ID:000538##
+  mcset $l "increment some register" \
+           "增加一些寄存器"
+  ##ID:000539##
+  mcset $l "close main loop" \
+           "关闭主循环"
+  ##ID:000540##
+  mcset $l "Comment" \
+           "注释"
+  ##ID:000541##
+  mcset $l "String" \
+           "字符串"
+  ##ID:000542##
+  mcset $l "macro Some value" \
+           "macro Some value" ;# <-- NOT TRANSLATED YET
+  ##ID:000543##
+  mcset $l "Select color - %s" \
+           "选择颜色 - %s"
+  ##ID:000544##
+  mcset $l "Invalid key: '%s'" \
+           "Invalid key: '%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:000545##
+  mcset $l "Unable to use external embedded editor because rxvt-unicode is not available" \
+           "Unable to use external embedded editor because rxvt-unicode is not available" ;# <-- NOT TRANSLATED YET
+  ##ID:000546##
+  mcset $l "Program %s is not available. Using native editor." \
+           "程序 %s 不可用. 使用内置编辑器."
+  ##ID:000547##
+  mcset $l "Char" \
+           "字符"
+  ##ID:000548##
+  mcset $l "Hexadecimal number" \
+           "十六进制数"
+  ##ID:000549##
+  mcset $l "Octal number" \
+           "八进制数"
+  ##ID:000550##
+  mcset $l "Decimal number" \
+           "十进制数"
+  ##ID:000551##
+  mcset $l "Binary number" \
+           "二进制数"
+  ##ID:000552##
+  mcset $l "Constant" \
+           "常量"
+  ##ID:000553##
+  mcset $l "Generic number" \
+           "通用数"
+  ##ID:000554##
+  mcset $l "Control sequence" \
+           "Control sequence" ;# <-- NOT TRANSLATED YET
+  ##ID:000555##
+  mcset $l "Symbol" \
+           "符号"
+  ##ID:000556##
+  mcset $l "Operand separator" \
+           "Operand separator" ;# <-- NOT TRANSLATED YET
+  ##ID:000557##
+  mcset $l "Directive" \
+           "指令"
+  ##ID:000558##
+  mcset $l "Label" \
+           "标签"
+  ##ID:000559##
+  mcset $l "Instruction" \
+           "指令"
+  ##ID:000560##
+  mcset $l "SFR register" \
+           "SFR寄存器"
+  ##ID:000561##
+  mcset $l "Indirect address" \
+           "间接寻址"
+  ##ID:000562##
+  mcset $l "Immediate char" \
+           "Immediate char" ;# <-- NOT TRANSLATED YET
+  ##ID:000563##
+  mcset $l "Immediate hex" \
+           "Immediate hex" ;# <-- NOT TRANSLATED YET
+  ##ID:000564##
+  mcset $l "Immediate oct" \
+           "Immediate oct" ;# <-- NOT TRANSLATED YET
+  ##ID:000565##
+  mcset $l "Immediate dec" \
+           "Immediate dec" ;# <-- NOT TRANSLATED YET
+  ##ID:000566##
+  mcset $l "Immediate bin" \
+           "Immediate bin" ;# <-- NOT TRANSLATED YET
+  ##ID:000567##
+  mcset $l "Immediate const" \
+           "Immediate const" ;# <-- NOT TRANSLATED YET
+  ##ID:000568##
+  mcset $l "Immediate generic" \
+           "Immediate generic" ;# <-- NOT TRANSLATED YET
+  ##ID:000569##
+  mcset $l "Macro instruction" \
+           "宏指令"
+  ##ID:000570##
+  mcset $l "Keyword" \
+           "关键字"
+  ##ID:000571##
+  mcset $l "Data type" \
+           "数据类型"
+  ##ID:000572##
+  mcset $l "Decimal" \
+           "十进制"
+  ##ID:000573##
+  mcset $l "Hexadecimal" \
+           "十六进制"
+  ##ID:000574##
+  mcset $l "Octal" \
+           "八进制"
+  ##ID:000575##
+  mcset $l "Float" \
+           "浮点型"
+  ##ID:000576##
+  mcset $l "String char" \
+           "String char" ;# <-- NOT TRANSLATED YET
+  ##ID:000577##
+  mcset $l "Bracket" \
+           "Bracket" ;# <-- NOT TRANSLATED YET
+  ##ID:000578##
+  mcset $l "Preprocessor" \
+           "预编译器"
+  ##ID:000579##
+  mcset $l "Preprocessor lib." \
+           "预编译库."
+  ##ID:000580##
+  mcset $l "Doxygen: Comment" \
+           "Doxygen: Comment" ;# <-- NOT TRANSLATED YET
+  ##ID:000581##
+  mcset $l "Doxygen: Tag" \
+           "Doxygen: Tag" ;# <-- NOT TRANSLATED YET
+  ##ID:000582##
+  mcset $l "Doxygen: Word" \
+           "Doxygen: Word" ;# <-- NOT TRANSLATED YET
+  ##ID:000583##
+  mcset $l "Doxygen: Name" \
+           "Doxygen: Name" ;# <-- NOT TRANSLATED YET
+  ##ID:000584##
+  mcset $l "Doxygen: HTML" \
+           "Doxygen: HTML" ;# <-- NOT TRANSLATED YET
+  ##ID:000585##
+  mcset $l "Doxygen: HTML arg." \
+           "Doxygen: HTML arg." ;# <-- NOT TRANSLATED YET
+  ##ID:000586##
+  mcset $l "Doxygen: HTML val." \
+           "Doxygen: HTML val." ;# <-- NOT TRANSLATED YET
+  ##ID:000587##
+  mcset $l "Value" \
+           "Value" ;# <-- NOT TRANSLATED YET
+  ##ID:000588##
+  mcset $l "Processor code" \
+           "Processor code" ;# <-- NOT TRANSLATED YET
+  ##ID:000589##
+  mcset $l "Address" \
+           "Address" ;# <-- NOT TRANSLATED YET
+  ##ID:000590##
+  mcset $l "Line number" \
+           "Line number" ;# <-- NOT TRANSLATED YET
+  ##ID:000591##
+  mcset $l "Macro level" \
+           "Macro level" ;# <-- NOT TRANSLATED YET
+  ##ID:000592##
+  mcset $l "Inclusion level" \
+           "Inclusion level" ;# <-- NOT TRANSLATED YET
+  ##ID:000593##
+  mcset $l "Error / Warning" \
+           "错误 / 警告"
+  ##ID:000594##
+  mcset $l "Message" \
+           "消息"
+}
+namespace eval ::configDialogues::compiler {
+  ##ID:000595##
+  mcset $l "Compiler configuration" \
+           "编译器配置"
+  ##ID:000596##
+  mcset $l "Assembly language" \
+           "汇编语言"
+  ##ID:000597##
+  mcset $l "Configure compiler for assembly language" \
+           "汇编语言的编译器配置"
+  ##ID:000598##
+  mcset $l "C language -- SDCC" \
+           "C语言 -- SDCC"
+  ##ID:000599##
+  mcset $l "GNU make utility" \
+           "GNU make 工具"
+  ##ID:000600##
+  mcset $l "Make utility is not available, please install GNU make and restart the IDE." \
+           "Make工具不存在, 请安装GNU make然后重启程序."
+  ##ID:000601##
+  mcset $l "Use this Makefile instead of calling C compiler directly:" \
+           "使用这个Makefile而不是直接调用C编译器:"
+  ##ID:000602##
+  mcset $l "Makefile:" \
+           "Makefile:" ;# <-- NOT TRANSLATED YET
+  ##ID:004491##
+  mcset $l "Targets:" \
+           "目标:"
+  ##ID:004492##
+  mcset $l "Options:" \
+           "选项:"
+  ##ID:000603##
+  mcset $l "Clear the entrybox" \
+           "清除输入框中内容"
+  ##ID:000604##
+  mcset $l "Select Makefile" \
+           "选择 Makefile"
+  ##ID:000605##
+  mcset $l "Compiler" \
+           "编译器"
+  ##ID:000606##
+  mcset $l "Reset to defaults" \
+           "重设为默认值"
+  ##ID:000607##
+  mcset $l "Reset all settings to defaults" \
+           "重设所有设置为默认值"
+  ##ID:000608##
+  mcset $l "Ok" \
+           "确定" ;
+  ##ID:000609##
+  mcset $l "Commit new settings" \
+           "应用新的设置"
+  ##ID:000610##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:000611##
+  mcset $l "Take changes back and close dialog" \
+           "应用并关闭窗口"
+  ##ID:000612##
+  mcset $l "Configure compiler - %s" \
+           "配置编译器 - %s"
+  ##ID:000613##
+  mcset $l "General" \
+           "常规"
+  ##ID:000614##
+  mcset $l "Code generation" \
+           "代码生成"
+  ##ID:000615##
+  mcset $l "Optimization" \
+           "优化"
+  ##ID:000616##
+  mcset $l "Linker" \
+           "链接器"
+  ##ID:000617##
+  mcset $l "Custom" \
+           "自定义"
+  ##ID:000618##
+  mcset $l "Standard:" \
+           "标准:"
+  ##ID:000619##
+  mcset $l "Include path" \
+           "Include 路径"
+  ##ID:000620##
+  mcset $l "Add to the include path, as in -Ipath\nPaths are separated by semicolons (`;')" \
+           "Add to the include path, as in -Ipath\nPaths are separated by semicolons (`;')" ;# <-- NOT TRANSLATED YET
+  ##ID:000621##
+  mcset $l "Disable warning" \
+           "禁用警告"
+  ##ID:000622##
+  mcset $l "Disable specific warning (--disable-warning)\nNumbers are separated by semicolons (`;')" \
+           "Disable specific warning (--disable-warning)\nNumbers are separated by semicolons (`;')" ;# <-- NOT TRANSLATED YET
+  ##ID:000623##
+  mcset $l "Model:" \
+           "Model:" ;# <-- NOT TRANSLATED YET
+  ##ID:000624##
+  mcset $l "External data space is used" \
+           "使用外部数据空间"
+  ##ID:000625##
+  mcset $l "External paged data space is used" \
+           "External paged data space is used" ;# <-- NOT TRANSLATED YET
+  ##ID:000626##
+  mcset $l "Internal data space is used" \
+           "Internal data space is used" ;# <-- NOT TRANSLATED YET
+  ##ID:000627##
+  mcset $l "Use this name for the code segment" \
+           "Use this name for the code segment" ;# <-- NOT TRANSLATED YET
+  ##ID:000628##
+  mcset $l "Use this name for the const segment" \
+           "Use this name for the const segment" ;# <-- NOT TRANSLATED YET
+  ##ID:000629##
+  mcset $l "Stack:" \
+           "堆栈:"
+  ##ID:000630##
+  mcset $l "Include the given library in the link\nPaths are separated by semicolons (`;')" \
+           "Include the given library in the link\nPaths are separated by semicolons (`;')" ;# <-- NOT TRANSLATED YET
+  ##ID:000631##
+  mcset $l "Add the next field to the library search path\nPaths are separated by semicolons (`;')" \
+           "Add the next field to the library search path\nPaths are separated by semicolons (`;')" ;# <-- NOT TRANSLATED YET
+  ##ID:000632##
+  mcset $l "Use this path to search for libraries" \
+           "Use this path to search for libraries" ;# <-- NOT TRANSLATED YET
+  ##ID:000633##
+  mcset $l "External Ram start location" \
+           "External Ram start location" ;# <-- NOT TRANSLATED YET
+  ##ID:000634##
+  mcset $l "External Stack start location" \
+           "External Stack start location" ;# <-- NOT TRANSLATED YET
+  ##ID:000635##
+  mcset $l "Code Segment Location" \
+           "代码段的位置"
+  ##ID:000636##
+  mcset $l "Stack pointer initial value" \
+           "Stack pointer initial value" ;# <-- NOT TRANSLATED YET
+  ##ID:000637##
+  mcset $l "Direct data start location" \
+           "Direct data start location" ;# <-- NOT TRANSLATED YET
+  ##ID:000638##
+  mcset $l "Tells the linker to allocate this space for stack" \
+           "Tells the linker to allocate this space for stack" ;# <-- NOT TRANSLATED YET
+  ##ID:000641##
+  mcset $l "Preferred assembler:" \
+           "汇编首选项:"
+  ##ID:000642##
+  mcset $l "Notes to assemblers:\n" \
+           "汇编器注意事项:\n"
+  ##ID:000643##
+  mcset $l "  a) MCU 8051 IDE has its own native assembler\n" \
+           "  a) MCU 8051 IDE 拥有自己的汇编器了\n" ;
+  ##ID:000644##
+  mcset $l "  b) ASEM-51 is a great assembler written by W.W. Heinz.\n" \
+           "  b) ASEM-51 is a great assembler written by W.W. Heinz.\n" ;# <-- NOT TRANSLATED YET
+  ##ID:000645##
+  mcset $l "     You can find it at http://plit.de/asem-51/home.htm\n" \
+           "     您可以在 http://plit.de/asem-51/home.htm 找到\n" ;
+  ##ID:000646##
+  mcset $l "  c) ASL: http://linux.maruhn.com/sec/asl.html\n" \
+           "  c) ASL: http://linux.maruhn.com/sec/asl.html\n" ;# <-- NOT TRANSLATED YET
+  ##ID:000647##
+  mcset $l "  d) AS31: http://www.pjrc.com/tech/8051/\n" \
+           "  d) AS31: http://www.pjrc.com/tech/8051/\n" ;# <-- NOT TRANSLATED YET
+  ##ID:000648##
+  mcset $l "MCU 8051 IDE native assembler - Sophisticated but slow" \
+           "MCU 8051 IDE native assembler - Sophisticated but slow" ;# <-- NOT TRANSLATED YET
+  ##ID:000649##
+  mcset $l "Sophisticated and very fast assembler written by W.W. Heinz" \
+           "Sophisticated and very fast assembler written by W.W. Heinz" ;# <-- NOT TRANSLATED YET
+  ##ID:000650##
+  mcset $l "Multiplatform assembler written by Alfred Arnold" \
+           "Multiplatform assembler written by Alfred Arnold" ;# <-- NOT TRANSLATED YET
+  ##ID:000651##
+  mcset $l "Simple 8051 assembler" \
+           "Simple 8051 assembler" ;# <-- NOT TRANSLATED YET
+  ##ID:000652##
+  mcset $l "Generate an object file in absolute OMF-51 format" \
+           "Generate an object file in absolute OMF-51 format" ;# <-- NOT TRANSLATED YET
+  ##ID:000653##
+  mcset $l "Output additional column numbers after the line numbers of program error messages" \
+           "Output additional column numbers after the line numbers of program error messages" ;# <-- NOT TRANSLATED YET
+  ##ID:000654##
+  mcset $l "Output additional product, version, and error summary information" \
+           "Output additional product, version, and error summary information" ;# <-- NOT TRANSLATED YET
+  ##ID:000655##
+  mcset $l "Generate MCU 8051 IDE debug file" \
+           "生成 MCU 8051 IDE 调试文件"
+  ##ID:000656##
+  mcset $l "Generate <file>.adb (MCU 8051 IDE Assembler Debug File) from <file>.lst" \
+           "Generate <file>.adb (MCU 8051 IDE Assembler Debug File) from <file>.lst" ;# <-- NOT TRANSLATED YET
+  ##ID:000657##
+  mcset $l "Include paths:" \
+           "Include 路径:"
+  ##ID:000658##
+  mcset $l "Option -i\nSeparate directories by colons (`:')" \
+           "Option -i\nSeparate directories by colons (`:')" ;# <-- NOT TRANSLATED YET
+  ##ID:000659##
+  mcset $l "Custom options:" \
+           "自定义选项:"
+  ##ID:000660##
+  mcset $l "Generate a listing file, option `-l'" \
+           "生成一个列表文件，选项 `-l'"
+  ##ID:000661##
+  mcset $l "This option tells the assembler to generate a listing file.\n\nTHIS OPTION IS REQUIRED BY THIS IDE TO GENERATE DEBUG FILE !" \
+           "This option tells the assembler to generate a listing file.\n\nTHIS OPTION IS REQUIRED BY THIS IDE TO GENERATE DEBUG FILE !" ;# <-- NOT TRANSLATED YET
+  ##ID:000662##
+  mcset $l "Generate <file>.adb (MCU 8051 IDE Assembler Debug File)\nfrom <file>.lst" \
+           "Generate <file>.adb (MCU 8051 IDE Assembler Debug File)\nfrom <file>.lst" ;# <-- NOT TRANSLATED YET
+  ##ID:000663##
+  mcset $l "This options specifies the output format that is to be used.\n\nSee AS31 manual page for more details ..." \
+           "This options specifies the output format that is to be used.\n\nSee AS31 manual page for more details ..." ;# <-- NOT TRANSLATED YET
+  ##ID:000664##
+  mcset $l "This option specifies a format specific string which is\npassed to the format generator. Both format \"tdr\" and the\nsrecord formats use this option." \
+           "This option specifies a format specific string which is\npassed to the format generator. Both format \"tdr\" and the\nsrecord formats use this option." ;# <-- NOT TRANSLATED YET
+  ##ID:000665##
+  mcset $l "Change the data structure that is internally used to store\nthe symbol table. By default, AS uses binary trees to store\nmacro and symbol definitions. Turning this option on will\nchange this to AVL-balanced trees. Depending on the ratio\nof symbol entries and lookups, this might speed up assembly.\nUsing AVL-balanced trees helps also reducing the stack usage,\nwhich is however irrelevant for the C version of AS." \
+           "Change the data structure that is internally used to store\nthe symbol table. By default, AS uses binary trees to store\nmacro and symbol definitions. Turning this option on will\nchange this to AVL-balanced trees. Depending on the ratio\nof symbol entries and lookups, this might speed up assembly.\nUsing AVL-balanced trees helps also reducing the stack usage,\nwhich is however irrelevant for the C version of AS." ;# <-- NOT TRANSLATED YET
+  ##ID:000666##
+  mcset $l "Instruct AS to write out the shared symbol definitions in\na format suitable for including into an AS assembler program.\nThe file's name is constructed by replacing the source file's\nextension with '.inc'. See the user manual for more\ninformation about symbol sharing." \
+           "Instruct AS to write out the shared symbol definitions in\na format suitable for including into an AS assembler program.\nThe file's name is constructed by replacing the source file's\nextension with '.inc'. See the user manual for more\ninformation about symbol sharing." ;# <-- NOT TRANSLATED YET
+  ##ID:000667##
+  mcset $l "Add a cross reference table to the assembler listing. A cross\nreference table lists all symbols that have been referenced\nat least once during assembly, including the source line\nnumber(s) and count of every reference. This option only makes\nsense when the generation of an assembly listing has been\nturned on via the -L or -l parameters. " \
+           "Add a cross reference table to the assembler listing. A cross\nreference table lists all symbols that have been referenced\nat least once during assembly, including the source line\nnumber(s) and count of every reference. This option only makes\nsense when the generation of an assembly listing has been\nturned on via the -L or -l parameters. " ;# <-- NOT TRANSLATED YET
+  ##ID:000668##
+  mcset $l "Instruct AS to write out the shared symbol definitions in a\nformat suitable for including into a C program. The file's\nname is constructed by replacing the source file's extension\nwith '.h'. See the user manual for more information about\nsymbol sharing." \
+           "Instruct AS to write out the shared symbol definitions in a\nformat suitable for including into a C program. The file's\nname is constructed by replacing the source file's extension\nwith '.h'. See the user manual for more information about\nsymbol sharing." ;# <-- NOT TRANSLATED YET
+  ##ID:000669##
+  mcset $l "Force AS to print all hexadecimal constants with lowercase\nletters, rather than with uppercase letters A..F which is\nthe default." \
+           "Force AS to print all hexadecimal constants with lowercase\nletters, rather than with uppercase letters A..F which is\nthe default." ;# <-- NOT TRANSLATED YET
+  ##ID:000670##
+  mcset $l "Add an include file list to the assembly listing. An include\nfile list contains all files that have been included while\nassembling the source files, including multiple and nested\ninclusion. Nesting of inclusion is identified by different\nindention. This option only makes sense when the generation of\nan assembly listing has been turned on via the -L or -l parameters." \
+           "Add an include file list to the assembly listing. An include\nfile list contains all files that have been included while\nassembling the source files, including multiple and nested\ninclusion. Nesting of inclusion is identified by different\nindention. This option only makes sense when the generation of\nan assembly listing has been turned on via the -L or -l parameters." ;# <-- NOT TRANSLATED YET
+  ##ID:000671##
+  mcset $l "Turn on generation of an assembly listing and send it to a\nfile whose name is constructed by replacing the source\nfile's extension with '.lst'." \
+           "Turn on generation of an assembly listing and send it to a\nfile whose name is constructed by replacing the source\nfile's extension with '.lst'." ;# <-- NOT TRANSLATED YET
+  ##ID:000672##
+  mcset $l "Turn on generation of a macro definition file. A macro\ndefinition file is a file that contains all macro definitions\nthat have been detected during assembly, in a format suitable\nfor an inclusion into another file. The macro definition file's\nname is constructed by replacing the source file's extension\nwith '.mac'." \
+           "Turn on generation of a macro definition file. A macro\ndefinition file is a file that contains all macro definitions\nthat have been detected during assembly, in a format suitable\nfor an inclusion into another file. The macro definition file's\nname is constructed by replacing the source file's extension\nwith '.mac'." ;# <-- NOT TRANSLATED YET
+  ##ID:000673##
+  mcset $l "Turn on generation of a macro output file. A macro output\nfile contains the intermediate source code that remains after\nmacro expansion and conditional assembly. The macro output\nfile's name is constructed by replacing the source file's\nextension with '.i'." \
+           "Turn on generation of a macro output file. A macro output\nfile contains the intermediate source code that remains after\nmacro expansion and conditional assembly. The macro output\nfile's name is constructed by replacing the source file's\nextension with '.i'." ;# <-- NOT TRANSLATED YET
+  ##ID:000674##
+  mcset $l "Force AS to extend all error and warning messages with their\ninternal error resp. warning number." \
+           "Force AS to extend all error and warning messages with their\ninternal error resp. warning number." ;# <-- NOT TRANSLATED YET
+  ##ID:000675##
+  mcset $l "Turn on silent assembly mode. In silent compilation mode, AS\nwill not do any console output except for warning and\nerror messages." \
+           "Turn on silent assembly mode. In silent compilation mode, AS\nwill not do any console output except for warning and\nerror messages." ;# <-- NOT TRANSLATED YET
+  ##ID:000676##
+  mcset $l "Add a section list to the assembly listing. A section list\ncontains all sections that have been defined in the source\nfiles, marking their nesting level by different levels of\nindentation. This option only makes sense when the generation\nof an assembly listing has been turned on via the\n-L or -l parameters." \
+           "Add a section list to the assembly listing. A section list\ncontains all sections that have been defined in the source\nfiles, marking their nesting level by different levels of\nindentation. This option only makes sense when the generation\nof an assembly listing has been turned on via the\n-L or -l parameters." ;# <-- NOT TRANSLATED YET
+  ##ID:000677##
+  mcset $l "Tell AS to do additional bookkeeping about which address\nranges have been used by the assembled program. This option\nenables the detection of overlapping memory usage. If an\nassembly listing has been turned on via the -L or -l parameters,\nit will also contain a list of all used memory areas." \
+           "Tell AS to do additional bookkeeping about which address\nranges have been used by the assembled program. This option\nenables the detection of overlapping memory usage. If an\nassembly listing has been turned on via the -L or -l parameters,\nit will also contain a list of all used memory areas." ;# <-- NOT TRANSLATED YET
+  ##ID:000678##
+  mcset $l "Force AS to operate in case-sensitive mode. By default,\nnames of symbols, macros, user-defined functions and sections\nare treated in a case-insensitive manner." \
+           "Force AS to operate in case-sensitive mode. By default,\nnames of symbols, macros, user-defined functions and sections\nare treated in a case-insensitive manner." ;# <-- NOT TRANSLATED YET
+  ##ID:000679##
+  mcset $l "Suppress output of warnings." \
+           "禁止输出警告."
+  ##ID:000680##
+  mcset $l "Turn on extended error reporting. With extended error\nreporting, several error and warning messages will also\nprint the item that created the message, e.g. the name of\nan unknown instruction. When this option is given twice,\nthe erroneous source line is additinally printed." \
+           "Turn on extended error reporting. With extended error\nreporting, several error and warning messages will also\nprint the item that created the message, e.g. the name of\nan unknown instruction. When this option is given twice,\nthe erroneous source line is additinally printed." ;# <-- NOT TRANSLATED YET
+  ##ID:000681##
+  mcset $l "Generate IHEX file" \
+           "生成IHEX文件"
+  ##ID:000682##
+  mcset $l "Use program p2hex to convert <file>.p to <file>.hex" \
+           "Use program p2hex to convert <file>.p to <file>.hex" ;# <-- NOT TRANSLATED YET
+  ##ID:000683##
+  mcset $l "Generate <file>.adb (MCU 8051 IDE Assembler Debug File)\nfrom <file>.hex and <file>.map" \
+           "Generate <file>.adb (MCU 8051 IDE Assembler Debug File)\nfrom <file>.hex and <file>.map" ;# <-- NOT TRANSLATED YET
+  ##ID:000684##
+  mcset $l "Set the target processor to <name>.\nUse this option if the source file does\nnot contain a CPU statement." \
+           "Set the target processor to <name>.\nUse this option if the source file does\nnot contain a CPU statement." ;# <-- NOT TRANSLATED YET
+  ##ID:000685##
+  mcset $l "-g \[MAP|Atmel|NoICE\]\n\tInstruct AS to write an additional file containing\n\tdebug information. This information covers the symbol\n\ttable and the relation between source line numbers\n\tand machine addresses. The argument specifies whether\n\tdebug info shall be written in AS's own MAP format,\n\tthe object format for Atmel's AVR tools, or a command\n\tfile suitable for John Hartman's NoICE. If no argument\n\tis given, MAP will be chosen. The file's name is\n\tconstructed by replacing the source file's extension\n\twith '.map', '.obj', or '.noi' respectively.\n\nMCU 8051 IDE requires MAP to be selected\nhere to generate debug file" \
+           "-g \[MAP|Atmel|NoICE\]\n\tInstruct AS to write an additional file containing\n\tdebug information. This information covers the symbol\n\ttable and the relation between source line numbers\n\tand machine addresses. The argument specifies whether\n\tdebug info shall be written in AS's own MAP format,\n\tthe object format for Atmel's AVR tools, or a command\n\tfile suitable for John Hartman's NoICE. If no argument\n\tis given, MAP will be chosen. The file's name is\n\tconstructed by replacing the source file's extension\n\twith '.map', '.obj', or '.noi' respectively.\n\nMCU 8051 IDE requires MAP to be selected\nhere to generate debug file" ;# <-- NOT TRANSLATED YET
+  ##ID:000686##
+  mcset $l "-r \[pass number\]\n\tTell AS to output warnings when a situation appears\n\tin a source file that forces another pass of assembly.\n\tSuch situations either take place when a symbol is\n\tundefined in the first pass or a symbol's value has\n\tchanged compared to the previous pass. This option\n\tis useful to track down sources of excessive\n\tmulti-passing, but be aware that it might yield a\n\tfairly large number of warnings, especially in the\n\tfirst pass. Optionally, a pass number may be added\n\tto this option to inhibit output until a certain\n\tpass is reached." \
+           "-r \[pass number\]\n\tTell AS to output warnings when a situation appears\n\tin a source file that forces another pass of assembly.\n\tSuch situations either take place when a symbol is\n\tundefined in the first pass or a symbol's value has\n\tchanged compared to the previous pass. This option\n\tis useful to track down sources of excessive\n\tmulti-passing, but be aware that it might yield a\n\tfairly large number of warnings, especially in the\n\tfirst pass. Optionally, a pass number may be added\n\tto this option to inhibit output until a certain\n\tpass is reached." ;# <-- NOT TRANSLATED YET
+  ##ID:000687##
+  mcset $l "-i <path\[:path...\]>\tAdd new entries to the list of paths that are\n\tsearched for include files. New entries are\n\tprepended to the current include path list,\n\tso if multiple paths are given with one\n\tcommand-line parameter, they will be entered\n\tinto the path list in reverse order." \
+           "-i <path\[:path...\]>\tAdd new entries to the list of paths that are\n\tsearched for include files. New entries are\n\tprepended to the current include path list,\n\tso if multiple paths are given with one\n\tcommand-line parameter, they will be entered\n\tinto the path list in reverse order." ;# <-- NOT TRANSLATED YET
+  ##ID:000688##
+  mcset $l "Trace calls to the preprocessor, assembler and linker" \
+           "Trace calls to the preprocessor, assembler and linker" ;# <-- NOT TRANSLATED YET
+  ##ID:000689##
+  mcset $l "Execute verbosely. Show sub commands as they are run" \
+           "Execute verbosely. Show sub commands as they are run" ;# <-- NOT TRANSLATED YET
+  ##ID:000690##
+  mcset $l "Compile only; do not assemble or link" \
+           "Compile only; do not assemble or link" ;# <-- NOT TRANSLATED YET
+  ##ID:000691##
+  mcset $l "Compile and assemble, but do not link" \
+           "Compile and assemble, but do not link" ;# <-- NOT TRANSLATED YET
+  ##ID:000692##
+  mcset $l "Preprocess only, do not compile" \
+           "只允许预编译器, 不编译"
+  ##ID:000693##
+  mcset $l "Act in c1 mode. The standard input is preprocessed code, the output is assembly code." \
+           "Act in c1 mode. The standard input is preprocessed code, the output is assembly code." ;# <-- NOT TRANSLATED YET
+  ##ID:000694##
+  mcset $l "Display the directories in the compiler's search path" \
+           "显示编译器的搜索路径"
+  ##ID:000695##
+  mcset $l "Send errors to stdout instead of stderr" \
+           "将错误报告发送到stdout而不是stderr"
+  ##ID:000696##
+  mcset $l "Do not include the standard library directory in the search path" \
+           "不包括在标准库的搜索路径目录"
+  ##ID:000697##
+  mcset $l "Disable some of the more pedantic warnings" \
+           "禁用一些迂腐警告"
+  ##ID:000698##
+  mcset $l "Enable debugging symbol output" \
+           "启用调试符号输出"
+  ##ID:000699##
+  mcset $l "Display complexity of compiled functions" \
+           "Display complexity of compiled functions" ;# <-- NOT TRANSLATED YET
+  ##ID:000700##
+  mcset $l "Permit '\$' as an identifier character" \
+           "Permit '\$' as an identifier character" ;# <-- NOT TRANSLATED YET
+  ##ID:000701##
+  mcset $l "Make \"char\" unsigned by default" \
+           "Make \"char\" unsigned by default" ;# <-- NOT TRANSLATED YET
+  ##ID:000702##
+  mcset $l "Use C89 standard only" \
+           "Use C89 standard only" ;# <-- NOT TRANSLATED YET
+  ##ID:000703##
+  mcset $l "Use C89 standard with SDCC extensions" \
+           "Use C89 standard with SDCC extensions" ;# <-- NOT TRANSLATED YET
+  ##ID:000704##
+  mcset $l "Use C99 standard only (incomplete)" \
+           "Use C99 standard only (incomplete)" ;# <-- NOT TRANSLATED YET
+  ##ID:000705##
+  mcset $l "Use C99 standard with SDCC extensions (incomplete)" \
+           "Use C99 standard with SDCC extensions (incomplete)" ;# <-- NOT TRANSLATED YET
+  ##ID:000706##
+  mcset $l "Use external stack" \
+           "使用外部堆栈"
+  ##ID:000707##
+  mcset $l "Use reenterant calls on the int and long support functions" \
+           "Use reenterant calls on the int and long support functions" ;# <-- NOT TRANSLATED YET
+  ##ID:000708##
+  mcset $l "Use reenterant calls on the float support functions" \
+           "Use reenterant calls on the float support functions" ;# <-- NOT TRANSLATED YET
+  ##ID:000709##
+  mcset $l "Issue a return after main()" \
+           "Issue a return after main()" ;# <-- NOT TRANSLATED YET
+  ##ID:000710##
+  mcset $l "Use movc instead of movx to read xram (xdata)" \
+           "Use movc instead of movx to read xram (xdata)" ;# <-- NOT TRANSLATED YET
+  ##ID:000711##
+  mcset $l "On supported ports, generate extra profiling information" \
+           "On supported ports, generate extra profiling information" ;# <-- NOT TRANSLATED YET
+  ##ID:000712##
+  mcset $l "Leave out the frame pointer." \
+           "Leave out the frame pointer." ;# <-- NOT TRANSLATED YET
+  ##ID:000713##
+  mcset $l "Callee will always save registers used" \
+           "Callee will always save registers used" ;# <-- NOT TRANSLATED YET
+  ##ID:000714##
+  mcset $l "Insert call to function __stack_probe at each function prologue" \
+           "Insert call to function __stack_probe at each function prologue" ;# <-- NOT TRANSLATED YET
+  ##ID:000715##
+  mcset $l "Use Bank1 for parameter passing" \
+           "Use Bank1 for parameter passing" ;# <-- NOT TRANSLATED YET
+  ##ID:000716##
+  mcset $l "Don't memcpy initialized xram from code" \
+           "Don't memcpy initialized xram from code" ;# <-- NOT TRANSLATED YET
+  ##ID:000717##
+  mcset $l "Don't include c-code as comments in the asm file" \
+           "Don't include c-code as comments in the asm file" ;# <-- NOT TRANSLATED YET
+  ##ID:000718##
+  mcset $l "Don't include peephole optimizer comments" \
+           "Don't include peephole optimizer comments" ;# <-- NOT TRANSLATED YET
+  ##ID:000719##
+  mcset $l "Include code generator comments" \
+           "Include code generator comments" ;# <-- NOT TRANSLATED YET
+  ##ID:000720##
+  mcset $l "Make short 8 bits (for old times sake)" \
+           "Make short 8 bits (for old times sake)" ;# <-- NOT TRANSLATED YET
+  ##ID:000721##
+  mcset $l "Stack automatic variables" \
+           "Stack automatic variables" ;# <-- NOT TRANSLATED YET
+  ##ID:000722##
+  mcset $l "Disable overlaying leaf function auto variables" \
+           "Disable overlaying leaf function auto variables" ;# <-- NOT TRANSLATED YET
+  ##ID:000723##
+  mcset $l "Disable the GCSE optimisation" \
+           "Disable the GCSE optimisation" ;# <-- NOT TRANSLATED YET
+  ##ID:000724##
+  mcset $l "Disable label optimisation" \
+           "Disable label optimisation" ;# <-- NOT TRANSLATED YET
+  ##ID:000725##
+  mcset $l "Disable optimisation of invariants" \
+           "Disable optimisation of invariants" ;# <-- NOT TRANSLATED YET
+  ##ID:000726##
+  mcset $l "Disable loop variable induction" \
+           "Disable loop variable induction" ;# <-- NOT TRANSLATED YET
+  ##ID:000727##
+  mcset $l "Don't generate boundary check for jump tables" \
+           "Don't generate boundary check for jump tables" ;# <-- NOT TRANSLATED YET
+  ##ID:000728##
+  mcset $l "Disable the loop reverse optimisation" \
+           "Disable the loop reverse optimisation" ;# <-- NOT TRANSLATED YET
+  ##ID:000729##
+  mcset $l "Disable the peephole assembly file optimisation" \
+           "Disable the peephole assembly file optimisation" ;# <-- NOT TRANSLATED YET
+  ##ID:000730##
+  mcset $l "On some ports, disable passing some parameters in registers" \
+           "On some ports, disable passing some parameters in registers" ;# <-- NOT TRANSLATED YET
+  ##ID:000731##
+  mcset $l "Enable peephole optimization on inline assembly" \
+           "Enable peephole optimization on inline assembly" ;# <-- NOT TRANSLATED YET
+  ##ID:000732##
+  mcset $l "Optimize for code speed rather than size" \
+           "Optimize for code speed rather than size" ;# <-- NOT TRANSLATED YET
+  ##ID:000733##
+  mcset $l "Optimize for code size rather than speed" \
+           "Optimize for code size rather than speed" ;# <-- NOT TRANSLATED YET
+  ##ID:000734##
+  mcset $l "Output in Intel hex format" \
+           "Output in Intel hex format" ;# <-- NOT TRANSLATED YET
+  ##ID:000735##
+  mcset $l "Output in S19 hex format" \
+           "Output in S19 hex format" ;# <-- NOT TRANSLATED YET
+  ##ID:000736##
+  mcset $l "Output" \
+           "Output" ;# <-- NOT TRANSLATED YET
+  ##ID:000737##
+  mcset $l "Messages and output code" \
+           "Messages and output code" ;# <-- NOT TRANSLATED YET
+  ##ID:000738##
+  mcset $l "Directives" \
+           "Directives" ;# <-- NOT TRANSLATED YET
+  ##ID:000739##
+  mcset $l "Which directives accept and which do not" \
+           "Which directives accept and which do not" ;# <-- NOT TRANSLATED YET
+  ##ID:000740##
+  mcset $l "Source" \
+           "Source" ;# <-- NOT TRANSLATED YET
+  ##ID:000741##
+  mcset $l "Use value defined in source code" \
+           "Use value defined in source code" ;# <-- NOT TRANSLATED YET
+  ##ID:000742##
+  mcset $l "Always" \
+           "总是"
+  ##ID:000743##
+  mcset $l "Generate always" \
+           "总是生成"
+  ##ID:000744##
+  mcset $l "Never" \
+           "从不"
+  ##ID:000745##
+  mcset $l "Never generate" \
+           "从不生成"
+  ##ID:000746##
+  mcset $l "Generate code listing" \
+           "生成的代码列表"
+  ##ID:000747##
+  mcset $l "Should compiler generate *.lst files" \
+           "Should compiler generate *.lst files" ;# <-- NOT TRANSLATED YET
+  ##ID:000748##
+  mcset $l "Table of symbols (in *.lst)" \
+           "Table of symbols (in *.lst)" ;# <-- NOT TRANSLATED YET
+  ##ID:000749##
+  mcset $l "Include table of used symbolic names to code listing" \
+           "Include table of used symbolic names to code listing" ;# <-- NOT TRANSLATED YET
+  ##ID:000750##
+  mcset $l "Generate object code (ihex8)" \
+           "Generate object code (ihex8)" ;# <-- NOT TRANSLATED YET
+  ##ID:000751##
+  mcset $l "Generate object code in format Intel Hex 8 (*.hex)" \
+           "Generate object code in format Intel Hex 8 (*.hex)" ;# <-- NOT TRANSLATED YET
+  ##ID:000752##
+  mcset $l "Generate code for simulator" \
+           "Generate code for simulator" ;# <-- NOT TRANSLATED YET
+  ##ID:000753##
+  mcset $l "Generate *.sim file for simulator" \
+           "Generate *.sim file for simulator" ;# <-- NOT TRANSLATED YET
+  ##ID:000754##
+  mcset $l "Generate binary object code" \
+           "Generate binary object code" ;# <-- NOT TRANSLATED YET
+  ##ID:000755##
+  mcset $l "Generate binary object code (*.bin)" \
+           "Generate binary object code (*.bin)" ;# <-- NOT TRANSLATED YET
+  ##ID:000756##
+  mcset $l "Warning level" \
+           "警告级别"
+  ##ID:000757##
+  mcset $l "All" \
+           "全部"
+  ##ID:000758##
+  mcset $l "Errors + Warnings" \
+           "错误 + 警告"
+  ##ID:000759##
+  mcset $l "Errros only" \
+           "只是错误"
+  ##ID:000760##
+  mcset $l "Nothing" \
+           "不使用警告"
+  ##ID:000761##
+  mcset $l "What kind of messages should be included in compiler log output" \
+           "What kind of messages should be included in compiler log output" ;# <-- NOT TRANSLATED YET
+  ##ID:000762##
+  mcset $l "Verbose" \
+           "详细"
+  ##ID:000763##
+  mcset $l "Should compiler inform user about what it is doing" \
+           "Should compiler inform user about what it is doing" ;# <-- NOT TRANSLATED YET
+  ##ID:000764##
+  mcset $l "Enable optimization" \
+           "启用优化"
+  ##ID:000765##
+  mcset $l "Enable peephole optimization" \
+           "启用peephole优化"
+  ##ID:000766##
+  mcset $l "Maximum HEX record data length" \
+           "Maximum HEX record data length" ;# <-- NOT TRANSLATED YET
+  ##ID:000767##
+  mcset $l "Maximum length of Intel HEX 8 record data field.\n\nGenerally it doesn't matter what is set here. But some (badly written)\nprogrammers may refuse to load files containing records which exceeds\ncertain length.\n\nHigher value also results in smaller .hex files\n\nValue equal to 0 will be treated as 1" \
+           "Maximum length of Intel HEX 8 record data field.\n\nGenerally it doesn't matter what is set here. But some (badly written)\nprogrammers may refuse to load files containing records which exceeds\ncertain length.\n\nHigher value also results in smaller .hex files\n\nValue equal to 0 will be treated as 1" ;# <-- NOT TRANSLATED YET
+  ##ID:000768##
+  mcset $l "Ignore directives" \
+           "忽略指令"
+  ##ID:000769##
+  mcset $l "Accept" \
+           "接受"
+  ##ID:000770##
+  mcset $l "Ignore" \
+           "忽略"
+  ##ID:000771##
+  mcset $l "Restore defaults" \
+           "恢复默认设置"
+  ##ID:000772##
+  mcset $l "Are you sure that you want restore default settings ?" \
+           "您确定要恢复默认设置?"
+}
+namespace eval ::configDialogues::rightPanel {
+  ##ID:000773##
+  mcset $l "Right panel configuration" \
+           "右面板配置"
+  ##ID:000774##
+  mcset $l "Register watches" \
+           "登记表"
+  ##ID:000775##
+  mcset $l "Configure highlighting colors for register watches" \
+           "配置登记表高亮颜色，"
+  ##ID:000776##
+  mcset $l "Instruction details" \
+           "详细说明"
+  ##ID:000777##
+  mcset $l "Configure highlighting colors for instruction details" \
+           "详细配置指令的高亮颜色"
+  ##ID:000778##
+  mcset $l "Bold" \
+           "Bold" ;# <-- NOT TRANSLATED YET
+  ##ID:000779##
+  mcset $l "Apply" \
+           "应用"
+  ##ID:000780##
+  mcset $l "Ok" \
+           "好"
+  ##ID:000781##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:000782##
+  mcset $l "Configure right panel - %s" \
+           "右侧面板配置 - %s"
+  ##ID:000783##
+  mcset $l "Select color - %s" \
+           "选择颜色- %s"
+  ##ID:000784##
+  mcset $l "Bit" \
+           "Bit" ;# <-- NOT TRANSLATED YET
+  ##ID:000785##
+  mcset $l "Name" \
+           "Name" ;# <-- NOT TRANSLATED YET
+  ##ID:000786##
+  mcset $l " etc." \
+           " etc." ;# <-- NOT TRANSLATED YET
+}
+namespace eval ::configDialogues::toolbar {
+  eval ${::TOOLBAR_TRANSLATIONS}
+  ##ID:000787##
+  mcset $l "Toolbar configuration" \
+           "工具栏配置"
+  ##ID:000788##
+  mcset $l "Search for a string in ListBox" \
+           "在ListBox中查找"
+  ##ID:000789##
+  mcset $l "Clear" \
+           "清除"
+  ##ID:000790##
+  mcset $l "available items" \
+           "可用项"
+  ##ID:000791##
+  mcset $l "Current toolbar items" \
+           "当前工具栏项目"
+  ##ID:000792##
+  mcset $l "Defaults" \
+           "默认"
+  ##ID:000793##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:000794##
+  mcset $l "Apply" \
+           "应用"
+  ##ID:000795##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:000796##
+  mcset $l "Configure Main Toolbar - %s" \
+           "配置的主工具栏 - %s"
+  ##ID:000797##
+  mcset $l " -- SEPARATOR --" \
+           " -- SEPARATOR --" ;# <-- NOT TRANSLATED YET
+  ##ID:000798##
+  mcset $l "Restore defaults" \
+           "恢复默认设置"
+  ##ID:000799##
+  mcset $l "Are you sure that you want restore default settings ?" \
+           "您确定要恢复默认设置?"
+  ##ID:000800##
+  mcset $l "Save changes?" \
+           "是否保存更改?"
+  ##ID:000801##
+  mcset $l "The settings have been changed. Do you want to save the changes?" \
+           "设置已更改，您是否想保存?"
+}
+namespace eval ::configDialogues::custom_commands {
+  ##ID:000802##
+  mcset $l "Edit custom commands" \
+           "编辑自定义命令"
+  ##ID:000803##
+  mcset $l "Command %s" \
+           "命令 %s"
+  ##ID:000804##
+  mcset $l "Short description" \
+           "简单说明"
+  ##ID:000805##
+  mcset $l "This string will be used as status bar tip (max. 50 chars)" \
+           "这个说明将会显示在状态栏提示（最多50个字符）"
+  ##ID:000806##
+  mcset $l "Options" \
+           "选项"
+  ##ID:000807##
+  mcset $l "Confirmation dialog" \
+           "配置界面"
+  ##ID:000808##
+  mcset $l "Invoke dialog to confirm command execution." \
+           "调用命令执行的确认界面" ;# <-- UPDATE?
+  ##ID:000809##
+  mcset $l "Show results" \
+           "显示结果"
+  ##ID:000810##
+  mcset $l "After finish show dialog with results." \
+           "完成后结果的显示界面" ;# <-- UPDATE?
+  ##ID:000811##
+  mcset $l "Ignore errors" \
+           "忽略错误"
+  ##ID:000812##
+  mcset $l "Do not invoke error dialog if the process fails." \
+           "如果这个过程失败不调用错误界面" ;# <-- UPDATE?
+  ##ID:004493##
+  mcset $l "Run in terminal" \
+           "运行终端"
+  ##ID:004494##
+  mcset $l "Run interactively in terminal emulator." \
+           "Run interactively in terminal emulator." ;# <-- NOT TRANSLATED YET
+  ##ID:000813##
+  mcset $l "Bash script to execute" \
+           "使用Shell脚本执行" ;# <-- UPDATE?
+  ##ID:000814##
+  mcset $l "Show help" \
+           "显示帮助"
+  ##ID:000815##
+  mcset $l "Ok" \
+           "确定"
+  ##ID:000816##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:000817##
+  mcset $l "Edit custom commands - %s" \
+           "编辑自定义命令 - %s"
+  ##ID:000818##
+  mcset $l "-- click to close --" \
+           "-- 点击关闭 --"
+  ##ID:000819##
+  mcset $l "Custom command %s: %s" \
+           "自定义命令 %s: %s"
+  ##ID:000820##
+  mcset $l "VARIABLES:" \
+           "变量:"
+  ##ID:000821##
+  mcset $l "\t\tThe full URL of the current file\n" \
+           "\t\t当前文件的完整URL\n"
+  ##ID:000822##
+  mcset $l "\t\tList of the URLs of all open documents\n" \
+           "\t\t列出所有打开文档的URL\n"
+  ##ID:000823##
+  mcset $l "\t\tProject directory\n" \
+           "\t\t项目目录\n"
+  ##ID:000824##
+  mcset $l "\t\tThe file name of the current document\n" \
+           "\t\t当前文件的文件名\n"
+  ##ID:000825##
+  mcset $l "\t\tSame as %filename, but without extension\n" \
+           "\t\tSame as %filename, but without extension\n" ;# <-- NOT TRANSLATED YET
+  ##ID:000826##
+  mcset $l "\t\tName of project main file\n" \
+           "\t\tName of project main file\n" ;# <-- NOT TRANSLATED YET
+  ##ID:000827##
+  mcset $l "\t\tNumber of the current line\n" \
+           "\t\tNumber of the current line\n" ;# <-- NOT TRANSLATED YET
+  ##ID:000828##
+  mcset $l "\t\tNumber of the current column\n" \
+           "\t\tNumber of the current column\n" ;# <-- NOT TRANSLATED YET
+  ##ID:000829##
+  mcset $l "\t\tThe selected text in the current file\n" \
+           "\t\tThe selected text in the current file\n" ;# <-- NOT TRANSLATED YET
+  ##ID:000830##
+  mcset $l "\t\tThe full text of the current file\n" \
+           "\t\tThe full text of the current file\n" ;# <-- NOT TRANSLATED YET
+  ##ID:000831##
+  mcset $l "\t\tPercent sign\n\n" \
+           "\t\tPercent sign\n\n" ;# <-- NOT TRANSLATED YET
+  # Keep string length here! Also percent signs should remain at the same positions.
+  ##ID:000832##
+  mcset $l {Variables %line, %column, %selection and %text} \
+           {Variables %line, %column, %selection and %text} ;# <-- NOT TRANSLATED YET
+  ##ID:000833##
+  mcset $l "\nare not available if external editor is used" \
+           "\nare not available if external editor is used" ;# <-- NOT TRANSLATED YET
+}
+namespace eval ::configDialogues::global {
+  ##ID:000834##
+  mcset $l "MCU 8051 IDE configuration" \
+           "配置单片机IDE"
+  ##ID:000835##
+  mcset $l "Display splash screen" \
+           "显示启动画面"
+  ##ID:000836##
+  mcset $l "Show splash screen on start-up" \
+           "启动时显示启动画面"
+  ##ID:000837##
+  mcset $l "Show tips on start-up" \
+           "启动时显示提示"
+  ##ID:000838##
+  mcset $l "Invoke dialog with tip of the day on start-up" \
+           "在启动时调用每日提示界面"
+  ##ID:000839##
+  mcset $l "Language" \
+           "语言"
+  ##ID:000840##
+  mcset $l "Your preferred language" \
+           "您首选的语言"
+  ##ID:000841##
+  mcset $l "Do not always ask whether to add file to the project after the file is opened" \
+           "该文件被打开后,不要老是问是否添加文件到项目里，"
+  ##ID:004479##
+  mcset $l "Do not show performance warning when enabling external HW simulation." \
+           "Do not show performance warning when enabling external HW simulation." ;# <-- NOT TRANSLATED YET
+  ##ID:000842##
+  mcset $l "Reset to defaults" \
+           "重设为默认值"
+  ##ID:000843##
+  mcset $l "Reset all settings to defaults" \
+           "重设所有设置为默认值"
+  ##ID:000844##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:000845##
+  mcset $l "Commit new settings" \
+           "应用新的设置"
+  ##ID:000846##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:000847##
+  mcset $l "Take changes back and close dialog" \
+           "Take changes back and close dialog" ;# <-- NOT TRANSLATED YET
+  ##ID:000848##
+  mcset $l "Configure MCU 8051 IDE" \
+           "配置 MCU 8051 IDE"
+  ##ID:000849##
+  mcset $l "Unable to write to base configuration file" \
+           "无法写入相应的配置文件"
+  ##ID:000850##
+  mcset $l "Application language changed" \
+           "改变应用程序语言"
+  ##ID:000851##
+  mcset $l "Language for this application has been changed. The change will take effect upon next start of application" \
+           "此应用程序的语言已被修改,\n这一变化将在下次启动时生效"
+  ##ID:000852##
+  mcset $l "Widget style" \
+           "控件样式"
+  ##ID:000853##
+  mcset $l "Your preferred widget style" \
+           "您首选的控件风格"
+  ##ID:000854##
+  mcset $l "Background color" \
+           "背景颜色"
+  ##ID:000855##
+  mcset $l "Common background color for almost everything in the GUI" \
+           "几乎所有的图形用户界面的共同背景颜色"
+  ##ID:000856##
+  mcset $l "Global font size factor" \
+           "全局字体的大小"
+  ##ID:000857##
+  mcset $l "Allows you to adjust size of (almost) all fonts used in this IDE" \
+           "允许您调整（几乎）所有的IDE中使用的字体大小"
+  ##ID:000858##
+  mcset $l "Normal" \
+           "Normal" ;# <-- NOT TRANSLATED YET
+  ##ID:000859##
+  mcset $l "A little larger" \
+           "A little larger" ;# <-- NOT TRANSLATED YET
+  ##ID:000860##
+  mcset $l "Notably larger" \
+           "Notably larger" ;# <-- NOT TRANSLATED YET
+  ##ID:000861##
+  mcset $l "Much larger" \
+           "Much larger" ;# <-- NOT TRANSLATED YET
+  ##ID:000862##
+  mcset $l "Huge" \
+           "Huge" ;# <-- NOT TRANSLATED YET
+  ##ID:000863##
+  mcset $l "Too BIG" \
+           "Too BIG" ;# <-- NOT TRANSLATED YET
+}
+namespace eval ::configDialogues::terminal {
+  ##ID:000864##
+  mcset $l "Terminal configuration" \
+           "终端配置"
+  ##ID:000865##
+  mcset $l "Foreground color" \
+           "前景颜色"
+  ##ID:000866##
+  mcset $l "Background color" \
+           "背景颜色"
+  ##ID:000867##
+  mcset $l "Font size" \
+           "字体大小"
+  ##ID:000868##
+  mcset $l "Font family" \
+           "字体"
+  ##ID:000869##
+  mcset $l "Use settings and restart terminal emulator" \
+           "应用设置并重新启动终端仿真器"
+  ##ID:000870##
+  mcset $l "Reset to defaults" \
+           "重设为默认值"
+  ##ID:000871##
+  mcset $l "Reset all settings to defaults" \
+           "重设所有设置为默认值"
+  ##ID:000872##
+  mcset $l "Ok" \
+           "确定"
+  ##ID:000873##
+  mcset $l "Commit new settings" \
+           "应用新的设置"
+  ##ID:000874##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:000875##
+  mcset $l "Take changes back and close dialog" \
+           "应用更改并关闭窗口"
+  ##ID:000876##
+  mcset $l "Configure terminal emulator" \
+           "配置终端仿真器"
+  ##ID:000877##
+  mcset $l "Select foreground color" \
+           "选择前景颜色"
+  ##ID:000878##
+  mcset $l "Select background color" \
+           "选择背景颜色"
+  ##ID:000879##
+  mcset $l "Invalid value of key: '%s'" \
+           "无效关键值: '%s'"
+}
+namespace eval ::configDialogues::simulator {
+  ##ID:000880##
+  mcset $l "Simulator configuration" \
+           "配置模拟器"
+  ##ID:000881##
+  mcset $l "Warning dialogues" \
+           "警告界面"
+  ##ID:000882##
+  mcset $l "Other" \
+           "其他"
+  ##ID:000883##
+  mcset $l "Undefined values" \
+           "未定义的值"
+  ##ID:000884##
+  mcset $l "Return random value" \
+           "返回随机值"
+  ##ID:000885##
+  mcset $l "Return zero value" \
+           "返回零值"
+  ##ID:000886##
+  mcset $l "Return highest possible value" \
+           "返回最高值"
+  ##ID:000887##
+  mcset $l "Reverse run" \
+           "反向运行"
+  ##ID:000888##
+  mcset $l "Stack capacity" \
+           "堆栈的容量"
+  ##ID:000889##
+  mcset $l "Number of steps which can be taken back" \
+           "Number of steps which can be taken back" ;# <-- NOT TRANSLATED YET
+  ##ID:004547##
+  mcset $l "Colors" \
+           "Colors" ;# <-- NOT TRANSLATED YET
+  ##ID:004548##
+  mcset $l "ON color" \
+           "ON color" ;# <-- NOT TRANSLATED YET
+  ##ID:004549##
+  mcset $l "OFF color" \
+           "OFF color" ;# <-- NOT TRANSLATED YET
+  ##ID:004550##
+  mcset $l "Color to display a bit name for a bit set to log. 1" \
+           "Color to display a bit name for a bit set to log. 1" ;# <-- NOT TRANSLATED YET
+  ##ID:004551##
+  mcset $l "Color to display a bit name for a bit set to log. 0" \
+           "Color to display a bit name for a bit set to log. 0" ;# <-- NOT TRANSLATED YET
+  ##ID:000890##
+  mcset $l "Defaults" \
+           "默认"
+  ##ID:000891##
+  mcset $l "Reset settings to defaults" \
+           "重设所有设置为默认值"
+  ##ID:000892##
+  mcset $l "Ok" \
+           "确定" ;
+  ##ID:000893##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:000894##
+  mcset $l "Simulator configuration - %s" \
+           "配置模拟器 - %s"
+  ##ID:000895##
+  mcset $l "Are you sure ?" \
+           "您确定吗?"
+  ##ID:000896##
+  mcset $l "Are you sure you want to restore default settings" \
+           "您确定要恢复默认设置?"
+  ##ID:000897##
+  mcset $l "Ignore stack overflow" \
+           "忽略堆栈溢出"
+  ##ID:000898##
+  mcset $l "Ignore stack underflow" \
+           "忽略堆栈下溢"
+  ##ID:000899##
+  mcset $l "Ignore invalid instructions" \
+           "忽略无效指令"
+  ##ID:000900##
+  mcset $l "Ignore watchdog overflow" \
+           "忽略看门狗溢出"
+  ##ID:000901##
+  mcset $l "Ignore invalid return from interrupt" \
+           "忽略无效的中断返回"
+  ##ID:000902##
+  mcset $l "Ignore reading from write only register" \
+           "忽略读取只写寄存器"
+  ##ID:000903##
+  mcset $l "Ignore invalid access to IDATA/SFR" \
+           "忽略IDATA/SFR无效访问"
+  ##ID:000904##
+  mcset $l "Ignore invalid access to EDATA" \
+           "忽略EDATA无效访问"
+  ##ID:000905##
+  mcset $l "Ignore invalid access to XDATA" \
+           "忽略XDATA无效访问"
+  ##ID:000906##
+  mcset $l "Ignore invalid access to bit" \
+           "忽略bit无效访问"
+  ##ID:000907##
+  mcset $l "Ignore invalid access to CODE" \
+           "忽略CODE无效访问"
+  ##ID:000908##
+  mcset $l "Ignore EEPROM write failure" \
+           "忽略EEPROM写入失败"
+  ##ID:000909##
+  mcset $l "Ignore EEPROM write abort" \
+           "忽略EEPROM写入中止"
+  ##ID:000910##
+  mcset $l "Ignore UART frame discard" \
+           "忽略丢弃的UART帧"
+  ##ID:000911##
+  mcset $l "Ignore illegal UART mode change" \
+           "忽略非法转变UART模式"
+  ##ID:000912##
+  mcset $l "Ignore illegal Timer/Counter mode change" \
+           "忽略非法改变定时器/计数器模式"
+  ##ID:000913##
+  mcset $l "Do not complain about invalid breakpoints" \
+           "不要抱怨无效的断点"
+  ##ID:000914##
+  mcset $l "Check this to disable warning on stack overflow" \
+           "检查禁用堆栈溢出的警告"
+  ##ID:000915##
+  mcset $l "Check this to disable warning on stack underflow" \
+           "检查禁用堆栈下溢警告"
+  ##ID:000916##
+  mcset $l "Check this to disable warning on\ninvalid instruction" \
+           "检查禁用警告\n无效的指令"
+  ##ID:000917##
+  mcset $l "Do not stop simulation on device reset\ninvoked by watchdog timer overflow" \
+           "Do not stop simulation on device reset\ninvoked by watchdog timer overflow" ;# <-- NOT TRANSLATED YET
+  ##ID:000918##
+  mcset $l "Do not show warning dialog when program trying to return from interrupt which has not been invoked" \
+           "Do not show warning dialog when program trying to return from interrupt which has not been invoked" ;# <-- NOT TRANSLATED YET
+  ##ID:000919##
+  mcset $l "Do not display warning dialog when\nreading from write-only register" \
+           "Do not display warning dialog when\nreading from write-only register" ;# <-- NOT TRANSLATED YET
+  ##ID:000920##
+  mcset $l "Do not display dialog \"Undefined result\" when simulated program\naccessing unimplemented Internal Data Memory (IDATA) or SFR area" \
+           "Do not display dialog \"Undefined result\" when simulated program\naccessing unimplemented Internal Data Memory (IDATA) or SFR area" ;# <-- NOT TRANSLATED YET
+  ##ID:000921##
+  mcset $l "Do not display dialog \"Undefined result\" when simulated program\naccessing unimplemented Expanded Data Memory (EDATA)" \
+           "Do not display dialog \"Undefined result\" when simulated program\naccessing unimplemented Expanded Data Memory (EDATA)" ;# <-- NOT TRANSLATED YET
+  ##ID:000922##
+  mcset $l "Do not display dialog \"Undefined result\" when simulated program\naccessing unimplemented External Data Memory (XDATA)" \
+           "Do not display dialog \"Undefined result\" when simulated program\naccessing unimplemented External Data Memory (XDATA)" ;# <-- NOT TRANSLATED YET
+  ##ID:000923##
+  mcset $l "Do not display dialog \"Undefined result\" when simulated program\naccessing unimplemented bit in IDATA or SFR area" \
+           "Do not display dialog \"Undefined result\" when simulated program\naccessing unimplemented bit in IDATA or SFR area" ;# <-- NOT TRANSLATED YET
+  ##ID:000924##
+  mcset $l "Do not display dialog \"Undefined result\" when simulated program\naccessing unimplemented Program Memory (CODE)" \
+           "Do not display dialog \"Undefined result\" when simulated program\naccessing unimplemented Program Memory (CODE)" ;# <-- NOT TRANSLATED YET
+  ##ID:000925##
+  mcset $l "Check this to disable warning on\ndata eeprom write failure" \
+           "Check this to disable warning on\ndata eeprom write failure" ;# <-- NOT TRANSLATED YET
+  ##ID:000926##
+  mcset $l "Check this to disable warning on\ndata eeprom write abort" \
+           "Check this to disable warning on\ndata eeprom write abort" ;# <-- NOT TRANSLATED YET
+  ##ID:000927##
+  mcset $l "Check this to disable warning on UART frame discard" \
+           "Check this to disable warning on UART frame discard" ;# <-- NOT TRANSLATED YET
+  ##ID:000928##
+  mcset $l "Check this to disable warning on illegal UART mode change" \
+           "Check this to disable warning on illegal UART mode change" ;# <-- NOT TRANSLATED YET
+  ##ID:000929##
+  mcset $l "Check this to disable warning on illegal Timer/Counter mode change" \
+           "Check this to disable warning on illegal Timer/Counter mode change" ;# <-- NOT TRANSLATED YET
+  ##ID:000930##
+  mcset $l "Disable warning: \"warning: Invalid breakpoint\"" \
+           "禁用警告: \"警告: 无效的断点\""
+}
+namespace eval ::configDialogues::shortcuts {
+  # Strings in shortcuts configuration dialog
+  ##ID:000931##
+  mcset $l "Configure key shortcuts" \
+           "配置快捷键"
+  ##ID:000932##
+  mcset $l "available items" \
+           "现有项目"
+  ##ID:000933##
+  mcset $l "<Nothing selected>" \
+           "<没有选中>"
+  ##ID:000934##
+  mcset $l "Search:" \
+           "搜索:"
+  ##ID:000935##
+  mcset $l "Enter your search string here" \
+           "在这里输入您的搜索字"
+  ##ID:000936##
+  mcset $l "Clear" \
+           "清除"
+  ##ID:000937##
+  mcset $l "Current shortcut:" \
+           "当前的快捷方式:"
+  ##ID:000938##
+  mcset $l "Default:" \
+           "默认:"
+  ##ID:000939##
+  mcset $l "Restore default" \
+           "恢复默认"
+  ##ID:000940##
+  mcset $l "Accept" \
+           "应用"
+  ##ID:000941##
+  mcset $l "Accept new shortcut" \
+           "接受新的快捷方式"
+  ##ID:000942##
+  mcset $l "Original" \
+           "原始"
+  ##ID:000943##
+  mcset $l "Discard new shortcut" \
+           "放弃新的快捷方式"
+  ##ID:000944##
+  mcset $l "Defaults" \
+           "默认"
+  ##ID:000945##
+  mcset $l "Reset all settings to defaults" \
+           "重设所有设置为默认值"
+  ##ID:000946##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:000947##
+  mcset $l "Commit new settings" \
+           "应用新的设置"
+  ##ID:000948##
+  mcset $l "Take changes back and close dialog" \
+           "Take changes back and close dialog" ;# <-- NOT TRANSLATED YET
+  ##ID:000949##
+  mcset $l "Configure shortcuts - %s" \
+           "配置快捷键 - %s"
+  ##ID:000950##
+  mcset $l "Modifier required (Control or Alt)" \
+           "Modifier required (Control or Alt)" ;# <-- NOT TRANSLATED YET
+  ##ID:000951##
+  mcset $l "This combination is hard-coded in the main window, so it cannot be used" \
+           "This combination is hard-coded in the main window, so it cannot be used" ;# <-- NOT TRANSLATED YET
+  ##ID:000952##
+  mcset $l "This combination is hard-coded, so it cannot be used" \
+           "This combination is hard-coded, so it cannot be used" ;# <-- NOT TRANSLATED YET
+  ##ID:000953##
+  mcset $l "The '%s' key combination has already been assigned to \"%s\"." \
+           "The '%s' key combination has already been assigned to \"%s\"." ;# <-- NOT TRANSLATED YET
+  ##ID:000954##
+  mcset $l "Removing key combination for action \"%s\"" \
+           "Removing key combination for action \"%s\"" ;# <-- NOT TRANSLATED YET
+  ##ID:000955##
+  mcset $l "Item changed" \
+           "改变项目"
+  ##ID:000956##
+  mcset $l "The previous item was modified. Do you want to save it ?" \
+           "The previous item was modified. Do you want to save it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:000957##
+  mcset $l "Confirmation required" \
+           "确认"
+  ##ID:000958##
+  mcset $l "This will discard all shortcut settings and replace them with defaults. Are you sure by that ?" \
+           "This will discard all shortcut settings and replace them with defaults. Are you sure by that ?" ;# <-- NOT TRANSLATED YET
+  ## Shortcut names
+   # Main
+  ##ID:000959##
+  mcset $l "Main" \
+           "Main" ;# <-- NOT TRANSLATED YET
+  ##ID:000960##
+  mcset $l "Exit program" \
+           "退出程序"
+  ##ID:000961##
+  mcset $l "Save session" \
+           "保存会话"
+  ##ID:000962##
+  mcset $l "File statistics" \
+           "档案统计"
+  ##ID:000963##
+  mcset $l "Toggle full screen mode" \
+           "切换到全屏模式"
+   # Project management
+  ##ID:000964##
+  mcset $l "Project management" \
+           "项目管理"
+  ##ID:000965##
+  mcset $l "New project" \
+           "新项目"
+  ##ID:000966##
+  mcset $l "Open project" \
+           "打开项目"
+  ##ID:000967##
+  mcset $l "Save project" \
+           "保存项目"
+  ##ID:000968##
+  mcset $l "Edit project" \
+           "编辑项目"
+  ##ID:000969##
+  mcset $l "Save and close project" \
+           "保存并关闭项目"
+  ##ID:000970##
+  mcset $l "Close project" \
+           "关闭项目"
+   # Simulator
+  ##ID:000971##
+  mcset $l "Simulator" \
+           "模拟器"
+  ##ID:000972##
+  mcset $l "Start simulator" \
+           "启动模拟器"
+  ##ID:000973##
+  mcset $l "Debug this file only" \
+           "只调试这个文件"
+  ##ID:000974##
+  mcset $l "Show SFR map" \
+           "显示SFR映射p"
+  ##ID:000975##
+  mcset $l "Bit addressable array" \
+           "Bit addressable array" ;# <-- NOT TRANSLATED YET
+  ##ID:000976##
+  mcset $l "Show Code memory" \
+           "显示代码的内存"
+  ##ID:000977##
+  mcset $l "Show XDATA memory" \
+           "显示XDATA内存"
+  ##ID:000978##
+  mcset $l "Show ERAM" \
+           "显示ERAM"
+  ##ID:000979##
+  mcset $l "Show Data EEPROM" \
+           "显示EEPROM数据"
+  ##ID:000980##
+  mcset $l "Show EEPROM write buffer" \
+           "显示EEPROM写显示缓冲区"
+  ##ID:000981##
+  mcset $l "Invoke MCU stack monitor" \
+           "调用单片机堆栈监视器"
+  ##ID:000982##
+  mcset $l "Reset - Only SFR" \
+           "复位 - Only SFR"
+  ##ID:000983##
+  mcset $l "Reset - All zeros" \
+           "复位 - All zeros"
+  ##ID:000984##
+  mcset $l "Reset - All ones" \
+           "复位 - All ones"
+  ##ID:000985##
+  mcset $l "Reset - Random" \
+           "复位 - Random"
+  ##ID:000986##
+  mcset $l "Simulator: Step" \
+           "Simulator: Step" ;# <-- NOT TRANSLATED YET
+  ##ID:000987##
+  mcset $l "Simulator: Step Back" \
+           "Simulator: Step Back" ;# <-- NOT TRANSLATED YET
+  ##ID:000988##
+  mcset $l "Simulator: Step over" \
+           "Simulator: Step over" ;# <-- NOT TRANSLATED YET
+  ##ID:000989##
+  mcset $l "Simulator: Animate" \
+           "Simulator: Animate" ;# <-- NOT TRANSLATED YET
+  ##ID:000990##
+  mcset $l "Simulator: Run" \
+           "Simulator: Run" ;# <-- NOT TRANSLATED YET
+  ##ID:000991##
+  mcset $l "Allow/Deny breakpoints" \
+           "允许/拒绝断点"
+  ##ID:000992##
+  mcset $l "Clear highlight" \
+           "清除高亮"
+  ##ID:000993##
+  mcset $l "Find cursor" \
+           "查找光标"
+  ##ID:000994##
+  mcset $l "Jump to line" \
+           "转跳到指定的行目"
+  ##ID:000995##
+  mcset $l "Simulator: Hibernate" \
+           "Simulator: Hibernate" ;# <-- NOT TRANSLATED YET
+  ##ID:000996##
+  mcset $l "Simulator: Resume" \
+           "Simulator: Resume" ;# <-- NOT TRANSLATED YET
+  ##ID:000997##
+  mcset $l "Interrupt monitor" \
+           "Interrupt monitor" ;# <-- NOT TRANSLATED YET
+  ##ID:000998##
+  mcset $l "Stopwatch" \
+           "秒表"
+   # Virtual HW
+  ##ID:000999##
+  mcset $l "Virtual HW" \
+           "虚拟硬件"
+  ##ID:001000##
+  mcset $l "LED panel" \
+           "LED面板"
+  ##ID:001001##
+  mcset $l "LED display" \
+           "数码管"
+  ##ID:001002##
+  mcset $l "LED matrix" \
+           "矩阵LED"
+  ##ID:001003##
+  mcset $l "Multiplexed LED display" \
+           "复用数码管"
+  ##ID:001004##
+  mcset $l "Simple keypad" \
+           "简单按键"
+  ##ID:001005##
+  mcset $l "Matrix keypad" \
+           "矩阵按键"
+  ##ID:001006##
+  mcset $l "Open" \
+           "打开"
+  ##ID:001007##
+  mcset $l "Load" \
+           "加载"
+  ##ID:001008##
+  mcset $l "Save" \
+           "保存"
+  ##ID:001009##
+  mcset $l "Save as" \
+           "另存为"
+  ##ID:001010##
+  mcset $l "Remove all" \
+           "删除所有"
+   # Tools
+  ##ID:001011##
+  mcset $l "Tools" \
+           "工具"
+  ##ID:001012##
+  mcset $l "Compile" \
+           "编译"
+  ##ID:001013##
+  mcset $l "Compile this file only" \
+           "只编译这个文件"
+  ##ID:001014##
+  mcset $l "Disassemble" \
+           "反汇编"
+  ##ID:001015##
+  mcset $l "Auto indent" \
+           "自动缩进"
+  ##ID:001016##
+  mcset $l "Change letter case" \
+           "变更字母大小写"
+  ##ID:001017##
+  mcset $l "Cleanup dialog" \
+           "清理界面"
+  ##ID:001018##
+  mcset $l "Export as XHTML" \
+           "导出为XHTML"
+  ##ID:001019##
+  mcset $l "Export as LaTeX" \
+           "导出为LaTeX"
+  ##ID:001020##
+  mcset $l "Document current function" \
+           "当前文件的函数"
+  ##ID:001021##
+  mcset $l "Run doxywizard" \
+           "运行doxywizard"
+  ##ID:001022##
+  mcset $l "Build C API documentation" \
+           "构建C API文档"
+  ##ID:001023##
+  mcset $l "Clear C API documentation" \
+           "清除C API文档"
+  ##ID:001024##
+  mcset $l "Custom command 0" \
+           "自定义命令0"
+  ##ID:001025##
+  mcset $l "Custom command 1" \
+           "自定义命令1"
+  ##ID:001026##
+  mcset $l "Custom command 2" \
+           "自定义命令2"
+   # Utilities
+  ##ID:001027##
+  mcset $l "Utilities" \
+           "Utilities" ;# <-- NOT TRANSLATED YET
+  ##ID:001028##
+  mcset $l "Hex -> Bin" \
+           "Hex -> Bin" ;# <-- NOT TRANSLATED YET
+  ##ID:001029##
+  mcset $l "Bin -> Hex" \
+           "Bin -> Hex" ;# <-- NOT TRANSLATED YET
+  ##ID:001030##
+  mcset $l "Sim -> Hex" \
+           "Sim -> Hex" ;# <-- NOT TRANSLATED YET
+  ##ID:001031##
+  mcset $l "Sim -> Bin" \
+           "Sim -> Bin" ;# <-- NOT TRANSLATED YET
+  ##ID:001032##
+  mcset $l "Normalize IHEX8" \
+           "Normalize IHEX8" ;# <-- NOT TRANSLATED YET
+  ##ID:001033##
+  mcset $l "Hex Editor" \
+           "Hex Editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001034##
+  mcset $l "Symbol table" \
+           "符号表"
+  ##ID:001035##
+  mcset $l "8-segment editor" \
+           "8段LED编辑器"
+  ##ID:001036##
+  mcset $l "ASCII chart" \
+           "ASCII表"
+  ##ID:001037##
+  mcset $l "Scribble notepad" \
+           "便利贴"
+  ##ID:001038##
+  mcset $l "Base Converter" \
+           "进制转换"
+  ##ID:001039##
+  mcset $l "UART/RS232 Debugger" \
+           "UART/RS232调试"
+  ##ID:001040##
+  mcset $l "Help" \
+           "帮助"
+  ##ID:001041##
+  mcset $l "About dialog" \
+           "关于界面"
+  ##ID:001042##
+  mcset $l "Welcome dialog" \
+           "欢迎界面"
+  ##ID:001043##
+  mcset $l "Tip of the day" \
+           "每日提示"
+  # Messages text
+  ##ID:001044##
+  mcset $l "Messages text" \
+           "消息文本"
+  ##ID:001045##
+  mcset $l "Clear messages" \
+           "清除消息"
+  ##ID:001046##
+  mcset $l "Find" \
+           "查找"
+  ##ID:001047##
+  mcset $l "Find next" \
+           "查找下一个"
+  ##ID:001048##
+  mcset $l "Find previous" \
+           "查找上一个"
+   # Notes
+  ##ID:001049##
+  mcset $l "Notes" \
+           "注释"
+  ##ID:001050##
+  mcset $l "Bold text" \
+           "粗体"
+  ##ID:001051##
+  mcset $l "Italic text" \
+           "斜体"
+  ##ID:001052##
+  mcset $l "Strikethrough text" \
+           "删除线文本"
+  ##ID:001053##
+  mcset $l "Underline text" \
+           "下划线文本"
+  ##ID:001054##
+  mcset $l "Erase tags" \
+           "擦除标记"
+  ##ID:001055##
+  mcset $l "Insert OK image" \
+           "已经插入图片"
+  ##ID:001056##
+  mcset $l "Register watches" \
+           "登记表"
+  ##ID:001057##
+  mcset $l "Move to top" \
+           "移动到顶部"
+  ##ID:001058##
+  mcset $l "Move up" \
+           "向上移动"
+  ##ID:001059##
+  mcset $l "Move down" \
+           "向下移动"
+  ##ID:001060##
+  mcset $l "Move to bottom" \
+           "移动到底部"
+  ##ID:001061##
+  mcset $l "Remove" \
+           "删除"
+   # Editor
+  ##ID:001062##
+  mcset $l "Editor" \
+           "编辑"
+  ##ID:001063##
+  mcset $l "Read only mode" \
+           "只读模式"
+  ##ID:001064##
+  mcset $l "New" \
+           "新建"
+  ##ID:001065##
+  mcset $l "Save all" \
+           "保存全部"
+  ##ID:001066##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:001067##
+  mcset $l "Close all" \
+           "关闭所有"
+  ##ID:001068##
+  mcset $l "Show/Hide icon border" \
+           "显示/隐藏图标栏"
+  ##ID:001069##
+  mcset $l "Show/Hide line numbers" \
+           "显示/隐藏行目"
+  ##ID:001070##
+  mcset $l "Reload" \
+           "刷新"
+  ##ID:001071##
+  mcset $l "Next editor" \
+           "下一个的编辑"
+  ##ID:001072##
+  mcset $l "Previous editor" \
+           "上一个的编辑"
+  ##ID:001073##
+  mcset $l "Breakpoint" \
+           "断点"
+  ##ID:001074##
+  mcset $l "Bookmark" \
+           "书签"
+  ##ID:001075##
+  mcset $l "Undo" \
+           "撤消"
+  ##ID:001076##
+  mcset $l "Redo" \
+           "取消撤销"
+  ##ID:001077##
+  mcset $l "Copy" \
+           "复制"
+  ##ID:001078##
+  mcset $l "Cut" \
+           "剪切"
+  ##ID:001079##
+  mcset $l "Paste" \
+           "粘帖"
+  ##ID:001080##
+  mcset $l "Select all" \
+           "选择所有"
+  ##ID:001081##
+  mcset $l "Replace" \
+           "替换"
+  ##ID:001082##
+  mcset $l "Go to line" \
+           "到达指定的行目"
+  ##ID:001083##
+  mcset $l "Comment" \
+           "注释"
+  ##ID:001084##
+  mcset $l "Uncomment" \
+           "取消注释"
+  ##ID:001085##
+  mcset $l "Indent" \
+           "缩进"
+  ##ID:001086##
+  mcset $l "Unindent" \
+           "取消缩进"
+  ##ID:001087##
+  mcset $l "Uppercase" \
+           "大写"
+  ##ID:001088##
+  mcset $l "Lowercase" \
+           "小写"
+  ##ID:001089##
+  mcset $l "Capitalize" \
+           "大写"
+  ##ID:001090##
+  mcset $l "Go to next bookmark" \
+           "转到下一页书签"
+  ##ID:001091##
+  mcset $l "Go to previous bookmark" \
+           "转到上一页书签"
+  ##ID:001092##
+  mcset $l "Program jump" \
+           "程序跳转"
+  ##ID:001093##
+  mcset $l "Call subprogram" \
+           "调用子程序"
+  ##ID:001094##
+  mcset $l "Editor command line" \
+           "编辑命令行"
+  ##ID:001095##
+  mcset $l "Split vertical" \
+           "垂直分割"
+  ##ID:001096##
+  mcset $l "Split horizontal" \
+           "水平分割"
+  ##ID:001097##
+  mcset $l "Close current view" \
+           "关闭当前视图"
+  ##ID:001098##
+  mcset $l "Block selection mode" \
+           "块选择模式"
+}
+# instructiondetails.tcl
+# ==============================================================================
+namespace eval InstructionDetails {
+  ##ID:001099##
+  mcset $l "Note:" \
+           "注"
+  ##ID:001100##
+  mcset $l "OPCODE:" \
+           "OPCODE:" ;# <-- NOT TRANSLATED YET
+  ##ID:001101##
+  mcset $l "Time:" \
+           "Time:" ;# <-- NOT TRANSLATED YET
+  ##ID:001102##
+  mcset $l "Length:" \
+           "Length:" ;# <-- NOT TRANSLATED YET
+  ##ID:001103##
+  mcset $l "Flags:" \
+           "Flags:" ;# <-- NOT TRANSLATED YET
+  ##ID:001104##
+  mcset $l "Class:" \
+           "Class:" ;# <-- NOT TRANSLATED YET
+  ##ID:001105##
+  mcset $l "no help available for this directive" \
+           "no help available for this directive" ;# <-- NOT TRANSLATED YET
+  ##ID:001106##
+  mcset $l "\tCarry flag\n" \
+           "\tCarry flag\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001107##
+  mcset $l "\tIndirect address" \
+           "\tIndirect address" ;# <-- NOT TRANSLATED YET
+  ##ID:001108##
+  mcset $l "\tRegisters of active bank\n" \
+           "\tRegisters of active bank\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001109##
+  mcset $l "\tAccumulator\n" \
+           "\tAccumulator\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001110##
+  mcset $l "\tPrimary work register\n" \
+           "\tPrimary work register\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001111##
+  mcset $l "\tData PoinTeR register (16 bit)\n" \
+           "\tData PoinTeR register (16 bit)\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001112##
+  mcset $l "\tbit memory direct address\n" \
+           "\tbit memory direct address\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001113##
+  mcset $l "\tinternal data memory or SFR direct address\n" \
+           "\tinternal data memory or SFR direct address\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001114##
+  mcset $l "\t16 bit constant data\n" \
+           "\t16 bit constant data\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001115##
+  mcset $l "\t8 bit constant data\n" \
+           "\t8 bit constant data\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001116##
+  mcset $l "\t16 bit program memory address\n" \
+           "\t16 bit program memory address\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001117##
+  mcset $l "\t11 bit program memory address\n" \
+           "\t11 bit program memory address\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001118##
+  mcset $l "\t8 bit offset for relative jump\n" \
+           "\t8 bit offset for relative jump\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001119##
+  mcset $l "bit" \
+           "bit" ;# <-- NOT TRANSLATED YET
+  ##ID:001120##
+  mcset $l "data" \
+           "data" ;# <-- NOT TRANSLATED YET
+  ##ID:001121##
+  mcset $l "imm16" \
+           "imm16" ;# <-- NOT TRANSLATED YET
+  ##ID:001122##
+  mcset $l "imm8" \
+           "imm8" ;# <-- NOT TRANSLATED YET
+  ##ID:001123##
+  mcset $l "code16" \
+           "code16" ;# <-- NOT TRANSLATED YET
+  ##ID:001124##
+  mcset $l "code11" \
+           "code11" ;# <-- NOT TRANSLATED YET
+  ##ID:001125##
+  mcset $l "code8" \
+           "code8" ;# <-- NOT TRANSLATED YET
+  ##ID:001126##
+  mcset $l "-- click to close --" \
+           "-- 点击关闭 --"
+  ##ID:001127##
+  mcset $l "Instruction operands" \
+           "Instruction operands" ;# <-- NOT TRANSLATED YET
+  ##ID:001128##
+  mcset $l "Instruction name" \
+           "Instruction name" ;# <-- NOT TRANSLATED YET
+  ##ID:001129##
+  mcset $l "Show legend" \
+           "Show legend" ;# <-- NOT TRANSLATED YET
+  ##ID:001130##
+  mcset $l "Conditional assembly\n\nSyntax:\n  ELSEIF <expr>\n\nExample:\n  IF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSEIF SOMETHING_ELSE\n    MOV  A, #40h\n  ENDIF\n\n" \
+           "Conditional assembly\n\nSyntax:\n  ELSEIF <expr>\n\nExample:\n  IF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSEIF SOMETHING_ELSE\n    MOV  A, #40h\n  ENDIF\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001131##
+  mcset $l "IF Not, conditional assembly\n\nSyntax:\n  IFN <expr>\n\nExample:\n  IF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\n" \
+           "IF Not, conditional assembly\n\nSyntax:\n  IFN <expr>\n\nExample:\n  IF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001132##
+  mcset $l "ELSE IF Not\n\nSyntax:\n  ELSEIFN <expr>\n\nExample:\n  IF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSEIFN SOMETHING_ELSE\n    MOV  A, #40h\n  ENDIF\n\n" \
+           "ELSE IF Not\n\nSyntax:\n  ELSEIFN <expr>\n\nExample:\n  IF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSEIFN SOMETHING_ELSE\n    MOV  A, #40h\n  ENDIF\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001133##
+  mcset $l "IF DEFined\n\nSyntax:\n  IFDEF <symbol>\n\nExample:\n  IFDEF CND\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\n" \
+           "IF DEFined\n\nSyntax:\n  IFDEF <symbol>\n\nExample:\n  IFDEF CND\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001134##
+  mcset $l "ELSE IF DEFined\n\nSyntax:\n  ELSEIFDEF <symbol>\n\nExample:\n  IFDEF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSEIFDEF SOMETHING_ELSE\n    MOV  A, #40h\n  ENDIF\n\n" \
+           "ELSE IF DEFined\n\nSyntax:\n  ELSEIFDEF <symbol>\n\nExample:\n  IFDEF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSEIFDEF SOMETHING_ELSE\n    MOV  A, #40h\n  ENDIF\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001135##
+  mcset $l "IF Not DEFined\n\nSyntax:\n  IFNDEF <symbol>\n\nExample:\n  IFNDEF CND\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\n" \
+           "IF Not DEFined\n\nSyntax:\n  IFNDEF <symbol>\n\nExample:\n  IFNDEF CND\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001136##
+  mcset $l "ELSE IF Not DEFined\n\nSyntax:\n  ELSEIFNDEF <symbol>\n\nExample:\n  IFDEF CND\n    MOV  A, #20h\n  ELSEIFNDEF SOMETHING_ELSE\n    MOV  A, #40h\n  ENDIF\n\n" \
+           "ELSE IF Not DEFined\n\nSyntax:\n  ELSEIFNDEF <symbol>\n\nExample:\n  IFDEF CND\n    MOV  A, #20h\n  ELSEIFNDEF SOMETHING_ELSE\n    MOV  A, #40h\n  ENDIF\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001137##
+  mcset $l "IF Black\n\nSyntax:\n  IFB <literal>\n\nExample:\n  IFB <CND>\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\nNote:\n  Supported by ASEM-51 only" \
+           "IF Black\n\nSyntax:\n  IFB <literal>\n\nExample:\n  IFB <CND>\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001138##
+  mcset $l "ELSE IF Black\n\nSyntax:\n  ELSEIFB <literal>\n\nExample:\n  IFB <CND>\n    MOV  A, #20h\n  ELSEIFB <SOMETHING_ELSE>\n    MOV  A, #40h\n  ENDIF\n\literal:\n  Supported by ASEM-51 only" \
+           "ELSE IF Black\n\nSyntax:\n  ELSEIFB <literal>\n\nExample:\n  IFB <CND>\n    MOV  A, #20h\n  ELSEIFB <SOMETHING_ELSE>\n    MOV  A, #40h\n  ENDIF\n\literal:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001139##
+  mcset $l "IF Not Black\n\nSyntax:\n  IFNB <literal>\n\nExample:\n  IFNB <CND>\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\nNote:\n  Supported by ASEM-51 only" \
+           "IF Not Black\n\nSyntax:\n  IFNB <literal>\n\nExample:\n  IFNB <CND>\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001140##
+  mcset $l "ELSE IF Not Black\n\nSyntax:\n  ELSEIFNB <literal>\n\nExample:\n  IFB <CND>\n    MOV  A, #20h\n  ELSEIFNB <SOMETHING_ELSE>\n    MOV  A, #40h\n  ENDIF\n\nNote:\n  Supported by ASEM-51 only" \
+           "ELSE IF Not Black\n\nSyntax:\n  ELSEIFNB <literal>\n\nExample:\n  IFB <CND>\n    MOV  A, #20h\n  ELSEIFNB <SOMETHING_ELSE>\n    MOV  A, #40h\n  ENDIF\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001141##
+  mcset $l "REPeaT Macro\n\nSyntax:\n  REPT <expr>\n\nExample:\n  REPT 5\n    NOP\n  ENDM\n\n" \
+           "REPeaT Macro\n\nSyntax:\n  REPT <expr>\n\nExample:\n  REPT 5\n    NOP\n  ENDM\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001142##
+  mcset $l "REPeaT Macro\n\nSyntax:\n  TIMES <expr>\n\nExample:\n  TIMES 5\n    NOP\n  ENDM\n\nNote:\n  Supported by native assembler only" \
+           "REPeaT Macro\n\nSyntax:\n  TIMES <expr>\n\nExample:\n  TIMES 5\n    NOP\n  ENDM\n\nNote:\n  Supported by native assembler only" ;# <-- NOT TRANSLATED YET
+  ##ID:001143##
+  mcset $l "define module NAME\n\nSyntax:\n  NAME <name>\n\nExample:\n  NAME my_2nd_program\n\nNote:\n  Supported by ASEM-51 only" \
+           "define module NAME\n\nSyntax:\n  NAME <name>\n\nExample:\n  NAME my_2nd_program\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001144##
+  mcset $l "Conditional assembly\n\nSyntax:\n  IF <expr>\n\nExample:\n  IF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\n" \
+           "Conditional assembly\n\nSyntax:\n  IF <expr>\n\nExample:\n  IF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001145##
+  mcset $l "Conditional assembly\n\nSyntax:\n  ELSE\n\nExample:\n  IF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\n" \
+           "Conditional assembly\n\nSyntax:\n  ELSE\n\nExample:\n  IF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001146##
+  mcset $l "Conditional assembly\n\nSyntax:\n  ENDIF\n\nExample:\n  IF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\n" \
+           "Conditional assembly\n\nSyntax:\n  ENDIF\n\nExample:\n  IF(2 * 4 - CND)\n    MOV  A, #20h\n  ELSE\n    MOV  A, #40h\n  ENDIF\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001147##
+  mcset $l "END of Macro definition\n\nSyntax:\n  ENDM\n\nExample:\n  ABC MACRO\n      MOV B, #12d\n  ENDM\n\n" \
+           "END of Macro definition\n\nSyntax:\n  ENDM\n\nExample:\n  ABC MACRO\n      MOV B, #12d\n  ENDM\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001148##
+  mcset $l "END of the program\n\nSyntax:\n  END\n\nExample:\n  END\n\n" \
+           "END of the program\n\nSyntax:\n  END\n\nExample:\n  END\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001149##
+  mcset $l "premature end of macro expansion\n\nSyntax:\n  EXITM\n\nExample:\n  ABC MACRO\n      MOV B, #12d\n  EXITM\n      NOP\n  ENDM\n\n" \
+           "premature end of macro expansion\n\nSyntax:\n  EXITM\n\nExample:\n  ABC MACRO\n      MOV B, #12d\n  EXITM\n      NOP\n  ENDM\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001150##
+  mcset $l "enable code LISTing\n\nSyntax:\n  LIST\n\nExample:\n  NOP\n  NOLIST\n  NOP\n  NOP\n  LIST\n  NOP\n\n" \
+           "enable code LISTing\n\nSyntax:\n  LIST\n\nExample:\n  NOP\n  NOLIST\n  NOP\n  NOP\n  LIST\n  NOP\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001151##
+  mcset $l "disabled code listing\n\nSyntax:\n  NOLIST\n\nExample:\n  NOP\n  NOLIST\n  NOP\n  NOP\n  LIST\n  NOP\n\n" \
+           "disabled code listing\n\nSyntax:\n  NOLIST\n\nExample:\n  NOP\n  NOLIST\n  NOP\n  NOP\n  LIST\n  NOP\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001152##
+  mcset $l "switch to DATA segment \[at address\]\n\nSyntax:\n  DSEG \[AT <expr>\]\n\nExample:\n  DSEG at 20d\n\n" \
+           "switch to DATA segment \[at address\]\n\nSyntax:\n  DSEG \[AT <expr>\]\n\nExample:\n  DSEG at 20d\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001153##
+  mcset $l "switch to IDATA segment \[at address\]\n\nSyntax:\n  ISEG \[AT <expr>\]\n\nExample:\n  ISEG at 10d\n\n" \
+           "switch to IDATA segment \[at address\]\n\nSyntax:\n  ISEG \[AT <expr>\]\n\nExample:\n  ISEG at 10d\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001154##
+  mcset $l "switch to BIT segment \[at address\]\n\nSyntax:\n  BSEG \[AT <expr>\]\n\nExample:\n  BSEG at 5d\n\n" \
+           "switch to BIT segment \[at address\]\n\nSyntax:\n  BSEG \[AT <expr>\]\n\nExample:\n  BSEG at 5d\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001155##
+  mcset $l "switch to XDATA segment \[at address\]\n\nSyntax:\n  XSEG \[AT <expr>\]\n\nExample:\n  XSEG at 30d\n\n" \
+           "switch to XDATA segment \[at address\]\n\nSyntax:\n  XSEG \[AT <expr>\]\n\nExample:\n  XSEG at 30d\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001156##
+  mcset $l "switch to CODE segment \[at address\]\n\nSyntax:\n  CSEG \[AT <expr>\]\n\nExample:\n  CSEG at 40d\n\n" \
+           "switch to CODE segment \[at address\]\n\nSyntax:\n  CSEG \[AT <expr>\]\n\nExample:\n  CSEG at 40d\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001157##
+  mcset $l "define a FLAG bit\n\nSyntax:\n  <symbol> FLAG  <expr>\n\nExample:\n  F4  FLAG  16h\n\nNote:\n  Deprecated directive. Consider directive BIT instead." \
+           "define a FLAG bit\n\nSyntax:\n  <symbol> FLAG  <expr>\n\nExample:\n  F4  FLAG  16h\n\nNote:\n  Deprecated directive. Consider directive BIT instead." ;# <-- NOT TRANSLATED YET
+  ##ID:001158##
+  mcset $l "SKIP bytes in the code memory\n\nSyntax:\n  SKIP  <expr>\n\nExample:\n  SKIP 5\n\n" \
+           "SKIP bytes in the code memory\n\nSyntax:\n  SKIP  <expr>\n\nExample:\n  SKIP 5\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001159##
+  mcset $l "EQUivalent\n\nSyntax:\n  <symbol> EQU <expr>\n\nExample:\n  ABC  EQU  R0\n  XYZ  EQU  4Eh+12\n\n" \
+           "EQUivalent\n\nSyntax:\n  <symbol> EQU <expr>\n\nExample:\n  ABC  EQU  R0\n  XYZ  EQU  4Eh+12\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001160##
+  mcset $l "define BIT address\n\nSyntax:\n  <symbol> BIT <expr>\n\nExample:\n  ABC  BIT  P4.5\n\n" \
+           "define BIT address\n\nSyntax:\n  <symbol> BIT <expr>\n\nExample:\n  ABC  BIT  P4.5\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001161##
+  mcset $l "SET numeric variable or variable register\n\nSyntax:\n  <symbol> SET <expr>\n  <symbol> SET <register>\n\nExample:\n  ALPHA  SET  R0\n  ALPHA  SET  42*BETA\n\n" \
+           "SET numeric variable or variable register\n\nSyntax:\n  <symbol> SET <expr>\n  <symbol> SET <register>\n\nExample:\n  ALPHA  SET  R0\n  ALPHA  SET  42*BETA\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001162##
+  mcset $l "define address in the CODE memory\n\nSyntax:\n  <symbol> CODE <expr>\n\nExample:\n  TBL  CODE  600h\n\n" \
+           "define address in the CODE memory\n\nSyntax:\n  <symbol> CODE <expr>\n\nExample:\n  TBL  CODE  600h\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001163##
+  mcset $l "define address in the DATA memory\n\nSyntax:\n  <symbol> DATA <expr>\n\nExample:\n  UIV  DATA  20h\n\n" \
+           "define address in the DATA memory\n\nSyntax:\n  <symbol> DATA <expr>\n\nExample:\n  UIV  DATA  20h\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001164##
+  mcset $l "define address in the Internal DATA memory\n\nSyntax:\n  <symbol> IDATA <expr>\n\nExample:\n  UIV  IDATA  20h\n\n" \
+           "define address in the Internal DATA memory\n\nSyntax:\n  <symbol> IDATA <expr>\n\nExample:\n  UIV  IDATA  20h\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001165##
+  mcset $l "define address in the External DATA memory\n\nSyntax:\n  <symbol> XDATA <expr>\n\nExample:\n  UIV  XDATA  400h\n\n" \
+           "define address in the External DATA memory\n\nSyntax:\n  <symbol> XDATA <expr>\n\nExample:\n  UIV  XDATA  400h\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001166##
+  mcset $l "MACRO definition\n\nSyntax:\n  <macro> MACRO \[<arg0> \[,<arg1> ... \]\n\n\nExample:\n  ABC MACRO X\n      MOV X, #12d\n  ENDM\n\n" \
+           "MACRO definition\n\nSyntax:\n  <macro> MACRO \[<arg0> \[,<arg1> ... \]\n\n\nExample:\n  ABC MACRO X\n      MOV X, #12d\n  ENDM\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001167##
+  mcset $l "Define Space\n\nSyntax:\n  DS <expr>\n\nExample:\n  DS 2+4\n\n" \
+           "Define Space\n\nSyntax:\n  DS <expr>\n\nExample:\n  DS 2+4\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001168##
+  mcset $l "Define Words\n\nSyntax:\n  DW <expr1> \[,<expr2> ... \]\n\nExample:\n  DW 0,02009H,2009,4171\n\n" \
+           "Define Words\n\nSyntax:\n  DW <expr1> \[,<expr2> ... \]\n\nExample:\n  DW 0,02009H,2009,4171\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001169##
+  mcset $l "Define Bytes\n\nSyntax:\n  DB <expr1> \[,<expr2> ... \]\n\nExample:\n  DB 24,'August',09,(2*8+24)/8\n\n" \
+           "Define Bytes\n\nSyntax:\n  DB <expr1> \[,<expr2> ... \]\n\nExample:\n  DB 24,'August',09,(2*8+24)/8\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001170##
+  mcset $l "Define BITs\n\nSyntax:\n  DBIT <expr>\n\nExample:\n  DBIT 4+2\n\n" \
+           "Define BITs\n\nSyntax:\n  DBIT <expr>\n\nExample:\n  DBIT 4+2\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001171##
+  mcset $l "INCLUDE an external source code\n\nSyntax:\n  INCLUDE <filename>\n\nExample:\n  INCLUDE 'my file.asm'\n\n" \
+           "INCLUDE an external source code\n\nSyntax:\n  INCLUDE <filename>\n\nExample:\n  INCLUDE 'my file.asm'\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001172##
+  mcset $l "ORiGin of code segment location\n\nSyntax:\n  ORG <expr>\n\nExample:\n  ORG 0Bh\n\n" \
+           "ORiGin of code segment location\n\nSyntax:\n  ORG <expr>\n\nExample:\n  ORG 0Bh\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001173##
+  mcset $l "USING register banks\n\nSyntax:\n  USING <expr>\n\nExample:\n  USING 2\n\n" \
+           "USING register banks\n\nSyntax:\n  USING <expr>\n\nExample:\n  USING 2\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001174##
+  mcset $l "define BYTE address in the data memory\n\nSyntax:\n  <symbol> BYTE <expr>\n\nExample:\n  UIV  BYTE  20h\n\nNote:\n  Deprecated directive. Consider directive DATA instead." \
+           "define BYTE address in the data memory\n\nSyntax:\n  <symbol> BYTE <expr>\n\nExample:\n  UIV  BYTE  20h\n\nNote:\n  Deprecated directive. Consider directive DATA instead." ;# <-- NOT TRANSLATED YET
+  ##ID:001175##
+  mcset $l "List full IFxx .. ENDIF\n\nSyntax:\n  \$COND\n\nExample:\n  \$COND\n\nNote:\n  Supported by ASEM-51 only" \
+           "List full IFxx .. ENDIF\n\nSyntax:\n  \$COND\n\nExample:\n  \$COND\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001176##
+  mcset $l "Don't list lines in false branches\n\nSyntax:\n  \$NOCOND\n\nExample:\n  \$NOCOND\n\nNote:\n  Supported by ASEM-51 only" \
+           "Don't list lines in false branches\n\nSyntax:\n  \$NOCOND\n\nExample:\n  \$NOCOND\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001177##
+  mcset $l "List assembled lines only\n\nSyntax:\n  \$CONDONLY\n\nExample:\n  \$CONDONLY\n\nNote:\n  Supported by ASEM-51 only" \
+           "List assembled lines only\n\nSyntax:\n  \$CONDONLY\n\nExample:\n  \$CONDONLY\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001178##
+  mcset $l "Inserts date string into page header\n\nSyntax:\n  \$DATE(string)\n\nExample:\n  \$DATE(1965-12-31)\n\n" \
+           "Inserts date string into page header\n\nSyntax:\n  \$DATE(string)\n\nExample:\n  \$DATE(1965-12-31)\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001179##
+  mcset $l "Include debug information\n\nSyntax:\n  \$DEBUG\n\nExample:\n  \$DEBUG\n\nNote:\n  Supported by ASEM-51 only" \
+           "Include debug information\n\nSyntax:\n  \$DEBUG\n\nExample:\n  \$DEBUG\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001180##
+  mcset $l "Include debug information\n\nSyntax:\n  \$DB\n\nExample:\n  \$DB\n\nNote:\n  Supported by ASEM-51 only" \
+           "Include debug information\n\nSyntax:\n  \$DB\n\nExample:\n  \$DB\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001181##
+  mcset $l "Don't include debug information\n\nSyntax:\n  \$NODEBUG\n\nExample:\n  \$NODEBUG\n\nNote:\n  Supported by ASEM-51 only" \
+           "Don't include debug information\n\nSyntax:\n  \$NODEBUG\n\nExample:\n  \$NODEBUG\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001182##
+  mcset $l "Don't include debug information\n\nSyntax:\n  \$NODB\n\nExample:\n  \$NODB\n\nNote:\n  Supported by ASEM-51 only" \
+           "Don't include debug information\n\nSyntax:\n  \$NODB\n\nExample:\n  \$NODB\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001183##
+  mcset $l "Start a new page in list file\n\nSyntax:\n  \$EJECT\n\nExample:\n  \$EJECT\n\n" \
+           "Start a new page in list file\n\nSyntax:\n  \$EJECT\n\nExample:\n  \$EJECT\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001184##
+  mcset $l "Start a new page in list file\n\nSyntax:\n  \$EJ\n\nExample:\n  \$EJ\n\n" \
+           "Start a new page in list file\n\nSyntax:\n  \$EJ\n\nExample:\n  \$EJ\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001185##
+  mcset $l "Force a user-defined error\n\nSyntax:\n  \$ERROR(string)\n\nExample:\n  \$ERROR(Impossible combination ...)\n\nNote:\n  Supported by ASEM-51 only" \
+           "Force a user-defined error\n\nSyntax:\n  \$ERROR(string)\n\nExample:\n  \$ERROR(Impossible combination ...)\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001186##
+  mcset $l "Force a user-defined warning\n\nSyntax:\n  \$WARNING(string)\n\nExample:\n  \$WARNING(Testing only !)\n\nNote:\n  Supported by ASEM-51 only" \
+           "Force a user-defined warning\n\nSyntax:\n  \$WARNING(string)\n\nExample:\n  \$WARNING(Testing only !)\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001187##
+  mcset $l "List macro calls and expansion lines\n\nSyntax:\n  \$GE\n\nExample:\n  \$GE\n\nNote:\n  Supported by ASEM-51 only" \
+           "List macro calls and expansion lines\n\nSyntax:\n  \$GE\n\nExample:\n  \$GE\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001188##
+  mcset $l "List macro calls and expansion lines\n\nSyntax:\n  \$GEN\n\nExample:\n  \$GEN\n\nNote:\n  Supported by ASEM-51 only" \
+           "List macro calls and expansion lines\n\nSyntax:\n  \$GEN\n\nExample:\n  \$GEN\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001189##
+  mcset $l "List macro calls only\n\nSyntax:\n  \$NOGE\n\nExample:\n  \$NOGE\n\nNote:\n  Supported by ASEM-51 only" \
+           "List macro calls only\n\nSyntax:\n  \$NOGE\n\nExample:\n  \$NOGE\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001190##
+  mcset $l "List macro calls only\n\nSyntax:\n  \$NOGEN\n\nExample:\n  \$NOGEN\n\nNote:\n  Supported by ASEM-51 only" \
+           "List macro calls only\n\nSyntax:\n  \$NOGEN\n\nExample:\n  \$NOGEN\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001191##
+  mcset $l "List expansion lines only\n\nSyntax:\n  \$GO\n\nExample:\n  \$GO\n\nNote:\n  Supported by ASEM-51 only" \
+           "List expansion lines only\n\nSyntax:\n  \$GO\n\nExample:\n  \$GO\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001192##
+  mcset $l "List expansion lines only\n\nSyntax:\n  \$GENONLY\n\nExample:\n  \$GENONLY\n\nNote:\n  Supported by ASEM-51 only" \
+           "List expansion lines only\n\nSyntax:\n  \$GENONLY\n\nExample:\n  \$GENONLY\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001193##
+  mcset $l "Include a source file\n\nSyntax:\n  \$INCLUDE(string)\n\nExample:\n  \$INCLUDE(somefile.asm)\n\n" \
+           "Include a source file\n\nSyntax:\n  \$INCLUDE(string)\n\nExample:\n  \$INCLUDE(somefile.asm)\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001194##
+  mcset $l "Include a source file\n\nSyntax:\n  \$INC(string)\n\nExample:\n  \$INC(somefile.asm)\n\n" \
+           "Include a source file\n\nSyntax:\n  \$INC(string)\n\nExample:\n  \$INC(somefile.asm)\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001195##
+  mcset $l "List subsequent source lines\n\nSyntax:\n  \$LIST\n\nExample:\n  \$LIST\n\n" \
+           "List subsequent source lines\n\nSyntax:\n  \$LIST\n\nExample:\n  \$LIST\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001196##
+  mcset $l "List subsequent source lines\n\nSyntax:\n  \$LI\n\nExample:\n  \$LI\n\n" \
+           "List subsequent source lines\n\nSyntax:\n  \$LI\n\nExample:\n  \$LI\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001197##
+  mcset $l "Don't list subsequent source lines\n\nSyntax:\n  \$NOLI\n\nExample:\n  \$NOLI\n\n" \
+           "Don't list subsequent source lines\n\nSyntax:\n  \$NOLI\n\nExample:\n  \$NOLI\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001198##
+  mcset $l "Don't list subsequent source lines\n\nSyntax:\n  \$NOLIST\n\nExample:\n  \$NOLIST\n\n" \
+           "Don't list subsequent source lines\n\nSyntax:\n  \$NOLIST\n\nExample:\n  \$NOLIST\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001199##
+  mcset $l "Reserve n % of free memory for macros\n\nSyntax:\n  \$MACRO(int)\n\nExample:\n  \$MACRO(50)\n\nNote:\n  Supported by ASEM-51 only" \
+           "Reserve n % of free memory for macros\n\nSyntax:\n  \$MACRO(int)\n\nExample:\n  \$MACRO(50)\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001200##
+  mcset $l "Reserve n % of free memory for macros\n\nSyntax:\n  \$MR(int)\n\nExample:\n  \$MR(50)\n\nNote:\n  Supported by ASEM-51 only" \
+           "Reserve n % of free memory for macros\n\nSyntax:\n  \$MR(int)\n\nExample:\n  \$MR(50)\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001201##
+  mcset $l "Reserve all for the symbol table\n\nSyntax:\n  \$NOMR\n\nExample:\n  \$NOMR\n\nNote:\n  Supported by ASEM-51 only" \
+           "Reserve all for the symbol table\n\nSyntax:\n  \$NOMR\n\nExample:\n  \$NOMR\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001202##
+  mcset $l "Reserve all for the symbol table\n\nSyntax:\n  \$NOMACRO\n\nExample:\n  \$NOMACRO\n\nNote:\n  Supported by ASEM-51 only" \
+           "Reserve all for the symbol table\n\nSyntax:\n  \$NOMACRO\n\nExample:\n  \$NOMACRO\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001203##
+  mcset $l "Enable predefined SFR symbols\n\nSyntax:\n  \$MOD51\n\nExample:\n  \$MOD51\n\nNote:\n  Supported by ASEM-51 only" \
+           "Enable predefined SFR symbols\n\nSyntax:\n  \$MOD51\n\nExample:\n  \$MOD51\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001204##
+  mcset $l "Enable predefined SFR symbols\n\nSyntax:\n  \$MO\n\nExample:\n  \$MO\n\nNote:\n  Supported by ASEM-51 only" \
+           "Enable predefined SFR symbols\n\nSyntax:\n  \$MO\n\nExample:\n  \$MO\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001205##
+  mcset $l "Disable predefined SFR symbols\n\nSyntax:\n  \$NOMOD\n\nExample:\n  \$NOMOD\n\n" \
+           "Disable predefined SFR symbols\n\nSyntax:\n  \$NOMOD\n\nExample:\n  \$NOMOD\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001206##
+  mcset $l "Disable predefined SFR symbols\n\nSyntax:\n  \$NOMO\n\nExample:\n  \$NOMO\n\n" \
+           "Disable predefined SFR symbols\n\nSyntax:\n  \$NOMO\n\nExample:\n  \$NOMO\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001207##
+  mcset $l "Disable predefined SFR symbols\n\nSyntax:\n  \$NOMOD51\n\nExample:\n  \$NOMOD51\n\n" \
+           "Disable predefined SFR symbols\n\nSyntax:\n  \$NOMOD51\n\nExample:\n  \$NOMOD51\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001208##
+  mcset $l "Don't list predefined symbols\n\nSyntax:\n  \$NOBUILTIN\n\nExample:\n  \$NOBUILTIN\n\nNote:\n  Supported by ASEM-51 only" \
+           "Don't list predefined symbols\n\nSyntax:\n  \$NOBUILTIN\n\nExample:\n  \$NOBUILTIN\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001209##
+  mcset $l "Don't use tabs in list file\n\nSyntax:\n  \$NOTABS\n\nExample:\n  \$NOTABS\n\nNote:\n  Supported by ASEM-51 only" \
+           "Don't use tabs in list file\n\nSyntax:\n  \$NOTABS\n\nExample:\n  \$NOTABS\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001210##
+  mcset $l "Enable listing page formatting\n\nSyntax:\n  \$LIST\n\nExample:\n  \$PAGING\n\n" \
+           "Enable listing page formatting\n\nSyntax:\n  \$LIST\n\nExample:\n  \$PAGING\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001211##
+  mcset $l "Enable listing page formatting\n\nSyntax:\n  \$PI\n\nExample:\n  \$PI\n\n" \
+           "Enable listing page formatting\n\nSyntax:\n  \$PI\n\nExample:\n  \$PI\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001212##
+  mcset $l "Disable listing page formatting\n\nSyntax:\n  \$NOPI\n\nExample:\n  \$NOPI\n\n" \
+           "Disable listing page formatting\n\nSyntax:\n  \$NOPI\n\nExample:\n  \$NOPI\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001213##
+  mcset $l "Disable listing page formatting\n\nSyntax:\n  \$NOPAGING\n\nExample:\n  \$NOPAGING\n\n" \
+           "Disable listing page formatting\n\nSyntax:\n  \$NOPAGING\n\nExample:\n  \$NOPAGING\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001214##
+  mcset $l "Set lines per page for listing\n\nSyntax:\n  \$PAGELENGTH(int)\n\nExample:\n  \$PAGELENGTH(64)\n\n" \
+           "Set lines per page for listing\n\nSyntax:\n  \$PAGELENGTH(int)\n\nExample:\n  \$PAGELENGTH(64)\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001215##
+  mcset $l "Set lines per page for listing\n\nSyntax:\n  \$PL(int)\n\nExample:\n  \$PL(64)\n\n" \
+           "Set lines per page for listing\n\nSyntax:\n  \$PL(int)\n\nExample:\n  \$PL(64)\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001216##
+  mcset $l "Set columns per line for listing\n\nSyntax:\n  \$PAGEWIDTH(int)\n\nExample:\n  \$PAGEWIDTH(132)\n\n" \
+           "Set columns per line for listing\n\nSyntax:\n  \$PAGEWIDTH(int)\n\nExample:\n  \$PAGEWIDTH(132)\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001217##
+  mcset $l "Set columns per line for listing\n\nSyntax:\n  \$PW(int)\n\nExample:\n  \$PW(132)\n\n" \
+           "Set columns per line for listing\n\nSyntax:\n  \$PW(int)\n\nExample:\n  \$PW(132)\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001218##
+  mcset $l "Switch on 83C75x family support\n\nSyntax:\n  \$PHILIPS\n\nExample:\n  \$PHILIPS\n\nNote:\n  Supported by ASEM-51 only" \
+           "Switch on 83C75x family support\n\nSyntax:\n  \$PHILIPS\n\nExample:\n  \$PHILIPS\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001219##
+  mcset $l "Save current \$LIST/\$GEN/\$COND\n\nSyntax:\n  \$SAVE\n\nExample:\n  \$SAVE\n\nNote:\n  Supported by ASEM-51 only" \
+           "Save current \$LIST/\$GEN/\$COND\n\nSyntax:\n  \$SAVE\n\nExample:\n  \$SAVE\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001220##
+  mcset $l "Save current \$LIST/\$GEN/\$COND\n\nSyntax:\n  \$SA\n\nExample:\n  \$SA\n\nNote:\n  Supported by ASEM-51 only" \
+           "Save current \$LIST/\$GEN/\$COND\n\nSyntax:\n  \$SA\n\nExample:\n  \$SA\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001221##
+  mcset $l "Restore old \$LIST/\$GEN/\$COND\n\nSyntax:\n  \$RESTORE\n\nExample:\n  \$RESTORE\n\nNote:\n  Supported by ASEM-51 only" \
+           "Restore old \$LIST/\$GEN/\$COND\n\nSyntax:\n  \$RESTORE\n\nExample:\n  \$RESTORE\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001222##
+  mcset $l "Restore old \$LIST/\$GEN/\$COND\n\nSyntax:\n  \$RS\n\nExample:\n  \$RS\n\nNote:\n  Supported by ASEM-51 only" \
+           "Restore old \$LIST/\$GEN/\$COND\n\nSyntax:\n  \$RS\n\nExample:\n  \$RS\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001223##
+  mcset $l "Create symbol table\n\nSyntax:\n  \$SYMBOLS\n\nExample:\n  \$SYMBOLS\n\n" \
+           "Create symbol table\n\nSyntax:\n  \$SYMBOLS\n\nExample:\n  \$SYMBOLS\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001224##
+  mcset $l "Create symbol table\n\nSyntax:\n  \$SB\n\nExample:\n  \$SB\n\n" \
+           "Create symbol table\n\nSyntax:\n  \$SB\n\nExample:\n  \$SB\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001225##
+  mcset $l "Don't create symbol table\n\nSyntax:\n  \$NOSYMBOLS\n\nExample:\n  \$NOSYMBOLS\n\n" \
+           "Don't create symbol table\n\nSyntax:\n  \$NOSYMBOLS\n\nExample:\n  \$NOSYMBOLS\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001226##
+  mcset $l "Don't create symbol table\n\nSyntax:\n  \$NOSB\n\nExample:\n  \$NOSB\n\n" \
+           "Don't create symbol table\n\nSyntax:\n  \$NOSB\n\nExample:\n  \$NOSB\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001227##
+  mcset $l "Inserts title string into page header\n\nSyntax:\n  \$TITLE(string)\n\nExample:\n  \$TITLE(My firts code)\n\n" \
+           "Inserts title string into page header\n\nSyntax:\n  \$TITLE(string)\n\nExample:\n  \$TITLE(My firts code)\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001228##
+  mcset $l "Inserts title string into page header\n\nSyntax:\n  \$TT(string)\n\nExample:\n  \$TT(My firts code)\n\n" \
+           "Inserts title string into page header\n\nSyntax:\n  \$TT(string)\n\nExample:\n  \$TT(My firts code)\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001229##
+  mcset $l "Create cross reference\n\nSyntax:\n  \$XREF\n\nExample:\n  \$XREF\n\nNote:\n  Supported by ASEM-51 only" \
+           "Create cross reference\n\nSyntax:\n  \$XREF\n\nExample:\n  \$XREF\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001230##
+  mcset $l "Create cross reference\n\nSyntax:\n  \$XR\n\nExample:\n  \$XR\n\nNote:\n  Supported by ASEM-51 only" \
+           "Create cross reference\n\nSyntax:\n  \$XR\n\nExample:\n  \$XR\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001231##
+  mcset $l "Don't create cross reference\n\nSyntax:\n  \$NOXREF\n\nExample:\n  \$NOXREF\n\nNote:\n  Supported by ASEM-51 only" \
+           "Don't create cross reference\n\nSyntax:\n  \$NOXREF\n\nExample:\n  \$NOXREF\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001232##
+  mcset $l "Don't create cross reference\n\nSyntax:\n  \$NOXR\n\nExample:\n  \$NOXR\n\nNote:\n  Supported by ASEM-51 only" \
+           "Don't create cross reference\n\nSyntax:\n  \$NOXR\n\nExample:\n  \$NOXR\n\nNote:\n  Supported by ASEM-51 only" ;# <-- NOT TRANSLATED YET
+  ##ID:001233##
+  mcset $l "Do not create Intel HEX file\n\nSyntax:\n  \$NOOBJECT\n\nExample:\n  \$NOOBJECT\n\nNote:\n  Supported by native assembler only" \
+           "Do not create Intel HEX file\n\nSyntax:\n  \$NOOBJECT\n\nExample:\n  \$NOOBJECT\n\nNote:\n  Supported by native assembler only" ;# <-- NOT TRANSLATED YET
+  ##ID:001234##
+  mcset $l "Specify file name for Intel HEX\n\nSyntax:\n  \$OBJECT(string)\n\nExample:\n  \$OBJECT(my_hex.hex)\n\nNote:\n  Supported by native assembler only" \
+           "Specify file name for Intel HEX\n\nSyntax:\n  \$OBJECT(string)\n\nExample:\n  \$OBJECT(my_hex.hex)\n\nNote:\n  Supported by native assembler only" ;# <-- NOT TRANSLATED YET
+  ##ID:001235##
+  mcset $l "Specify file name for list file\n\nSyntax:\n  \$PRINT(string)\n\nExample:\n  \$PRINT(my_list.lst)\n\nNote:\n  Supported by native assembler only" \
+           "Specify file name for list file\n\nSyntax:\n  \$PRINT(string)\n\nExample:\n  \$PRINT(my_list.lst)\n\nNote:\n  Supported by native assembler only" ;# <-- NOT TRANSLATED YET
+  ##ID:001236##
+  mcset $l "Do not create list file at all\n\nSyntax:\n  \$NOPRINT\n\nExample:\n  \$NOPRINT\n\nNote:\n  Supported by native assembler only" \
+           "Do not create list file at all\n\nSyntax:\n  \$NOPRINT\n\nExample:\n  \$NOPRINT\n\nNote:\n  Supported by native assembler only" ;# <-- NOT TRANSLATED YET
+  ##ID:001237##
+  mcset $l "Define and expand macro instruction after! conditional assembly and definitions of constants\n\nSyntax:\n  \$NOMACROSFIRTS\n\nExample:\n  \$NOMACROSFIRTS\n\nNote:\n  Supported by native assembler only" \
+           "Define and expand macro instruction after! conditional assembly and definitions of constants\n\nSyntax:\n  \$NOMACROSFIRTS\n\nExample:\n  \$NOMACROSFIRTS\n\nNote:\n  Supported by native assembler only" ;# <-- NOT TRANSLATED YET
+  ##ID:001238##
+  mcset $l "Add register to Accumulator" \
+           "Add register to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001239##
+  mcset $l "Add direct byte to Accumulator" \
+           "Add direct byte to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001240##
+  mcset $l "Add indirect RAM to Accumulator" \
+           "Add indirect RAM to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001241##
+  mcset $l "Add immediate data to Accumulator" \
+           "Add immediate data to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001242##
+  mcset $l "Add register to Accumulator with Carry" \
+           "Add register to Accumulator with Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001243##
+  mcset $l "Add direct byte to Accumulator with Carry" \
+           "Add direct byte to Accumulator with Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001244##
+  mcset $l "Add indirect RAM to Accumulator with Carry" \
+           "Add indirect RAM to Accumulator with Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001245##
+  mcset $l "Add immediate data to Acc with Carry" \
+           "Add immediate data to Acc with Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001246##
+  mcset $l "Subtract Register from Acc with borrow" \
+           "Subtract Register from Acc with borrow" ;# <-- NOT TRANSLATED YET
+  ##ID:001247##
+  mcset $l "Subtract direct byte from Acc with borrow" \
+           "Subtract direct byte from Acc with borrow" ;# <-- NOT TRANSLATED YET
+  ##ID:001248##
+  mcset $l "Subtract indirect RAM from ACC with borrow" \
+           "Subtract indirect RAM from ACC with borrow" ;# <-- NOT TRANSLATED YET
+  ##ID:001249##
+  mcset $l "Subtract immediate data from Acc with borrow" \
+           "Subtract immediate data from Acc with borrow" ;# <-- NOT TRANSLATED YET
+  ##ID:001250##
+  mcset $l "Increment Accumulator" \
+           "Increment Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001251##
+  mcset $l "Increment register" \
+           "Increment register" ;# <-- NOT TRANSLATED YET
+  ##ID:001252##
+  mcset $l "Increment direct byte" \
+           "Increment direct byte" ;# <-- NOT TRANSLATED YET
+  ##ID:001253##
+  mcset $l "Increment direct RAM" \
+           "Increment direct RAM" ;# <-- NOT TRANSLATED YET
+  ##ID:001254##
+  mcset $l "Decrement Accumulator" \
+           "Decrement Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001255##
+  mcset $l "Decrement Register" \
+           "Decrement Register" ;# <-- NOT TRANSLATED YET
+  ##ID:001256##
+  mcset $l "Decrement direct byte" \
+           "Decrement direct byte" ;# <-- NOT TRANSLATED YET
+  ##ID:001257##
+  mcset $l "Decrement indirect RAM" \
+           "Decrement indirect RAM" ;# <-- NOT TRANSLATED YET
+  ##ID:001258##
+  mcset $l "Increment Data Pointer" \
+           "Increment Data Pointer" ;# <-- NOT TRANSLATED YET
+  ##ID:001259##
+  mcset $l "Multiply A & B" \
+           "Multiply A & B" ;# <-- NOT TRANSLATED YET
+  ##ID:001260##
+  mcset $l "Divide A by B" \
+           "Divide A by B" ;# <-- NOT TRANSLATED YET
+  ##ID:001261##
+  mcset $l "Decimal Adjust Accumulator" \
+           "Decimal Adjust Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001262##
+  mcset $l "AND Register to Accumulator" \
+           "AND Register to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001263##
+  mcset $l "AND direct byte to Accumulator" \
+           "AND direct byte to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001264##
+  mcset $l "AND indirect RAM to Accumulator" \
+           "AND indirect RAM to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001265##
+  mcset $l "AND immediate data to Accumulator" \
+           "AND immediate data to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001266##
+  mcset $l "AND Accumulator to direct byte" \
+           "AND Accumulator to direct byte" ;# <-- NOT TRANSLATED YET
+  ##ID:001267##
+  mcset $l "AND immediate data to direct byte" \
+           "AND immediate data to direct byte" ;# <-- NOT TRANSLATED YET
+  ##ID:001268##
+  mcset $l "OR register to Accumulator" \
+           "OR register to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001269##
+  mcset $l "OR direct byte to Accumulator" \
+           "OR direct byte to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001270##
+  mcset $l "OR indirect RAM to Accumulator" \
+           "OR indirect RAM to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001271##
+  mcset $l "OR immediate data to Accumulator" \
+           "OR immediate data to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001272##
+  mcset $l "OR Accumulator to direct byte" \
+           "OR Accumulator to direct byte" ;# <-- NOT TRANSLATED YET
+  ##ID:001273##
+  mcset $l "OR immediate data to direct byte" \
+           "OR immediate data to direct byte" ;# <-- NOT TRANSLATED YET
+  ##ID:001274##
+  mcset $l "Exclusive-OR register to Accumulator" \
+           "Exclusive-OR register to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001275##
+  mcset $l "Exclusive-OR direct byte to Accumulator" \
+           "Exclusive-OR direct byte to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001276##
+  mcset $l "Exclusive-OR indirect RAM to Accumulator" \
+           "Exclusive-OR indirect RAM to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001277##
+  mcset $l "Exclusive-OR immediate data to Accumulator" \
+           "Exclusive-OR immediate data to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001278##
+  mcset $l "Exclusive-OR Accumulator to direct byte" \
+           "Exclusive-OR Accumulator to direct byte" ;# <-- NOT TRANSLATED YET
+  ##ID:001279##
+  mcset $l "Exclusive-OR immediate data to direct byte" \
+           "Exclusive-OR immediate data to direct byte" ;# <-- NOT TRANSLATED YET
+  ##ID:001280##
+  mcset $l "Clear Accumulator" \
+           "Clear Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001281##
+  mcset $l "Complement Accumulator" \
+           "Complement Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001282##
+  mcset $l "Rotate Accumulator Left" \
+           "Rotate Accumulator Left" ;# <-- NOT TRANSLATED YET
+  ##ID:001283##
+  mcset $l "Rotate Accumulator Left through the Carry" \
+           "Rotate Accumulator Left through the Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001284##
+  mcset $l "Rotate Accumulator Right" \
+           "Rotate Accumulator Right" ;# <-- NOT TRANSLATED YET
+  ##ID:001285##
+  mcset $l "Rotate Accumulator Right through the Carry" \
+           "Rotate Accumulator Right through the Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001286##
+  mcset $l "Swap nibbles within the Accumulator" \
+           "Swap nibbles within the Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001287##
+  mcset $l "Move register to Accumulator" \
+           "Move register to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001288##
+  mcset $l "Move direct byte to Accumulator" \
+           "Move direct byte to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001289##
+  mcset $l "Move indirect RAM to Accumulator" \
+           "Move indirect RAM to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001290##
+  mcset $l "Move immediate data to Accumulator" \
+           "Move immediate data to Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001291##
+  mcset $l "Move Accumulator to register" \
+           "Move Accumulator to register" ;# <-- NOT TRANSLATED YET
+  ##ID:001292##
+  mcset $l "Move direct byte to register" \
+           "Move direct byte to register" ;# <-- NOT TRANSLATED YET
+  ##ID:001293##
+  mcset $l "Move immediate data to register" \
+           "Move immediate data to register" ;# <-- NOT TRANSLATED YET
+  ##ID:001294##
+  mcset $l "Move Accumulator to direct byte" \
+           "Move Accumulator to direct byte" ;# <-- NOT TRANSLATED YET
+  ##ID:001295##
+  mcset $l "Move register to direct byte" \
+           "Move register to direct byte" ;# <-- NOT TRANSLATED YET
+  ##ID:001296##
+  mcset $l "Move direct byte to direct" \
+           "Move direct byte to direct" ;# <-- NOT TRANSLATED YET
+  ##ID:001297##
+  mcset $l "Move indirect RAM to direct byte" \
+           "Move indirect RAM to direct byte" ;# <-- NOT TRANSLATED YET
+  ##ID:001298##
+  mcset $l "Move immediate data to direct byte" \
+           "Move immediate data to direct byte" ;# <-- NOT TRANSLATED YET
+  ##ID:001299##
+  mcset $l "Move Accumulator to indirect RAM" \
+           "Move Accumulator to indirect RAM" ;# <-- NOT TRANSLATED YET
+  ##ID:001300##
+  mcset $l "Move direct byte to indirect RAM" \
+           "Move direct byte to indirect RAM" ;# <-- NOT TRANSLATED YET
+  ##ID:001301##
+  mcset $l "Move immediate data to indirect RAM" \
+           "Move immediate data to indirect RAM" ;# <-- NOT TRANSLATED YET
+  ##ID:001302##
+  mcset $l "Load Data Pointer with a 16-bit constant" \
+           "Load Data Pointer with a 16-bit constant" ;# <-- NOT TRANSLATED YET
+  ##ID:001303##
+  mcset $l "Move Code byte relative to DPTR to Acc" \
+           "Move Code byte relative to DPTR to Acc" ;# <-- NOT TRANSLATED YET
+  ##ID:001304##
+  mcset $l "Move Code byte relative to PC to Acc" \
+           "Move Code byte relative to PC to Acc" ;# <-- NOT TRANSLATED YET
+  ##ID:001305##
+  mcset $l "Move External RAM (8-bit addr) to Acc" \
+           "Move External RAM (8-bit addr) to Acc" ;# <-- NOT TRANSLATED YET
+  ##ID:001306##
+  mcset $l "Move Exernal RAM (16-bit addr) to Acc" \
+           "Move Exernal RAM (16-bit addr) to Acc" ;# <-- NOT TRANSLATED YET
+  ##ID:001307##
+  mcset $l "Move Acc to External RAM (8-bit addr)" \
+           "Move Acc to External RAM (8-bit addr)" ;# <-- NOT TRANSLATED YET
+  ##ID:001308##
+  mcset $l "Move Acc to External RAM (16-bit addr)" \
+           "Move Acc to External RAM (16-bit addr)" ;# <-- NOT TRANSLATED YET
+  ##ID:001309##
+  mcset $l "Push direct byte onto stack" \
+           "Push direct byte onto stack" ;# <-- NOT TRANSLATED YET
+  ##ID:001310##
+  mcset $l "Pop direct byte from stack" \
+           "Pop direct byte from stack" ;# <-- NOT TRANSLATED YET
+  ##ID:001311##
+  mcset $l "Exchange register with Accumulator" \
+           "Exchange register with Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001312##
+  mcset $l "Exchange direct byte with Accumulator" \
+           "Exchange direct byte with Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001313##
+  mcset $l "Exchange indirect RAM with Accumulator" \
+           "Exchange indirect RAM with Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:001314##
+  mcset $l "Exchange low-order Digit indirect RAM with Acc" \
+           "Exchange low-order Digit indirect RAM with Acc" ;# <-- NOT TRANSLATED YET
+  ##ID:001315##
+  mcset $l "Clear Carry" \
+           "Clear Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001316##
+  mcset $l "Clear direct bit" \
+           "Clear direct bit" ;# <-- NOT TRANSLATED YET
+  ##ID:001317##
+  mcset $l "Set Carry" \
+           "Set Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001318##
+  mcset $l "Set direct bit" \
+           "Set direct bit" ;# <-- NOT TRANSLATED YET
+  ##ID:001319##
+  mcset $l "Complement Carry" \
+           "Complement Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001320##
+  mcset $l "Complement direct bit" \
+           "Complement direct bit" ;# <-- NOT TRANSLATED YET
+  ##ID:001321##
+  mcset $l "AND direct bit to CARRY" \
+           "AND direct bit to CARRY" ;# <-- NOT TRANSLATED YET
+  ##ID:001322##
+  mcset $l "AND complement of direct bit to Carry" \
+           "AND complement of direct bit to Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001323##
+  mcset $l "OR direct bit to Carry" \
+           "OR direct bit to Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001324##
+  mcset $l "OR complement of direct bit to Carry" \
+           "OR complement of direct bit to Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001325##
+  mcset $l "Move direct bit to Carry" \
+           "Move direct bit to Carry" ;# <-- NOT TRANSLATED YET
+  ##ID:001326##
+  mcset $l "Move Carry to direct bit" \
+           "Move Carry to direct bit" ;# <-- NOT TRANSLATED YET
+  ##ID:001327##
+  mcset $l "Jump if Carry is set" \
+           "Jump if Carry is set" ;# <-- NOT TRANSLATED YET
+  ##ID:001328##
+  mcset $l "Jump if Carry not set" \
+           "Jump if Carry not set" ;# <-- NOT TRANSLATED YET
+  ##ID:001329##
+  mcset $l "Jump if direct Bit is set" \
+           "Jump if direct Bit is set" ;# <-- NOT TRANSLATED YET
+  ##ID:001330##
+  mcset $l "Jump if direct Bit is Not set" \
+           "Jump if direct Bit is Not set" ;# <-- NOT TRANSLATED YET
+  ##ID:001331##
+  mcset $l "Jump if direct Bit is set & clear bit" \
+           "Jump if direct Bit is set & clear bit" ;# <-- NOT TRANSLATED YET
+  ##ID:001332##
+  mcset $l "Absolute Subroutine Call" \
+           "Absolute Subroutine Call" ;# <-- NOT TRANSLATED YET
+  ##ID:001333##
+  mcset $l "Long Subroutine Call" \
+           "Long Subroutine Call" ;# <-- NOT TRANSLATED YET
+  ##ID:001334##
+  mcset $l "Return from Subroutine" \
+           "Return from Subroutine" ;# <-- NOT TRANSLATED YET
+  ##ID:001335##
+  mcset $l "Return from interrupt" \
+           "Return from interrupt" ;# <-- NOT TRANSLATED YET
+  ##ID:001336##
+  mcset $l "Absolute Jump" \
+           "Absolute Jump" ;# <-- NOT TRANSLATED YET
+  ##ID:001337##
+  mcset $l "Long Jump" \
+           "Long Jump" ;# <-- NOT TRANSLATED YET
+  ##ID:001338##
+  mcset $l "Short Jump (relative addr)" \
+           "Short Jump (relative addr)" ;# <-- NOT TRANSLATED YET
+  ##ID:001339##
+  mcset $l "Jump indirect relative to the DPTR" \
+           "Jump indirect relative to the DPTR" ;# <-- NOT TRANSLATED YET
+  ##ID:001340##
+  mcset $l "Jump if Accumulator is Zero" \
+           "Jump if Accumulator is Zero" ;# <-- NOT TRANSLATED YET
+  ##ID:001341##
+  mcset $l "Jump if Accumulator is Not Zero" \
+           "Jump if Accumulator is Not Zero" ;# <-- NOT TRANSLATED YET
+  ##ID:001342##
+  mcset $l "Compare direct byte to Acc and Jump if Not Equal" \
+           "Compare direct byte to Acc and Jump if Not Equal" ;# <-- NOT TRANSLATED YET
+  ##ID:001343##
+  mcset $l "Compare immediate to Acc and Jump if Not Equal" \
+           "Compare immediate to Acc and Jump if Not Equal" ;# <-- NOT TRANSLATED YET
+  ##ID:001344##
+  mcset $l "Compare immediate to register and Jump if Not Equal" \
+           "Compare immediate to register and Jump if Not Equal" ;# <-- NOT TRANSLATED YET
+  ##ID:001345##
+  mcset $l "Compare immediate to indirect and Jump if Not Equal" \
+           "Compare immediate to indirect and Jump if Not Equal" ;# <-- NOT TRANSLATED YET
+  ##ID:001346##
+  mcset $l "Decrement register and Jump if Not Zero" \
+           "Decrement register and Jump if Not Zero" ;# <-- NOT TRANSLATED YET
+  ##ID:001347##
+  mcset $l "Decrement direct byte and Jump if Not Zero" \
+           "Decrement direct byte and Jump if Not Zero" ;# <-- NOT TRANSLATED YET
+  ##ID:001348##
+  mcset $l "Program Branching" \
+           "Program Branching" ;# <-- NOT TRANSLATED YET
+  ##ID:001349##
+  mcset $l "No Operation" \
+           "No Operation" ;# <-- NOT TRANSLATED YET
+  ##ID:001350##
+  mcset $l "Data Transfer" \
+           "Data Transfer" ;# <-- NOT TRANSLATED YET
+  ##ID:001351##
+  mcset $l "Boolean Variable Manipulation" \
+           "Boolean Variable Manipulation" ;# <-- NOT TRANSLATED YET
+  ##ID:001352##
+  mcset $l "Read-Modify-Write" \
+           "Read-Modify-Write" ;# <-- NOT TRANSLATED YET
+  ##ID:001353##
+  mcset $l "Logical Operations" \
+           "Logical Operations" ;# <-- NOT TRANSLATED YET
+  ##ID:001354##
+  mcset $l "Arithmetic Operations" \
+           "Arithmetic Operations" ;# <-- NOT TRANSLATED YET
+}
+# messages.tcl
+# ==============================================================================
+namespace eval Messages {
+  ##ID:001355##
+  mcset $l "Copy selected text into clipboard" \
+           "复制选定的文本到剪贴板"
+  ##ID:001356##
+  mcset $l "Clear all messages" \
+           "清除所有消息"
+  ##ID:001357##
+  mcset $l "Select all text in this TextBox" \
+           "Select all text in this TextBox" ;# <-- NOT TRANSLATED YET
+  ##ID:001358##
+  mcset $l "Find next" \
+           "查找下一个"
+  ##ID:001359##
+  mcset $l "Find previous" \
+           "查找上一个"
+  ##ID:001360##
+  mcset $l "Match case" \
+           "区分大小写"
+  ##ID:001361##
+  mcset $l "Find:" \
+           "查找:"
+  ##ID:001362##
+  mcset $l "Hide search bar" \
+           "隐藏搜索栏"
+  ##ID:001363##
+  mcset $l "Find previous occurrence of search string" \
+           "查找上一个出现的搜索字"
+  ##ID:001364##
+  mcset $l "Find next occurrence of search string" \
+           "查找下一个出现的搜索字"
+}
+# hexeditor.tcl
+# ==============================================================================
+namespace eval HexEditor {
+  ##ID:001365##
+  mcset $l "Select all" \
+           "选择所有"
+  ##ID:001366##
+  mcset $l "Text to find" \
+           "要查找的文本"
+  ##ID:001367##
+  mcset $l "Where" \
+           "Where" ;# <-- NOT TRANSLATED YET
+  ##ID:001368##
+  mcset $l "Left view" \
+           "左视图"
+  ##ID:001369##
+  mcset $l "Right view" \
+           "右视图"
+  ##ID:001370##
+  mcset $l "Options" \
+           "选项"
+  ##ID:001371##
+  mcset $l "From cursor" \
+           "从光标"
+  ##ID:001372##
+  mcset $l "Backwards" \
+           "向后"
+  ##ID:001373##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:001374##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:001375##
+  mcset $l "Find" \
+           "查找"
+  ##ID:001376##
+  mcset $l "String not found" \
+           "字符未找到"
+  ##ID:001377##
+  mcset $l "Search string '%s' not found !" \
+           "字符 '%s' 没有搜索到!"
+}
+# cvarsview.tcl
+# ==============================================================================
+namespace eval CVarsView {
+  ##ID:001378##
+  mcset $l "Unable to read file\n'%s'" \
+           "无法读取文件\n'%s'"
+  ##ID:001379##
+  mcset $l "Permission denied" \
+           "没有权限"
+  ##ID:001380##
+  mcset $l "Search:" \
+           "搜索:"
+  ##ID:001381##
+  mcset $l {Value        Level   Data type  Variable name} \
+           {Value        Level   Data type  Variable name} ;# <-- NOT TRANSLATED YET
+  ##ID:001382##
+  mcset $l {Value        Data type  Variable name} \
+           {Value        Data type  Variable name} ;# <-- NOT TRANSLATED YET
+  ##ID:001383##
+  mcset $l "Global static scalar variables" \
+           "Global static scalar variables" ;# <-- NOT TRANSLATED YET
+  ##ID:001384##
+  mcset $l "Local static scalar variables" \
+           "Local static scalar variables" ;# <-- NOT TRANSLATED YET
+}
+# my_tk_messageBox.tcl
+# ==============================================================================
+namespace eval my_tk_messageBox {
+  ##ID:001385##
+  mcset $l "Abort" \
+           "中止"
+  ##ID:001386##
+  mcset $l "Retry" \
+           "重试"
+  ##ID:001387##
+  mcset $l "Ignore" \
+           "忽略"
+  ##ID:001388##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:001389##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:001390##
+  mcset $l "Yes" \
+           "Yes" ;# <-- NOT TRANSLATED YET
+  ##ID:001391##
+  mcset $l "No" \
+           "No" ;# <-- NOT TRANSLATED YET
+}
+# tips.tcl
+# ==============================================================================
+namespace eval Tips {
+  ##ID:001392##
+  mcset $l "Did you know ... " \
+           "您知道吗 ... "
+  ##ID:001393##
+  mcset $l "Show tips on start-up" \
+           "在启动时显示"
+  ##ID:001394##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:001395##
+  mcset $l "Next" \
+           "下一页"
+  ##ID:001396##
+  mcset $l "Previous" \
+           "上一页"
+  ##ID:001397##
+  mcset $l "Tip of the day - MCU 8051 IDE" \
+           "每日提示 - MCU 8051 IDE"
+  ##ID:001398##
+  mcset $l "Unable to open file containing tips,\nplease check your installation" \
+           "无法打开文件，其中包含提示,\n请检查您的安装"
+  ##ID:001399##
+  mcset $l "Unable to parse tips.xml" \
+           "无法解析tips.xml"
+  ##ID:001400##
+  mcset $l "File tips.xml is corrupted,\nplease check your installation" \
+           "文件tips.xml已损坏,\n请检查您的安装"
+}
+# editor.tcl
+# ==============================================================================
+namespace eval Editor {
+  ##ID:001401##
+  mcset $l "LJMP this line" \
+           "LJMP这一行"
+  ##ID:001402##
+  mcset $l "LCALL this line" \
+           "LCALL这一行"
+  ##ID:001403##
+  mcset $l "Program jump" \
+           "程序转跳"
+  ##ID:001404##
+  mcset $l "Call subprogram" \
+           "调用子程序"
+  ##ID:001405##
+  mcset $l "Breakpoint" \
+           "断点"
+  ##ID:001406##
+  mcset $l "Bookmark" \
+           "书签"
+  ##ID:001407##
+  mcset $l "Add/Remove breakpoint to/from current line" \
+           "Add/Remove breakpoint to/from current line" ;# <-- NOT TRANSLATED YET
+  ##ID:001408##
+  mcset $l "Add/Remove bookmark to/from current line" \
+           "Add/Remove bookmark to/from current line" ;# <-- NOT TRANSLATED YET
+  ##ID:001409##
+  mcset $l "Uppercase" \
+           "大写"
+  ##ID:001410##
+  mcset $l "Lowercase" \
+           "小写"
+  ##ID:001411##
+  mcset $l "Capitalize" \
+           "大写"
+  ##ID:001412##
+  mcset $l "Save file" \
+           "保存文件"
+  ##ID:001413##
+  mcset $l "Save this file" \
+           "保存这个文件"
+  ##ID:001414##
+  mcset $l "Configure panel" \
+           "配置面板"
+  ##ID:001415##
+  mcset $l "Invoke editor configuration dialog" \
+           "调用编辑器配置面板"
+  ##ID:001416##
+  mcset $l "Hide this panel" \
+           "隐藏这个面板"
+  ##ID:001417##
+  mcset $l "Hide panel" \
+           "隐藏面板"
+  ##ID:001418##
+  mcset $l "Split vertical" \
+           "垂直分割"
+  ##ID:001419##
+  mcset $l "Split the editor vertically" \
+           "垂直分割编辑器"
+  ##ID:001420##
+  mcset $l "Split horizontal" \
+           "水平分割"
+  ##ID:001421##
+  mcset $l "Split the editor horizontally" \
+           "水平分割编辑器"
+  ##ID:001422##
+  mcset $l "Close current view" \
+           "关闭当前视图"
+  ##ID:001423##
+  mcset $l "Back" \
+           "返回"
+  ##ID:001424##
+  mcset $l "Go to previous file in the file list" \
+           "移动到文件列表里的上一个文件"
+  ##ID:001425##
+  mcset $l "Go to next file in the file list" \
+           "移动到文件列表里的下一个文件"
+  ##ID:001426##
+  mcset $l "Forward" \
+           "向前"
+  ##ID:001427##
+  mcset $l "Editor command line, type `help' for more" \
+           "Editor command line, type `help' for more" ;# <-- NOT TRANSLATED YET
+  ##ID:001428##
+  mcset $l "Icon border - click to add/remove bookmark" \
+           "Icon border - click to add/remove bookmark" ;# <-- NOT TRANSLATED YET
+  ##ID:001429##
+  mcset $l "Line numbers - click to add/remove breakpoint" \
+           "Line numbers - click to add/remove breakpoint" ;# <-- NOT TRANSLATED YET
+  ##ID:001430##
+  mcset $l "Insertion mode" \
+           "Insertion mode" ;# <-- NOT TRANSLATED YET
+  ##ID:001431##
+  mcset $l "Insertion mode -- OVR == overwrite; INS == insert" \
+           "Insertion mode -- OVR == overwrite; INS == insert" ;# <-- NOT TRANSLATED YET
+  ##ID:001432##
+  mcset $l "INS" \
+           "INS" ;# <-- NOT TRANSLATED YET
+  ##ID:001433##
+  mcset $l "OVR" \
+           "OVR" ;# <-- NOT TRANSLATED YET
+  ##ID:001434##
+  mcset $l "Selection mode" \
+           "Selection mode" ;# <-- NOT TRANSLATED YET
+  ##ID:001435##
+  mcset $l "Selection mode -- BLK == block; NORM == normal" \
+           "Selection mode -- BLK == block; NORM == normal" ;# <-- NOT TRANSLATED YET
+  ##ID:001436##
+  mcset $l "NORM" \
+           "NORM" ;# <-- NOT TRANSLATED YET
+  ##ID:001437##
+  mcset $l "BLK" \
+           "BLK" ;# <-- NOT TRANSLATED YET
+  ##ID:001438##
+  mcset $l "Line:" \
+           "Line:" ;# <-- NOT TRANSLATED YET
+  ##ID:001439##
+  mcset $l " Column:" \
+           " Column:" ;# <-- NOT TRANSLATED YET
+  ##ID:001440##
+  mcset $l " Total:" \
+           " Total:" ;# <-- NOT TRANSLATED YET
+  ##ID:001441##
+  mcset $l "Editor status bar" \
+           "编辑器状态栏"
+  ##ID:001442##
+  mcset $l "Starting simulator" \
+           "启动模拟器"
+  ##ID:001443##
+  mcset $l "Simulator mode    " \
+           "模拟器模式    "
+  ##ID:001444##
+  mcset $l "Editor disabled" \
+           "禁用编辑器"
+  ##ID:001445##
+  mcset $l "File has been modified, click to save" \
+           "文件已被修改,点击保存"
+  ##ID:001446##
+  mcset $l "Name of the current file or \"untitled\" if the file has not yet been saved under any name" \
+           "Name of the current file or \"untitled\" if the file has not yet been saved under any name" ;# <-- NOT TRANSLATED YET
+  ##ID:001447##
+  mcset $l "File type\n  C/H\tC source / header\n  ASM\tAssembly language\n  LST\tCode listing\n  ASX\tASX8051 assembler" \
+           "File type\n  C/H\tC source / header\n  ASM\tAssembly language\n  LST\tCode listing\n  ASX\tASX8051 assembler" ;# <-- NOT TRANSLATED YET
+  ##ID:001448##
+  mcset $l "File type" \
+           "文件类型"
+  ##ID:001449##
+  mcset $l "Invalid command" \
+           "无效的命令"
+  ##ID:001450##
+  mcset $l "Ambiguous command" \
+           "Ambiguous command" ;# <-- NOT TRANSLATED YET
+  ##ID:001451##
+  mcset $l "This MCU cannot have connected external data memory" \
+           "This MCU cannot have connected external data memory" ;# <-- NOT TRANSLATED YET
+  ##ID:001452##
+  mcset $l "This MCU cannot have connected external program memory" \
+           "This MCU cannot have connected external program memory" ;# <-- NOT TRANSLATED YET
+  ##ID:001453##
+  mcset $l "EDITOR COMMAND LINE: invalid command, type `help list' to get list of available commands" \
+           "EDITOR COMMAND LINE: invalid command, type `help list' to get list of available commands" ;# <-- NOT TRANSLATED YET
+  ##ID:001454##
+  mcset $l "EDITOR COMMAND LINE: wrong # args (command: %s)" \
+           "EDITOR COMMAND LINE: wrong # args (command: %s)" ;# <-- NOT TRANSLATED YET
+  ##ID:001455##
+  mcset $l "EDITOR COMMAND LINE: This command takes no arguments" \
+           "EDITOR COMMAND LINE: This command takes no arguments" ;# <-- NOT TRANSLATED YET
+  ##ID:001456##
+  mcset $l "EDITOR COMMAND LINE: Invalid number format" \
+           "EDITOR COMMAND LINE: Invalid number format" ;# <-- NOT TRANSLATED YET
+  ##ID:001457##
+  mcset $l "EDITOR COMMAND LINE: This command requires exactly one argument" \
+           "EDITOR COMMAND LINE: This command requires exactly one argument" ;# <-- NOT TRANSLATED YET
+  ##ID:001458##
+  mcset $l "EDITOR COMMAND LINE: Unknown command: `%s'" \
+           "EDITOR COMMAND LINE: Unknown command: `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001459##
+  mcset $l "EDITOR COMMAND LINE: Unsupported processor `%s'" \
+           "EDITOR COMMAND LINE: Unsupported processor `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001460##
+  mcset $l "EDITOR COMMAND LINE: Expected integer but got `%s' (command: %s)" \
+           "EDITOR COMMAND LINE: Expected integer but got `%s' (command: %s)" ;# <-- NOT TRANSLATED YET
+  ##ID:001461##
+  mcset $l "EDITOR COMMAND LINE: This MCU has XDATA memory limit 0x10000 B (65536) (command: %s)" \
+           "EDITOR COMMAND LINE: This MCU has XDATA memory limit 0x10000 B (65536) (command: %s)" ;# <-- NOT TRANSLATED YET
+  ##ID:001462##
+  mcset $l "EDITOR COMMAND LINE: This MCU has CODE memory limit 0x10000 B (65536) (command: %s)" \
+           "EDITOR COMMAND LINE: This MCU has CODE memory limit 0x10000 B (65536) (command: %s)" ;# <-- NOT TRANSLATED YET
+  ##ID:001463##
+  mcset $l "EDITOR COMMAND LINE: Invalid format string" \
+           "EDITOR COMMAND LINE: Invalid format string" ;# <-- NOT TRANSLATED YET
+  ##ID:001464##
+  mcset $l "EDITOR COMMAND LINE: syntax error: expected integer (command: %s)" \
+           "EDITOR COMMAND LINE: syntax error: expected integer (command: %s)" ;# <-- NOT TRANSLATED YET
+  ##ID:001465##
+  mcset $l "Target line out of range" \
+           "Target line out of range" ;# <-- NOT TRANSLATED YET
+  ##ID:001466##
+  mcset $l "Invalid option: %s" \
+           "无效的选项: %s"
+  ##ID:001467##
+  mcset $l "String not found: %s" \
+           "String not found: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001468##
+  mcset $l "Found %s occurrences" \
+           "Found %s occurrences" ;# <-- NOT TRANSLATED YET
+  ##ID:001469##
+  mcset $l "Success" \
+           "成功"
+  ##ID:001470##
+  mcset $l "Help" \
+           "帮助"
+  ##ID:001471##
+  mcset $l "This is MCU 8051 IDE command line\n\nusage: <b>command \[arguments\]</b>\n\nEnter <b>help list</b> for list of available commands or\n<b>help <STRING command></b> for help for individual command" \
+           "This is MCU 8051 IDE command line\n\nusage: <b>command \[arguments\]</b>\n\nEnter <b>help list</b> for list of available commands or\n<b>help <STRING command></b> for help for individual command" ;# <-- NOT TRANSLATED YET
+  ##ID:001472##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:001473##
+  mcset $l "Close this window" \
+           "关闭这个窗口"
+  ##ID:001474##
+  mcset $l "Replace: %s replacements made" \
+           "Replace: %s replacements made" ;# <-- NOT TRANSLATED YET
+  ##ID:001475##
+  mcset $l "Finishing highlight" \
+           "Finishing highlight" ;# <-- NOT TRANSLATED YET
+  ##ID:001476##
+  mcset $l "Invalid list of bookmarks -- bookmarks discarded" \
+           "Invalid list of bookmarks -- bookmarks discarded" ;# <-- NOT TRANSLATED YET
+  ##ID:001477##
+  mcset $l "Invalid list of breakpoints -- bookmarks discarded" \
+           "Invalid list of breakpoints -- bookmarks discarded" ;# <-- NOT TRANSLATED YET
+  ##ID:001478##
+  mcset $l "File switching locked" \
+           "File switching locked" ;# <-- NOT TRANSLATED YET
+  ##ID:001479##
+  mcset $l "File switching unlocked" \
+           "File switching unlocked" ;# <-- NOT TRANSLATED YET
+  ##ID:001480##
+  mcset $l "Lock file switching" \
+           "Lock file switching" ;# <-- NOT TRANSLATED YET
+  ##ID:001481##
+  mcset $l "Unlock file switching" \
+           "Unlock file switching" ;# <-- NOT TRANSLATED YET
+  ##ID:001482##
+  mcset $l "Unable to open file:\n\"%s\"\nfor writing" \
+           "Unable to open file:\n\"%s\"\nfor writing" ;# <-- NOT TRANSLATED YET
+  ##ID:001483##
+  mcset $l "File %s saved" \
+           "File %s saved" ;# <-- NOT TRANSLATED YET
+  ##ID:001484##
+  mcset $l "Unable to execute: nothing selected" \
+           "Unable to execute: nothing selected" ;# <-- NOT TRANSLATED YET
+  ##ID:001485##
+  mcset $l "FATAL ERROR" \
+           "FATAL ERROR" ;# <-- NOT TRANSLATED YET
+  ##ID:001486##
+  mcset $l "Unable to start embedded editor due to an unknown error. This error did not occurred in MCU 8051 IDE code but somewhere else. Please try to restart MCU 8051 IDE with --reset-user-settings" \
+           "Unable to start embedded editor due to an unknown error. This error did not occurred in MCU 8051 IDE code but somewhere else. Please try to restart MCU 8051 IDE with --reset-user-settings" ;# <-- NOT TRANSLATED YET
+  ##ID:001487##
+  mcset $l "No function to document" \
+           "No function to document" ;# <-- NOT TRANSLATED YET
+  ##ID:001488##
+  mcset $l "Read-only project" \
+           "Read-only project" ;# <-- NOT TRANSLATED YET
+  ##ID:001489##
+  mcset $l "This project has a special purpose, modifications to this project are not allowed." \
+           "This project has a special purpose, modifications to this project are not allowed." ;# <-- NOT TRANSLATED YET
+  ##ID:001490##
+  mcset $l "This editor is only for reading, to change that press alt+v and o" \
+           "This editor is only for reading, to change that press alt+v and o" ;# <-- NOT TRANSLATED YET
+  ##ID:001491##
+  mcset $l " READ ONLY " \
+           " READ ONLY " ;# <-- NOT TRANSLATED YET
+  ##ID:001492##
+  mcset $l "available commands" \
+           "available commands" ;# <-- NOT TRANSLATED YET
+  ##ID:001493##
+  mcset $l "DEC -> HEX" \
+           "DEC -> HEX" ;# <-- NOT TRANSLATED YET
+  ##ID:001494##
+  mcset $l "DEC -> OCT" \
+           "DEC -> OCT" ;# <-- NOT TRANSLATED YET
+  ##ID:001495##
+  mcset $l "DEC -> BIN" \
+           "DEC -> BIN" ;# <-- NOT TRANSLATED YET
+  ##ID:001496##
+  mcset $l "HEX -> DEC" \
+           "HEX -> DEC" ;# <-- NOT TRANSLATED YET
+  ##ID:001497##
+  mcset $l "HEX -> OCT" \
+           "HEX -> OCT" ;# <-- NOT TRANSLATED YET
+  ##ID:001498##
+  mcset $l "HEX -> BIN" \
+           "HEX -> BIN" ;# <-- NOT TRANSLATED YET
+  ##ID:001499##
+  mcset $l "OCT -> HEX" \
+           "OCT -> HEX" ;# <-- NOT TRANSLATED YET
+  ##ID:001500##
+  mcset $l "OCT -> DEC" \
+           "OCT -> DEC" ;# <-- NOT TRANSLATED YET
+  ##ID:001501##
+  mcset $l "OCT -> BIN" \
+           "OCT -> BIN" ;# <-- NOT TRANSLATED YET
+  ##ID:001502##
+  mcset $l "BIN -> HEX" \
+           "BIN -> HEX" ;# <-- NOT TRANSLATED YET
+  ##ID:001503##
+  mcset $l "BIN -> DEC" \
+           "BIN -> DEC" ;# <-- NOT TRANSLATED YET
+  ##ID:001504##
+  mcset $l "BIN -> OCT" \
+           "BIN -> OCT" ;# <-- NOT TRANSLATED YET
+  ##ID:001505##
+  mcset $l "Animate program" \
+           "Animate program" ;# <-- NOT TRANSLATED YET
+  ##ID:001506##
+  mcset $l "Compile current file" \
+           "编译当前文件"
+  ##ID:001507##
+  mcset $l "Reformat code" \
+           "重新格式化代码"
+  ##ID:001508##
+  mcset $l "Bookmark current line" \
+           "当前行的书签"
+  ##ID:001509##
+  mcset $l "Add/Remove breakpoint" \
+           "添加/删除断点"
+  ##ID:001510##
+  mcset $l "Capitalize selection" \
+           "Capitalize selection" ;# <-- NOT TRANSLATED YET
+  ##ID:001511##
+  mcset $l "Clear history" \
+           "清除历史"
+  ##ID:001512##
+  mcset $l "Comment selected text" \
+           "注释选定的文本"
+  ##ID:001513##
+  mcset $l "Copy selection" \
+           "复制选取"
+  ##ID:001514##
+  mcset $l "Custom command" \
+           "自定义命令"
+  ##ID:001515##
+  mcset $l "Cut selection" \
+           "剪切选取"
+  ##ID:001516##
+  mcset $l "Insert date" \
+           "插入时间"
+  ##ID:001517##
+  mcset $l "Exit command line" \
+           "退出命令行"
+  ##ID:001518##
+  mcset $l "Exit program" \
+           "退出程序"
+  ##ID:001519##
+  mcset $l "Find string" \
+           "查找字符"
+  ##ID:001520##
+  mcset $l "Go to line" \
+           "到达指定的行目"
+  ##ID:001521##
+  mcset $l "Insert literal character" \
+           "插入文字字符"
+  ##ID:001522##
+  mcset $l "Indent selection" \
+           "选择缩进"
+  ##ID:001523##
+  mcset $l "Remove current line" \
+           "删除当前行"
+  ##ID:001524##
+  mcset $l "Open file" \
+           "打开文件"
+  ##ID:001525##
+  mcset $l "Paste clipboard" \
+           "粘贴剪贴板"
+  ##ID:001526##
+  mcset $l "Take back last undo" \
+           "Take back last undo" ;# <-- NOT TRANSLATED YET
+  ##ID:001527##
+  mcset $l "Reload current document" \
+           "Reload current document" ;# <-- NOT TRANSLATED YET
+  ##ID:001528##
+  mcset $l "Replace strings" \
+           "替换字符串"
+  ##ID:001529##
+  mcset $l "Run simulation" \
+           "模拟运行"
+  ##ID:001530##
+  mcset $l "Save current line" \
+           "保存当前行"
+  ##ID:001531##
+  mcset $l "Show/Hide icon border" \
+           "显示/隐藏图标栏"
+  ##ID:001532##
+  mcset $l "Show/Hide line n. bar" \
+           "显示/隐藏 line n. bar"
+  ##ID:001533##
+  mcset $l "Start/Stop simulator" \
+           "启动/停止模拟器"
+  ##ID:001534##
+  mcset $l "Step program" \
+           "Step program" ;# <-- NOT TRANSLATED YET
+  ##ID:001535##
+  mcset $l "To lowercase" \
+           "To lowercase" ;# <-- NOT TRANSLATED YET
+  ##ID:001536##
+  mcset $l "To uppercase" \
+           "To uppercase" ;# <-- NOT TRANSLATED YET
+  ##ID:001537##
+  mcset $l "Uncomment selection" \
+           "取消选中注释"
+  ##ID:001538##
+  mcset $l "Take back last operation" \
+           "Take back last operation" ;# <-- NOT TRANSLATED YET
+  ##ID:001539##
+  mcset $l "Unindent selection" \
+           "取消选择缩进"
+  ##ID:001540##
+  mcset $l "Hibernate running program" \
+           "Hibernate running program" ;# <-- NOT TRANSLATED YET
+  ##ID:001541##
+  mcset $l "Resume hibernated program" \
+           "Resume hibernated program" ;# <-- NOT TRANSLATED YET
+  ##ID:001542##
+  mcset $l "Change current MCU" \
+           "切换当前MCU"
+  ##ID:001543##
+  mcset $l "Set XCODE memory size for current MCU" \
+           "Set XCODE memory size for current MCU" ;# <-- NOT TRANSLATED YET
+  ##ID:001544##
+  mcset $l "SET XDATA memory size for current MCU" \
+           "SET XDATA memory size for current MCU" ;# <-- NOT TRANSLATED YET
+  ##ID:001545##
+  mcset $l "Available commands" \
+           "Available commands" ;# <-- NOT TRANSLATED YET
+  ##ID:001546##
+  mcset $l "Command hibernate" \
+           "Command hibernate" ;# <-- NOT TRANSLATED YET
+  ##ID:001547##
+  mcset $l "<b>hibernate</b> \[<STRING target-file>\]\nHibernate running program (available only when simulator is stated).\n\nThis function saves current state of the simulator engine for future resumption. If no target is not specified it will invoke file selection dialog" \
+           "<b>hibernate</b> \[<STRING target-file>\]\nHibernate running program (available only when simulator is stated).\n\nThis function saves current state of the simulator engine for future resumption. If no target is not specified it will invoke file selection dialog" ;# <-- NOT TRANSLATED YET
+  ##ID:001548##
+  mcset $l "Command resume" \
+           "Command resume" ;# <-- NOT TRANSLATED YET
+  ##ID:001549##
+  mcset $l "<b>resume</b> \[<STRING source-file>\]\nResume hibernated program (available only when simulator is stated).\n\nThis function restores previous state of the simulator engine stored in the given file. If no source is not specified it will invoke file selection dialog" \
+           "<b>resume</b> \[<STRING source-file>\]\nResume hibernated program (available only when simulator is stated).\n\nThis function restores previous state of the simulator engine stored in the given file. If no source is not specified it will invoke file selection dialog" ;# <-- NOT TRANSLATED YET
+  ##ID:001550##
+  mcset $l "Command switch-mcu" \
+           "Command switch-mcu" ;# <-- NOT TRANSLATED YET
+  ##ID:001551##
+  mcset $l "<b>switch-mcu</b> <STRING processor-type>\nChange current MCU. Type `switch-mcu list' for list of supported microcontrollers" \
+           "<b>switch-mcu</b> <STRING processor-type>\nChange current MCU. Type `switch-mcu list' for list of supported microcontrollers" ;# <-- NOT TRANSLATED YET
+  ##ID:001552##
+  mcset $l "Command set-xcode" \
+           "Command set-xcode" ;# <-- NOT TRANSLATED YET
+  ##ID:001553##
+  mcset $l "<b>set-xcode</b> <INT size>\nChange capacity of external program memory.\nNote: this command also close CODE memory hex editor" \
+           "<b>set-xcode</b> <INT size>\nChange capacity of external program memory.\nNote: this command also close CODE memory hex editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001554##
+  mcset $l "Command set-xdata" \
+           "Command set-xdata" ;# <-- NOT TRANSLATED YET
+  ##ID:001555##
+  mcset $l "<b>set-xdata</b> <INT size>\nChange capacity of external data memory.\nNote: this command also close XDATA memory hex editor" \
+           "<b>set-xdata</b> <INT size>\nChange capacity of external data memory.\nNote: this command also close XDATA memory hex editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001556##
+  mcset $l "Command run" \
+           "Command run" ;# <-- NOT TRANSLATED YET
+  ##ID:001557##
+  mcset $l "Run simulation (available only when simulator is stated)" \
+           "Run simulation (available only when simulator is stated)" ;# <-- NOT TRANSLATED YET
+  ##ID:001558##
+  mcset $l "Command exit" \
+           "Command exit" ;# <-- NOT TRANSLATED YET
+  ##ID:001559##
+  mcset $l "Exits this command line" \
+           "Exits this command line" ;# <-- NOT TRANSLATED YET
+  ##ID:001560##
+  mcset $l "Command exit-program" \
+           "Command exit-program" ;# <-- NOT TRANSLATED YET
+  ##ID:001561##
+  mcset $l "Quit MCU 8051 IDE" \
+           "退出MCU 8051 IDE"
+  ##ID:001562##
+  mcset $l "Command set-icon-border" \
+           "Command set-icon-border" ;# <-- NOT TRANSLATED YET
+  ##ID:001563##
+  mcset $l "Sets the visibility of the icon border" \
+           "Sets the visibility of the icon border" ;# <-- NOT TRANSLATED YET
+  ##ID:001564##
+  mcset $l "Command set-line-numbers" \
+           "Command set-line-numbers" ;# <-- NOT TRANSLATED YET
+  ##ID:001565##
+  mcset $l "Sets the visibility of the line numbers." \
+           "Sets the visibility of the line numbers." ;# <-- NOT TRANSLATED YET
+  ##ID:001566##
+  mcset $l "Command help" \
+           "Command help" ;# <-- NOT TRANSLATED YET
+  ##ID:001567##
+  mcset $l "<b>help</b> <STRING command>\nShows help for the given command\n\n<b>help list</b>\nShows list of available command" \
+           "<b>help</b> <STRING command>\nShows help for the given command\n\n<b>help list</b>\nShows list of available command" ;# <-- NOT TRANSLATED YET
+  ##ID:001568##
+  mcset $l "Command open" \
+           "Command open" ;# <-- NOT TRANSLATED YET
+  ##ID:001569##
+  mcset $l "<b>open</b> <STRING full_filename>\nOpens the given file in new editor" \
+           "<b>open</b> <STRING full_filename>\nOpens the given file in new editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001570##
+  mcset $l "Command indent" \
+           "Command indent" ;# <-- NOT TRANSLATED YET
+  ##ID:001571##
+  mcset $l "Indents current line or selected area" \
+           "Indents current line or selected area" ;# <-- NOT TRANSLATED YET
+  ##ID:001572##
+  mcset $l "Command unindent" \
+           "Command unindent" ;# <-- NOT TRANSLATED YET
+  ##ID:001573##
+  mcset $l "Unindents current line or selected area" \
+           "Unindents current line or selected area" ;# <-- NOT TRANSLATED YET
+  ##ID:001574##
+  mcset $l "Command comment" \
+           "Command comment" ;# <-- NOT TRANSLATED YET
+  ##ID:001575##
+  mcset $l "Comments current line or selected area" \
+           "Comments current line or selected area" ;# <-- NOT TRANSLATED YET
+  ##ID:001576##
+  mcset $l "Command uncomment" \
+           "Command uncomment" ;# <-- NOT TRANSLATED YET
+  ##ID:001577##
+  mcset $l "Uncomments current line or selected area" \
+           "Uncomments current line or selected area" ;# <-- NOT TRANSLATED YET
+  ##ID:001578##
+  mcset $l "Command kill-line" \
+           "Command kill-line" ;# <-- NOT TRANSLATED YET
+  ##ID:001579##
+  mcset $l "Removes the current line" \
+           "Removes the current line" ;# <-- NOT TRANSLATED YET
+  ##ID:001580##
+  mcset $l "Command date" \
+           "Command date" ;# <-- NOT TRANSLATED YET
+  ##ID:001581##
+  mcset $l "<b>date</b> <STRING format>\nInserts formatted date at the current position in text\n\n<b>Format string:</b>\n%%  => %\n%a  => Weekday name (Mon, Tue, etc.)\n%A  => Weekday name (Monday, Tuesday, etc.)\n%b  => Month name (Jan, Feb, etc.)\n%B  => Full month name\n%C  => Year (19 or 20)\n%d  => Day of month (01 - 31)\n%D  => %m/%d/%y\n%h  => Abbreviated month name.\n%H  => Hour (00 - 23)\n%I  => Hour (01 - 12)\n%j  => Day of year (001 - 366)\n%k  => Hour (0 - 23)\n%l  => Hour (1 - 12).\n%m  => Month (01 - 12)\n%M  => Minute (00 - 59)\n%n  => Newline\n%p  => AM/PM\n%R  => %H:%M.\n%s  => Unix timestamp\n%S  => Seconds (00 - 59)\n%t  => Tab\n%T  => %H:%M:%S.\n%u  => Weekday number (Monday = 1, Sunday = 7)\n%w  => Weekday number (Sunday = 0, Saturday = 6)\n%y  => Year without century (00 - 99)\n%Y  => Year with century (e.g. 1459)" \
+           "<b>date</b> <STRING format>\nInserts formatted date at the current position in text\n\n<b>Format string:</b>\n%%  => %\n%a  => Weekday name (Mon, Tue, etc.)\n%A  => Weekday name (Monday, Tuesday, etc.)\n%b  => Month name (Jan, Feb, etc.)\n%B  => Full month name\n%C  => Year (19 or 20)\n%d  => Day of month (01 - 31)\n%D  => %m/%d/%y\n%h  => Abbreviated month name.\n%H  => Hour (00 - 23)\n%I  => Hour (01 - 12)\n%j  => Day of year (001 - 366)\n%k  => Hour (0 - 23)\n%l  => Hour (1 - 12).\n%m  => Month (01 - 12)\n%M  => Minute (00 - 59)\n%n  => Newline\n%p  => AM/PM\n%R  => %H:%M.\n%s  => Unix timestamp\n%S  => Seconds (00 - 59)\n%t  => Tab\n%T  => %H:%M:%S.\n%u  => Weekday number (Monday = 1, Sunday = 7)\n%w  => Weekday number (Sunday = 0, Saturday = 6)\n%y  => Year without century (00 - 99)\n%Y  => Year with century (e.g. 1459)" ;# <-- NOT TRANSLATED YET
+  ##ID:001582##
+  mcset $l "Command clear" \
+           "Command clear" ;# <-- NOT TRANSLATED YET
+  ##ID:001583##
+  mcset $l "Clears command line history" \
+           "Clears command line history" ;# <-- NOT TRANSLATED YET
+  ##ID:001584##
+  mcset $l "Command char" \
+           "Command char" ;# <-- NOT TRANSLATED YET
+  ##ID:001585##
+  mcset $l "<b>char</b> <NUMBER identifier>\nInserts literal characters by their numerical identifier.\nIdentifier can be in decimal hexadecimal or octal form." \
+           "<b>char</b> <NUMBER identifier>\nInserts literal characters by their numerical identifier.\nIdentifier can be in decimal hexadecimal or octal form." ;# <-- NOT TRANSLATED YET
+  ##ID:001586##
+  mcset $l "Command goto" \
+           "Command goto" ;# <-- NOT TRANSLATED YET
+  ##ID:001587##
+  mcset $l "<b>goto</b> <INT line>\nGo to the given line" \
+           "<b>goto</b> <INT line>\nGo to the given line" ;# <-- NOT TRANSLATED YET
+  ##ID:001588##
+  mcset $l "Command replace" \
+           "Command replace" ;# <-- NOT TRANSLATED YET
+  ##ID:001589##
+  mcset $l "<b>replace\[:options\]</b> <STRING pattern> <STRING replacement>\n\n<b>options:</b>\nb  Search backwards\nc  Search from cursor position\nr  Regular expression search\ns  Case sensitive search\np  Ask before replacement" \
+           "<b>replace\[:options\]</b> <STRING pattern> <STRING replacement>\n\n<b>options:</b>\nb  Search backwards\nc  Search from cursor position\nr  Regular expression search\ns  Case sensitive search\np  Ask before replacement" ;# <-- NOT TRANSLATED YET
+  ##ID:001590##
+  mcset $l "Command find" \
+           "Command find" ;# <-- NOT TRANSLATED YET
+  ##ID:001591##
+  mcset $l "<b>find\[:options\]</b> <STRING pattern>\n\n<b>options:</b>\nb  Search backwards\nc  Search from cursor position\ne  Search in the selection only\nr  Regular expression search\ns  Case sensitive search" \
+           "<b>find\[:options\]</b> <STRING pattern>\n\n<b>options:</b>\nb  Search backwards\nc  Search from cursor position\ne  Search in the selection only\nr  Regular expression search\ns  Case sensitive search" ;# <-- NOT TRANSLATED YET
+  ##ID:001592##
+  mcset $l "Command cut" \
+           "Command cut" ;# <-- NOT TRANSLATED YET
+  ##ID:001593##
+  mcset $l "Cut selected text" \
+           "Cut selected text" ;# <-- NOT TRANSLATED YET
+  ##ID:001594##
+  mcset $l "Command copy" \
+           "Command copy" ;# <-- NOT TRANSLATED YET
+  ##ID:001595##
+  mcset $l "Copy selected text to clipboard" \
+           "Copy selected text to clipboard" ;# <-- NOT TRANSLATED YET
+  ##ID:001596##
+  mcset $l "Command paste" \
+           "Command paste" ;# <-- NOT TRANSLATED YET
+  ##ID:001597##
+  mcset $l "Paste clipboard content" \
+           "Paste clipboard content" ;# <-- NOT TRANSLATED YET
+  ##ID:001598##
+  mcset $l "Command tolower" \
+           "Command tolower" ;# <-- NOT TRANSLATED YET
+  ##ID:001599##
+  mcset $l "Convert selected text to lowercase" \
+           "Convert selected text to lowercase" ;# <-- NOT TRANSLATED YET
+  ##ID:001600##
+  mcset $l "Command toupper" \
+           "Command toupper" ;# <-- NOT TRANSLATED YET
+  ##ID:001601##
+  mcset $l "Convert selected text to uppercase" \
+           "Convert selected text to uppercase" ;# <-- NOT TRANSLATED YET
+  ##ID:001602##
+  mcset $l "Command capitalize" \
+           "Command capitalize" ;# <-- NOT TRANSLATED YET
+  ##ID:001603##
+  mcset $l "Capitalize the selected text (convert 1st character to uppercase)" \
+           "Capitalize the selected text (convert 1st character to uppercase)" ;# <-- NOT TRANSLATED YET
+  ##ID:001604##
+  mcset $l "Command save" \
+           "Command save" ;# <-- NOT TRANSLATED YET
+  ##ID:001605##
+  mcset $l "Save the current document" \
+           "Save the current document" ;# <-- NOT TRANSLATED YET
+  ##ID:001606##
+  mcset $l "Command bookmark" \
+           "Command bookmark" ;# <-- NOT TRANSLATED YET
+  ##ID:001607##
+  mcset $l "Bookmark the current line" \
+           "Bookmark the current line" ;# <-- NOT TRANSLATED YET
+  ##ID:001608##
+  mcset $l "Command custom" \
+           "Command custom" ;# <-- NOT TRANSLATED YET
+  ##ID:001609##
+  mcset $l "<b>custom</b> <INT command_number>\nExecute custom command (see menu Configuration -> Custom commands)" \
+           "<b>custom</b> <INT command_number>\nExecute custom command (see menu Configuration -> Custom commands)" ;# <-- NOT TRANSLATED YET
+  ##ID:001610##
+  mcset $l "Command breakpoint" \
+           "Command breakpoint" ;# <-- NOT TRANSLATED YET
+  ##ID:001611##
+  mcset $l "Add / Remove breakpoint to the current line" \
+           "Add / Remove breakpoint to the current line" ;# <-- NOT TRANSLATED YET
+  ##ID:001612##
+  mcset $l "Command undo" \
+           "Command undo" ;# <-- NOT TRANSLATED YET
+  ##ID:001613##
+  mcset $l "Command redo" \
+           "Command redo" ;# <-- NOT TRANSLATED YET
+  ##ID:001614##
+  mcset $l "Command auto-indent" \
+           "Command auto-indent" ;# <-- NOT TRANSLATED YET
+  ##ID:001615##
+  mcset $l "Command reload" \
+           "Command reload" ;# <-- NOT TRANSLATED YET
+  ##ID:001616##
+  mcset $l "Reload the current document" \
+           "Reload the current document" ;# <-- NOT TRANSLATED YET
+  ##ID:001617##
+  mcset $l "Command assemble" \
+           "Command assemble" ;# <-- NOT TRANSLATED YET
+  ##ID:001618##
+  mcset $l "Compile the current document" \
+           "Compile the current document" ;# <-- NOT TRANSLATED YET
+  ##ID:001619##
+  mcset $l "Command sim" \
+           "Command sim" ;# <-- NOT TRANSLATED YET
+  ##ID:001620##
+  mcset $l "Start / Stop simulator" \
+           "启动/停止模拟器"
+  ##ID:001621##
+  mcset $l "Command step" \
+           "Command step" ;# <-- NOT TRANSLATED YET
+  ##ID:001622##
+  mcset $l "Step program (available only when simulator is stated)" \
+           "Step program (available only when simulator is stated)" ;# <-- NOT TRANSLATED YET
+  ##ID:001623##
+  mcset $l "Command animate" \
+           "Command animate" ;# <-- NOT TRANSLATED YET
+  ##ID:001624##
+  mcset $l "Animate program (available only when simulator is stated)" \
+           "Animate program (available only when simulator is stated)" ;# <-- NOT TRANSLATED YET
+  ##ID:001625##
+  mcset $l "Command d2h" \
+           "Command d2h" ;# <-- NOT TRANSLATED YET
+  ##ID:001626##
+  mcset $l "Convert decimal number to hexadecimal and write result to editor" \
+           "Convert decimal number to hexadecimal and write result to editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001627##
+  mcset $l "Command d2o" \
+           "Command d2o" ;# <-- NOT TRANSLATED YET
+  ##ID:001628##
+  mcset $l "Convert decimal number to octal and write result to editor" \
+           "Convert decimal number to octal and write result to editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001629##
+  mcset $l "Command d2b" \
+           "Command d2b" ;# <-- NOT TRANSLATED YET
+  ##ID:001630##
+  mcset $l "Convert decimal number to binary and write result to editor" \
+           "Convert decimal number to binary and write result to editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001631##
+  mcset $l "Command h2d" \
+           "Command h2d" ;# <-- NOT TRANSLATED YET
+  ##ID:001632##
+  mcset $l "Convert hexadecimal number to decimal and write result to editor" \
+           "Convert hexadecimal number to decimal and write result to editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001633##
+  mcset $l "Command h2o" \
+           "Command h2o" ;# <-- NOT TRANSLATED YET
+  ##ID:001634##
+  mcset $l "Convert hexadecimal number to octal and write result to editor" \
+           "Convert hexadecimal number to octal and write result to editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001635##
+  mcset $l "Command h2b" \
+           "Command h2b" ;# <-- NOT TRANSLATED YET
+  ##ID:001636##
+  mcset $l "Convert hexadecimal number to binary and write result to editor" \
+           "Convert hexadecimal number to binary and write result to editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001637##
+  mcset $l "Command o2h" \
+           "Command o2h" ;# <-- NOT TRANSLATED YET
+  ##ID:001638##
+  mcset $l "Convert octal number to hexadecimal and write result to editor" \
+           "Convert octal number to hexadecimal and write result to editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001639##
+  mcset $l "Command o2d" \
+           "Command o2d" ;# <-- NOT TRANSLATED YET
+  ##ID:001640##
+  mcset $l "Convert octal number to decimal and write result to editor" \
+           "Convert octal number to decimal and write result to editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001641##
+  mcset $l "Command o2b" \
+           "Command o2b" ;# <-- NOT TRANSLATED YET
+  ##ID:001642##
+  mcset $l "Convert octal number to binary and write result to editor" \
+           "Convert octal number to binary and write result to editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001643##
+  mcset $l "Command b2h" \
+           "Command b2h" ;# <-- NOT TRANSLATED YET
+  ##ID:001644##
+  mcset $l "Convert binary number to hexadecimal and write result to editor" \
+           "Convert binary number to hexadecimal and write result to editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001645##
+  mcset $l "Command b2d" \
+           "Command b2d" ;# <-- NOT TRANSLATED YET
+  ##ID:001646##
+  mcset $l "Convert binary number to decimal and write result to editor" \
+           "Convert binary number to decimal and write result to editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001647##
+  mcset $l "Command b2o" \
+           "Command b2o" ;# <-- NOT TRANSLATED YET
+  ##ID:001648##
+  mcset $l "Convert binary number to octal and write result to editor" \
+           "Convert binary number to octal and write result to editor" ;# <-- NOT TRANSLATED YET
+}
+# compiler.tcl
+# ==============================================================================
+namespace eval Compiler {
+  ##ID:001649##
+  mcset $l "%s errors, %s warnings" \
+           "%s errors, %s warnings" ;# <-- NOT TRANSLATED YET
+  ##ID:001650##
+  mcset $l "Unable to open the specified file. (%s)" \
+           "Unable to open the specified file. (%s)" ;# <-- NOT TRANSLATED YET
+  ##ID:001651##
+  mcset $l "Unable to open the specified file. (\033\[34;1m%s\033\[m)" \
+           "Unable to open the specified file. (\033\[34;1m%s\033\[m)" ;# <-- NOT TRANSLATED YET
+  ##ID:001652##
+  mcset $l "Compilation FAILED !" \
+           "Compilation FAILED !" ;# <-- NOT TRANSLATED YET
+  ##ID:001653##
+  mcset $l "\033\[31;1mCompilation FAILED !\033\[m" \
+           "\033\[31;1mCompilation FAILED !\033\[m" ;# <-- NOT TRANSLATED YET
+  ##ID:001654##
+  mcset $l "Compiling file: %s" \
+           "Compiling file: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001655##
+  mcset $l "Compiling file: \033\[34;1m%s\033\[m" \
+           "Compiling file: \033\[34;1m%s\033\[m" ;# <-- NOT TRANSLATED YET
+  ##ID:001656##
+  mcset $l "Initializing pre-processor ..." \
+           "Initializing pre-processor ..." ;# <-- NOT TRANSLATED YET
+  ##ID:001657##
+  mcset $l "Pre-processing FAILED !" \
+           "Pre-processing FAILED !" ;# <-- NOT TRANSLATED YET
+  ##ID:001658##
+  mcset $l "\033\[31;1mPre-processing FAILED !\033\[m" \
+           "\033\[31;1mPre-processing FAILED !\033\[m" ;# <-- NOT TRANSLATED YET
+  ##ID:001659##
+  mcset $l "Compiling ..." \
+           "Compiling ..." ;# <-- NOT TRANSLATED YET
+  ##ID:001660##
+  mcset $l "Creating IHEX8 ...\t\t\t-> \"%s\"" \
+           "Creating IHEX8 ...\t\t\t-> \"%s\"" ;# <-- NOT TRANSLATED YET
+  ##ID:001661##
+  mcset $l "Creating IHEX8 ...\t\t\t-> \"\033\[34;1m%s\033\[m\"" \
+           "Creating IHEX8 ...\t\t\t-> \"\033\[34;1m%s\033\[m\"" ;# <-- NOT TRANSLATED YET
+  ##ID:001662##
+  mcset $l "Error: Unable to open file \"%s\" for writing" \
+           "Error: Unable to open file \"%s\" for writing" ;# <-- NOT TRANSLATED YET
+  ##ID:001663##
+  mcset $l "\033\[31;1mError\033\[m: Unable to open file \"\033\[34;1m%s\033\[m\" for writing" \
+           "\033\[31;1mError\033\[m: Unable to open file \"\033\[34;1m%s\033\[m\" for writing" ;# <-- NOT TRANSLATED YET
+  ##ID:001664##
+  mcset $l "Creating object file ...\t\t-> \"%s\"" \
+           "Creating object file ...\t\t-> \"%s\"" ;# <-- NOT TRANSLATED YET
+  ##ID:001665##
+  mcset $l "Creating object file ...\t\t-> \"\033\[34;1m%s\033\[m\"" \
+           "Creating object file ...\t\t-> \"\033\[34;1m%s\033\[m\"" ;# <-- NOT TRANSLATED YET
+  ##ID:001666##
+  mcset $l "Creating assembler debug file ...\t-> \"%s\"" \
+           "Creating assembler debug file ...\t-> \"%s\"" ;# <-- NOT TRANSLATED YET
+  ##ID:001667##
+  mcset $l "Creating simulator data file ...\t-> \"\033\[34;1m%s\033\[m\"" \
+           "Creating simulator data file ...\t-> \"\033\[34;1m%s\033\[m\"" ;# <-- NOT TRANSLATED YET
+  ##ID:001668##
+  mcset $l "Number of optimization performed: %s" \
+           "Number of optimization performed: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001669##
+  mcset $l "Number of optimization performed: \033\[1m%s\033\[m" \
+           "Number of optimization performed: \033\[1m%s\033\[m" ;# <-- NOT TRANSLATED YET
+  ##ID:001670##
+  mcset $l "Compilation successful. (time: %s sec.)" \
+           "Compilation successful. (time: %s sec.)" ;# <-- NOT TRANSLATED YET
+  ##ID:001671##
+  mcset $l "\033\[32;1mCompilation successful.\033\[m (time: %s sec.)" \
+           "\033\[32;1mCompilation successful.\033\[m (time: %s sec.)" ;# <-- NOT TRANSLATED YET
+  ##ID:001672##
+  mcset $l "Creating code listing file ...\t\t-> \"%s\"" \
+           "Creating code listing file ...\t\t-> \"%s\"" ;# <-- NOT TRANSLATED YET
+  ##ID:001673##
+  mcset $l "Creating code listing file ...\t\t-> \"\033\[34;1m%s\033\[m\"" \
+           "Creating code listing file ...\t\t-> \"\033\[34;1m%s\033\[m\"" ;# <-- NOT TRANSLATED YET
+}
+# assembler.tcl
+# ==============================================================================
+namespace eval assembler {
+  ##ID:001674##
+  mcset $l "File access error:\n%s" \
+           "文件访问错误:\n%s"
+  ##ID:001675##
+  mcset $l "Aborted" \
+           "中止"
+  ##ID:001676##
+  mcset $l "Unknown error %s" \
+           "未知错误 %s"
+  ##ID:001677##
+  mcset $l "Invalid address at %s" \
+           "无效地址 at %s"
+  ##ID:001678##
+  mcset $l "Invalid operand: '%s'" \
+           "无效的操作数: '%s'"
+  ##ID:001679##
+  mcset $l "Invalid value" \
+           "无效值"
+  ##ID:001680##
+  mcset $l "Invalid operand" \
+           "无效的操作数"
+  ##ID:001681##
+  mcset $l "Unknown instruction: %s" \
+           "未知的指令: %s"
+  ##ID:001682##
+  mcset $l "Compilation error at line %s: %s" \
+           "编译错误在行 %s: %s"
+  ##ID:001683##
+  mcset $l " in %s" \
+           " in %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001684##
+  mcset $l "\033\[31;1mCompilation error at line \033\[31;1;4m%s\033\[m%s: %s" \
+           "\033\[31;1mCompilation error at line \033\[31;1;4m%s\033\[m%s: %s" ;# <-- NOT TRANSLATED YET
+}
+# external_compiler.tcl
+# ==============================================================================
+namespace eval ExternalCompiler {
+  ##ID:001685##
+  mcset $l "\n\nStarting compiler ..." \
+           "\n\nStarting compiler ..." ;# <-- NOT TRANSLATED YET
+  ##ID:001686##
+  mcset $l "\n\nStarting make ..." \
+           "\n\nStarting make ..." ;# <-- NOT TRANSLATED YET
+  ##ID:001687##
+  mcset $l "\nError: Unable to change working directory to '%s'" \
+           "\nError: Unable to change working directory to '%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001688##
+  mcset $l "\nUnable to create \"%s\"" \
+           "\nUnable to create \"%s\"" ;# <-- NOT TRANSLATED YET
+  ##ID:001689##
+  mcset $l "\nUnable to find \"%s\"" \
+           "\nUnable to find \"%s\"" ;# <-- NOT TRANSLATED YET
+  ##ID:001690##
+  mcset $l "\nUnable to find \"%s\"\n\tMCU 8051 IDE debug file (*.adf) could not be generated\n\tPLEASE CHECK YOUR %s CONFIGURATION" \
+           "\nUnable to find \"%s\"\n\tMCU 8051 IDE debug file (*.adf) could not be generated\n\tPLEASE CHECK YOUR %s CONFIGURATION" ;# <-- NOT TRANSLATED YET
+  ##ID:001691##
+  mcset $l "\nCompilation successful" \
+           "\nCompilation successful" ;# <-- NOT TRANSLATED YET
+  ##ID:001692##
+  mcset $l "\nCompilation FAILED" \
+           "\nCompilation FAILED" ;# <-- NOT TRANSLATED YET
+  ##ID:001693##
+  mcset $l "File access error:\n%s" \
+           "文件访问错误:\n%s"
+  ##ID:001694##
+  mcset $l "Unable to understand formulation at line %s in file %s" \
+           "Unable to understand formulation at line %s in file %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001695##
+  mcset $l "Compilation error:\nFile \"%s\" is not a valid Intel® HEX 8 file" \
+           "Compilation error:\nFile \"%s\" is not a valid Intel® HEX 8 file" ;# <-- NOT TRANSLATED YET
+}
+# disassembler.tcl
+# ==============================================================================
+namespace eval disassembler {
+  ##ID:001696##
+  mcset $l "Initializing disassembler ..." \
+           "Initializing disassembler ..." ;# <-- NOT TRANSLATED YET
+  ##ID:001697##
+  mcset $l "Disassembly FAILED ..." \
+           "Disassembly FAILED ..." ;# <-- NOT TRANSLATED YET
+  ##ID:001698##
+  mcset $l "\033\[31;1mDisassembly FAILED\033\[m ..." \
+           "\033\[31;1mDisassembly FAILED\033\[m ..." ;# <-- NOT TRANSLATED YET
+  ##ID:001699##
+  mcset $l "Aborted" \
+           "Aborted" ;# <-- NOT TRANSLATED YET
+  ##ID:001700##
+  mcset $l "Disassembly complete" \
+           "Disassembly complete" ;# <-- NOT TRANSLATED YET
+  ##ID:001701##
+  mcset $l "\033\[32;1mDisassembly complete\033\[m" \
+           "\033\[32;1mDisassembly complete\033\[m" ;# <-- NOT TRANSLATED YET
+  ##ID:001702##
+  mcset $l "Invalid line (line contain not allowed characters)" \
+           "Invalid line (line contain not allowed characters)" ;# <-- NOT TRANSLATED YET
+  ##ID:001703##
+  mcset $l "Line do not contain odd number of chars" \
+           "Line do not contain odd number of chars" ;# <-- NOT TRANSLATED YET
+  ##ID:001704##
+  mcset $l "Bad checksum, given: %s ; computed: %s" \
+           "Bad checksum, given: %s ; computed: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001705##
+  mcset $l "Unknown record type number `%s' (Intel HEX 8 can contain only 00 and 01)" \
+           "Unknown record type number `%s' (Intel HEX 8 can contain only 00 and 01)" ;# <-- NOT TRANSLATED YET
+  ##ID:001706##
+  mcset $l "Length field do not correspond true data length" \
+           "Length field do not correspond true data length" ;# <-- NOT TRANSLATED YET
+  ##ID:001707##
+  mcset $l "Unexpected address -- code is not well formatted" \
+           "Unexpected address -- code is not well formatted" ;# <-- NOT TRANSLATED YET
+  ##ID:001708##
+  mcset $l "Warning: %s" \
+           "Warning: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001709##
+  mcset $l "\033\[33mWarning\033\[m: %s" \
+           "\033\[33mWarning\033\[m: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001710##
+  mcset $l " at line %s" \
+           " at line %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001711##
+  mcset $l " at line \033\[31;1;4m%s\033\[m" \
+           " at line \033\[31;1;4m%s\033\[m" ;# <-- NOT TRANSLATED YET
+  ##ID:001712##
+  mcset $l "Error%s: %s" \
+           "Error%s: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001713##
+  mcset $l "\033\[31;1mError%s\033\[m: %s" \
+           "\033\[31;1mError%s\033\[m: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001714##
+  mcset $l "Code address overflow, instruction: %s" \
+           "Code address overflow, instruction: %s" ;# <-- NOT TRANSLATED YET
+}
+# preprocessor.tcl
+# ==============================================================================
+namespace eval PreProcessor {
+  ##ID:001716##
+  mcset $l "Aborted" \
+           "中止"
+  ##ID:001718##
+  mcset $l "Inclusion nesting exceeded maximum allowed level" \
+           "Inclusion nesting exceeded maximum allowed level" ;# <-- NOT TRANSLATED YET
+  ##ID:001721##
+  mcset $l "Macro nesting exceeded maximum allowed level" \
+           "Macro nesting exceeded maximum allowed level" ;# <-- NOT TRANSLATED YET
+  ##ID:001725##
+  mcset $l "Invalid argument: %s" \
+           "Invalid argument: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001726##
+  mcset $l "Extra characters after control sequence: %s" \
+           "Extra characters after control sequence: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001727##
+  mcset $l "Control %s has been overridden (by compiler settings)" \
+           "Control %s has been overridden (by compiler settings)" ;# <-- NOT TRANSLATED YET
+  ##ID:001728##
+  mcset $l "Control `%s' expect exactly one argument, but no argument given" \
+           "Control `%s' expect exactly one argument, but no argument given" ;# <-- NOT TRANSLATED YET
+  ##ID:001729##
+  mcset $l "Control `%s' takes no arguments." \
+           "Control `%s' takes no arguments." ;# <-- NOT TRANSLATED YET
+  ##ID:001730##
+  mcset $l "Invalid argument (must be integer): %s" \
+           "Invalid argument (must be integer): %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001731##
+  mcset $l "Unsupported control sequence: %s -- control sequence ignored" \
+           "Unsupported control sequence: %s -- control sequence ignored" ;# <-- NOT TRANSLATED YET
+  ##ID:001732##
+  mcset $l "You are using unusual directive 'BYTE', consider usage of 'DB' instead" \
+           "You are using unusual directive 'BYTE', consider usage of 'DB' instead" ;# <-- NOT TRANSLATED YET
+  ##ID:001733##
+  mcset $l "CSEG cannot take any label: %s" \
+           "CSEG cannot take any label: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001734##
+  mcset $l "Missing `AT' operator" \
+           "Missing `AT' operator" ;# <-- NOT TRANSLATED YET
+  ##ID:001735##
+  mcset $l "Argument value out of range: %s  (%s)" \
+           "Argument value out of range: %s  (%s)" ;# <-- NOT TRANSLATED YET
+  ##ID:001736##
+  mcset $l "Invalid expression `%s'" \
+           "Invalid expression `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001737##
+  mcset $l "Using `%s', but active segment is `%s' (should be CSEG)" \
+           "Using `%s', but active segment is `%s' (should be CSEG)" ;# <-- NOT TRANSLATED YET
+  ##ID:001738##
+  mcset $l "Missing value" \
+           "Missing value" ;# <-- NOT TRANSLATED YET
+  ##ID:001739##
+  mcset $l "Invalid value" \
+           "Invalid value" ;# <-- NOT TRANSLATED YET
+  ##ID:001740##
+  mcset $l "Directive DW can take only one argument" \
+           "Directive DW can take only one argument" ;# <-- NOT TRANSLATED YET
+  ##ID:001741##
+  mcset $l "Unable to recognize character: `%s'" \
+           "Unable to recognize character: `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001742##
+  mcset $l "Argument value out of range: %s" \
+           "Argument value out of range: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001743##
+  mcset $l "Expected bit address: %s" \
+           "Expected bit address: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001744##
+  mcset $l "Label is too far for 8-bit relative addressing." \
+           "Label is too far for 8-bit relative addressing." ;# <-- NOT TRANSLATED YET
+  ##ID:001745##
+  mcset $l "Operand value out of range: `%s' (`%s')" \
+           "Operand value out of range: `%s' (`%s')" ;# <-- NOT TRANSLATED YET
+  ##ID:001746##
+  mcset $l "Value out of range: `%s' (%s)" \
+           "Value out of range: `%s' (%s)" ;# <-- NOT TRANSLATED YET
+  ##ID:001747##
+  mcset $l "Invalid label declaration: `%s'\n\tLabels can contain alphanumeric characters only and must not begin with a digit" \
+           "Invalid label declaration: `%s'\n\tLabels can contain alphanumeric characters only and must not begin with a digit" ;# <-- NOT TRANSLATED YET
+  ##ID:001748##
+  mcset $l "Unknown keyword: `%s'\n\t`%s' is neither macro nor instruction nor directive" \
+           "Unknown keyword: `%s'\n\t`%s' is neither macro nor instruction nor directive" ;# <-- NOT TRANSLATED YET
+  ##ID:001749##
+  mcset $l "Invalid bit designator: %s" \
+           "Invalid bit designator: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001750##
+  mcset $l "Given register does not belong to the bit addressable area: %s" \
+           "Given register does not belong to the bit addressable area: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001751##
+  mcset $l "Invalid value: %s'" \
+           "Invalid value: %s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001752##
+  mcset $l "Invalid numeric base `%s'\n\tPossible options are: __H (hex), __D (dec) __B (bin), __Q __O (oct) and 'char'" \
+           "Invalid numeric base `%s'\n\tPossible options are: __H (hex), __D (dec) __B (bin), __Q __O (oct) and 'char'" ;# <-- NOT TRANSLATED YET
+  ##ID:001753##
+  mcset $l "Special function register \"%s\" is not available on the target MCU" \
+           "Special function register \"%s\" is not available on the target MCU" ;# <-- NOT TRANSLATED YET
+  ##ID:001754##
+  mcset $l "Special function bit \"%s\" is not available on the target MCU" \
+           "Special function bit \"%s\" is not available on the target MCU" ;# <-- NOT TRANSLATED YET
+  ##ID:001755##
+  mcset $l "Symbol not defined: %s" \
+           "Symbol not defined: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001756##
+  mcset $l "Reserved keyword used as label" \
+           "Reserved keyword used as label" ;# <-- NOT TRANSLATED YET
+  ##ID:001757##
+  mcset $l "Invalid label: `%s' \n\t(labels can contain only alphanumeric characters and must not begin with a digit)" \
+           "Invalid label: `%s' \n\t(labels can contain only alphanumeric characters and must not begin with a digit)" ;# <-- NOT TRANSLATED YET
+  ##ID:001758##
+  mcset $l "Unable to overwrite already reserved program memory at address 0x%s -- compilation failed" \
+           "Unable to overwrite already reserved program memory at address 0x%s -- compilation failed" ;# <-- NOT TRANSLATED YET
+  ##ID:001759##
+  mcset $l "This instruction exceeding code memory capacity" \
+           "This instruction exceeding code memory capacity" ;# <-- NOT TRANSLATED YET
+  ##ID:001760##
+  mcset $l "No instruction found at address 0x00. Consider usage of appropriate ORG directive to clarify correct code placement." \
+           "No instruction found at address 0x00. Consider usage of appropriate ORG directive to clarify correct code placement." ;# <-- NOT TRANSLATED YET
+  ##ID:001761##
+  mcset $l "Label was already defined: `%s'" \
+           "Label is already defined: `%s'"
+  ##ID:001762##
+  mcset $l "Overwriting `%s' with `%s' (according to your previous definition!)" \
+           "Overwriting `%s' with `%s' (according to your previous definition!)" ;# <-- NOT TRANSLATED YET
+  ##ID:001763##
+  mcset $l "Too few operands, %s must take exactly %s operand" \
+           "Too few operands, %s must take exactly %s operand" ;# <-- NOT TRANSLATED YET
+  ##ID:001764##
+  mcset $l "Too few operands, %s must take exactly %s operands" \
+           "Too few operands, %s must take exactly %s operands" ;# <-- NOT TRANSLATED YET
+  ##ID:001765##
+  mcset $l "Too many operands, %s can take only %s operand" \
+           "Too many operands, %s can take only %s operand" ;# <-- NOT TRANSLATED YET
+  ##ID:001766##
+  mcset $l "Too many operands, %s can take only %s operands" \
+           "Too many operands, %s can take only %s operands" ;# <-- NOT TRANSLATED YET
+  ##ID:001767##
+  mcset $l "`%s' changed by compiler to `%s'" \
+           "`%s' changed by compiler to `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001768##
+  mcset $l "Invalid set of operands: %s %s" \
+           "Invalid set of operands: %s %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001769##
+  mcset $l "Direct value used as operand for %s" \
+           "Direct value used as operand for %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001770##
+  mcset $l "Too many arguments, \$s extra argument(s)" \
+           "Too many arguments, \$s extra argument(s)" ;# <-- NOT TRANSLATED YET
+  ##ID:001771##
+  mcset $l "Too few arguments, %s argument(s) missing: %s ..." \
+           "Too few arguments, %s argument(s) missing: %s ..." ;# <-- NOT TRANSLATED YET
+  ##ID:001772##
+  mcset $l "Cannot define macro inside another one -- macro processing failed" \
+           "Cannot define macro inside another one -- macro processing failed" ;# <-- NOT TRANSLATED YET
+  ##ID:001773##
+  mcset $l "Missing number of repeats" \
+           "Missing number of repeats" ;# <-- NOT TRANSLATED YET
+  ##ID:001774##
+  mcset $l "Number of repeats is lower than zero" \
+           "Number of repeats is lower than zero" ;# <-- NOT TRANSLATED YET
+  ##ID:001775##
+  mcset $l "Zero number of repeats" \
+           "Zero number of repeats" ;# <-- NOT TRANSLATED YET
+  ##ID:001776##
+  mcset $l "Reserved keyword used as macro parameter: %s in macro %s" \
+           "Reserved keyword used as macro parameter: %s in macro %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001777##
+  mcset $l "Reserved keyword substituted with macro argument: %s --> %s" \
+           "Reserved keyword substituted with macro argument: %s --> %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001778##
+  mcset $l "Macro name is reserved keyword: %s" \
+           "Macro name is reserved keyword: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001779##
+  mcset $l "Macro `%s' is already defined" \
+           "Macro `%s' is already defined" ;# <-- NOT TRANSLATED YET
+  ##ID:001780##
+  mcset $l "Directive %s takes no arguments" \
+           "Directive %s takes no arguments" ;# <-- NOT TRANSLATED YET
+  ##ID:001781##
+  mcset $l "Label is not allowed here (%s)" \
+           "Label is not allowed here (%s)" ;# <-- NOT TRANSLATED YET
+  ##ID:001782##
+  mcset $l "Value of ``\$'' is not known at this point" \
+           "Value of ``\$'' is not known at this point" ;# <-- NOT TRANSLATED YET
+  ##ID:001783##
+  mcset $l "Unable to close macro, no macro is opened" \
+           "Unable to close macro, no macro is opened" ;# <-- NOT TRANSLATED YET
+  ##ID:001784##
+  mcset $l "Invalid label specification: ``%s''" \
+           "Invalid label specification: ``%s''" ;# <-- NOT TRANSLATED YET
+  ##ID:001785##
+  mcset $l "Missing name of macro" \
+           "Missing name of macro" ;# <-- NOT TRANSLATED YET
+  ##ID:001786##
+  mcset $l "Labels are not allowed before directives ENDM" \
+           "Labels are not allowed before directives ENDM" ;# <-- NOT TRANSLATED YET
+  ##ID:001787##
+  mcset $l "Missing file name" \
+           "Missing file name" ;# <-- NOT TRANSLATED YET
+  ##ID:001788##
+  mcset $l "Unable to open file: %s" \
+           "无法打开文件: %s"
+  ##ID:001789##
+  mcset $l "File not found: %s" \
+           "文件没有找到: %s"
+  ##ID:001790##
+  mcset $l "Extra symbols after `END' directive" \
+           "Extra symbols after `END' directive" ;# <-- NOT TRANSLATED YET
+  ##ID:001791##
+  mcset $l "Missing `END' directive" \
+           "Missing `END' directive" ;# <-- NOT TRANSLATED YET
+  ##ID:001792##
+  mcset $l "Missing address" \
+           "Missing address" ;# <-- NOT TRANSLATED YET
+  ##ID:001793##
+  mcset $l "Label already defined: `%s'" \
+           "Label already defined: `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001794##
+  mcset $l "Invalid label: `%s'" \
+           "Invalid label: `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001795##
+  mcset $l "This ORG has lower value than the previous one" \
+           "This ORG has lower value than the previous one" ;# <-- NOT TRANSLATED YET
+  ##ID:001796##
+  mcset $l "This formulation is deprecated, consider usage of \"<Const> <Directive> <Value>\" instead" \
+           "This formulation is deprecated, consider usage of \"<Const> <Directive> <Value>\" instead" ;# <-- NOT TRANSLATED YET
+  ##ID:001797##
+  mcset $l "Missing name of constant to define" \
+           "Missing name of constant to define" ;# <-- NOT TRANSLATED YET
+  ##ID:001798##
+  mcset $l "Empty expression" \
+           "Empty expression" ;# <-- NOT TRANSLATED YET
+  ##ID:001799##
+  mcset $l "Missing expression" \
+           "Missing expression" ;# <-- NOT TRANSLATED YET
+  ##ID:001800##
+  mcset $l "Argument value is out of range ({0 1 2 3}) : `%s'" \
+           "Argument value is out of range ({0 1 2 3}) : `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001801##
+  mcset $l "Missing size" \
+           "Missing size" ;# <-- NOT TRANSLATED YET
+  ##ID:001802##
+  mcset $l "Length of data area cannot be negative number: %s" \
+           "Length of data area cannot be negative number: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001803##
+  mcset $l "Using `DBIT' directive, but active segment is `%s' (should be BSEG)" \
+           "Using `DBIT' directive, but active segment is `%s' (should be BSEG)" ;# <-- NOT TRANSLATED YET
+  ##ID:001804##
+  mcset $l "Using `%s' directive, but currently active segment is `%s'" \
+           "Using `%s' directive, but currently active segment is `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001805##
+  mcset $l "Exceeding %s segment boundary by %s bites." \
+           "Exceeding %s segment boundary by %s bites." ;# <-- NOT TRANSLATED YET
+  ##ID:001806##
+  mcset $l "Exceeding %s segment boundary by %s Bytes." \
+           "Exceeding %s segment boundary by %s Bytes." ;# <-- NOT TRANSLATED YET
+  ##ID:001807##
+  mcset $l "Nearing %s segment boundary" \
+           "Nearing %s segment boundary" ;# <-- NOT TRANSLATED YET
+  ##ID:001808##
+  mcset $l "Overwriting reserved memory -- in %s area at addresses: %s" \
+           "Overwriting reserved memory -- in %s area at addresses: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001809##
+  mcset $l "Unable redefine constant: %s" \
+           "Unable redefine constant: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001810##
+  mcset $l "Ambiguous symbol definition: %s" \
+           "Ambiguous symbol definition: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001811##
+  mcset $l "Unknown operator: `%s', should be `%s at <address>', e.g. `%s at X+0FFh'" \
+           "Unknown operator: `%s', should be `%s at <address>', e.g. `%s at X+0FFh'" ;# <-- NOT TRANSLATED YET
+  ##ID:001812##
+  mcset $l "Segment pointer is too high: %s / %s" \
+           "Segment pointer is too high: %s / %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001813##
+  mcset $l "Segment pointer cannot be negative: `%s'" \
+           "Segment pointer cannot be negative: `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001814##
+  mcset $l "Missing condition" \
+           "Missing condition" ;# <-- NOT TRANSLATED YET
+  ##ID:001815##
+  mcset $l "Unexpected `ELSE'" \
+           "Unexpected `ELSE'" ;# <-- NOT TRANSLATED YET
+  ##ID:001816##
+  mcset $l "Unexpected `ELSEIF'" \
+           "Unexpected `ELSEIF'" ;# <-- NOT TRANSLATED YET
+  ##ID:001817##
+  mcset $l "Unexpected `ENDIF'" \
+           "Unexpected `ENDIF'" ;# <-- NOT TRANSLATED YET
+  ##ID:001818##
+  mcset $l "Invalid symbolic name: %s" \
+           "Invalid symbolic name: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001819##
+  mcset $l "Invalid expression: `%s'" \
+           "Invalid expression: `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001820##
+  mcset $l "Expected symbol to define, but got label: `%s'" \
+           "Expected symbol to define, but got label: `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001821##
+  mcset $l "Invalid symbol name: `%s'" \
+           "Invalid symbol name: `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001822##
+  mcset $l "Special value (with no numerical representation) assigned to constant: %s <- %s" \
+           "Special value (with no numerical representation) assigned to constant: %s <- %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001823##
+  mcset $l "Trying to overwrite constant: %s" \
+           "Trying to overwrite constant: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001824##
+  mcset $l "Expression out of range" \
+           "Expression out of range" ;# <-- NOT TRANSLATED YET
+  ##ID:001825##
+  mcset $l "Exceeding code memory capacity: %s <- %s" \
+           "Exceeding code memory capacity: %s <- %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001826##
+  mcset $l "Exceeding internal data memory capacity: %s <- %s" \
+           "Exceeding internal data memory capacity: %s <- %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001827##
+  mcset $l "Exceeding external data memory capacity: %s <- %s" \
+           "Exceeding external data memory capacity: %s <- %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001828##
+  mcset $l "Trying to change variable `%s' with wrong directive (EQU)" \
+           "Trying to change variable `%s' with wrong directive (EQU)" ;# <-- NOT TRANSLATED YET
+  ##ID:001829##
+  mcset $l "Setting new variable value: %s <- %s" \
+           "Setting new variable value: %s <- %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001830##
+  mcset $l "Invalid expression - parentheses are not balanced: `%s'" \
+           "Invalid expression - parentheses are not balanced: `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001831##
+  mcset $l "Invalid value: `%s' (should be char)" \
+           "Invalid value: `%s' (should be char)" ;# <-- NOT TRANSLATED YET
+  ##ID:001832##
+  mcset $l "Invalid numeric value: %s (should be decimal number)" \
+           "Invalid numeric value: %s (should be decimal number)" ;# <-- NOT TRANSLATED YET
+  ##ID:001833##
+  mcset $l "Invalid numeric value: %s (should be hexadecimal number)" \
+           "Invalid numeric value: %s (should be hexadecimal number)" ;# <-- NOT TRANSLATED YET
+  ##ID:001834##
+  mcset $l "Invalid numeric value: %s (should be binary number)" \
+           "Invalid numeric value: %s (should be binary number)" ;# <-- NOT TRANSLATED YET
+  ##ID:001835##
+  mcset $l "Invalid numeric value: %s (should be octal number)" \
+           "Invalid numeric value: %s (should be octal number)" ;# <-- NOT TRANSLATED YET
+  ##ID:001836##
+  mcset $l "Undefined symbol name: %s" \
+           "Undefined symbol name: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001837##
+  mcset $l "Floating point value converted to integer value `%s' -> `%s'" \
+           "Floating point value converted to integer value `%s' -> `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001838##
+  mcset $l "Overflow `%s' -> `%s'" \
+           "Overflow `%s' -> `%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001839##
+  mcset $l "Cannot to use string `%s' as a valid value" \
+           "Cannot to use string `%s' as a valid value" ;# <-- NOT TRANSLATED YET
+  ##ID:001840##
+  mcset $l "Cannot to use string `%s' as value" \
+           "Cannot to use string `%s' as value" ;# <-- NOT TRANSLATED YET
+  ##ID:001841##
+  mcset $l "Compilation error at %s: %s" \
+           "Compilation error at %s: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001842##
+  mcset $l " in %s" \
+           " in %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001843##
+  mcset $l "\033\[31;1mCompilation error\033\[m at \033\[31;1;4m%s\033\[m%s: %s" \
+           "\033\[31;1mCompilation error\033\[m at \033\[31;1;4m%s\033\[m%s: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001844##
+  mcset $l "Notice at %s: %s" \
+           "Notice at %s: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001845##
+  mcset $l "\033\[33;1mNotice\033\[m at \033\[33;1;4m%s\033\[m%s: %s" \
+           "\033\[33;1mNotice\033\[m at \033\[33;1;4m%s\033\[m%s: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001846##
+  mcset $l "Warning at %s: %s" \
+           "Warning at %s: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001847##
+  mcset $l "\033\[33mWarning\033\[m at \033\[33;4m%s\033\[m%s: %s" \
+           "\033\[33mWarning\033\[m at \033\[33;4m%s\033\[m%s: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001848##
+  mcset $l "Syntax error at %s: %s" \
+           "Syntax error at %s: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001849##
+  mcset $l "\033\[31;1mSyntax error\033\[m at \033\[31;1;4m%s\033\[m%s: %s" \
+           "\033\[31;1mSyntax error\033\[m at \033\[31;1;4m%s\033\[m%s: %s" ;# <-- NOT TRANSLATED YET
+}
+# errorhandler.tcl
+# ==============================================================================
+namespace eval ErrorHandler {
+  ##ID:001850##
+  mcset $l "PROGRAM ERROR  " \
+           "程序错误  "
+  ##ID:001851##
+  mcset $l "Error log saved in: %s\n" \
+           "错误日志保存在: %s\n"
+  ##ID:001852##
+  mcset $l "Please send this file to %s or report this bug at http://mcu8051ide.sf.net/forum\n\n\n" \
+           "Please send this file to %s or report this bug at http://mcu8051ide.sf.net/forum\n\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:001853##
+  mcset $l "ERROR DETAILS:\n--------------\n" \
+           "错误详细信息:\n--------------\n"
+  ##ID:001854##
+  mcset $l "Skip errors" \
+           "跳过错误"
+  ##ID:001855##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:001856##
+  mcset $l "PROGRAM ERROR - MCU 8051 IDE" \
+           "程序错误 - MCU 8051 IDE"
+}
+# notes.tcl
+# ==============================================================================
+namespace eval Notes {
+  ##ID:001857##
+  mcset $l "Pencil" \
+           "铅笔"
+  ##ID:001858##
+  mcset $l "Line" \
+           "线"
+  ##ID:001859##
+  mcset $l "Arrow" \
+           "箭头"
+  ##ID:001860##
+  mcset $l "Rectangle" \
+           "矩形"
+  ##ID:001861##
+  mcset $l "Oval" \
+           "椭圆形"
+  ##ID:001862##
+  mcset $l "Insert text" \
+           "插入文本"
+  ##ID:001863##
+  mcset $l "Move" \
+           "移动"
+  ##ID:001864##
+  mcset $l "Move canvas" \
+           "移动画布"
+  ##ID:001865##
+  mcset $l "Eraser" \
+           "橡皮擦"
+  ##ID:001866##
+  mcset $l "Zoom in" \
+           "放大"
+  ##ID:001867##
+  mcset $l "Zoom out" \
+           "缩小"
+  ##ID:001868##
+  mcset $l "Insert image" \
+           "插入图像"
+  ##ID:001869##
+  mcset $l "Select color" \
+           "选择颜色"
+  ##ID:001870##
+  mcset $l "Clear all" \
+           "清除所有"
+  ##ID:001871##
+  mcset $l "Really close ?" \
+           "真的关闭 ?"
+  ##ID:001872##
+  mcset $l "Do you really want to close your notes ? (There is no save function ...)" \
+           "Do you really want to close your notes ? (There is no save function ...)" ;# <-- NOT TRANSLATED YET
+  ##ID:001873##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:001874##
+  mcset $l "Shade" \
+           "收缩"
+  ##ID:001875##
+  mcset $l "Draw ovals" \
+           "绘制椭圆"
+  ##ID:001876##
+  mcset $l "Draw rectangles" \
+           "绘制矩形"
+  ##ID:001877##
+  mcset $l "Draw arrows" \
+           "绘制箭头"
+  ##ID:001878##
+  mcset $l "Draw lines" \
+           "绘制线"
+  ##ID:001879##
+  mcset $l "Text:" \
+           "文本:"
+  ##ID:001880##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:001881##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:001882##
+  mcset $l "Enter text" \
+           "输入文本"
+  ##ID:001883##
+  mcset $l "Are you sure ?" \
+           "您确定吗?"
+  ##ID:001884##
+  mcset $l "Do you really want to clear this notepad\n(there is no undo action)" \
+           "您难道真的要清除这个记事本?\n(无法返回的操作)"
+  ##ID:001885##
+  mcset $l "Insert image from file" \
+           "从文件中插入图像"
+  ##ID:001886##
+  mcset $l "Unable to read file" \
+           "无法读取文件"
+  ##ID:001887##
+  mcset $l "Scribble notepad" \
+           "便利贴"
+  ##ID:001888##
+  mcset $l "Portable network graphics" \
+           "Portable network graphics" ;# <-- NOT TRANSLATED YET
+}
+# sfrwatches.tcl
+# ==============================================================================
+namespace eval SFRWatches {
+  ##ID:001889##
+  mcset $l "Set to 0x00" \
+           "Set to 0x00" ;# <-- NOT TRANSLATED YET
+  ##ID:001890##
+  mcset $l "Set this register to 0" \
+           "Set this register to 0" ;# <-- NOT TRANSLATED YET
+  ##ID:001891##
+  mcset $l "Set to 0xFF" \
+           "Set to 0xFF" ;# <-- NOT TRANSLATED YET
+  ##ID:001892##
+  mcset $l "Set this register to 255" \
+           "Set this register to 255" ;# <-- NOT TRANSLATED YET
+  ##ID:001893##
+  mcset $l "HEX" \
+           "HEX" ;# <-- NOT TRANSLATED YET
+  ##ID:001894##
+  mcset $l "DEC" \
+           "DEC" ;# <-- NOT TRANSLATED YET
+  ##ID:001895##
+  mcset $l "Register" \
+           "Register" ;# <-- NOT TRANSLATED YET
+  ##ID:001896##
+  mcset $l "Search:" \
+           "Search:" ;# <-- NOT TRANSLATED YET
+}
+# stackmonitor.tcl
+# ==============================================================================
+namespace eval StackMonitor {
+  ##ID:001897##
+  mcset $l "Do you really want to clear the list without any effect in simulator engine ?" \
+           "Do you really want to clear the list without any effect in simulator engine ?" ;# <-- NOT TRANSLATED YET
+  ##ID:001898##
+  mcset $l "Confirmation" \
+           "确认"
+  ##ID:001899##
+  mcset $l "Push value onto stack." \
+           "Push value onto stack." ;# <-- NOT TRANSLATED YET
+  ##ID:001900##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:001901##
+  mcset $l "PUSH" \
+           "PUSH" ;# <-- NOT TRANSLATED YET
+  ##ID:001902##
+  mcset $l "POP" \
+           "POP" ;# <-- NOT TRANSLATED YET
+  ##ID:001903##
+  mcset $l "Clear" \
+           "清除"
+  ##ID:001904##
+  mcset $l "SP: " \
+           "SP: " ;# <-- NOT TRANSLATED YET
+  ##ID:001905##
+  mcset $l "Push value onto stack (HEX)" \
+           "Push value onto stack (HEX)" ;# <-- NOT TRANSLATED YET
+  ##ID:001906##
+  mcset $l "Stack - %s - MCU 8051 IDE" \
+           "Stack - %s - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:001907##
+  mcset $l "General" \
+           "General" ;# <-- NOT TRANSLATED YET
+  ##ID:001908##
+  mcset $l "Subprogram" \
+           "Subprogram" ;# <-- NOT TRANSLATED YET
+  ##ID:001909##
+  mcset $l "Interrupt" \
+           "中断"
+  ##ID:001910##
+  mcset $l "Legend:" \
+           "Legend:" ;# <-- NOT TRANSLATED YET
+  ##ID:001911##
+  mcset $l "Show/Hide tool bar" \
+           "显示/隐藏工具栏"
+  ##ID:001912##
+  mcset $l "Current stack pointer value" \
+           "Current stack pointer value" ;# <-- NOT TRANSLATED YET
+  # Keep string length here!
+  ##ID:001913##
+  mcset $l {Addr HH Dec  Binary  Oct A} \
+           {Addr HH Dec  Binary  Oct A} ;# <-- NOT TRANSLATED YET
+}
+# terminal.tcl
+# ==============================================================================
+namespace eval Terminal {
+  ##ID:001914##
+  mcset $l "Unable to find urxvt" \
+           "找不到urxvt"
+  ##ID:001915##
+  mcset $l "Unable to execute program \"urxvt\", terminal emulator is eiter not available or badly configured." \
+           "Unable to execute program \"urxvt\", terminal emulator is eiter not available or badly configured." ;# <-- NOT TRANSLATED YET
+}
+# eightsegment.tcl
+# ==============================================================================
+namespace eval EightSegment {
+  ##ID:001916##
+  mcset $l "8 segment editor" \
+           "8 segment editor" ;# <-- NOT TRANSLATED YET
+  ##ID:001917##
+  mcset $l "Common cathode" \
+           "Common cathode" ;# <-- NOT TRANSLATED YET
+  ##ID:001918##
+  mcset $l "Hex:" \
+           "Hex:" ;# <-- NOT TRANSLATED YET
+  ##ID:001919##
+  mcset $l "Dec:" \
+           "Dec:" ;# <-- NOT TRANSLATED YET
+  ##ID:001920##
+  mcset $l "Bin:" \
+           "Bin:" ;# <-- NOT TRANSLATED YET
+  ##ID:001921##
+  mcset $l "Copy to clipboard" \
+           "复制到剪贴板"
+  ##ID:001922##
+  mcset $l "Copy contents of the entrybox to clipboard" \
+           "Copy contents of the entrybox to clipboard" ;# <-- NOT TRANSLATED YET
+  ##ID:001923##
+  mcset $l "Common anode" \
+           "Common anode" ;# <-- NOT TRANSLATED YET
+  ##ID:001924##
+  mcset $l "LED" \
+           "LED" ;# <-- NOT TRANSLATED YET
+  ##ID:001925##
+  mcset $l "PIN" \
+           "PIN" ;# <-- NOT TRANSLATED YET
+  ##ID:001926##
+  mcset $l "Close" \
+           "关闭"
+}
+# symbol_viewer.tcl
+# ==============================================================================
+namespace eval SymbolViewer {
+  ##ID:001927##
+  mcset $l "Assembly symbol table - MCU 8051 IDE" \
+           "符号表集合 - MCU 8051 IDE"
+  ##ID:001928##
+  mcset $l "Copy symbol name" \
+           "复制符号名称"
+  ##ID:001929##
+  mcset $l "Copy hex value" \
+           "复制十六进制值"
+  ##ID:001930##
+  mcset $l "Copy dec value" \
+           "复制十进制值"
+  ##ID:001931##
+  mcset $l "Copy line" \
+           "复制行"
+  ##ID:001932##
+  mcset $l "Open *.LST" \
+           "打开*.LST"
+  ##ID:001933##
+  mcset $l "Load table of symbols from list file (*.lst)\n\tOnly for: ASEM-51, MCU8051IDE and ASM51" \
+           "Load table of symbols from list file (*.lst)\n\tOnly for: ASEM-51, MCU8051IDE and ASM51" ;# <-- NOT TRANSLATED YET
+  ##ID:001934##
+  mcset $l "Open code listing" \
+           "打开代码列表"
+  ##ID:001935##
+  mcset $l "Reload" \
+           "刷新"
+  ##ID:001936##
+  mcset $l "Reload opened file" \
+           "刷新打开的文件"
+  ##ID:001937##
+  mcset $l "Search:" \
+           "搜索:"
+  ##ID:001938##
+  mcset $l "Search for symbol by its name or value" \
+           "Search for symbol by its name or value" ;# <-- NOT TRANSLATED YET
+  ##ID:001939##
+  mcset $l "Search for symbol" \
+           "Search for symbol" ;# <-- NOT TRANSLATED YET
+  ##ID:001940##
+  mcset $l "Clear search entry box" \
+           "清除搜索输入框"
+  ##ID:001941##
+  mcset $l "Symbol\t\t\t\tType\tHEX\tDEC\tUsed" \
+           "Symbol\t\t\t\tType\tHEX\tDEC\tUsed" ;# <-- NOT TRANSLATED YET
+  ##ID:001942##
+  mcset $l "Display" \
+           "显示"
+  ##ID:001943##
+  mcset $l "Used symbols" \
+           "Used symbols" ;# <-- NOT TRANSLATED YET
+  ##ID:001944##
+  mcset $l "Unused symbols" \
+           "Unused symbols" ;# <-- NOT TRANSLATED YET
+  ##ID:001945##
+  mcset $l "Sort by" \
+           "Sort by" ;# <-- NOT TRANSLATED YET
+  ##ID:001946##
+  mcset $l "Incremental order" \
+           "Incremental order" ;# <-- NOT TRANSLATED YET
+  ##ID:001947##
+  mcset $l "Decremental order" \
+           "Decremental order" ;# <-- NOT TRANSLATED YET
+  ##ID:001948##
+  mcset $l "Load symbol table - MCU 8051 IDE" \
+           "载入符号表 - MCU 8051 IDE"
+  ##ID:001949##
+  mcset $l "Code listing" \
+           "代码列表"
+  ##ID:001950##
+  mcset $l "Invalid file" \
+           "无效文件"
+  ##ID:001951##
+  mcset $l "Unable to use selected file. Please check your permissions. File: '%s'" \
+           "Unable to use selected file. Please check your permissions. File: '%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:001952##
+  mcset $l "YES" \
+           "Yes"
+  ##ID:001953##
+  mcset $l "NO" \
+           "NO" ;# <-- NOT TRANSLATED YET
+}
+# sfrmap.tcl
+# ==============================================================================
+namespace eval SFRMap {
+  ##ID:001954##
+  mcset $l "Map of SFR area" \
+           "Map of SFR area" ;# <-- NOT TRANSLATED YET
+  ##ID:001955##
+  mcset $l "Reserved" \
+           "Reserved" ;# <-- NOT TRANSLATED YET
+  ##ID:001956##
+  mcset $l "Bit addressable" \
+           "Bit addressable" ;# <-- NOT TRANSLATED YET
+  ##ID:001957##
+  mcset $l "HEX:" \
+           "HEX:" ;# <-- NOT TRANSLATED YET
+  ##ID:001958##
+  mcset $l "DEC:" \
+           "DEC:" ;# <-- NOT TRANSLATED YET
+  ##ID:001959##
+  mcset $l "BIN:" \
+           "BIN:" ;# <-- NOT TRANSLATED YET
+  ##ID:001960##
+  mcset $l "OCT:" \
+           "OCT:" ;# <-- NOT TRANSLATED YET
+}
+# hibernate.tcl
+# ==============================================================================
+namespace eval Hibernate {
+  ##ID:001961##
+  mcset $l "Abort" \
+           "中止"
+  ##ID:001962##
+  mcset $l "Hibernation progress" \
+           "Hibernation progress" ;# <-- NOT TRANSLATED YET
+  ##ID:001963##
+  mcset $l "Interrupt at vector 0x%s  " \
+           "Interrupt at vector 0x%s  " ;# <-- NOT TRANSLATED YET
+  ##ID:001964##
+  mcset $l "Fatal error" \
+           "致命错误"
+  ##ID:001965##
+  mcset $l "Version of this M5IHIB file is higher than %s\nUnable to continue." \
+           "Version of this M5IHIB file is higher than %s\nUnable to continue." ;# <-- NOT TRANSLATED YET
+  ##ID:001966##
+  mcset $l "The following problems must be \nresolved before program resumption" \
+           "The following problems must be \nresolved before program resumption" ;# <-- NOT TRANSLATED YET
+  ##ID:001967##
+  mcset $l "This file is indented for %s but the current MCU is %s" \
+           "This file is indented for %s but the current MCU is %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001968##
+  mcset $l "Set current MCU to %s" \
+           "Set current MCU to %s" ;# <-- NOT TRANSLATED YET
+  ##ID:001969##
+  mcset $l "This file contains %s B of external data memory but but your processor has %s B" \
+           "This file contains %s B of external data memory but but your processor has %s B" ;# <-- NOT TRANSLATED YET
+  ##ID:001970##
+  mcset $l "Set current XDATA capacity to %s B" \
+           "Set current XDATA capacity to %s B" ;# <-- NOT TRANSLATED YET
+  ##ID:001971##
+  mcset $l "Ignore this difference" \
+           "Ignore this difference" ;# <-- NOT TRANSLATED YET
+  ##ID:001972##
+  mcset $l "Current file (%s) has different MD5 hash than MD5 recorded in this hibernation file" \
+           "Current file (%s) has different MD5 hash than MD5 recorded in this hibernation file" ;# <-- NOT TRANSLATED YET
+  ##ID:001973##
+  mcset $l "This hibernation file was generated from \"%s\" but current file is \"%s\"" \
+           "This hibernation file was generated from \"%s\" but current file is \"%s\"" ;# <-- NOT TRANSLATED YET
+  ##ID:001974##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:001975##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:001976##
+  mcset $l "Program resumption" \
+           "恢复计划"
+  ##ID:001977##
+  mcset $l "Options:" \
+           "选项:"
+}
+# find_in_files.tcl
+# ==============================================================================
+namespace eval FindInFiles {
+  ##ID:001978##
+  mcset $l "Go to" \
+           "转到"
+  ##ID:001979##
+  mcset $l "Go to this line" \
+           "前往此行"
+  ##ID:001980##
+  mcset $l "Clear" \
+           "清除"
+  ##ID:001981##
+  mcset $l "Clear this panel" \
+           "清除此面板"
+  ##ID:001982##
+  mcset $l "Search pattern" \
+           "搜索模式"
+  ##ID:001983##
+  mcset $l "File mask (e.g. \"*.c,*.asm\")" \
+           "File mask (e.g. \"*.c,*.asm\")" ;# <-- NOT TRANSLATED YET
+  ##ID:001984##
+  mcset $l "Select folder" \
+           "选择文件夹"
+  ##ID:001985##
+  mcset $l "Recursive" \
+           "递归"
+  ##ID:001986##
+  mcset $l "Search in all subfolders" \
+           "搜索所有子文件夹"
+  ##ID:001987##
+  mcset $l "Find" \
+           "查找"
+  ##ID:001988##
+  mcset $l "Start / Stop search" \
+           "开始/停止搜索"
+  ##ID:001989##
+  mcset $l "Clear results" \
+           "清除结果"
+  ##ID:001990##
+  mcset $l "Case sensitive" \
+           "区分大小写"
+  ##ID:001991##
+  mcset $l "Perform case sensitive search" \
+           "执行区分大小写的搜索"
+  ##ID:001992##
+  mcset $l "Regular expression" \
+           "正规表达式"
+  ##ID:001993##
+  mcset $l "Pattern is a regular expression" \
+           "正规表达式模式"
+  ##ID:001994##
+  mcset $l "Pattern:" \
+           "模式:"
+  ##ID:001995##
+  mcset $l "Folder:" \
+           "文件夹:"
+  ##ID:001996##
+  mcset $l "Mask:" \
+           "Mask:" ;# <-- NOT TRANSLATED YET
+  ##ID:001997##
+  mcset $l "Clear pattern entrybox" \
+           "Clear pattern entrybox" ;# <-- NOT TRANSLATED YET
+  ##ID:001998##
+  mcset $l "Show help for file mask" \
+           "Show help for file mask" ;# <-- NOT TRANSLATED YET
+  ##ID:001999##
+  mcset $l "Choose directory - MCU 8051 IDE" \
+           "选择目录 - MCU 8051 IDE"
+  ##ID:002000##
+  mcset $l "Folder not found" \
+           "没有找到文件夹"
+  ##ID:002001##
+  mcset $l "The specified folder does not exist.\n'%s'" \
+           "The specified folder does not exist.\n'%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:002002##
+  mcset $l "The string specified as a folder is not a folder.\n'%s'" \
+           "The string specified as a folder is not a folder.\n'%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:002003##
+  mcset $l "Error" \
+           "错误"
+  ##ID:002004##
+  mcset $l "Invalid regular expression" \
+           "Invalid regular expression" ;# <-- NOT TRANSLATED YET
+  ##ID:002005##
+  mcset $l "Stop" \
+           "停止"
+  ##ID:002006##
+  mcset $l "-- click to close --" \
+           "-- 点击关闭 --"
+  ##ID:002007##
+  mcset $l "Comma separated list of file masks (e.g \"*.c,*.h,*.asm\")\n" \
+           "Comma separated list of file masks (e.g \"*.c,*.h,*.asm\")\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002008##
+  mcset $l "The mask may contain any of the following special characters:\n" \
+           "The mask may contain any of the following special characters:\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002009##
+  mcset $l "  ?  Matches any single character.\n" \
+           "  ?  Matches any single character.\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002010##
+  mcset $l "  *  Matches any sequence of zero or more characters.\n" \
+           "  *  Matches any sequence of zero or more characters.\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002011##
+  mcset $l "  \[chars\]  Matches any single character in chars.\n" \
+           "  \[chars\]  Matches any single character in chars.\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002012##
+  mcset $l "    If chars contains a sequence of the form a-b then any\n" \
+           "    If chars contains a sequence of the form a-b then any\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002013##
+  mcset $l "    character between a and b (inclusive) will match.\n" \
+           "    character between a and b (inclusive) will match.\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002014##
+  mcset $l "  \\x  Matches the character x." \
+           "  \\x  Matches the character x." ;# <-- NOT TRANSLATED YET
+}
+# fsbrowser.tcl
+# ==============================================================================
+namespace eval FSBrowser {
+  ##ID:002015##
+  mcset $l "Sorting" \
+           "排序"
+  ##ID:002016##
+  mcset $l "By Name" \
+           "按名称"
+  ##ID:002017##
+  mcset $l "Sort files by name" \
+           "按文件名称排序"
+  ##ID:002018##
+  mcset $l "By Date" \
+           "按日期"
+  ##ID:002019##
+  mcset $l "Sort files by date" \
+           "按文件日期排序"
+  ##ID:002020##
+  mcset $l "By Size" \
+           "俺大小"
+  ##ID:002021##
+  mcset $l "Sort files by size" \
+           "按文件大小排序"
+  ##ID:002022##
+  mcset $l "Reverse" \
+           "反向"
+  ##ID:002023##
+  mcset $l "Decremental sorting" \
+           "递减排序"
+  ##ID:002024##
+  mcset $l "Case insensitive" \
+           "不区分大小写"
+  ##ID:002025##
+  mcset $l "Sorting mode ASCII / Dictionary" \
+           "Sorting mode ASCII / Dictionary" ;# <-- NOT TRANSLATED YET
+  ##ID:002026##
+  mcset $l "Show hidden files" \
+           "显示隐藏文件"
+  ##ID:002027##
+  mcset $l "Show / Ignore files starting with dot" \
+           "显示/忽略文件开头点"
+  ##ID:002028##
+  mcset $l "Up" \
+           "向上"
+  ##ID:002029##
+  mcset $l "Go to parent folder" \
+           "转到父文件夹"
+  ##ID:002030##
+  mcset $l "Back" \
+           "后退"
+  ##ID:002031##
+  mcset $l "Go back in history" \
+           "转到上一个访问的位置"
+  ##ID:002032##
+  mcset $l "Forward" \
+           "向前"
+  ##ID:002033##
+  mcset $l "Go forward in history" \
+           "转到下一个访问的位置"
+  ##ID:002034##
+  mcset $l "Home" \
+           "主文件夹"
+  ##ID:002035##
+  mcset $l "Go to your home folder" \
+           "转到您的主文件夹"
+  ##ID:002036##
+  mcset $l "Reload" \
+           "刷新"
+  ##ID:002037##
+  mcset $l "Reload file list" \
+           "刷新文件列表"
+  ##ID:002038##
+  mcset $l "Rename" \
+           "重命名"
+  ##ID:002039##
+  mcset $l "Rename file" \
+           "重命名文件"
+  ##ID:002040##
+  mcset $l "Delete" \
+           "删除"
+  ##ID:002041##
+  mcset $l "Delete file" \
+           "删除文件"
+  ##ID:002042##
+  mcset $l "New folder" \
+           "新建文件夹"
+  ##ID:002043##
+  mcset $l "Create new directory" \
+           "新建目录"
+  ##ID:002044##
+  mcset $l "Bookmark folder" \
+           "书签文件夹"
+  ##ID:002045##
+  mcset $l "Bookmark the current directory" \
+           "Bookmark the current directory" ;# <-- NOT TRANSLATED YET
+  ##ID:002046##
+  mcset $l "Properties" \
+           "属性"
+  ##ID:002047##
+  mcset $l "Show file properties" \
+           "显示文件属性"
+  ##ID:002048##
+  mcset $l "Add bookmark" \
+           "添加书签"
+  ##ID:002049##
+  mcset $l "Bookmark the current folder" \
+           "书签当前文件夹"
+  ##ID:002050##
+  mcset $l "Edit bookmarks" \
+           "编辑书签"
+  ##ID:002051##
+  mcset $l "Invoke bookmark editor" \
+           "调用书签编辑器"
+  ##ID:002052##
+  mcset $l "Back in history" \
+           "转到上一个访问的位置"
+  ##ID:002053##
+  mcset $l "Forward in history" \
+           "转到下一个访问的位置"
+  ##ID:002054##
+  mcset $l "Bookmark" \
+           "书签"
+  ##ID:002055##
+  mcset $l "Bookmark menu" \
+           "书签菜单"
+  ##ID:002056##
+  mcset $l "Current document folder" \
+           "当前的文件夹"
+  ##ID:002057##
+  mcset $l "Go to directory containing the current document" \
+           "转到当前文档所在的目录"
+  ##ID:002058##
+  mcset $l "Configure" \
+           "配置"
+  ##ID:002059##
+  mcset $l "File system browser configuration menu" \
+           "文件系统浏览器的配置菜单"
+  ##ID:002060##
+  mcset $l "Current directory" \
+           "当前目录"
+  ##ID:002061##
+  mcset $l "Directory location bar" \
+           "目录位置栏"
+  ##ID:002062##
+  mcset $l "Confirm directory location" \
+           "目录位置确认"
+  ##ID:002063##
+  mcset $l "Filter" \
+           "过滤器"
+  ##ID:002064##
+  mcset $l "File filter" \
+           "文件过滤器"
+  ##ID:002065##
+  mcset $l "Invalid directory" \
+           "无效目录"
+  ##ID:002066##
+  mcset $l "The specified directory does not exist:\n%s" \
+           "The specified directory does not exist:\n%s" ;# <-- NOT TRANSLATED YET
+  ##ID:002067##
+  mcset $l "Unable to compile" \
+           "无法编译"
+  ##ID:002068##
+  mcset $l "Unable to open source file while simulator is engaged." \
+           "Unable to open source file while simulator is engaged." ;# <-- NOT TRANSLATED YET
+  ##ID:002069##
+  mcset $l "Open file %s" \
+           "打开文件 %s"
+  ##ID:002070##
+  mcset $l "This file does not look like a source code.\nDo you really want to open it ?" \
+           "This file does not look like a source code.\nDo you really want to open it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:002071##
+  mcset $l "Permission denied" \
+           "没有权限"
+  ##ID:002072##
+  mcset $l "Unable to rename file:\n%s" \
+           "无法重命名文件:\n%s"
+  ##ID:002073##
+  mcset $l "Do you really want to delete file:\n%s" \
+           "您是否确定删除文件:\n%s"
+  ##ID:002074##
+  mcset $l "Unable to remove file:\n%s" \
+           "无法删除文件:\n%s"
+  ##ID:002075##
+  mcset $l "Create new folder in:\n%s" \
+           "在创建新文件夹:\n%s"
+  ##ID:002076##
+  mcset $l "Clear" \
+           "清除"
+  ##ID:002077##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:002078##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:002079##
+  mcset $l "Unable to create folder" \
+           "无法创建文件夹"
+  ##ID:002080##
+  mcset $l "Unable to create the specified folder" \
+           "无法创建指定的文件夹"
+  ##ID:002081##
+  mcset $l "Directory" \
+           "目录"
+  ##ID:002082##
+  mcset $l "File" \
+           "文件"
+  ##ID:002083##
+  mcset $l "Unknown Error" \
+           "未知错误"
+  ##ID:002084##
+  mcset $l "This file apparently does not exist" \
+           "此文件显然不存在"
+  ##ID:002085##
+  mcset $l "General" \
+           "General" ;# <-- NOT TRANSLATED YET
+  ##ID:002086##
+  mcset $l "Permissions" \
+           "权限"
+  ##ID:002087##
+  mcset $l "Name:" \
+           "名称:"
+  ##ID:002088##
+  mcset $l "Access permissions" \
+           "访问权限"
+  ##ID:002089##
+  mcset $l "Ownership" \
+           "所有权"
+  ##ID:002090##
+  mcset $l "Owner" \
+           "所有主"
+  ##ID:002091##
+  mcset $l "Group" \
+           "所有组"
+  ##ID:002092##
+  mcset $l "Item properties" \
+           "项目属性"
+  ##ID:002093##
+  mcset $l "Unable to change permissions for file:\n%s" \
+           "Unable to change permissions for file:\n%s" ;# <-- NOT TRANSLATED YET
+  ##ID:002094##
+  mcset $l "Unable to rename file:\n%s\n\t=>\n%s" \
+           "无法重命名文件:\n%s\n\t=>\n%s"
+}
+# ihextools.tcl
+# ==============================================================================
+namespace eval IHexTools {
+  ##ID:002095##
+  mcset $l "Line contains invalid characters" \
+           "Line contains invalid characters" ;# <-- NOT TRANSLATED YET
+  ##ID:002096##
+  mcset $l "Line contains even number of characters" \
+           "Line contains even number of characters" ;# <-- NOT TRANSLATED YET
+  ##ID:002097##
+  mcset $l "Unknown record type '%s'" \
+           "Unknown record type '%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:002098##
+  mcset $l "Bad checksum" \
+           "Bad checksum" ;# <-- NOT TRANSLATED YET
+  ##ID:002099##
+  mcset $l "Bad length" \
+           "Bad length" ;# <-- NOT TRANSLATED YET
+  ##ID:002100##
+  mcset $l "Missing EOF" \
+           "Missing EOF" ;# <-- NOT TRANSLATED YET
+  ##ID:002101##
+  mcset $l "Data length exceeding limit 0x10000" \
+           "Data length exceeding limit 0x10000" ;# <-- NOT TRANSLATED YET
+  ##ID:002102##
+  mcset $l "Invalid address '%s'" \
+           "Invalid address '%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:002103##
+  mcset $l "Invalid line number '%s'" \
+           "Invalid line number '%s'" ;# <-- NOT TRANSLATED YET
+  ##ID:002104##
+  mcset $l "Invalid data field" \
+           "Invalid data field" ;# <-- NOT TRANSLATED YET
+  ##ID:002105##
+  mcset $l "Error at line %s:\t" \
+           "Error at line %s:\t" ;# <-- NOT TRANSLATED YET
+}
+# project.tcl
+# ==============================================================================
+namespace eval Project {
+  ##ID:002106##
+  mcset $l "Project loading error" \
+           "项目加载错误"
+  ##ID:002107##
+  mcset $l "ERROR:\nThe project file cannot be loaded correctly due to a xml parsing error. The file is either corrupted or it is not a project file acceptable by this environment." \
+           "ERROR:\nThe project file cannot be loaded correctly due to a xml parsing error. The file is either corrupted or it is not a project file acceptable by this environment." ;# <-- NOT TRANSLATED YET
+  ##ID:002108##
+  mcset $l "Converting old project file to new version" \
+           "Converting old project file to new version" ;# <-- NOT TRANSLATED YET
+}
+# simulator.tcl
+# ==============================================================================
+namespace eval Simulator {
+  ##ID:002109##
+  mcset $l "Simulator warning" \
+           "模拟器错误"
+  ##ID:002110##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:002111##
+  mcset $l "See simulator configuration dialog\nMain Menu -> Configure -> Simulator" \
+           "See simulator configuration dialog\n主菜单 -> 配置 -> 模拟器"
+  ##ID:002112##
+  mcset $l "Do not show this dialog again" \
+           "不再显示此对话框"
+  ##ID:002113##
+  mcset $l "PC:" \
+           "PC:" ;# <-- NOT TRANSLATED YET
+  ##ID:002114##
+  mcset $l "Line:" \
+           "Line:" ;# <-- NOT TRANSLATED YET
+  ##ID:002115##
+  mcset $l "File:" \
+           "文件:"
+  ##ID:002116##
+  mcset $l "Invalid return from interrupt" \
+           "Invalid return from interrupt" ;# <-- NOT TRANSLATED YET
+  ##ID:002117##
+  mcset $l "Unable to initialize EEPROM programming cycle\nbecause EEMWE, RDYBSY and WRTINH must be set\n" \
+           "Unable to initialize EEPROM programming cycle\nbecause EEMWE, RDYBSY and WRTINH must be set\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002118##
+  mcset $l "Data EEPROM write cycle aborted\n" \
+           "Data EEPROM write cycle aborted\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002119##
+  mcset $l "Unable to read write-only register.\nRandom value returned.\n\nRegister:\t\t0x%s" \
+           "Unable to read write-only register.\nRandom value returned.\n\nRegister:\t\t0x%s" ;# <-- NOT TRANSLATED YET
+  ##ID:002120##
+  mcset $l "Invalid instruction OP code\n" \
+           "Invalid instruction OP code\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002121##
+  mcset $l "Stack overflow\n" \
+           "Stack overflow\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002122##
+  mcset $l "Stack underflow\n" \
+           "Stack underflow\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002123##
+  mcset $l "WATCHDOG OVERFLOW\n" \
+           "看门狗溢出\n"
+  ##ID:002124##
+  mcset $l "Timer mode has been changed while timer was running.\nIt is important to stop timer/counter before changing modes.\n\nTimer number: %s\n" \
+           "Timer mode has been changed while timer was running.\nIt is important to stop timer/counter before changing modes.\n\nTimer number: %s\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002125##
+  mcset $l "UART mode has been changed while UART was engaged.\n" \
+           "UART mode has been changed while UART was engaged.\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002126##
+  mcset $l "UART: Frame discarded (according to MCS-51 manual)\n" \
+           "UART: Frame discarded (according to MCS-51 manual)\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002127##
+  mcset $l "Unable to access file:\n%s" \
+           "无法访问文件:\n%s"
+  ##ID:002128##
+  mcset $l "Permission denied" \
+           "没有权限"
+  ##ID:002129##
+  mcset $l "Specified file does already exist,\ndo you want to overwrite it ?" \
+           "Specified file does already exist,\ndo you want to overwrite it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:002130##
+  mcset $l "Overwrite file ?" \
+           "覆盖文件 ?"
+  ##ID:002131##
+  mcset $l "Save error log - MCU 8051 IDE" \
+           "保存错误日志 - MCU 8051 IDE"
+  ##ID:002132##
+  mcset $l "Undefined result - MCU 8051 IDE" \
+           "未定义的结果 - MCU 8051 IDE"
+  ##ID:002133##
+  mcset $l "Save as XHTML" \
+           "另存为XHTML"
+  ##ID:002134##
+  mcset $l "Log files" \
+           "Log files" ;# <-- NOT TRANSLATED YET
+  ##ID:002135##
+  mcset $l "HTML files" \
+           "HTML files" ;# <-- NOT TRANSLATED YET
+  ##ID:002136##
+  mcset $l "Save as plain text" \
+           "保存为纯文本"
+  ##ID:002137##
+  mcset $l "\"Undefined result\"" \
+           "\"未定义的结果\""
+  ##ID:002138##
+  mcset $l "Summary:" \
+           "Summary:" ;# <-- NOT TRANSLATED YET
+  ##ID:002139##
+  mcset $l "\nYour program tried access to register at address " \
+           "\nYour program tried access to register at address " ;# <-- NOT TRANSLATED YET
+  ##ID:002140##
+  mcset $l "\nYour program tried indirect access to register at address " \
+           "\nYour program tried indirect access to register at address " ;# <-- NOT TRANSLATED YET
+  ##ID:002141##
+  mcset $l "\nYour program tried direct access to register at address " \
+           "\nYour program tried direct access to register at address " ;# <-- NOT TRANSLATED YET
+  ##ID:002142##
+  mcset $l "CODE" \
+           "CODE" ;# <-- NOT TRANSLATED YET
+  ##ID:002143##
+  mcset $l "XDATA" \
+           "XDATA" ;# <-- NOT TRANSLATED YET
+  ##ID:002144##
+  mcset $l "Bit area" \
+           "Bit area" ;# <-- NOT TRANSLATED YET
+  ##ID:002145##
+  mcset $l "IDATA" \
+           "IDATA" ;# <-- NOT TRANSLATED YET
+  ##ID:002146##
+  mcset $l "SFR" \
+           "SFR" ;# <-- NOT TRANSLATED YET
+  ##ID:002147##
+  mcset $l "0x%s in program memory" \
+           "0x%s in program memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002148##
+  mcset $l "0x%s in external data memory" \
+           "0x%s in external data memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002149##
+  mcset $l "0x%s in internal data memory" \
+           "0x%s in internal data memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002150##
+  mcset $l "0x%s in bit addressable area" \
+           "0x%s in bit addressable area" ;# <-- NOT TRANSLATED YET
+  ##ID:002151##
+  mcset $l "0x%s in special function registers area" \
+           "0x%s in special function registers area" ;# <-- NOT TRANSLATED YET
+  ##ID:002152##
+  mcset $l ". This register is not implemented on this processor (" \
+           ". This register is not implemented on this processor (" ;# <-- NOT TRANSLATED YET
+  ##ID:002153##
+  mcset $l ") in this configuration. You can continue in simulation but result of this operation is undefined." \
+           ") in this configuration. You can continue in simulation but result of this operation is undefined." ;# <-- NOT TRANSLATED YET
+  ##ID:002154##
+  mcset $l "\n\nError details:" \
+           "\n\n错误的详细信息:"
+  ##ID:002155##
+  mcset $l "\n\tTarget memory:\t\t" \
+           "\n\tTarget memory:\t\t" ;# <-- NOT TRANSLATED YET
+  ##ID:002156##
+  mcset $l "\n\tTarget address: \t" \
+           "\n\tTarget address: \t" ;# <-- NOT TRANSLATED YET
+  ##ID:002157##
+  mcset $l "\n\tLine:\t\t\t" \
+           "\n\tLine:\t\t\t" ;# <-- NOT TRANSLATED YET
+  ##ID:002158##
+  mcset $l "\n\tFile:\t\t\t" \
+           "\n\tFile:\t\t\t" ;# <-- NOT TRANSLATED YET
+  ##ID:002159##
+  mcset $l "\n\tProject:\t\t" \
+           "\n\tProject:\t\t" ;# <-- NOT TRANSLATED YET
+  ##ID:002160##
+  mcset $l "\n\nProcessor details:" \
+           "\n\nProcessor details:" ;# <-- NOT TRANSLATED YET
+  ##ID:002161##
+  mcset $l "\n\tType:\t\t\t" \
+           "\n\tType:\t\t\t" ;# <-- NOT TRANSLATED YET
+  ##ID:002162##
+  mcset $l "\n\tRam size:\t\t" \
+           "\n\tRam size:\t\t" ;# <-- NOT TRANSLATED YET
+  ##ID:002163##
+  mcset $l "\n\tProgram memory: \t" \
+           "\n\tProgram memory: \t" ;# <-- NOT TRANSLATED YET
+  ##ID:002164##
+  mcset $l "\n\tExternal memory:\t" \
+           "\n\tExternal memory:\t" ;# <-- NOT TRANSLATED YET
+  ##ID:002165##
+  mcset $l "\n\tExpanded memory:\t" \
+           "\n\tExpanded memory:\t" ;# <-- NOT TRANSLATED YET
+}
+# ledmatrix.tcl
+# ==============================================================================
+namespace eval LedMatrix {
+  ##ID:002166##
+  mcset $l "Fade out interval" \
+           "Fade out interval" ;# <-- NOT TRANSLATED YET
+  ##ID:002167##
+  mcset $l "dim_interval_changed" \
+           "dim_interval_changed" ;# <-- NOT TRANSLATED YET
+  ##ID:002168##
+  mcset $l "Set LED dim interval to 0 instruction cycles" \
+           "Set LED dim interval to 0 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002169##
+  mcset $l "Set LED dim interval to 5 instruction cycles" \
+           "Set LED dim interval to 5 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002170##
+  mcset $l "Set LED dim interval to 10 instruction cycles" \
+           "Set LED dim interval to 10 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002171##
+  mcset $l "Set LED dim interval to 20 instruction cycles" \
+           "Set LED dim interval to 20 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002172##
+  mcset $l "Set LED dim interval to 50 instruction cycles" \
+           "Set LED dim interval to 50 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002173##
+  mcset $l "Set LED dim interval to 100 instruction cycles" \
+           "Set LED dim interval to 100 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002174##
+  mcset $l "Set LED dim interval to 200 instruction cycles" \
+           "Set LED dim interval to 200 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002175##
+  mcset $l "Set LED dim interval to 500 instruction cycles" \
+           "Set LED dim interval to 500 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002176##
+  mcset $l "Set LED dim interval to 1000 instruction cycles" \
+           "Set LED dim interval to 1000 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002177##
+  mcset $l "Mapping" \
+           "Mapping" ;# <-- NOT TRANSLATED YET
+  ##ID:002178##
+  mcset $l "Random" \
+           "Random" ;# <-- NOT TRANSLATED YET
+  ##ID:002179##
+  mcset $l "Random access to the matrix (default)" \
+           "Random access to the matrix (default)" ;# <-- NOT TRANSLATED YET
+  ##ID:002180##
+  mcset $l "Row" \
+           "Row" ;# <-- NOT TRANSLATED YET
+  ##ID:002181##
+  mcset $l "When a particular row is activated, it's previous state is forgotten" \
+           "When a particular row is activated, it's previous state is forgotten" ;# <-- NOT TRANSLATED YET
+  ##ID:002182##
+  mcset $l "Column" \
+           "Column" ;# <-- NOT TRANSLATED YET
+  ##ID:002183##
+  mcset $l "When a particular column is activated, it's previous state is forgotten" \
+           "When a particular column is activated, it's previous state is forgotten" ;# <-- NOT TRANSLATED YET
+  ##ID:002184##
+  mcset $l "Color" \
+           "Color" ;# <-- NOT TRANSLATED YET
+  ##ID:002185##
+  mcset $l "Red" \
+           "Red" ;# <-- NOT TRANSLATED YET
+  ##ID:002186##
+  mcset $l "Orange" \
+           "Orange" ;# <-- NOT TRANSLATED YET
+  ##ID:002187##
+  mcset $l "Yellow" \
+           "Yellow" ;# <-- NOT TRANSLATED YET
+  ##ID:002188##
+  mcset $l "Green" \
+           "Green" ;# <-- NOT TRANSLATED YET
+  ##ID:002189##
+  mcset $l "Blue" \
+           "Blue" ;# <-- NOT TRANSLATED YET
+  ##ID:002190##
+  mcset $l "Purple" \
+           "Purple" ;# <-- NOT TRANSLATED YET
+  ##ID:002191##
+  mcset $l "Light up when" \
+           "Light up when" ;# <-- NOT TRANSLATED YET
+  ##ID:002192##
+  mcset $l "Row 0 & Column 0" \
+           "Row 0 & Column 0" ;# <-- NOT TRANSLATED YET
+  ##ID:002193##
+  mcset $l "Light up LED when both wires are in low" \
+           "Light up LED when both wires are in low" ;# <-- NOT TRANSLATED YET
+  ##ID:002194##
+  mcset $l "Row 0 & Column 1" \
+           "Row 0 & Column 1" ;# <-- NOT TRANSLATED YET
+  ##ID:002195##
+  mcset $l "Light up LED when row wire is in low and column wire is in high" \
+           "Light up LED when row wire is in low and column wire is in high" ;# <-- NOT TRANSLATED YET
+  ##ID:002196##
+  mcset $l "Row 1 & Column 0" \
+           "Row 1 & Column 0" ;# <-- NOT TRANSLATED YET
+  ##ID:002197##
+  mcset $l "Light up LED when row wire is in high and column wire is in low" \
+           "Light up LED when row wire is in high and column wire is in low" ;# <-- NOT TRANSLATED YET
+  ##ID:002198##
+  mcset $l "Row 1 & Column 1" \
+           "Row 1 & Column 1" ;# <-- NOT TRANSLATED YET
+  ##ID:002199##
+  mcset $l "Light up LED when both wires are in high" \
+           "Light up LED when both wires are in high" ;# <-- NOT TRANSLATED YET
+  ##ID:002200##
+  mcset $l "All fade out" \
+           "All fade out" ;# <-- NOT TRANSLATED YET
+  ##ID:002201##
+  mcset $l "Dim all LEDs" \
+           "Dim all LEDs" ;# <-- NOT TRANSLATED YET
+  ##ID:002202##
+  mcset $l "Show help" \
+           "显示帮助"
+  ##ID:002203##
+  mcset $l "Show brief help" \
+           "Show brief help" ;# <-- NOT TRANSLATED YET
+  ##ID:002204##
+  mcset $l "Save configuration" \
+           "保存配置"
+  ##ID:002205##
+  mcset $l "Save configuration into a file" \
+           "保存配置到一个文件中"
+  ##ID:002206##
+  mcset $l "Load configuration" \
+           "导入配置"
+  ##ID:002207##
+  mcset $l "Load configuration from a file" \
+           "从一个文件中导入配置"
+  ##ID:002208##
+  mcset $l "BIT" \
+           "BIT" ;# <-- NOT TRANSLATED YET
+  ##ID:002209##
+  mcset $l "PORT" \
+           "PORT" ;# <-- NOT TRANSLATED YET
+  ##ID:002210##
+  mcset $l "Note" \
+           "Note" ;# <-- NOT TRANSLATED YET
+  ##ID:002211##
+  mcset $l "Turn HW simulation on/off" \
+           "Turn HW simulation on/off" ;# <-- NOT TRANSLATED YET
+  ##ID:002212##
+  mcset $l "Configure" \
+           "配置"
+  ##ID:002213##
+  mcset $l "LED matrix" \
+           "矩阵LED"
+  ##ID:002214##
+  mcset $l "This tool consists of 64 LED's.  Each of them can be connected to any port pin of the simulated uC.  Connections with the uC are made with ComboBoxes.  Panel configuration can be saved to a file with extension vhc, and can be loaded from that file later.  Condition on which a LED lights up and LED colors are configurable.  Also fade out interval is configurable.\n\n" \
+           "This tool consists of 64 LED's.  Each of them can be connected to any port pin of the simulated uC.  Connections with the uC are made with ComboBoxes.  Panel configuration can be saved to a file with extension vhc, and can be loaded from that file later.  Condition on which a LED lights up and LED colors are configurable.  Also fade out interval is configurable.\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002215##
+  mcset $l "LED states:" \
+           "LED states:" ;# <-- NOT TRANSLATED YET
+  ##ID:002216##
+  mcset $l "\n  " \
+           "\n  " ;# <-- NOT TRANSLATED YET
+  ##ID:002217##
+  mcset $l "  Off\n  " \
+           "  Off\n  " ;# <-- NOT TRANSLATED YET
+  ##ID:002218##
+  mcset $l "  Fast blinking\n  " \
+           "  Fast blinking\n  " ;# <-- NOT TRANSLATED YET
+  ##ID:002219##
+  mcset $l "  Shining\n  " \
+           "  Shining\n  " ;# <-- NOT TRANSLATED YET
+  ##ID:002220##
+  mcset $l "  Fading out" \
+           "  Fading out" ;# <-- NOT TRANSLATED YET
+}
+# leddisplay.tcl
+# ==============================================================================
+namespace eval LedDisplay {
+  ##ID:002221##
+  mcset $l "Common electrode" \
+           "Common electrode" ;# <-- NOT TRANSLATED YET
+  ##ID:002222##
+  mcset $l "Common anode" \
+           "Common anode" ;# <-- NOT TRANSLATED YET
+  ##ID:002223##
+  mcset $l "Common cathode" \
+           "Common cathode" ;# <-- NOT TRANSLATED YET
+  ##ID:002224##
+  mcset $l "Color" \
+           "Color" ;# <-- NOT TRANSLATED YET
+  ##ID:002225##
+  mcset $l "Red" \
+           "Red" ;# <-- NOT TRANSLATED YET
+  ##ID:002226##
+  mcset $l "Orange" \
+           "Orange" ;# <-- NOT TRANSLATED YET
+  ##ID:002227##
+  mcset $l "Yellow" \
+           "Yellow" ;# <-- NOT TRANSLATED YET
+  ##ID:002228##
+  mcset $l "Green" \
+           "Green" ;# <-- NOT TRANSLATED YET
+  ##ID:002229##
+  mcset $l "Blue" \
+           "Blue" ;# <-- NOT TRANSLATED YET
+  ##ID:002230##
+  mcset $l "Purple" \
+           "Purple" ;# <-- NOT TRANSLATED YET
+  ##ID:002231##
+  mcset $l "Show help" \
+           "显示帮助"
+  ##ID:002232##
+  mcset $l "Show brief help" \
+           "Show brief help" ;# <-- NOT TRANSLATED YET
+  ##ID:002233##
+  mcset $l "Save configuration" \
+           "保存配置"
+  ##ID:002234##
+  mcset $l "Save configuration into a file" \
+           "保存配置到一个文件中"
+  ##ID:002235##
+  mcset $l "Load configuration" \
+           "导入配置"
+  ##ID:002236##
+  mcset $l "Load configuration from a file" \
+           "从一个文件中导入配置"
+  ##ID:002237##
+  mcset $l "LED Display" \
+           "数码管"
+  ##ID:002238##
+  mcset $l "BIT" \
+           "BIT" ;# <-- NOT TRANSLATED YET
+  ##ID:002239##
+  mcset $l "PORT" \
+           "PORT" ;# <-- NOT TRANSLATED YET
+  ##ID:002240##
+  mcset $l "Note" \
+           "Note" ;# <-- NOT TRANSLATED YET
+  ##ID:002241##
+  mcset $l "Turn HW simulation on/off" \
+           "Turn HW simulation on/off" ;# <-- NOT TRANSLATED YET
+  ##ID:002242##
+  mcset $l "Configure" \
+           "配置"
+  ##ID:002243##
+  mcset $l "Virtual LED display with common anode (default) or cathode.  Each segment can be connected to any port pin of the simulated uC.  Connections with the uC are made with ComboBoxes on the bottom of the panel.  Panel configuration can be saved to a file with extension vhc, and can be loaded from that file later.\n\n" \
+           "Virtual LED display with common anode (default) or cathode.  Each segment can be connected to any port pin of the simulated uC.  Connections with the uC are made with ComboBoxes on the bottom of the panel.  Panel configuration can be saved to a file with extension vhc, and can be loaded from that file later.\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002244##
+  mcset $l "LED states:" \
+           "LED states:" ;# <-- NOT TRANSLATED YET
+  ##ID:002245##
+  mcset $l "\n  " \
+           "\n  " ;# <-- NOT TRANSLATED YET
+  ##ID:002246##
+  mcset $l "  Off\n  " \
+           "  Off\n  " ;# <-- NOT TRANSLATED YET
+  ##ID:002247##
+  mcset $l "  Fast blinking\n  " \
+           "  Fast blinking\n  " ;# <-- NOT TRANSLATED YET
+  ##ID:002248##
+  mcset $l "  Shining\n  " \
+           "  Shining\n  " ;# <-- NOT TRANSLATED YET
+}
+# ledpanel.tcl
+# ==============================================================================
+namespace eval LedPanel {
+  ##ID:002249##
+  mcset $l "Color" \
+           "颜色"
+  ##ID:002250##
+  mcset $l "Red" \
+           "红色"
+  ##ID:002251##
+  mcset $l "Orange" \
+           "橙色"
+  ##ID:002252##
+  mcset $l "Yellow" \
+           "黄色"
+  ##ID:002253##
+  mcset $l "Green" \
+           "绿色"
+  ##ID:002254##
+  mcset $l "Blue" \
+           "蓝色"
+  ##ID:002255##
+  mcset $l "Purple" \
+           "紫色"
+  ##ID:002256##
+  mcset $l "Show help" \
+           "显示帮助"
+  ##ID:002257##
+  mcset $l "Show brief help" \
+           "Show brief help" ;# <-- NOT TRANSLATED YET
+  ##ID:002258##
+  mcset $l "Save configuration" \
+           "保存配置"
+  ##ID:002259##
+  mcset $l "Save configuration into a file" \
+           "保存配置到一个文件中"
+  ##ID:002260##
+  mcset $l "Load configuration" \
+           "导入配置"
+  ##ID:002261##
+  mcset $l "Load configuration from a file" \
+           "从一个文件中导入配置"
+  ##ID:002262##
+  mcset $l "LED panel" \
+           "LED面板"
+  ##ID:002263##
+  mcset $l "BIT" \
+           "BIT" ;# <-- NOT TRANSLATED YET
+  ##ID:002264##
+  mcset $l "PORT" \
+           "PORT" ;# <-- NOT TRANSLATED YET
+  ##ID:002265##
+  mcset $l "Note" \
+           "Note" ;# <-- NOT TRANSLATED YET
+  ##ID:002266##
+  mcset $l "Turn HW simulation on/off" \
+           "Turn HW simulation on/off" ;# <-- NOT TRANSLATED YET
+  ##ID:002267##
+  mcset $l "Configure" \
+           "配置"
+  ##ID:002268##
+  mcset $l "This tool consists of 8 LED's.  Each of them can be connected to any port pin of the simulated uC.  Connections with the uC are made with ComboBoxes on the bottom of the panel.  Panel configuration can be saved to a file with extension vhc, and can be loaded from that file later.  LED colors are configurable.\n\n" \
+           "This tool consists of 8 LED's.  Each of them can be connected to any port pin of the simulated uC.  Connections with the uC are made with ComboBoxes on the bottom of the panel.  Panel configuration can be saved to a file with extension vhc, and can be loaded from that file later.  LED colors are configurable.\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002269##
+  mcset $l "LED states:" \
+           "LED 状态:"
+  ##ID:002270##
+  mcset $l "\n  " \
+           "\n  " ;# <-- NOT TRANSLATED YET
+  ##ID:002271##
+  mcset $l "  Off\n  " \
+           "  关闭\n  "
+  ##ID:002272##
+  mcset $l "  Fast blinking\n  " \
+           "  快速闪烁\n  "
+  ##ID:002273##
+  mcset $l "  Shining" \
+           "  Shining" ;# <-- NOT TRANSLATED YET
+}
+# matrixkeypad.tcl
+# ==============================================================================
+namespace eval MatrixKeyPad {
+  ##ID:002274##
+  mcset $l "Radio buttons" \
+           "单选按钮"
+  ##ID:002275##
+  mcset $l "Show help" \
+           "显示帮助"
+  ##ID:002276##
+  mcset $l "Show brief help" \
+           "Show brief help" ;# <-- NOT TRANSLATED YET
+  ##ID:002277##
+  mcset $l "Save configuration" \
+           "保存配置"
+  ##ID:002278##
+  mcset $l "Save configuration into a file" \
+           "保存配置到一个文件中"
+  ##ID:002279##
+  mcset $l "Load configuration" \
+           "导入配置"
+  ##ID:002280##
+  mcset $l "Load configuration from a file" \
+           "从一个文件中导入配置"
+  ##ID:002281##
+  mcset $l "Matrix Keypad" \
+           "矩阵按键"
+  ##ID:002282##
+  mcset $l "BIT" \
+           "BIT" ;# <-- NOT TRANSLATED YET
+  ##ID:002283##
+  mcset $l "PORT" \
+           "PORT" ;# <-- NOT TRANSLATED YET
+  ##ID:002284##
+  mcset $l "Note" \
+           "Note" ;# <-- NOT TRANSLATED YET
+  ##ID:002285##
+  mcset $l "Turn HW simulation on/off" \
+           "Turn HW simulation 开/关"
+  ##ID:002286##
+  mcset $l "Configure" \
+           "配置"
+  ##ID:002287##
+  mcset $l "This tool consists of 16 switches connected in matrix.  Connections with the uC are made with ComboBoxes.  Panel configuration can be saved to a file with extension vhc, and can be loaded from that file later.  Wire colors are identical to colors used in graph representing IO ports.\n\n" \
+           "This tool consists of 16 switches connected in matrix.  Connections with the uC are made with ComboBoxes.  Panel configuration can be saved to a file with extension vhc, and can be loaded from that file later.  Wire colors are identical to colors used in graph representing IO ports.\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002288##
+  mcset $l "Keypad can be configured in two ways:" \
+           "Keypad can be configured in two ways:" ;# <-- NOT TRANSLATED YET
+  ##ID:002289##
+  mcset $l "\n   " \
+           "\n   " ;# <-- NOT TRANSLATED YET
+  ##ID:002290##
+  mcset $l "1)" \
+           "1)" ;# <-- NOT TRANSLATED YET
+  ##ID:002291##
+  mcset $l " To allow key combinations\n      Menu -> Check \"Radio buttons\"\n   " \
+           " To allow key combinations\n      Menu -> Check \"Radio buttons\"\n   " ;# <-- NOT TRANSLATED YET
+  ##ID:002292##
+  mcset $l "2)" \
+           "2)" ;# <-- NOT TRANSLATED YET
+  ##ID:002293##
+  mcset $l " To do not allow key combinations\n      Menu -> Uncheck \"Radio buttons\"" \
+           " To do not allow key combinations\n      Menu -> Uncheck \"Radio buttons\"" ;# <-- NOT TRANSLATED YET
+}
+# simplekeypad.tcl
+# ==============================================================================
+namespace eval SimpleKeyPad {
+  ##ID:002294##
+  mcset $l "Simple Keypad" \
+           "简单按键"
+  ##ID:002295##
+  mcset $l "BIT" \
+           "BIT" ;# <-- NOT TRANSLATED YET
+  ##ID:002296##
+  mcset $l "PORT" \
+           "PORT" ;# <-- NOT TRANSLATED YET
+  ##ID:002297##
+  mcset $l "Note" \
+           "Note" ;# <-- NOT TRANSLATED YET
+  ##ID:002298##
+  mcset $l "Turn HW simulation on/off" \
+           "Turn HW simulation 开/关"
+  ##ID:002299##
+  mcset $l "Configure" \
+           "配置"
+  ##ID:002300##
+  mcset $l "Radio buttons" \
+           "单选按钮"
+  ##ID:002301##
+  mcset $l "Show help" \
+           "显示帮助"
+  ##ID:002302##
+  mcset $l "Show brief help" \
+           "Show brief help" ;# <-- NOT TRANSLATED YET
+  ##ID:002303##
+  mcset $l "Save configuration" \
+           "保存配置"
+  ##ID:002304##
+  mcset $l "Save configuration into a file" \
+           "保存配置到一个文件中"
+  ##ID:002305##
+  mcset $l "Load configuration" \
+           "导入配置"
+  ##ID:002306##
+  mcset $l "Load configuration from a file" \
+           "从一个文件中导入配置"
+  ##ID:002307##
+  mcset $l "This tool consists of 8 switches.  Each of them can connect any port pin of the simulated uC to ground.  Connections with the uC are made with ComboBoxes on the bottom of the panel.  Panel configuration can be saved to a file with extension vhc, and can be loaded from that file later.  Wire colors are identical to colors used in graph representing IO ports.\n\n" \
+           "This tool consists of 8 switches.  Each of them can connect any port pin of the simulated uC to ground.  Connections with the uC are made with ComboBoxes on the bottom of the panel.  Panel configuration can be saved to a file with extension vhc, and can be loaded from that file later.  Wire colors are identical to colors used in graph representing IO ports.\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002308##
+  mcset $l "Keypad can be configured in two ways:" \
+           "Keypad can be configured in two ways:" ;# <-- NOT TRANSLATED YET
+  ##ID:002309##
+  mcset $l "\n   " \
+           "\n   " ;# <-- NOT TRANSLATED YET
+  ##ID:002310##
+  mcset $l "1)" \
+           "1)" ;# <-- NOT TRANSLATED YET
+  ##ID:002311##
+  mcset $l " To allow key combinations\n      Menu -> Check \"Radio buttons\"\n   " \
+           " To allow key combinations\n      Menu -> Check \"Radio buttons\"\n   " ;# <-- NOT TRANSLATED YET
+  ##ID:002312##
+  mcset $l "2)" \
+           "2)" ;# <-- NOT TRANSLATED YET
+  ##ID:002313##
+  mcset $l " To do not allow key combinations\n      Menu -> Uncheck \"Radio buttons\"" \
+           " To do not allow key combinations\n      Menu -> Uncheck \"Radio buttons\"" ;# <-- NOT TRANSLATED YET
+}
+# multiplexedleddisplay.tcl
+# ==============================================================================
+namespace eval MultiplexedLedDisplay {
+  ##ID:002314##
+  mcset $l "Common electrode" \
+           "Common electrode" ;# <-- NOT TRANSLATED YET
+  ##ID:002315##
+  mcset $l "Common anode" \
+           "Common anode" ;# <-- NOT TRANSLATED YET
+  ##ID:002316##
+  mcset $l "Common cathode" \
+           "Common cathode" ;# <-- NOT TRANSLATED YET
+  ##ID:002317##
+  mcset $l "Fade out interval" \
+           "Fade out interval" ;# <-- NOT TRANSLATED YET
+  ##ID:002318##
+  mcset $l "Set LED dim interval to 0 instruction cycles" \
+           "Set LED dim interval to 0 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002319##
+  mcset $l "Set LED dim interval to 5 instruction cycles" \
+           "Set LED dim interval to 5 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002320##
+  mcset $l "Set LED dim interval to 10 instruction cycles" \
+           "Set LED dim interval to 10 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002321##
+  mcset $l "Set LED dim interval to 20 instruction cycles" \
+           "Set LED dim interval to 20 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002322##
+  mcset $l "Set LED dim interval to 50 instruction cycles" \
+           "Set LED dim interval to 50 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002323##
+  mcset $l "Set LED dim interval to 100 instruction cycles" \
+           "Set LED dim interval to 100 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002324##
+  mcset $l "Set LED dim interval to 200 instruction cycles" \
+           "Set LED dim interval to 200 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002325##
+  mcset $l "Set LED dim interval to 500 instruction cycles" \
+           "Set LED dim interval to 500 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002326##
+  mcset $l "Set LED dim interval to 1000 instruction cycles" \
+           "Set LED dim interval to 1000 instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002327##
+  mcset $l "All fade out" \
+           "All fade out" ;# <-- NOT TRANSLATED YET
+  ##ID:002328##
+  mcset $l "Dim all LEDs" \
+           "Dim all LEDs" ;# <-- NOT TRANSLATED YET
+  ##ID:002329##
+  mcset $l "Color" \
+           "Color" ;# <-- NOT TRANSLATED YET
+  ##ID:002330##
+  mcset $l "Red" \
+           "Red" ;# <-- NOT TRANSLATED YET
+  ##ID:002331##
+  mcset $l "Orange" \
+           "Orange" ;# <-- NOT TRANSLATED YET
+  ##ID:002332##
+  mcset $l "Yellow" \
+           "Yellow" ;# <-- NOT TRANSLATED YET
+  ##ID:002333##
+  mcset $l "Green" \
+           "Green" ;# <-- NOT TRANSLATED YET
+  ##ID:002334##
+  mcset $l "Blue" \
+           "Blue" ;# <-- NOT TRANSLATED YET
+  ##ID:002335##
+  mcset $l "Purple" \
+           "Purple" ;# <-- NOT TRANSLATED YET
+  ##ID:002336##
+  mcset $l "Show help" \
+           "显示帮助"
+  ##ID:002337##
+  mcset $l "Show brief help" \
+           "Show brief help" ;# <-- NOT TRANSLATED YET
+  ##ID:002338##
+  mcset $l "Save configuration" \
+           "保存配置"
+  ##ID:002339##
+  mcset $l "Save configuration into a file" \
+           "保存配置到一个文件中"
+  ##ID:002340##
+  mcset $l "Load configuration" \
+           "导入配置"
+  ##ID:002341##
+  mcset $l "Load configuration from a file" \
+           "从一个文件中导入配置"
+  ##ID:002342##
+  mcset $l "Multiplexed LED display" \
+           "复用数码管"
+  ##ID:002343##
+  mcset $l "BIT" \
+           "BIT" ;# <-- NOT TRANSLATED YET
+  ##ID:002344##
+  mcset $l "PORT" \
+           "PORT" ;# <-- NOT TRANSLATED YET
+  ##ID:002345##
+  mcset $l "Note" \
+           "Note" ;# <-- NOT TRANSLATED YET
+  ##ID:002346##
+  mcset $l "Turn HW simulation on/off" \
+           "Turn HW simulation on/off" ;# <-- NOT TRANSLATED YET
+  ##ID:002347##
+  mcset $l "Configure" \
+           "配置"
+  ##ID:002348##
+  mcset $l "Virtual Multiplexed LED Display with common anode (default) or cathode.  Each segment can be connected to any port pin of the simulated uC.  Connections with the uC are made with ComboBoxes.  Panel configuration can be saved to a file with extension vhc, and can be loaded from that file later.  LED fade out interval and LED colors are configurable.\n\n" \
+           "Virtual Multiplexed LED Display with common anode (default) or cathode.  Each segment can be connected to any port pin of the simulated uC.  Connections with the uC are made with ComboBoxes.  Panel configuration can be saved to a file with extension vhc, and can be loaded from that file later.  LED fade out interval and LED colors are configurable.\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002349##
+  mcset $l "LED states:" \
+           "LED states:" ;# <-- NOT TRANSLATED YET
+  ##ID:002350##
+  mcset $l "\n  " \
+           "\n  " ;# <-- NOT TRANSLATED YET
+  ##ID:002351##
+  mcset $l "  Off\n  " \
+           "  Off\n  " ;# <-- NOT TRANSLATED YET
+  ##ID:002352##
+  mcset $l "  Fast blinking\n  " \
+           "  Fast blinking\n  " ;# <-- NOT TRANSLATED YET
+  ##ID:002353##
+  mcset $l "  Shining\n  " \
+           "  Shining\n  " ;# <-- NOT TRANSLATED YET
+  ##ID:002354##
+  mcset $l "  Fading out\n  " \
+           "  Fading out\n  " ;# <-- NOT TRANSLATED YET
+}
+# virtual_hw_component.tcl
+# ==============================================================================
+namespace eval VirtualHWComponent {
+  ##ID:002355##
+  mcset $l "Component modified" \
+           "Component modified" ;# <-- NOT TRANSLATED YET
+  ##ID:002356##
+  mcset $l "Do you want to save the configuration of this panel before closing?" \
+           "Do you want to save the configuration of this panel before closing?" ;# <-- NOT TRANSLATED YET
+  ##ID:002357##
+  mcset $l "Save configuration" \
+           "保存配置"
+  ##ID:002358##
+  mcset $l "Load configuration" \
+           "载入配置"
+  ##ID:002359##
+  mcset $l "Overwrite file" \
+           "覆盖文件"
+  ##ID:002360##
+  mcset $l "A file with name '%s' already exists. Do you want to overwrite it ?" \
+           "A file with name '%s' already exists. Do you want to overwrite it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:002361##
+  mcset $l "IO Error" \
+           "IO Error" ;# <-- NOT TRANSLATED YET
+  ##ID:002362##
+  mcset $l "Unable to write to file:\n\"%s\"" \
+           "无法写入文件:\n\"%s\""
+  ##ID:002363##
+  mcset $l "Unable to read file:\n\"%s\"" \
+           "无法读取文件:\n\"%s\""
+  ##ID:002364##
+  mcset $l "Unable to read configuration from file:\n\"%s\"" \
+           "无法读取配置文件:\n\"%s\""
+  ##ID:002365##
+  mcset $l "File corrupted" \
+           "文件损坏"
+  ##ID:002366##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:002367##
+  mcset $l "Wire colors:" \
+           "Wire colors:" ;# <-- NOT TRANSLATED YET
+  ##ID:002368##
+  mcset $l "ON" \
+           "ON" ;# <-- NOT TRANSLATED YET
+  ##ID:002369##
+  mcset $l "OFF" \
+           "OFF" ;# <-- NOT TRANSLATED YET
+  ##ID:002370##
+  mcset $l "VH component" \
+           "VH component" ;# <-- NOT TRANSLATED YET
+}
+# hwmanager.tcl
+# ==============================================================================
+namespace eval HwManager {
+  ##ID:002371##
+  mcset $l "HW:" \
+           "HW:" ;# <-- NOT TRANSLATED YET
+  ##ID:002372##
+  mcset $l "available/installed plugins" \
+           "使用/安装的插件"
+  ##ID:002373##
+  mcset $l "List available or installed HW plugins" \
+           "列出可用的硬件或安装插件"
+  ##ID:002374##
+  mcset $l "Refresh list available or installed HW plugins" \
+           "刷新列表或安装硬件插件"
+  ##ID:002375##
+  mcset $l "Refresh" \
+           "刷新"
+  ##ID:002376##
+  mcset $l "Too old version" \
+           "太旧的版本"
+  ##ID:002377##
+  mcset $l "Plugin %s requires MCU 8051 IDE version %s and above, please upgrade your MCU 8051 IDE" \
+           "刷新Plugin %s requires MCU 8051 IDE version %s and above, please upgrade your MCU 8051 IDE刷新"
+  ##ID:002378##
+  mcset $l "PLUGIN ERROR" \
+           "插件错误"
+  ##ID:002379##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:002380##
+  mcset $l "Plugin name:\t%s\n" \
+           "插件名称:\t%s\n"
+  ##ID:002381##
+  mcset $l "Plugin version:\t%s\n" \
+           "插件版本:\t%s\n"
+  ##ID:002382##
+  mcset $l "Author:\t\t%s <%s>\n" \
+           "作者:\t\t%s <%s>\n"
+  ##ID:002383##
+  mcset $l "PLUGIN ERROR - MCU 8051 IDE" \
+           "插件错误 - MCU 8051 IDE"
+  ##ID:002384##
+  mcset $l "Hardware is busy" \
+           "Hardware is busy" ;# <-- NOT TRANSLATED YET
+  ##ID:002385##
+  mcset $l "Plugin \"%s\" is busy.\nDo you really want to close the program ?" \
+           "Plugin \"%s\" is busy.\nDo you really want to close the program ?" ;# <-- NOT TRANSLATED YET
+}
+# graph.tcl
+# ==============================================================================
+namespace eval Graph {
+  ##ID:002386##
+  mcset $l "ON" \
+           "ON" ;# <-- NOT TRANSLATED YET
+  ##ID:002387##
+  mcset $l "OFF" \
+           "OFF" ;# <-- NOT TRANSLATED YET
+  ##ID:002388##
+  mcset $l "True state" \
+           "True state" ;# <-- NOT TRANSLATED YET
+  ##ID:002389##
+  mcset $l "Port latches" \
+           "Port latches" ;# <-- NOT TRANSLATED YET
+  ##ID:002390##
+  mcset $l "True output" \
+           "True output" ;# <-- NOT TRANSLATED YET
+  ##ID:002391##
+  mcset $l "Legend" \
+           "Legend" ;# <-- NOT TRANSLATED YET
+  ##ID:002392##
+  mcset $l "Turn graph on/off" \
+           "Turn graph on/off" ;# <-- NOT TRANSLATED YET
+  ##ID:002393##
+  mcset $l "Enable/Disable graph" \
+           "Enable/Disable graph" ;# <-- NOT TRANSLATED YET
+  ##ID:002394##
+  mcset $l "Change grid" \
+           "Change grid" ;# <-- NOT TRANSLATED YET
+  ##ID:002395##
+  mcset $l "Change grid morphology" \
+           "Change grid morphology" ;# <-- NOT TRANSLATED YET
+  ##ID:002396##
+  mcset $l "Change bit length on X axis to a lower value" \
+           "Change bit length on X axis to a lower value" ;# <-- NOT TRANSLATED YET
+  ##ID:002397##
+  mcset $l "Zoom in (X axis)" \
+           "Zoom in (X axis)" ;# <-- NOT TRANSLATED YET
+  ##ID:002398##
+  mcset $l "Change bit length on X axis to a higher value" \
+           "Change bit length on X axis to a higher value" ;# <-- NOT TRANSLATED YET
+  ##ID:002399##
+  mcset $l "Zoom out (X axis)" \
+           "Zoom out (X axis)" ;# <-- NOT TRANSLATED YET
+  ##ID:002400##
+  mcset $l "Clear user marks" \
+           "Clear user marks" ;# <-- NOT TRANSLATED YET
+  ##ID:002401##
+  mcset $l "Clear marks" \
+           "Clear marks" ;# <-- NOT TRANSLATED YET
+  ##ID:002402##
+  mcset $l "-- click to close --" \
+           "-- click to close --" ;# <-- NOT TRANSLATED YET
+  ##ID:002403##
+  mcset $l "Log. 1 forced to log. 0" \
+           "Log. 1 forced to log. 0" ;# <-- NOT TRANSLATED YET
+  ##ID:002404##
+  mcset $l "Not connected" \
+           "Not connected" ;# <-- NOT TRANSLATED YET
+  ##ID:002405##
+  mcset $l "Access to external memory" \
+           "Access to external memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002406##
+  mcset $l "Indeterminable state" \
+           "Indeterminable state" ;# <-- NOT TRANSLATED YET
+  ##ID:002407##
+  mcset $l "No voltage" \
+           "No voltage" ;# <-- NOT TRANSLATED YET
+  ##ID:002408##
+  mcset $l "Log. 1" \
+           "Log. 1" ;# <-- NOT TRANSLATED YET
+  ##ID:002409##
+  mcset $l "Log. 0" \
+           "Log. 0" ;# <-- NOT TRANSLATED YET
+}
+# graphwidget.tcl
+# ==============================================================================
+namespace eval GraphWidget {
+  ##ID:002410##
+  mcset $l "ON/OFF" \
+           "ON/OFF" ;# <-- NOT TRANSLATED YET
+  ##ID:002411##
+  mcset $l "Enable/Disable graph" \
+           "Enable/Disable graph" ;# <-- NOT TRANSLATED YET
+  ##ID:002412##
+  mcset $l "Change grid" \
+           "Change grid" ;# <-- NOT TRANSLATED YET
+  ##ID:002413##
+  mcset $l "Change grid morphology" \
+           "Change grid morphology" ;# <-- NOT TRANSLATED YET
+  ##ID:002414##
+  mcset $l "Zoom in" \
+           "Zoom in" ;# <-- NOT TRANSLATED YET
+  ##ID:002415##
+  mcset $l "Change bit length on X axis to a lower value" \
+           "Change bit length on X axis to a lower value" ;# <-- NOT TRANSLATED YET
+  ##ID:002416##
+  mcset $l "Zoom out" \
+           "Zoom out" ;# <-- NOT TRANSLATED YET
+  ##ID:002417##
+  mcset $l "Change bit length on X axis to a higher value" \
+           "Change bit length on X axis to a higher value" ;# <-- NOT TRANSLATED YET
+  ##ID:002418##
+  mcset $l "Remove marks" \
+           "Remove marks" ;# <-- NOT TRANSLATED YET
+  ##ID:002419##
+  mcset $l "Clear user marks" \
+           "Clear user marks" ;# <-- NOT TRANSLATED YET
+  ##ID:002420##
+  mcset $l "Performance warning" \
+           "Performance warning" ;# <-- NOT TRANSLATED YET
+  ##ID:002421##
+  mcset $l "You have just enabled simulation of external devices. Having this feature enabled causes serious reduction of simulator performance, the number of instructions executed per second in real time usually decreases by a factor of hundreds, maybe even thousands." \
+           "You have just enabled simulation of external devices. Having this feature enabled causes serious reduction of simulator performance, the number of instructions executed per second in real time usually decreases by a factor of hundreds, maybe even thousands." ;# <-- NOT TRANSLATED YET
+  ##ID:004480##
+  mcset $l "Do not display again" \
+           "Do not display again" ;# <-- NOT TRANSLATED YET
+}
+# hexeditdlg.tcl
+# ==============================================================================
+namespace eval HexEditDlg {
+  ##ID:002422##
+  mcset $l "LJMP this_address" \
+           "LJMP this_address" ;# <-- NOT TRANSLATED YET
+  ##ID:002423##
+  mcset $l "LCALL this_address" \
+           "LCALL this_address" ;# <-- NOT TRANSLATED YET
+  ##ID:002424##
+  mcset $l "Code memory" \
+           "Code memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002425##
+  mcset $l "Expanded RAM" \
+           "Expanded RAM" ;# <-- NOT TRANSLATED YET
+  ##ID:002426##
+  mcset $l "Data EEPROM" \
+           "Data EEPROM" ;# <-- NOT TRANSLATED YET
+  ##ID:002427##
+  mcset $l "XDATA memory" \
+           "XDATA memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002428##
+  mcset $l "untitled" \
+           "untitled" ;# <-- NOT TRANSLATED YET
+  ##ID:002429##
+  mcset $l "Hexadecimal editor" \
+           "Hexadecimal editor" ;# <-- NOT TRANSLATED YET
+  ##ID:002430##
+  mcset $l "Load IHEX8 file" \
+           "Load IHEX8 file" ;# <-- NOT TRANSLATED YET
+  ##ID:002431##
+  mcset $l "Open file" \
+           "打开文件"
+  ##ID:002432##
+  mcset $l "Save current data to IHEX8 file" \
+           "Save current data to IHEX8 file" ;# <-- NOT TRANSLATED YET
+  ##ID:002433##
+  mcset $l "Save file" \
+           "保存文件"
+  ##ID:002434##
+  mcset $l "Save current data to IHEX8 file under a different name" \
+           "Save current data to IHEX8 file under a different name" ;# <-- NOT TRANSLATED YET
+  ##ID:002435##
+  mcset $l "Save as" \
+           "另存为"
+  ##ID:002436##
+  mcset $l "Reload data from simulator" \
+           "Reload data from simulator" ;# <-- NOT TRANSLATED YET
+  ##ID:002437##
+  mcset $l "Reload" \
+           "刷新"
+  ##ID:002438##
+  mcset $l "Exit editor" \
+           "退出编辑"
+  ##ID:002439##
+  mcset $l "Exit" \
+           "退出"
+  ##ID:002440##
+  mcset $l "Current view mode" \
+           "Current view mode" ;# <-- NOT TRANSLATED YET
+  ##ID:002441##
+  mcset $l "View mode" \
+           "View mode" ;# <-- NOT TRANSLATED YET
+  ##ID:002442##
+  mcset $l "VALUE" \
+           "VALUE" ;# <-- NOT TRANSLATED YET
+  ##ID:002443##
+  mcset $l "ADDRESS" \
+           "ADDRESS" ;# <-- NOT TRANSLATED YET
+  ##ID:002444##
+  mcset $l "DEC: " \
+           "DEC: " ;# <-- NOT TRANSLATED YET
+  ##ID:002445##
+  mcset $l "OCT: " \
+           "OCT: " ;# <-- NOT TRANSLATED YET
+  ##ID:002446##
+  mcset $l "HEX: " \
+           "HEX: " ;# <-- NOT TRANSLATED YET
+  ##ID:002447##
+  mcset $l "BIN: " \
+           "BIN: " ;# <-- NOT TRANSLATED YET
+  ##ID:002448##
+  mcset $l "LJMP" \
+           "LJMP" ;# <-- NOT TRANSLATED YET
+  ##ID:002449##
+  mcset $l "Perform program jump" \
+           "Perform program jump" ;# <-- NOT TRANSLATED YET
+  ##ID:002450##
+  mcset $l "Program jump" \
+           "程序转跳"
+  ##ID:002451##
+  mcset $l "LCALL" \
+           "LCALL" ;# <-- NOT TRANSLATED YET
+  ##ID:002452##
+  mcset $l "Perform subprogram call" \
+           "执行子程序调用"
+  ##ID:002453##
+  mcset $l "Subprogram call" \
+           "子程序调用"
+  ##ID:002454##
+  mcset $l "Cursor:" \
+           "光标:"
+  ##ID:002455##
+  mcset $l "Address of entry under mouse cursor" \
+           "Address of entry under mouse cursor" ;# <-- NOT TRANSLATED YET
+  ##ID:002456##
+  mcset $l "Line\t%s:\tInvalid characters\n" \
+           "Line\t%s:\tInvalid characters\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002457##
+  mcset $l "Line\t%s:\tInvalid chceksum\n" \
+           "Line\t%s:\tInvalid chceksum\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002458##
+  mcset $l "Line\t%s:\tInvalid length\n" \
+           "Line\t%s:\tInvalid length\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002459##
+  mcset $l "Line\t%s:\tUnknown record type: '%s'\n" \
+           "Line\t%s:\tUnknown record type: '%s'\n" ;# <-- NOT TRANSLATED YET
+  ##ID:002460##
+  mcset $l "Line\t%s:\tMissing EOF" \
+           "Line\t%s:\tMissing EOF" ;# <-- NOT TRANSLATED YET
+  ##ID:002461##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:002462##
+  mcset $l "Error(s) occurred while parsing IHEX file" \
+           "Error(s) occurred while parsing IHEX file" ;# <-- NOT TRANSLATED YET
+  ##ID:002463##
+  mcset $l "File modified" \
+           "File modified" ;# <-- NOT TRANSLATED YET
+  ##ID:002464##
+  mcset $l "File %s has been modifed.\nDo you want to save it ?" \
+           "File %s has been modifed.\nDo you want to save it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:004536##
+  mcset $l "Content of the hex editor has been changed.\nDo you really want to reload without saving it?" \
+           "Content of the hex editor has been changed.\nDo you really want to reload without saving it?" ;# <-- NOT TRANSLATED YET
+  ##ID:002465##
+  mcset $l "Save file - MCU 8051 IDE" \
+           "保存文件 - MCU 8051 IDE"
+  ##ID:002466##
+  mcset $l "Open file - MCU 8051 IDE" \
+           "打开文件 - MCU 8051 IDE"
+  ##ID:002467##
+  mcset $l "Permission denied" \
+           "没有权限"
+  ##ID:002468##
+  mcset $l "Unable to open file:\n%s" \
+           "无法打开文件:\n%s"
+  ##ID:002469##
+  mcset $l "Unable to access file: %s" \
+           "无法访问文件: %s"
+  ##ID:002470##
+  mcset $l "Overwrite file" \
+           "覆盖文件"
+  ##ID:002471##
+  mcset $l "A file name '%s' already exists. Are you sure you want to overwrite it ?" \
+           "A file name '%s' already exists. Are you sure you want to overwrite it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:002472##
+  mcset $l "Saving file" \
+           "正在保存文件"
+  ##ID:002473##
+  mcset $l "Abort" \
+           "中止"
+  ##ID:002474##
+  mcset $l "File %s saved" \
+           "文件 %s 已经保存"
+  ##ID:002475##
+  mcset $l "Load IHEX8 file into editor and simulator XDATA memory" \
+           "Load IHEX8 file into editor and simulator XDATA memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002476##
+  mcset $l "Save current content of XDATA memory to IHEX8 file" \
+           "Save current content of XDATA memory to IHEX8 file" ;# <-- NOT TRANSLATED YET
+  ##ID:002477##
+  mcset $l "Save current document under a different name" \
+           "Save current document under a different name" ;# <-- NOT TRANSLATED YET
+  ##ID:002478##
+  mcset $l "Reload data from simulator XDATA memory" \
+           "Reload data from simulator XDATA memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002479##
+  mcset $l "Copy selected text to clipboard" \
+           "复制选定的文本到剪贴板"
+  ##ID:002480##
+  mcset $l "Paste clipboard contents" \
+           "粘贴剪贴板内容"
+  ##ID:002481##
+  mcset $l "Invoke dialog for searching strings in the text" \
+           "Invoke dialog for searching strings in the text" ;# <-- NOT TRANSLATED YET
+  ##ID:002482##
+  mcset $l "Find next occurrence of the search string" \
+           "Find next occurrence of the search string" ;# <-- NOT TRANSLATED YET
+  ##ID:002483##
+  mcset $l "Find previous occurrence of the search string" \
+           "Find previous occurrence of the search string" ;# <-- NOT TRANSLATED YET
+  ##ID:002484##
+  mcset $l "Switch view mode to hexadecimal" \
+           "Switch view mode to hexadecimal" ;# <-- NOT TRANSLATED YET
+  ##ID:002485##
+  mcset $l "Switch view mode to decimal" \
+           "Switch view mode to decimal" ;# <-- NOT TRANSLATED YET
+  ##ID:002486##
+  mcset $l "Switch view mode to octal" \
+           "Switch view mode to octal" ;# <-- NOT TRANSLATED YET
+  ##ID:002487##
+  mcset $l "Save current content of program (CODE) memory to IHEX8 file" \
+           "Save current content of program (CODE) memory to IHEX8 file" ;# <-- NOT TRANSLATED YET
+  ##ID:002488##
+  mcset $l "Save" \
+           "保存"
+  ##ID:002489##
+  mcset $l "Open ADF" \
+           "打开ADF"
+  ##ID:002490##
+  mcset $l "Open IHEX8" \
+           "打开IHEX8"
+  ##ID:002491##
+  mcset $l "Copy" \
+           "复制"
+  ##ID:002492##
+  mcset $l "Paste" \
+           "粘帖"
+  ##ID:002493##
+  mcset $l "Find" \
+           "查找"
+  ##ID:002494##
+  mcset $l "Find next" \
+           "查找下一个"
+  ##ID:002495##
+  mcset $l "Find previous" \
+           "查找上一个"
+  ##ID:002496##
+  mcset $l "HEX" \
+           "HEX" ;# <-- NOT TRANSLATED YET
+  ##ID:002497##
+  mcset $l "DEC" \
+           "DEC" ;# <-- NOT TRANSLATED YET
+  ##ID:002498##
+  mcset $l "OCT" \
+           "OCT" ;# <-- NOT TRANSLATED YET
+  ##ID:002499##
+  mcset $l "File" \
+           "文件"
+  ##ID:002500##
+  mcset $l "Edit" \
+           "编辑"
+  ##ID:002501##
+  mcset $l "Mode" \
+           "模式"
+  ##ID:002502##
+  mcset $l "Intel 8 HEX" \
+           "Intel 8 HEX" ;# <-- NOT TRANSLATED YET
+  ##ID:002503##
+  mcset $l "Simulator file" \
+           "模拟器文件"
+}
+# todo.tcl
+# ==============================================================================
+namespace eval Todo {
+  ##ID:002504##
+  mcset $l "Undo" \
+           "撤消"
+  ##ID:002505##
+  mcset $l "Undo last operation" \
+           "撤消最后一次操作"
+  ##ID:002506##
+  mcset $l "Redo" \
+           "取消撤销"
+  ##ID:002507##
+  mcset $l "Take back last undo operation" \
+           "重做上次撤销的操作."
+  ##ID:002508##
+  mcset $l "Cut" \
+           "剪切"
+  ##ID:002509##
+  mcset $l "Copy" \
+           "复制"
+  ##ID:002510##
+  mcset $l "Paste" \
+           "粘帖"
+  ##ID:002511##
+  mcset $l "Clear" \
+           "清除"
+  ##ID:002512##
+  mcset $l "Select all" \
+           "选择所有"
+  ##ID:002513##
+  mcset $l "Find" \
+           "查找"
+  ##ID:002514##
+  mcset $l "Find next" \
+           "查找下一个"
+  ##ID:002515##
+  mcset $l "Find previous" \
+           "查找上一个"
+  ##ID:002516##
+  mcset $l "Bold text" \
+           "粗体"
+  ##ID:002517##
+  mcset $l "Use bold font" \
+           "使用粗体"
+  ##ID:002518##
+  mcset $l "Italic text" \
+           "斜体"
+  ##ID:002519##
+  mcset $l "Use italic font" \
+           "使用斜体"
+  ##ID:002520##
+  mcset $l "Strikethrough font" \
+           "删除线字体"
+  ##ID:002521##
+  mcset $l "Strikethrough text" \
+           "删除线文本"
+  ##ID:002522##
+  mcset $l "Use strikethrough font" \
+           "使用删除线字体"
+  ##ID:002523##
+  mcset $l "Underline text" \
+           "下划线字体"
+  ##ID:002524##
+  mcset $l "Use underline font" \
+           "使用下划线字体"
+  ##ID:002525##
+  mcset $l "Erase tags" \
+           "删除标记"
+  ##ID:002526##
+  mcset $l "Clear rich text tags" \
+           "Clear rich text tags" ;# <-- NOT TRANSLATED YET
+  ##ID:002527##
+  mcset $l "Insert OK image" \
+           "已经插入图片"
+  ##ID:002528##
+  mcset $l "Insert image \"Ok\"" \
+           "插入图片 \"Ok\""
+  ##ID:002529##
+  mcset $l "Notes for file:" \
+           "注释文件:"
+  ##ID:002530##
+  mcset $l "Find next occurrence of search string" \
+           "查找下一个出现的搜索字"
+  ##ID:002531##
+  mcset $l "Find previous occurrence of search string" \
+           "查找上一个出现的搜索字"
+  ##ID:002532##
+  mcset $l "Hide search bar" \
+           "隐藏搜索栏"
+  ##ID:002533##
+  mcset $l "Find:" \
+           "查找:"
+  ##ID:002534##
+  mcset $l "Match case" \
+           "区分大小写"
+  ##ID:002535##
+  mcset $l "Bold font" \
+           "粗体字"
+  ##ID:002536##
+  mcset $l "Striketrought font" \
+           "删除线字体"
+  ##ID:002537##
+  mcset $l "Underline font" \
+           "下划线字体"
+  ##ID:002538##
+  mcset $l "Erase text tags" \
+           "删除文本标记"
+  ##ID:002539##
+  mcset $l "Remove formatting tags within selected area" \
+           "删除所选区域内的标记"
+  ##ID:002540##
+  mcset $l "Insert \"Ok\" image at the current cursor position" \
+           "Insert \"Ok\" image at the current cursor position" ;# <-- NOT TRANSLATED YET
+}
+# subprograms.tcl
+# ==============================================================================
+namespace eval SubPrograms {
+  ##ID:002541##
+  mcset $l "Go to source line" \
+           "Go to source line" ;# <-- NOT TRANSLATED YET
+  ##ID:002542##
+  mcset $l "Navigate code editor to the line from which this subprogram was invoked" \
+           "Navigate code editor to the line from which this subprogram was invoked" ;# <-- NOT TRANSLATED YET
+  ##ID:002543##
+  mcset $l "Go to target line" \
+           "Go to target line" ;# <-- NOT TRANSLATED YET
+  ##ID:002544##
+  mcset $l "Navigate code editor to the line from where this subprogram resides" \
+           "Navigate code editor to the line from where this subprogram resides" ;# <-- NOT TRANSLATED YET
+  ##ID:002545##
+  mcset $l "Copy source address to clipboard" \
+           "Copy source address to clipboard" ;# <-- NOT TRANSLATED YET
+  ##ID:002546##
+  mcset $l "Copy return address to clipboard (hexadecimal representation)" \
+           "Copy return address to clipboard (hexadecimal representation)" ;# <-- NOT TRANSLATED YET
+  ##ID:002547##
+  mcset $l "Copy target address to clipboard" \
+           "Copy target address to clipboard" ;# <-- NOT TRANSLATED YET
+  ##ID:002548##
+  mcset $l "Copy address where this subprogram begins to the clipboard" \
+           "Copy address where this subprogram begins to the clipboard" ;# <-- NOT TRANSLATED YET
+  ##ID:002549##
+  mcset $l "Remove this" \
+           "Remove this" ;# <-- NOT TRANSLATED YET
+  ##ID:002550##
+  mcset $l "Remove this entry" \
+           "Remove this entry" ;# <-- NOT TRANSLATED YET
+  ##ID:002551##
+  mcset $l "Enable" \
+           "Enable" ;# <-- NOT TRANSLATED YET
+  ##ID:002552##
+  mcset $l "Include interrupts" \
+           "Include interrupts" ;# <-- NOT TRANSLATED YET
+  ##ID:002553##
+  mcset $l "RETURN" \
+           "RETURN" ;# <-- NOT TRANSLATED YET
+  ##ID:002554##
+  mcset $l "Clear" \
+           "清除"
+  ##ID:002555##
+  mcset $l "Save" \
+           "保存"
+  ##ID:002556##
+  mcset $l "TOTAL: " \
+           "TOTAL: " ;# <-- NOT TRANSLATED YET
+  ##ID:002557##
+  mcset $l "Line not found" \
+           "Line not found" ;# <-- NOT TRANSLATED YET
+  ##ID:002558##
+  mcset $l "There is no matching line in the source code" \
+           "There is no matching line in the source code" ;# <-- NOT TRANSLATED YET
+  ##ID:002559##
+  mcset $l " Return address:\t" \
+           " Return address:\t" ;# <-- NOT TRANSLATED YET
+  ##ID:002560##
+  mcset $l "Save file - MCU 8051 IDE" \
+           "保存文件 - MCU 8051 IDE"
+  ##ID:002561##
+  mcset $l "A file name '%s' already exists. Are you sure you want to overwrite it ?" \
+           "A file name '%s' already exists. Are you sure you want to overwrite it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:002562##
+  mcset $l "Overwrite file" \
+           "覆盖文件"
+  ##ID:002563##
+  mcset $l "Unable to write to file:\n\"%s\"" \
+           "无法写入文件:\n\"%s\""
+  ##ID:002564##
+  mcset $l "Permission denied" \
+           "没有权限"
+  ##ID:002565##
+  mcset $l "Plain text" \
+           "纯文本"
+}
+# stopwatch.tcl
+# ==============================================================================
+namespace eval Stopwatch {
+  ##ID:002566##
+  mcset $l "Micro seconds" \
+           "Micro seconds" ;# <-- NOT TRANSLATED YET
+  ##ID:002567##
+  mcset $l "Clock cycles" \
+           "Clock cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002568##
+  mcset $l "Instruction cycles" \
+           "Instruction cycles" ;# <-- NOT TRANSLATED YET
+  ##ID:002569##
+  mcset $l "Instructions passed" \
+           "Instructions passed" ;# <-- NOT TRANSLATED YET
+  ##ID:002570##
+  mcset $l "Program bytes" \
+           "Program bytes" ;# <-- NOT TRANSLATED YET
+  ##ID:002571##
+  mcset $l "Interrupts" \
+           "Interrupts" ;# <-- NOT TRANSLATED YET
+  ##ID:002572##
+  mcset $l "Subprogram calls" \
+           "Subprogram calls" ;# <-- NOT TRANSLATED YET
+  ##ID:002573##
+  mcset $l "RET" \
+           "RET" ;# <-- NOT TRANSLATED YET
+  ##ID:002574##
+  mcset $l "RETI" \
+           "RETI" ;# <-- NOT TRANSLATED YET
+  ##ID:002575##
+  mcset $l "Breakpoints" \
+           "Breakpoints" ;# <-- NOT TRANSLATED YET
+  ##ID:002576##
+  mcset $l "Stopwatch" \
+           "Stopwatch" ;# <-- NOT TRANSLATED YET
+  ##ID:002577##
+  mcset $l "Stop" \
+           "停止"
+  ##ID:002578##
+  mcset $l "Start" \
+           "开始"
+  ##ID:002579##
+  mcset $l "Save as plain text" \
+           "Save as plain text" ;# <-- NOT TRANSLATED YET
+  ##ID:002580##
+  mcset $l "Save as XHTML" \
+           "另存为XHTML"
+  ##ID:002581##
+  mcset $l "Close window" \
+           "Close window" ;# <-- NOT TRANSLATED YET
+  ##ID:002582##
+  mcset $l "Current" \
+           "Current" ;# <-- NOT TRANSLATED YET
+  ##ID:002583##
+  mcset $l "Project:" \
+           "Project:" ;# <-- NOT TRANSLATED YET
+  ##ID:002584##
+  mcset $l "Date:" \
+           "Date:" ;# <-- NOT TRANSLATED YET
+  ##ID:002585##
+  mcset $l "Generated by %s" \
+           "Generated by %s" ;# <-- NOT TRANSLATED YET
+  ##ID:002586##
+  mcset $l "Clear all" \
+           "清除所有"
+  ##ID:002587##
+  mcset $l "Stop after" \
+           "Stop after" ;# <-- NOT TRANSLATED YET
+  ##ID:002588##
+  mcset $l "Overall" \
+           "Overall" ;# <-- NOT TRANSLATED YET
+  ##ID:002589##
+  mcset $l "Clear entrybox" \
+           "Clear entrybox" ;# <-- NOT TRANSLATED YET
+  ##ID:002590##
+  mcset $l "Clear" \
+           "清除"
+  ##ID:002591##
+  mcset $l "Stop simulation" \
+           "Stop simulation" ;# <-- NOT TRANSLATED YET
+  ##ID:002592##
+  mcset $l "Save stopwatch state - MCU 8051 IDE" \
+           "Save stopwatch state - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:002593##
+  mcset $l "Overwrite file" \
+           "覆盖文件"
+  ##ID:002594##
+  mcset $l "A file name '%s' already exists. Are you sure you want to overwrite it ?" \
+           "A file name '%s' already exists. Are you sure you want to overwrite it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:002595##
+  mcset $l "Permission denied" \
+           "没有权限"
+  ##ID:002596##
+  mcset $l "Unable to open file:\n'%s'" \
+           "无法打开文件:\n'%s'"
+}
+# simulator_engine.tcl
+# ==============================================================================
+namespace eval Simulator_ENGINE {
+  ##ID:002597##
+  mcset $l "Interrupt at vector 0x%s  " \
+           "Interrupt at vector 0x%s  " ;# <-- NOT TRANSLATED YET
+  ##ID:002598##
+  mcset $l "No instruction found at 0x%s" \
+           "No instruction found at 0x%s" ;# <-- NOT TRANSLATED YET
+  ##ID:002599##
+  mcset $l "Breakpoint reached at 0x%s" \
+           "Breakpoint reached at 0x%s" ;# <-- NOT TRANSLATED YET
+  ##ID:002600##
+  mcset $l "Out of memory" \
+           "Out of memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002601##
+  mcset $l "%s has not enough program memory to load this program. Simulator will work but the loaded code is incomplete" \
+           "%s has not enough program memory to load this program. Simulator will work but the loaded code is incomplete" ;# <-- NOT TRANSLATED YET
+  ##ID:002602##
+  mcset $l "Interrupt  PC: 0x%s; line: %s; vector 0x%s  " \
+           "Interrupt  PC: 0x%s; line: %s; vector 0x%s  " ;# <-- NOT TRANSLATED YET
+  ##ID:002603##
+  mcset $l "Incomplete instruction OP code at 0x%s" \
+           "Incomplete instruction OP code at 0x%s" ;# <-- NOT TRANSLATED YET
+}
+# maintab.tcl
+# ==============================================================================
+namespace eval MainTab {
+  ##ID:002604##
+  mcset $l "FATAL ERROR" \
+           "致命错误"
+  ##ID:002605##
+  mcset $l "MCUs database file is corrupted,\nthis program cannot run without it.\nPlease reinstall MCU 8051 IDE." \
+           "MCUs database file is corrupted,\nthis program cannot run without it.\nPlease reinstall MCU 8051 IDE." ;# <-- NOT TRANSLATED YET
+  ##ID:002606##
+  mcset $l "IO Error" \
+           "IO Error" ;# <-- NOT TRANSLATED YET
+  ##ID:002607##
+  mcset $l "Unable to open VHW file:\n\"%s\"" \
+           "无法打开VHW文件:\n\"%s\""
+  ##ID:002867##
+  mcset $l "Opening project files" \
+           "正在打开项目文件"
+  ##ID:002868##
+  mcset $l "Abort" \
+           "中止"
+  ##ID:004495##
+  mcset $l "Initializing ..." \
+           "Initializing ..." ;# <-- NOT TRANSLATED YET
+  ##ID:004496##
+  mcset $l "Finishing ..." \
+           "Finishing ..." ;# <-- NOT TRANSLATED YET
+}
+# selectmcu.tcl
+# ==============================================================================
+namespace eval SelectMCU {
+  ##ID:002608##
+  mcset $l "Choose MCU - MCU 8051 IDE" \
+           "选择 MCU - MCU 8051 IDE"
+  ##ID:002609##
+  mcset $l "Clear search bar" \
+           "清除搜索栏"
+  ##ID:002610##
+  mcset $l "Search bar, enter something like \"C4051\"" \
+           "Search bar, enter something like \"C4051\"" ;# <-- NOT TRANSLATED YET
+  ##ID:002611##
+  mcset $l "Processor Type\t\tCODE/PMEM    IDATA/IRAM       GPIO    Frequency" \
+           "Processor Type\t\tCODE/PMEM    IDATA/IRAM       GPIO    Frequency" ;# <-- NOT TRANSLATED YET
+  ##ID:002612##
+  mcset $l "Search:" \
+           "搜索:"
+  ##ID:002613##
+  mcset $l "  Vendor:" \
+           "  Vendor:" ;# <-- NOT TRANSLATED YET
+  ##ID:002614##
+  mcset $l "all" \
+           "全部"
+  ##ID:002615##
+  mcset $l "One of available packages for selected microcontroller" \
+           "One of available packages for selected microcontroller" ;# <-- NOT TRANSLATED YET
+  ##ID:002616##
+  mcset $l {Vendor:} \
+           {Vendor:} ;# <-- NOT TRANSLATED YET
+  ##ID:002617##
+  mcset $l {UART:} \
+           {UART:} ;# <-- NOT TRANSLATED YET
+  ##ID:002618##
+  mcset $l {Operating voltage:} \
+           {Operating voltage:} ;# <-- NOT TRANSLATED YET
+  ##ID:002619##
+  mcset $l {Interrupt sources:} \
+           {Interrupt sources:} ;# <-- NOT TRANSLATED YET
+  ##ID:002620##
+  mcset $l {Timers:} \
+           {Timers:} ;# <-- NOT TRANSLATED YET
+  ##ID:002621##
+  mcset $l "External RAM (XDATA)" \
+           "External RAM (XDATA)" ;# <-- NOT TRANSLATED YET
+  ##ID:002622##
+  mcset $l "External ROM/FLASH (XCODE)" \
+           "External ROM/FLASH (XCODE)" ;# <-- NOT TRANSLATED YET
+  ##ID:002623##
+  mcset $l "NOT available" \
+           "NOT available" ;# <-- NOT TRANSLATED YET
+  ##ID:002624##
+  mcset $l "Enable" \
+           "Enable" ;# <-- NOT TRANSLATED YET
+  ##ID:002625##
+  mcset $l "Connect external data memory" \
+           "Connect external data memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002626##
+  mcset $l "Amount of external data memory" \
+           "Amount of external data memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002627##
+  mcset $l "Connect external program memory" \
+           "Connect external program memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002628##
+  mcset $l "Amount of total program memory minus internal program memory" \
+           "Amount of total program memory minus internal program memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002629##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:002630##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:002631##
+  mcset $l "Unable to open file containing supported MCUs,\nplease check your installation" \
+           "Unable to open file containing supported MCUs,\nplease check your installation" ;# <-- NOT TRANSLATED YET
+  ##ID:002632##
+  mcset $l "MCUs database file is corrupted ,\nplease check your installation" \
+           "MCUs database file is corrupted,\nplease check your installation" ;# <-- NOT TRANSLATED YET
+  ##ID:002633##
+  mcset $l "Error" \
+           "错误"
+  ##ID:002634##
+  mcset $l "  Image not found" \
+           "  Image not found" ;# <-- NOT TRANSLATED YET
+  ##ID:002635##
+  mcset $l "Loading image ..." \
+           "Loading image ..." ;# <-- NOT TRANSLATED YET
+}
+# regwatches.tcl
+# ==============================================================================
+namespace eval RegWatches {
+  ##ID:002636##
+  mcset $l "Move top" \
+           "返移动顶部"
+  ##ID:002637##
+  mcset $l "Move this register watch to the top of list" \
+           "移动该寄存器到列表的顶部"
+  ##ID:002638##
+  mcset $l "Move up" \
+           "向上移动"
+  ##ID:002639##
+  mcset $l "Move this register watch up" \
+           "向上移动该寄存器"
+  ##ID:002640##
+  mcset $l "Move down" \
+           "向下移动"
+  ##ID:002641##
+  mcset $l "Move this register watch down" \
+           "向下移动该寄存器"
+  ##ID:002642##
+  mcset $l "Move bottom" \
+           "移动底部"
+  ##ID:002643##
+  mcset $l "Move this register watch to the bottom of list" \
+           "动该寄存器到列表的底部"
+  ##ID:002644##
+  mcset $l "Remove" \
+           "删除"
+  ##ID:002645##
+  mcset $l "Remove this register watch from the list" \
+           "从列表删中除该寄存器"
+  ##ID:002646##
+  mcset $l "Remove all" \
+           "删除所有"
+  ##ID:002647##
+  mcset $l "Clear the list of register watches" \
+           "清除列表中的所有寄存器"
+  ##ID:002648##
+  mcset $l "Save" \
+           "保存"
+  ##ID:002649##
+  mcset $l "Save this list to a file" \
+           "保存这个列表到一个文件"
+  ##ID:002650##
+  mcset $l "Configure" \
+           "配置"
+  ##ID:002651##
+  mcset $l "Configure this panel" \
+           "配置这个面板"
+  ##ID:002652##
+  mcset $l "Sort by" \
+           "按"
+  ##ID:002653##
+  mcset $l "Name" \
+           "名称"
+  ##ID:002654##
+  mcset $l "Address" \
+           "地址"
+  ##ID:002655##
+  mcset $l "Type" \
+           "类型"
+  ##ID:002656##
+  mcset $l "Incremental" \
+           "增量"
+  ##ID:002657##
+  mcset $l "Decremental" \
+           "递减"
+  ##ID:002658##
+  mcset $l "Autoload from code listing" \
+           "自动加载代码列表"
+  ##ID:002659##
+  mcset $l "Clear on auto-load" \
+           "清除自动加载"
+  ##ID:002660##
+  mcset $l "Save under a different file name" \
+           "除根据不同的文件名保存"
+  ##ID:002661##
+  mcset $l "Open *.wtc file" \
+           "打开*.wtc文件"
+  ##ID:002662##
+  mcset $l "Import list of registers from code listing or WTC file" \
+           "Import list of registers from code listing or WTC file" ;# <-- NOT TRANSLATED YET
+  ##ID:002663##
+  mcset $l "Import list of registers from *.lst or *.wtc file" \
+           "Import list of registers from *.lst or *.wtc file" ;# <-- NOT TRANSLATED YET
+  ##ID:002664##
+  mcset $l "Enter your search string here" \
+           "Enter your search string here" ;# <-- NOT TRANSLATED YET
+  ##ID:002665##
+  mcset $l "Search for a name" \
+           "Search for a name" ;# <-- NOT TRANSLATED YET
+  ##ID:002666##
+  mcset $l "Clear search string" \
+           "Clear search string" ;# <-- NOT TRANSLATED YET
+  ##ID:002667##
+  mcset $l "Register address:\n  1 or 2 digits\tinternal RAM (not SFR)\n  3 digits\t\texpanded RAM\n  4 digits\t\texternal RAM\n  dot and 2 digits\tBit" \
+           "Register address:\n  1 or 2 digits\tinternal RAM (not SFR)\n  3 digits\t\texpanded RAM\n  4 digits\t\texternal RAM\n  dot and 2 digits\tBit" ;# <-- NOT TRANSLATED YET
+  ##ID:002668##
+  mcset $l "Register address or bit address" \
+           "Register address or bit address" ;# <-- NOT TRANSLATED YET
+  ##ID:002669##
+  mcset $l "Name of the watch. Any string." \
+           "Name of the watch. Any string." ;# <-- NOT TRANSLATED YET
+  ##ID:002670##
+  mcset $l "Add this entry to register watches" \
+           "Add this entry to register watches" ;# <-- NOT TRANSLATED YET
+  ##ID:002671##
+  mcset $l "New register watches entry" \
+           "New register watches entry" ;# <-- NOT TRANSLATED YET
+  ##ID:002672##
+  mcset $l "Create new register watch" \
+           "Create new register watch" ;# <-- NOT TRANSLATED YET
+  ##ID:002673##
+  mcset $l "Remove this entry" \
+           "Remove this entry" ;# <-- NOT TRANSLATED YET
+  ##ID:002674##
+  mcset $l "Addr" \
+           "Addr" ;# <-- NOT TRANSLATED YET
+  ##ID:002675##
+  mcset $l "Register name" \
+           "Register name" ;# <-- NOT TRANSLATED YET
+  ##ID:002676##
+  mcset $l "Unable to assign, address is already in use" \
+           "无法分配, 地址正在使用"
+  ##ID:002677##
+  mcset $l "You must specify the register address." \
+           "您必须指定寄存器地址。"
+  ##ID:002678##
+  mcset $l "Specified address is already used." \
+           "指定的地址已经被使用"
+  ##ID:002679##
+  mcset $l "Overwrite file" \
+           "覆盖文件"
+  ##ID:002680##
+  mcset $l "A file name '%s' already exists. Are you sure you want to overwrite it ?" \
+           "文件 '%s' 已经存在. 您确认覆盖它吗?"
+  ##ID:002681##
+  mcset $l "Error - MCU 8051 IDE" \
+           "错误 - MCU 8051 IDE"
+  ##ID:002682##
+  mcset $l "Unable to access file \"%s\", check your permissions." \
+           "无法访问文件 \"%s\", 检请查您的权限."
+  ##ID:002683##
+  mcset $l "Definitions saved to \"%s\"" \
+           "Definitions saved to \"%s\"" ;# <-- NOT TRANSLATED YET
+  ##ID:002684##
+  mcset $l "Save watches - MCU 8051 IDE" \
+           "Save watches - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:002685##
+  mcset $l "File access error" \
+           "文件访问错误"
+  ##ID:002686##
+  mcset $l "Unable to read file '%s'" \
+           "无法读取文件 '%s'"
+  ##ID:002687##
+  mcset $l "Corrupted file" \
+           "损坏的文件"
+  ##ID:002688##
+  mcset $l "file: %s is either corrupted or it is not a file in expected format." \
+           "file: %s is either corrupted or it is not a file in expected format." ;# <-- NOT TRANSLATED YET
+  ##ID:002689##
+  mcset $l "Load watches from file - MCU 8051 IDE" \
+           "Load watches from file - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:002690##
+  mcset $l "Import file - MCU 8051 IDE" \
+           "导入文件 - MCU 8051 IDE"
+  ##ID:002691##
+  mcset $l "Unknown file" \
+           "未知文件"
+  ##ID:002692##
+  mcset $l "Unable to recognize file format" \
+           "Unable to recognize file format" ;# <-- NOT TRANSLATED YET
+  ##ID:002693##
+  mcset $l "Unable to open file:\n'%s'" \
+           "无法打开文件:\n'%s'"
+  ##ID:002694##
+  mcset $l "Are you sure ?" \
+           "您确定吗"
+  ##ID:002695##
+  mcset $l "Do you really want to clear the panel ?" \
+           "Do you really want to clear the panel ?" ;# <-- NOT TRANSLATED YET
+  ##ID:002696##
+  mcset $l "MCU 8051 IDE watches definition" \
+           "MCU 8051 IDE watches definition" ;# <-- NOT TRANSLATED YET
+  ##ID:002697##
+  mcset $l "Code listing" \
+           "Code listing" ;# <-- NOT TRANSLATED YET
+}
+# fsd.tcl
+# ==============================================================================
+namespace eval KIFSD::FSD {
+  ##ID:002698##
+  mcset $l "   Name\t\t\t\t   Size      Rights  Date           " \
+           "   Name\t\t\t\t   Size      Rights  Date           " ;# <-- NOT TRANSLATED YET
+  ##ID:002699##
+  mcset $l "Location:" \
+           "Location:" ;# <-- NOT TRANSLATED YET
+  ##ID:002700##
+  mcset $l "Filter:" \
+           "过滤器:"
+  ##ID:002701##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:002702##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:002703##
+  mcset $l "Parent folder" \
+           "父文件夹"
+  ##ID:002704##
+  mcset $l "Back" \
+           "返回"
+  ##ID:002705##
+  mcset $l "Forward" \
+           "向前"
+  ##ID:002706##
+  mcset $l "Reload" \
+           "刷新"
+  ##ID:002707##
+  mcset $l "New folder" \
+           "新建文件夹"
+  ##ID:002708##
+  mcset $l "Short view" \
+           "Short view" ;# <-- NOT TRANSLATED YET
+  ##ID:002709##
+  mcset $l "Detailed view" \
+           "Detailed view" ;# <-- NOT TRANSLATED YET
+  ##ID:002710##
+  mcset $l "Bookmarks" \
+           "书签"
+  ##ID:002711##
+  mcset $l "Configure" \
+           "配置"
+  ##ID:002712##
+  mcset $l "By name" \
+           "按名称"
+  ##ID:002713##
+  mcset $l "By date" \
+           "按日期"
+  ##ID:002714##
+  mcset $l "By size" \
+           "按大小"
+  ##ID:002715##
+  mcset $l "Reverse" \
+           "反向"
+  ##ID:002716##
+  mcset $l "Folders first" \
+           "Folders first" ;# <-- NOT TRANSLATED YET
+  ##ID:002717##
+  mcset $l "Case insensitive" \
+           "不区分大小写"
+  ##ID:002718##
+  mcset $l "Sorting" \
+           "排序"
+  ##ID:002719##
+  mcset $l "Show hidden files" \
+           "显示隐藏文件"
+  ##ID:002720##
+  mcset $l "Quick access navigation panel" \
+           "Quick access navigation panel" ;# <-- NOT TRANSLATED YET
+  ##ID:002721##
+  mcset $l "Separate folders" \
+           "单独文件夹"
+  ##ID:002722##
+  mcset $l "Add bookmark" \
+           "添加书签"
+  ##ID:002723##
+  mcset $l "Edit bookmarks" \
+           "编辑书签"
+  ##ID:002724##
+  mcset $l "Up" \
+           "向上"
+  ##ID:002725##
+  mcset $l "Rename" \
+           "重命名"
+  ##ID:002726##
+  mcset $l "Delete" \
+           "删除"
+  ##ID:002727##
+  mcset $l "Bookmark folder" \
+           "收藏夹"
+  ##ID:002728##
+  mcset $l "Properties" \
+           "属性"
+  ##ID:002729##
+  mcset $l "Add entry" \
+           "添加条目"
+  ##ID:002730##
+  mcset $l "Hide panel" \
+           "隐藏面板"
+  ##ID:002731##
+  mcset $l "Move up" \
+           "向上移动"
+  ##ID:002732##
+  mcset $l "Move down" \
+           "向下移动"
+  ##ID:002733##
+  mcset $l "Edit entry" \
+           "编辑录入"
+  ##ID:002734##
+  mcset $l "Remove entry" \
+           "重命名条目"
+  ##ID:002735##
+  mcset $l "Invalid folder" \
+           "无效的文件夹"
+  ##ID:002736##
+  mcset $l "The specified folder does not exist:\n%s" \
+           "指定的文件不存在:\n%s"
+  ##ID:002737##
+  mcset $l "Create new folder in:\n%s" \
+           "创建新文件夹:\n%s"
+  ##ID:002738##
+  mcset $l "Clear" \
+           "清除"
+  ##ID:002739##
+  mcset $l "Unable to create folder" \
+           "无法创建文件夹"
+  ##ID:002740##
+  mcset $l "Unable to create the specified folder" \
+           "无法创建指定的文件夹"
+  ##ID:002741##
+  mcset $l "Delete file" \
+           "删除文件"
+  ##ID:002742##
+  mcset $l "Do you really want to delete file:\n%s" \
+           "您真的确定删除文件:\n%s"
+  ##ID:002743##
+  mcset $l "Permission denied" \
+           "没有权限"
+  ##ID:002744##
+  mcset $l "Unable to remove file:\n%s" \
+           "无法删除文件:\n%s"
+  ##ID:002745##
+  mcset $l "Unable to rename file:\n%s" \
+           "无法重命名文件:\n%s"
+  ##ID:002746##
+  mcset $l "Unknown Error" \
+           "未知错误"
+  ##ID:002747##
+  mcset $l "This file apparently does not exist" \
+           "此文件显然不存在"
+  ##ID:002748##
+  mcset $l "Unable to change permissions for file:\n%s" \
+           "无法更改文件权限:\n%s"
+  ##ID:002749##
+  mcset $l "Unable to rename file:%s" \
+           "无法重命名文件:%s"
+  ##ID:002750##
+  mcset $l "Remove" \
+           "删除"
+  ##ID:002751##
+  mcset $l "Edit" \
+           "编辑"
+  ##ID:002752##
+  mcset $l "Down" \
+           "向下"
+  ##ID:002753##
+  mcset $l "New entry" \
+           "新条目"
+  ##ID:002754##
+  mcset $l "Name" \
+           "名称"
+  ##ID:002755##
+  mcset $l "URL" \
+           "URL" ;# <-- NOT TRANSLATED YET
+  ##ID:002756##
+  mcset $l "Icon" \
+           "图标"
+  ##ID:002757##
+  mcset $l "Name:" \
+           "名称:"
+  ##ID:002758##
+  mcset $l "Ownership" \
+           "所有权"
+  ##ID:002759##
+  mcset $l "Owner" \
+           "所有者"
+  ##ID:002760##
+  mcset $l "Group" \
+           "所有组"
+  ##ID:002761##
+  mcset $l "Item properties" \
+           "项目属性"
+  ##ID:002762##
+  mcset $l "Type" \
+           "类型"
+  ##ID:002763##
+  mcset $l "Location" \
+           "位置"
+  ##ID:002764##
+  mcset $l "Size" \
+           "大小"
+  ##ID:002765##
+  mcset $l "Modified" \
+           "Modified" ;# <-- NOT TRANSLATED YET
+  ##ID:002766##
+  mcset $l "Accessed" \
+           "Accessed" ;# <-- NOT TRANSLATED YET
+  ##ID:002767##
+  mcset $l "Access permissions" \
+           "访问权限"
+  ##ID:002768##
+  mcset $l "Class" \
+           "类型"
+  ##ID:002769##
+  mcset $l "Read" \
+           "读取"
+  ##ID:002770##
+  mcset $l "Write" \
+           "写入"
+  ##ID:002771##
+  mcset $l "Exec" \
+           "执行"
+  ##ID:002772##
+  mcset $l "Others" \
+           "其他"
+}
+# filelist.tcl
+# ==============================================================================
+namespace eval FileList {
+  ##ID:002773##
+  mcset $l "Append to project" \
+           "添加到项目"
+  ##ID:002774##
+  mcset $l "Append this file to the current project" \
+           "添加此文件到当前项目"
+  ##ID:002775##
+  mcset $l "New" \
+           "新建"
+  ##ID:002776##
+  mcset $l "Create new file and open its editor" \
+           "创建新的文件并打开它的编辑"
+  ##ID:002777##
+  mcset $l "Open" \
+           "打开"
+  ##ID:002778##
+  mcset $l "Open an existing file" \
+           "打开一个现有的文件"
+  ##ID:002779##
+  mcset $l "Save" \
+           "保存"
+  ##ID:002780##
+  mcset $l "Save this file" \
+           "保存这个文件"
+  ##ID:002781##
+  mcset $l "Save as" \
+           "另存为"
+  ##ID:002782##
+  mcset $l "Save this file under different name" \
+           "以不同的名称保存此文件"
+  ##ID:002783##
+  mcset $l "Save all" \
+           "保存全部"
+  ##ID:002784##
+  mcset $l "Save all file in the list" \
+           "保存列表中的所有文件"
+  ##ID:002785##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:002786##
+  mcset $l "Close this file" \
+           "关闭这个文件"
+  ##ID:002787##
+  mcset $l "Close All" \
+           "关闭所有"
+  ##ID:002788##
+  mcset $l "Close all files in the list" \
+           "关闭列表中的所有的文件"
+  ##ID:002789##
+  mcset $l "Bookmark" \
+           "书签"
+  ##ID:002790##
+  mcset $l "Add/Remove bookmark for this file" \
+           "添加/删除这个文件书签"
+  ##ID:002791##
+  mcset $l "Move up" \
+           "向上移动"
+  ##ID:002792##
+  mcset $l "Move this file up in the list" \
+           "在列表中向上移动这个文件"
+  ##ID:002793##
+  mcset $l "Move down" \
+           "向下移动"
+  ##ID:002794##
+  mcset $l "Move this file down in the list" \
+           "在列表中向下移动这个文件"
+  ##ID:002795##
+  mcset $l "Move to top" \
+           "移动到顶部"
+  ##ID:002796##
+  mcset $l "Move this file to the top of the list" \
+           "将此文件移动到列表的顶部“"
+  ##ID:002797##
+  mcset $l "Move to bottom" \
+           "移动到底部"
+  ##ID:002798##
+  mcset $l "Move this file to the bottom of the list" \
+           "将此文件移动到列表的底部"
+  ##ID:002799##
+  mcset $l "Sort items by" \
+           "项目排序"
+  ##ID:002800##
+  mcset $l "Document Name" \
+           "文件名称"
+  ##ID:002801##
+  mcset $l "File URL" \
+           "文件 URL"
+  ##ID:002802##
+  mcset $l "File Size in B" \
+           "File Size in B" ;# <-- NOT TRANSLATED YET
+  ##ID:002803##
+  mcset $l "Open with" \
+           "打开"
+  ##ID:002804##
+  mcset $l "Hide the panel" \
+           "隐藏面板"
+  ##ID:002805##
+  mcset $l "Remove file from the project" \
+           "从项目中删除文件"
+  ##ID:002806##
+  mcset $l "Remove this file from the project" \
+           "从项目中移除此文件"
+  ##ID:002807##
+  mcset $l "Close file" \
+           "关闭文件"
+  ##ID:002808##
+  mcset $l "Open file" \
+           "打开文件"
+  ##ID:002809##
+  mcset $l "Open this file" \
+           "打开这个文件"
+  ##ID:002810##
+  mcset $l "Move this item up" \
+           "移动此项目"
+  ##ID:002811##
+  mcset $l "Move this item down" \
+           "向下移动此项目"
+  ##ID:002812##
+  mcset $l "Move this item to the top of the list" \
+           "移动此项目到列表的顶部"
+  ##ID:002813##
+  mcset $l "Move this item to the bottom of the list" \
+           "移动此项目到列表的底部"
+  ##ID:002814##
+  mcset $l "Add/Remove bookmark" \
+           "添加/删除书签"
+  ##ID:002815##
+  mcset $l "Move file up" \
+           "向上移动文件"
+  ##ID:002816##
+  mcset $l "Move selected file up in the list" \
+           "Move selected file up in the list" ;# <-- NOT TRANSLATED YET
+  ##ID:002817##
+  mcset $l "Move file down" \
+           "向下移动文件"
+  ##ID:002818##
+  mcset $l "Move selected file down in the list" \
+           "Move selected file down in the list" ;# <-- NOT TRANSLATED YET
+  ##ID:002819##
+  mcset $l "Move item to top" \
+           "移至项目顶部"
+  ##ID:002820##
+  mcset $l "Move selected file to the top of the list" \
+           "移动选定的文件到列表顶部"
+  ##ID:002821##
+  mcset $l "Move item to bottom" \
+           "移至项目底部"
+  ##ID:002822##
+  mcset $l "Move selected file to the bottom of the list" \
+           "选定的文件移动到列表的底部"
+  ##ID:002823##
+  mcset $l "Open this file and create its own editor" \
+           "打开这个文件并创建它的编辑器"
+  ##ID:002824##
+  mcset $l "Close this file and close its editor" \
+           "关闭该文件与其编辑器"
+  ##ID:002825##
+  mcset $l "Exclude this file from list of files of this project" \
+           "从此项目移除这个文件"
+  ##ID:002826##
+  mcset $l "Hide this panel" \
+           "隐藏这个面板"
+  ##ID:002827##
+  mcset $l "Opened Files:" \
+           "打开文件:"
+  ##ID:002828##
+  mcset $l "Opened files" \
+           "打开这个文件"
+  ##ID:002829##
+  mcset $l "Files in the project" \
+           "项目中的文件"
+  ##ID:002830##
+  mcset $l "File system browser" \
+           "文件系统浏览器"
+  ##ID:002831##
+  mcset $l "List of SFR's" \
+           "List of SFR's" ;# <-- NOT TRANSLATED YET
+  ##ID:002832##
+  mcset $l "Files of the current project" \
+           "文件中的当前项目"
+  ##ID:002833##
+  mcset $l "Special Function Registers" \
+           "特殊功能寄存器"
+  ##ID:002834##
+  mcset $l "Bookmarks for opened files" \
+           "打开的文件的书签"
+  ##ID:002835##
+  mcset $l "List of opened files" \
+           "打开的文件列表"
+  ##ID:002836##
+  mcset $l "Search for file" \
+           "搜索文件"
+  ##ID:002837##
+  mcset $l "Search for certain file name in list of opened files" \
+           "在打开的文件列表中搜索特定的文件名"
+  ##ID:002838##
+  mcset $l "Search for certain file name in list of project files" \
+           "在项目文件列表中搜索特定的文件名"
+  ##ID:002839##
+  mcset $l "Clear search entry box" \
+           "清除搜索输入框"
+  ##ID:002840##
+  mcset $l "Previous editor" \
+           "上一步的编辑"
+  ##ID:002841##
+  mcset $l "Switch to the previous editor" \
+           "切换到下一个编辑器"
+  ##ID:002842##
+  mcset $l "Next editor" \
+           "下一个的编辑"
+  ##ID:002843##
+  mcset $l "Switch to the next editor" \
+           "切换到下一个编辑器"
+  ##ID:002844##
+  mcset $l "Bookmarks for project files" \
+           "项目文件书签"
+  ##ID:002845##
+  mcset $l "List of project files" \
+           "项目文件列表"
+  ##ID:002846##
+  mcset $l "Project Files:" \
+           "项目:"
+  ##ID:002847##
+  mcset $l "Show the panel" \
+           "显示面板"
+  ##ID:002848##
+  mcset $l "Currently opened files" \
+           "当前打开的文件"
+  ##ID:002849##
+  mcset $l "Files in the current project" \
+           "当前项目中的文件"
+  ##ID:002850##
+  mcset $l "SFR watches" \
+           "SFR watches" ;# <-- NOT TRANSLATED YET
+  ##ID:002851##
+  mcset $l "(read only)" \
+           "(只读)"
+  ##ID:002852##
+  mcset $l "File does not exist" \
+           "文件不存在"
+  ##ID:002853##
+  mcset $l "Path:" \
+           "路径:"
+  ##ID:002854##
+  mcset $l "Size:" \
+           "大小:"
+  ##ID:002855##
+  mcset $l "Modified:" \
+           "Modified:" ;# <-- NOT TRANSLATED YET
+  ##ID:002856##
+  mcset $l "Owner:" \
+           "所有者:"
+  ##ID:002857##
+  mcset $l "Permissions:" \
+           "权限:"
+  ##ID:002858##
+  mcset $l "Encoding:" \
+           "编码:"
+  ##ID:002859##
+  mcset $l "EOL:" \
+           "EOL:" ;# <-- NOT TRANSLATED YET
+  ##ID:002860##
+  mcset $l "Are you sure ?" \
+           "您确定吗"
+  ##ID:002861##
+  mcset $l "Reload of the file will change contents of the current editor. Are you sure you want that ?" \
+           "Reload of the file will change contents of the current editor. Are you sure you want that ?" ;# <-- NOT TRANSLATED YET
+  ##ID:002862##
+  mcset $l "Reload aborted" \
+           "终止刷新"
+  ##ID:002863##
+  mcset $l "Binary File Opened - MCU 8015 IDE" \
+           "打开二进制文件 - MCU 8015 IDE"
+  ##ID:002864##
+  mcset $l "The file %s is binary, saving it will result corrupted file." \
+           "文件 %s 是二进制文件，保存它会导致文件损坏。"
+  ##ID:002865##
+  mcset $l "Unknown error" \
+           "未知错误"
+  ##ID:004497##
+  mcset $l "Checking for changes in files ..." \
+           "正在检查文件的更改 ..."
+  ##ID:002866##
+  mcset $l "Error raised during md5 checking of file:\n%s.\nMaybe md5 extension is not correctly loaded." \
+           "Raised error during md5 checking file %s. Maybe md5 extension is not correctly loaded." ;# <-- UPDATE?
+  ##ID:002869##
+  mcset $l "The following files could not be located:" \
+           "下列文件无法找到:"
+  ##ID:002870##
+  mcset $l "Ok" \
+           "确定"
+  ##ID:002871##
+  mcset $l "File(s) not found" \
+           "没有找到文件"
+  ##ID:002872##
+  mcset $l "The following files were modified since last save:" \
+           "The following files were modified since last save:" ;# <-- NOT TRANSLATED YET
+  ##ID:002873##
+  mcset $l "File(s) changed" \
+           "文件已被更改"
+  ##ID:002874##
+  mcset $l "File not found - MCU 8051 IDE" \
+           "文件没有找到 - MCU 8051 IDE"
+  ##ID:002875##
+  mcset $l "File %s not found !" \
+           "文件 %s 没有找到 !"
+  ##ID:004498##
+  mcset $l "Dangerously large file!" \
+           "Dangerously large file!" ;# <-- NOT TRANSLATED YET
+  ##ID:004499##
+  mcset $l "WARNING: The file you are about to open is larger than 10MB!\n\nOpening extremely big source code files might lead your system to run out of operating memory, then the MCU 8051 IDE might got killed by the operating system!\n\nARE YOU SURE you want to proceed?" \
+           "WARNING: The file you are about to open is larger than 10MB!\n\nOpening extremely big source code files might lead your system to run out of operating memory, then the MCU 8051 IDE might got killed by the operating system!\n\nARE YOU SURE you want to proceed?" ;# <-- NOT TRANSLATED YET
+  ##ID:002876##
+  mcset $l "File: %s is already opened." \
+           "文件 : %s 已经打开."
+  ##ID:002877##
+  mcset $l "Do you want to add this file to the project ?\n%s" \
+           "Do you want to add this file to the project ?\n%s" ;# <-- NOT TRANSLATED YET
+  ##ID:002878##
+  mcset $l "Yes" \
+           "Yes" ;# <-- NOT TRANSLATED YET
+  ##ID:002879##
+  mcset $l "No" \
+           "No" ;# <-- NOT TRANSLATED YET
+  ##ID:002880##
+  mcset $l "Do not ask again" \
+           "不要再询问"
+  ##ID:002882##
+  mcset $l "Add file ?" \
+           "添加文件?"
+  ##ID:002883##
+  mcset $l "Overwrite file" \
+           "覆盖文件"
+  ##ID:002884##
+  mcset $l "A file name '%s' already exists. Are you sure you want to overwrite it ?" \
+           "A file name '%s' already exists. Are you sure you want to overwrite it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:002885##
+  mcset $l "Close document - MCU 8051 IDE" \
+           "关闭文档 - MCU 8051 IDE"
+  ##ID:002886##
+  mcset $l "The document %s have been modified.\nDo you want to save it ?" \
+           "The document %s have been modified.\nDo you want to save it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:002887##
+  mcset $l "Last editor window closed -> opening a new one ..." \
+           "Last editor window closed -> opening a new one ..." ;# <-- NOT TRANSLATED YET
+  ##ID:002888##
+  mcset $l "The following documents have been modified,\ndo you want to save them before closing ?" \
+           "The following documents have been modified,\ndo you want to save them before closing ?" ;# <-- NOT TRANSLATED YET
+  ##ID:002889##
+  mcset $l "Unsaved files" \
+           "未保存文件"
+  ##ID:002890##
+  mcset $l "Save selected" \
+           "保存选定"
+  ##ID:002891##
+  mcset $l "Discard" \
+           "丢弃"
+  ##ID:002892##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:002893##
+  mcset $l "Close files - MCU 8051 IDE" \
+           "关闭文件  - MCU 8051 IDE"
+  ##ID:002894##
+  mcset $l "File not found" \
+           "文件没有找到"
+  ##ID:002895##
+  mcset $l "File %s could not be located at the specified location." \
+           "File %s could not be located at the specified location." ;# <-- NOT TRANSLATED YET
+  ##ID:002896##
+  mcset $l "File changed" \
+           "文件已经修改"
+  ##ID:002897##
+  mcset $l "File \"%s\" was modified since last project save\nTime: %s" \
+           "File \"%s\" was modified since last project save\nTime: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:002898##
+  mcset $l "Raised error during md5 checking file %s. Maybe md5 extension is not correctly loaded." \
+           "Raised error during md5 checking file %s. Maybe md5 extension is not correctly loaded." ;# <-- NOT TRANSLATED YET
+  ##ID:002899##
+  mcset $l "Program not found" \
+           "找不到程序"
+  ##ID:002900##
+  mcset $l "Unable to execute \"%s\"" \
+           "无法执行 \"%s\""
+  ##ID:002901##
+  mcset $l "Enter command to execute:" \
+           "输入要执行的命令:"
+  ##ID:002902##
+  mcset $l "Open with other ..." \
+           "Open with other ..." ;# <-- NOT TRANSLATED YET
+  ##ID:002903##
+  mcset $l "Unable to find \"%s\" in list of opened files or project files" \
+           "Unable to find \"%s\" in list of opened files or project files" ;# <-- NOT TRANSLATED YET
+  ##ID:002904##
+  mcset $l "Simulator: unable to switch to file: '%s'" \
+           "模拟器: 无法切换到文件: '%s'"
+}
+# rightpanel.tcl
+# ==============================================================================
+namespace eval RightPanel {
+  ##ID:002905##
+  mcset $l "Remove" \
+           "删除"
+  ##ID:002906##
+  mcset $l "Add/Remove editor bookmark to/from current line" \
+           "Add/Remove editor bookmark to/from current line" ;# <-- NOT TRANSLATED YET
+  ##ID:002907##
+  mcset $l "Previous" \
+           "上一页"
+  ##ID:002908##
+  mcset $l "Go to previous bookmark" \
+           "转到上一页书签"
+  ##ID:002909##
+  mcset $l "Next" \
+           "下一页"
+  ##ID:002910##
+  mcset $l "Go to next bookmark" \
+           "转到下一页书签"
+  ##ID:002911##
+  mcset $l "Remove all" \
+           "删除所有"
+  ##ID:002912##
+  mcset $l "Remove all bookmarks from the editor" \
+           "从编辑器中删除所有书签"
+  ##ID:002913##
+  mcset $l "Go to previous breakpoint" \
+           "转到上一个前断点"
+  ##ID:002914##
+  mcset $l "Go to next breakpoint" \
+           "转到下一个前断点"
+  ##ID:002915##
+  mcset $l "Remove all breakpoints from the editor" \
+           "从编译中删除所有断点"
+  ##ID:002916##
+  mcset $l "List of bookmarks in the current editor" \
+           "列出当前编辑器的书签"
+  ##ID:002917##
+  mcset $l "List of breakpoints in the current editor" \
+           "列出当前编辑器的书签"
+  ##ID:002918##
+  mcset $l "Details for instruction on the current line" \
+           "Details for instruction on the current line" ;# <-- NOT TRANSLATED YET
+  ##ID:002919##
+  mcset $l "Register watches (for internal data memory, external data memory, expanded data memory and bits)" \
+           "Register watches (for internal data memory, external data memory, expanded data memory and bits)" ;# <-- NOT TRANSLATED YET
+  ##ID:002920##
+  mcset $l "List of active subprograms" \
+           "List of active subprograms" ;# <-- NOT TRANSLATED YET
+  ##ID:002921##
+  mcset $l "Symbol list" \
+           "Symbol list" ;# <-- NOT TRANSLATED YET
+  ##ID:002922##
+  mcset $l "Hardware manager" \
+           "硬件管理"
+  ##ID:002923##
+  mcset $l "Hide the panel" \
+           "隐藏面板"
+  ##ID:002924##
+  mcset $l "Bookmarks" \
+           "书签"
+  ##ID:002925##
+  mcset $l "List of bookmarks in editor (Ctrl+6)" \
+           "编辑器中的书签列表 (Ctrl+6)"
+  ##ID:002926##
+  mcset $l "Breakpoints" \
+           "断点"
+  ##ID:002927##
+  mcset $l "List of breakpoints in editor (Ctrl+7)" \
+           "编辑器中的断点列表 (Ctrl+7)"
+  ##ID:002928##
+  mcset $l "Symbols" \
+           "符号"
+  ##ID:002929##
+  mcset $l "Symbol List" \
+           "符号列表"
+  ##ID:002930##
+  mcset $l "Instruction" \
+           "指令"
+  ##ID:002931##
+  mcset $l "Instruction details (Ctrl+8)" \
+           "Instruction details (Ctrl+8)" ;# <-- NOT TRANSLATED YET
+  ##ID:002932##
+  mcset $l "Watches" \
+           "Watches" ;# <-- NOT TRANSLATED YET
+  ##ID:002933##
+  mcset $l "Register watches (Ctrl+9)" \
+           "Register watches (Ctrl+9)" ;# <-- NOT TRANSLATED YET
+  ##ID:002934##
+  mcset $l "Subprograms" \
+           "子程序"
+  ##ID:002935##
+  mcset $l "Active subprograms (Ctrl+0)" \
+           "Active subprograms (Ctrl+0)" ;# <-- NOT TRANSLATED YET
+  ##ID:002936##
+  mcset $l "Hardware" \
+           "硬件"
+  ##ID:002937##
+  mcset $l "Hide" \
+           "隐藏"
+  ##ID:002938##
+  mcset $l "Show the panel" \
+           "显示面板"
+  ##ID:002939##
+  mcset $l "Hardware tools" \
+           "硬件工具"
+  ##ID:002940##
+  mcset $l "Hardware tools manager" \
+           "硬件工具管理"
+  ##ID:002941##
+  mcset $l "MCU register watches (Ctrl+9)" \
+           "MCU register watches (Ctrl+9)" ;# <-- NOT TRANSLATED YET
+  ##ID:002942##
+  mcset $l "Register watches for internal data memory, external data memory and expanded data memory" \
+           "Register watches for internal data memory, external data memory and expanded data memory" ;# <-- NOT TRANSLATED YET
+  ##ID:002943##
+  mcset $l "Move to previous bookmark" \
+           "Move to previous bookmark" ;# <-- NOT TRANSLATED YET
+  ##ID:002944##
+  mcset $l "Go to to line of previous bookmark" \
+           "Go to to line of previous bookmark" ;# <-- NOT TRANSLATED YET
+  ##ID:002945##
+  mcset $l "Move to the next bookmark" \
+           "Move to the next bookmark" ;# <-- NOT TRANSLATED YET
+  ##ID:002946##
+  mcset $l "Go to to line of next bookmark" \
+           "Go to to line of next bookmark" ;# <-- NOT TRANSLATED YET
+  ##ID:002947##
+  mcset $l "Add/Remove bookmark on the current line" \
+           "Add/Remove bookmark on the current line" ;# <-- NOT TRANSLATED YET
+  ##ID:002948##
+  mcset $l "Add/Remove bookmark on the current line in editor" \
+           "Add/Remove bookmark on the current line in editor" ;# <-- NOT TRANSLATED YET
+  ##ID:002949##
+  mcset $l "Clear all bookmarks" \
+           "清除所有书签"
+  ##ID:002950##
+  mcset $l "Clear all bookmarks from editor" \
+           "清除所有编辑器的书签"
+  ##ID:002951##
+  mcset $l "Move to previous breakpoint" \
+           "Move to previous breakpoint" ;# <-- NOT TRANSLATED YET
+  ##ID:002952##
+  mcset $l "Go to to line of previous breakpoint" \
+           "Go to to line of previous breakpoint" ;# <-- NOT TRANSLATED YET
+  ##ID:002953##
+  mcset $l "Move to next breakpoint" \
+           "Move to next breakpoint" ;# <-- NOT TRANSLATED YET
+  ##ID:002954##
+  mcset $l "Go to to line of next breakpoint" \
+           "Go to to line of next breakpoint" ;# <-- NOT TRANSLATED YET
+  ##ID:002955##
+  mcset $l "Add/Remove breakpoint on the current line" \
+           "Add/Remove breakpoint on the current line" ;# <-- NOT TRANSLATED YET
+  ##ID:002956##
+  mcset $l "Add/Remove breakpoint on the current line in editor" \
+           "Add/Remove breakpoint on the current line in editor" ;# <-- NOT TRANSLATED YET
+  ##ID:002957##
+  mcset $l "Clear all breakpoints" \
+           "清除所有断点"
+  ##ID:002958##
+  mcset $l "Clear all breakpoints from editor" \
+           "清除所有编辑器的断点"
+  ##ID:002959##
+  mcset $l "Reevaluate" \
+           "Reevaluate" ;# <-- NOT TRANSLATED YET
+  ##ID:002960##
+  mcset $l "Reevaluate ..." \
+           "Reevaluate ..." ;# <-- NOT TRANSLATED YET
+  ##ID:002961##
+  mcset $l "Clear search string" \
+           "Clear search string" ;# <-- NOT TRANSLATED YET
+  ##ID:002962##
+  mcset $l "Search for a constant, variable, function or macro" \
+           "Search for a constant, variable, function or macro" ;# <-- NOT TRANSLATED YET
+  ##ID:002963##
+  mcset $l "    Search:" \
+           "    搜索:"
+}
+# X.tcl
+# ==============================================================================
+namespace eval X {
+  ##ID:002964##
+  mcset $l "Options" \
+           "选项"
+  ##ID:002965##
+  mcset $l "Case sensitive" \
+           "区分大小写"
+  ##ID:002966##
+  mcset $l "Backwards" \
+           "向后"
+  ##ID:002967##
+  mcset $l "From cursor" \
+           "从光标"
+  ##ID:002968##
+  mcset $l "Regular expr." \
+           "正规表达式."
+  ##ID:002969##
+  mcset $l "Prompt on replace" \
+           "替换时提示"
+  ##ID:002970##
+  mcset $l "Case sensitive search" \
+           "区分大小写的搜索"
+  ##ID:002971##
+  mcset $l "Search backwards from the specified location" \
+           "从指定位置反向搜索"
+  ##ID:002972##
+  mcset $l "Start search from cursor instead of beginning" \
+           "从头开始搜索"
+  ##ID:002973##
+  mcset $l "Use search string as regular expression" \
+           "Use search string as regular expression" ;# <-- NOT TRANSLATED YET
+  ##ID:002974##
+  mcset $l "Selected text" \
+           "所选文字"
+  ##ID:002975##
+  mcset $l "Search within selected text only" \
+           "仅在选定的文本中搜索"
+  ##ID:002976##
+  mcset $l "Save" \
+           "保存"
+  ##ID:002977##
+  mcset $l "Save this project" \
+           "保存这个项目"
+  ##ID:002978##
+  mcset $l "Edit project" \
+           "编辑这个项目"
+  ##ID:002979##
+  mcset $l "Edit additional project detail" \
+           "编辑附加项目细节"
+  ##ID:002980##
+  mcset $l "Save and close" \
+           "保存并关闭"
+  ##ID:002981##
+  mcset $l "Save and close this project" \
+           "保存并关闭这个项目"
+  ##ID:002982##
+  mcset $l "Close without saving" \
+           "不保存关闭"
+  ##ID:002983##
+  mcset $l "Close this project" \
+           "关闭这个项目"
+  ##ID:002984##
+  mcset $l "Move left" \
+           "Move left" ;# <-- NOT TRANSLATED YET
+  ##ID:002985##
+  mcset $l "Move this tab to right the beginning of the tab bar" \
+           "Move this tab to right the beginning of the tab bar" ;# <-- NOT TRANSLATED YET
+  ##ID:002986##
+  mcset $l "Move right" \
+           "Move right" ;# <-- NOT TRANSLATED YET
+  ##ID:002987##
+  mcset $l "Move this tab to right the end of the tab bar" \
+           "Move this tab to right the end of the tab bar" ;# <-- NOT TRANSLATED YET
+  ##ID:002988##
+  mcset $l "Move to beginning" \
+           "Move to beginning" ;# <-- NOT TRANSLATED YET
+  ##ID:002989##
+  mcset $l "Move to end" \
+           "Move to end" ;# <-- NOT TRANSLATED YET
+  ##ID:002990##
+  mcset $l "Export to XHTML - MCU 8051 IDE" \
+           "Export to XHTML - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:002991##
+  mcset $l "Export to LaTeX - MCU 8051 IDE" \
+           "Export to LaTeX - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:002992##
+  mcset $l "Export to XHTML file" \
+           "Export to XHTML file" ;# <-- NOT TRANSLATED YET
+  ##ID:002993##
+  mcset $l "Export to LaTeX file" \
+           "Export to LaTeX file" ;# <-- NOT TRANSLATED YET
+  ##ID:002994##
+  mcset $l "Hexadecimal number" \
+           "Hexadecimal number" ;# <-- NOT TRANSLATED YET
+  ##ID:002995##
+  mcset $l "Octal number" \
+           "Octal number" ;# <-- NOT TRANSLATED YET
+  ##ID:002996##
+  mcset $l "Decimal number" \
+           "Decimal number" ;# <-- NOT TRANSLATED YET
+  ##ID:002997##
+  mcset $l "Binary number" \
+           "Binary number" ;# <-- NOT TRANSLATED YET
+  ##ID:002998##
+  mcset $l "Constant" \
+           "Constant" ;# <-- NOT TRANSLATED YET
+  ##ID:002999##
+  mcset $l "Generic number" \
+           "Generic number" ;# <-- NOT TRANSLATED YET
+  ##ID:003000##
+  mcset $l "Comment" \
+           "注释"
+  ##ID:003001##
+  mcset $l "Control sequence" \
+           "Control sequence" ;# <-- NOT TRANSLATED YET
+  ##ID:003002##
+  mcset $l "Symbol" \
+           "Symbol" ;# <-- NOT TRANSLATED YET
+  ##ID:003003##
+  mcset $l "Directive" \
+           "Directive" ;# <-- NOT TRANSLATED YET
+  ##ID:003004##
+  mcset $l "Label" \
+           "Label" ;# <-- NOT TRANSLATED YET
+  ##ID:003005##
+  mcset $l "Instruction" \
+           "Instruction" ;# <-- NOT TRANSLATED YET
+  ##ID:003006##
+  mcset $l "SFR register" \
+           "SFR register" ;# <-- NOT TRANSLATED YET
+  ##ID:003007##
+  mcset $l "Indirect address" \
+           "Indirect address" ;# <-- NOT TRANSLATED YET
+  ##ID:003008##
+  mcset $l "Immediate hex" \
+           "Immediate hex" ;# <-- NOT TRANSLATED YET
+  ##ID:003009##
+  mcset $l "Immediate oct" \
+           "Immediate oct" ;# <-- NOT TRANSLATED YET
+  ##ID:003010##
+  mcset $l "Immediate dec" \
+           "Immediate dec" ;# <-- NOT TRANSLATED YET
+  ##ID:003011##
+  mcset $l "Immediate bin" \
+           "Immediate bin" ;# <-- NOT TRANSLATED YET
+  ##ID:003012##
+  mcset $l "Immediate const" \
+           "Immediate const" ;# <-- NOT TRANSLATED YET
+  ##ID:003013##
+  mcset $l "Immediate generic" \
+           "Immediate generic" ;# <-- NOT TRANSLATED YET
+  ##ID:003014##
+  mcset $l "Macro instruction" \
+           "Macro instruction" ;# <-- NOT TRANSLATED YET
+  ##ID:003015##
+  mcset $l "Uppercase" \
+           "大写"
+  ##ID:003016##
+  mcset $l "Lowercase" \
+           "小写"
+  ##ID:003017##
+  mcset $l "Keep case" \
+           "Keep case" ;# <-- NOT TRANSLATED YET
+  ##ID:003018##
+  mcset $l "Code listing files" \
+           "Code listing files" ;# <-- NOT TRANSLATED YET
+  ##ID:003019##
+  mcset $l "Assembly debug files (before v1.0.5)" \
+           "Assembly debug files (before v1.0.5)" ;# <-- NOT TRANSLATED YET
+  ##ID:003020##
+  mcset $l "IHEX object code files" \
+           "IHEX object code files" ;# <-- NOT TRANSLATED YET
+  ##ID:003021##
+  mcset $l "Binary object code files" \
+           "Binary object code files" ;# <-- NOT TRANSLATED YET
+  ##ID:003022##
+  mcset $l "HTML files" \
+           "HTML文件"
+  ##ID:003023##
+  mcset $l "TeX sources" \
+           "TeX sources" ;# <-- NOT TRANSLATED YET
+  ##ID:003024##
+  mcset $l "Hibernated programs" \
+           "Hibernated programs" ;# <-- NOT TRANSLATED YET
+  ##ID:003025##
+  mcset $l "ASL: NoICE-compatible command ﬁle" \
+           "ASL: NoICE-compatible command ﬁle"
+  ##ID:003026##
+  mcset $l "ASL: Atmel debug file used by the AVR tools" \
+           "ASL: Atmel debug file used by the AVR tools" ;# <-- NOT TRANSLATED YET
+  ##ID:003027##
+  mcset $l "SDCC: The memory map for the load module" \
+           "SDCC: The memory map for the load module" ;# <-- NOT TRANSLATED YET
+  ##ID:003028##
+  mcset $l "ASL object files" \
+           "ASL object files" ;# <-- NOT TRANSLATED YET
+  ##ID:003029##
+  mcset $l "Macro definition file" \
+           "Macro definition file" ;# <-- NOT TRANSLATED YET
+  ##ID:003030##
+  mcset $l "Macro output files" \
+           "Macro output files" ;# <-- NOT TRANSLATED YET
+  ##ID:003031##
+  mcset $l "SDCC IHEX8 object files" \
+           "SDCC IHEX8 object files" ;# <-- NOT TRANSLATED YET
+  ##ID:003032##
+  mcset $l "MCU 8051 IDE Assembler debug files" \
+           "MCU 8051 IDE Assembler debug files" ;# <-- NOT TRANSLATED YET
+  ##ID:003033##
+  mcset $l "SDCC Assembler debug files" \
+           "SDCC Assembler debug files" ;# <-- NOT TRANSLATED YET
+  ##ID:003034##
+  mcset $l "SDCC: Object file created by the assembler" \
+           "SDCC: Object file created by the assembler" ;# <-- NOT TRANSLATED YET
+  ##ID:003035##
+  mcset $l "SDCC debug files" \
+           "SDCC debug files" ;# <-- NOT TRANSLATED YET
+  ##ID:003036##
+  mcset $l "SDCC: A file with a summary of the memory usage" \
+           "SDCC: A file with a summary of the memory usage" ;# <-- NOT TRANSLATED YET
+  ##ID:003037##
+  mcset $l "SDCC: Linker script" \
+           "SDCC: Linker script" ;# <-- NOT TRANSLATED YET
+  ##ID:003038##
+  mcset $l "SDCC: Symbol listing for the source file" \
+           "SDCC: Symbol listing for the source file" ;# <-- NOT TRANSLATED YET
+  ##ID:003039##
+  mcset $l "OMF-51 object files" \
+           "OMF-51 object files" ;# <-- NOT TRANSLATED YET
+  ##ID:003040##
+  mcset $l "SDCC: Listing file updated with linkedit information" \
+           "SDCC: Listing file updated with linkedit information" ;# <-- NOT TRANSLATED YET
+  ##ID:003041##
+  mcset $l "MD5 hashes for C source files" \
+           "MD5 hashes for C source files" ;# <-- NOT TRANSLATED YET
+  ##ID:003042##
+  mcset $l "Doxygen backup file" \
+           "Doxygen backup file" ;# <-- NOT TRANSLATED YET
+  ##ID:003043##
+  mcset $l "Assembly language sources" \
+           "Assembly language sources" ;# <-- NOT TRANSLATED YET
+  ##ID:003044##
+  mcset $l "Register watches definition files" \
+           "Register watches definition files" ;# <-- NOT TRANSLATED YET
+  ##ID:003045##
+  mcset $l "MCU 8051 IDE hibernated program" \
+           "MCU 8051 IDE hibernated program" ;# <-- NOT TRANSLATED YET
+  ##ID:003046##
+  mcset $l "MCU 8051 IDE project" \
+           "MCU 8051 IDE roject" ;# <-- NOT TRANSLATED YET
+  ##ID:003047##
+  mcset $l "C sources" \
+           "C sources" ;# <-- NOT TRANSLATED YET
+  ##ID:003048##
+  mcset $l "C headers" \
+           "C headers" ;# <-- NOT TRANSLATED YET
+  ##ID:003049##
+  mcset $l "Virtual Hardware Component" \
+           "Virtual Hardware Component" ;# <-- NOT TRANSLATED YET
+  ##ID:003050##
+  mcset $l "Virtual Hardware" \
+           "Virtual Hardware" ;# <-- NOT TRANSLATED YET
+  ##ID:003051##
+  mcset $l "Text files" \
+           "文本文件"
+  ##ID:003052##
+  mcset $l "All backup files" \
+           "所有备份文件"
+  ##ID:003053##
+  mcset $l "echo \"This is a custom command\"\necho \"\tYou can configure it in Main menu->Configure->Edit user commands.\"\necho \"\tCustom commands are intended for running external programs from this IDE (e.g. program uploaders)\"" \
+           "echo \"This is a custom command\"\necho \"\tYou can configure it in Main menu->Configure->Edit user commands.\"\necho \"\tCustom commands are intended for running external programs from this IDE (e.g. program uploaders)\"" ;# <-- NOT TRANSLATED YET
+  ##ID:003054##
+  mcset $l "More: Main menu -> Configure -> Edit user commands" \
+           "More: Main menu -> Configure -> Edit user commands" ;# <-- NOT TRANSLATED YET
+  ##ID:003055##
+  mcset $l "Unable to compile" \
+           "Unable to compile" ;# <-- NOT TRANSLATED YET
+  ##ID:003056##
+  mcset $l "Simulator is engaged, shutdown the simulator first." \
+           "Simulator is engaged, shutdown the simulator first." ;# <-- NOT TRANSLATED YET
+  ##ID:003057##
+  mcset $l "Open file - MCU 8051 IDE" \
+           "打开文件 - MCU 8051 IDE"
+  ##ID:003058##
+  mcset $l "New file - MCU 8051 IDE" \
+           "新建文件 - MCU 8051 IDE"
+  ##ID:003059##
+  mcset $l "Assembly language" \
+           "Assembly language" ;# <-- NOT TRANSLATED YET
+  ##ID:003060##
+  mcset $l "C source" \
+           "C source" ;# <-- NOT TRANSLATED YET
+  ##ID:003061##
+  mcset $l "C header" \
+           "C header" ;# <-- NOT TRANSLATED YET
+  ##ID:003062##
+  mcset $l "Code listing" \
+           "Code listing" ;# <-- NOT TRANSLATED YET
+  ##ID:003063##
+  mcset $l "All files" \
+           "所有文件"
+  ##ID:003064##
+  mcset $l "File not found - MCU 8051 IDE" \
+           "文件没有找到 - MCU 8051 IDE"
+  ##ID:003065##
+  mcset $l "The selected file do not exist:\n%s" \
+           "The selected file do not exist:\n%s" ;# <-- NOT TRANSLATED YET
+  ##ID:003066##
+  mcset $l "Save file - MCU 8051 IDE" \
+           "保存文件 - MCU 8051 IDE"
+  ##ID:003067##
+  mcset $l "Text to find:" \
+           "要查找的文本:"
+  ##ID:003068##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:003069##
+  mcset $l "Cancel" \
+           "取消"
+  ##ID:003070##
+  mcset $l "Find - MCU 8051 IDE" \
+           "查找 - MCU 8051 IDE"
+  ##ID:003071##
+  mcset $l "Unable to execute" \
+           "无法执行"
+  ##ID:003072##
+  mcset $l "Search result: %s matches found" \
+           "Search result: %s matches found" ;# <-- NOT TRANSLATED YET
+  ##ID:003073##
+  mcset $l "Find - %s" \
+           "查找- %s"
+  ##ID:003074##
+  mcset $l "Search string '%s' not found !" \
+           "Search string '%s' not found !" ;# <-- NOT TRANSLATED YET
+  ##ID:003075##
+  mcset $l "Beginning of document reached\n\nContinue from end ?" \
+           "Beginning of document reached\n\nContinue from end ?" ;# <-- NOT TRANSLATED YET
+  ##ID:003076##
+  mcset $l "End of document reached\n\nContinue from beginning ?" \
+           "End of document reached\n\nContinue from beginning ?" ;# <-- NOT TRANSLATED YET
+  ##ID:003077##
+  mcset $l "Editor: Nothing to search ..." \
+           "Editor: Nothing to search ..." ;# <-- NOT TRANSLATED YET
+  ##ID:003078##
+  mcset $l "Text to find: " \
+           "Text to find: " ;# <-- NOT TRANSLATED YET
+  ##ID:003079##
+  mcset $l "Replace with:" \
+           "Replace with:" ;# <-- NOT TRANSLATED YET
+  ##ID:003080##
+  mcset $l "Replace - MCU 8051 IDE" \
+           "Replace - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:003081##
+  mcset $l "Replace - %s" \
+           "Replace - %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003082##
+  mcset $l "Found an occurrence of your search term.\nWhat do you want to do ?" \
+           "Found an occurrence of your search term.\nWhat do you want to do ?" ;# <-- NOT TRANSLATED YET
+  ##ID:003083##
+  mcset $l "Replace" \
+           "替换"
+  ##ID:003084##
+  mcset $l "Replace & close" \
+           "替换及关闭"
+  ##ID:003085##
+  mcset $l "Replace all" \
+           "全部替换"
+  ##ID:003086##
+  mcset $l "Find next" \
+           "查找下一个"
+  ##ID:003087##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:003088##
+  mcset $l "Replace confirmation - %s" \
+           "Replace confirmation - %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003089##
+  mcset $l "Go to line" \
+           "到达指定的行目"
+  ##ID:003090##
+  mcset $l "Go to line - MCU 8051 IDE" \
+           "到达指定的行目 - MCU 8051 IDE"
+  ##ID:003091##
+  mcset $l "Choose directory - MCU 8051 IDE" \
+           "选择目录 - MCU 8051 IDE"
+  ##ID:003092##
+  mcset $l "Create a new project.\n All entries are required. Other options --> edit project." \
+           "Create a new project.\n All entries are required. Other options --> edit project." ;# <-- NOT TRANSLATED YET
+  ##ID:003093##
+  mcset $l "General" \
+           "General" ;# <-- NOT TRANSLATED YET
+  ##ID:003094##
+  mcset $l "Project name" \
+           "项目名称"
+  ##ID:003095##
+  mcset $l "Project directory" \
+           "项目目录"
+  ##ID:003096##
+  mcset $l "Choose destination location" \
+           "选择目标位置"
+  ##ID:003097##
+  mcset $l "Processor" \
+           "Processor" ;# <-- NOT TRANSLATED YET
+  ##ID:003098##
+  mcset $l "External RAM (XDATA)" \
+           "External RAM (XDATA)" ;# <-- NOT TRANSLATED YET
+  ##ID:003099##
+  mcset $l "External ROM/FLASH (XCODE)" \
+           "External ROM/FLASH (XCODE)" ;# <-- NOT TRANSLATED YET
+  ##ID:003100##
+  mcset $l "Type:" \
+           "类型:"
+  ##ID:003101##
+  mcset $l "Selected uC" \
+           "Selected uC" ;# <-- NOT TRANSLATED YET
+  ##ID:003102##
+  mcset $l "Select MCU" \
+           "Select MCU" ;# <-- NOT TRANSLATED YET
+  ##ID:003103##
+  mcset $l "Choose processor from database" \
+           "Choose processor from database" ;# <-- NOT TRANSLATED YET
+  ##ID:003104##
+  mcset $l "Enable" \
+           "Enable" ;# <-- NOT TRANSLATED YET
+  ##ID:003105##
+  mcset $l "Connect external data memory" \
+           "Connect external data memory" ;# <-- NOT TRANSLATED YET
+  ##ID:003106##
+  mcset $l "Amount of external data memory" \
+           "Amount of external data memory" ;# <-- NOT TRANSLATED YET
+  ##ID:003107##
+  mcset $l "Connect external program memory" \
+           "Connect external program memory" ;# <-- NOT TRANSLATED YET
+  ##ID:003108##
+  mcset $l "Amount of total program memory minus internal program memory" \
+           "Amount of total program memory minus internal program memory" ;# <-- NOT TRANSLATED YET
+  ##ID:003109##
+  mcset $l "New project - MCU 8051 IDE" \
+           "新建项目 - MCU 8051 IDE"
+  ##ID:003110##
+  mcset $l "Invalid request" \
+           "无效的请求"
+  ##ID:003111##
+  mcset $l "Both entries in section general must be filled." \
+           "Both entries in section general must be filled." ;# <-- NOT TRANSLATED YET
+  ##ID:003112##
+  mcset $l "Create directory - MCU 8051 IDE" \
+           "创建目录 - MCU 8051 IDE"
+  ##ID:003113##
+  mcset $l "The specified directory does not exist do you want to create it ?" \
+           "The specified directory does not exist do you want to create it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:003114##
+  mcset $l "File access error" \
+           "文件访问错误"
+  ##ID:003115##
+  mcset $l "Creation of directory '%s' FAILED !\nPlease check your permissions." \
+           "Creation of directory '%s' FAILED !\nPlease check your permissions." ;# <-- NOT TRANSLATED YET
+  ##ID:003116##
+  mcset $l "File already exists - MCU 8051 IDE" \
+           "文件已存在 - MCU 8051 IDE"
+  ##ID:003117##
+  mcset $l "Some project with the same name already exists in the specified directory. \nDo you want to overwrite it ?" \
+           "Some project with the same name already exists in the specified directory. \nDo you want to overwrite it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:003118##
+  mcset $l "Unable to write to file:\n\"%s\"" \
+           "无法写入文件:\n\"%s\""
+  ##ID:003119##
+  mcset $l "Open project - MCU 8051 IDE" \
+           "打开项目 - MCU 8051 IDE"
+  ##ID:003120##
+  mcset $l "Error - MCU 8051 IDE" \
+           "错误 - MCU 8051 IDE"
+  ##ID:003121##
+  mcset $l "Unable to load file: %s" \
+           "无法载入文件: %s"
+  ##ID:003122##
+  mcset $l "Project saved to %s" \
+           "项目保存到 %s"
+  ##ID:003123##
+  mcset $l "IO Error" \
+           "IO Error" ;# <-- NOT TRANSLATED YET
+  ##ID:003124##
+  mcset $l "General information" \
+           "General information" ;# <-- NOT TRANSLATED YET
+  ##ID:003125##
+  mcset $l "Version" \
+           "Version" ;# <-- NOT TRANSLATED YET
+  ##ID:003126##
+  mcset $l "Date" \
+           "Date" ;# <-- NOT TRANSLATED YET
+  ##ID:003127##
+  mcset $l "Copyright" \
+           "Copyright" ;# <-- NOT TRANSLATED YET
+  ##ID:003128##
+  mcset $l "License" \
+           "License" ;# <-- NOT TRANSLATED YET
+  ##ID:003129##
+  mcset $l "Authors:" \
+           "Authors:" ;# <-- NOT TRANSLATED YET
+  ##ID:003130##
+  mcset $l "List of project authors (one per line):" \
+           "List of project authors (one per line):" ;# <-- NOT TRANSLATED YET
+  ##ID:003131##
+  mcset $l "XDATA" \
+           "XDATA" ;# <-- NOT TRANSLATED YET
+  ##ID:003132##
+  mcset $l "XCODE" \
+           "XCODE" ;# <-- NOT TRANSLATED YET
+  ##ID:003133##
+  mcset $l "Clock \[kHz\]:" \
+           "Clock \[kHz\]:" ;# <-- NOT TRANSLATED YET
+  ##ID:003134##
+  mcset $l "Main file:" \
+           "Main file:" ;# <-- NOT TRANSLATED YET
+  ##ID:003135##
+  mcset $l "Project main file (e.g. main.c)\n(empty string means always compile current file)" \
+           "Project main file (e.g. main.c)\n(empty string means always compile current file)" ;# <-- NOT TRANSLATED YET
+  ##ID:003136##
+  mcset $l "Size of external data memory" \
+           "Size of external data memory" ;# <-- NOT TRANSLATED YET
+  ##ID:003137##
+  mcset $l "Project description" \
+           "项目说明"
+  ##ID:003138##
+  mcset $l "Edit project - MCU 8051 IDE" \
+           "编辑项目 - MCU 8051 IDE"
+  ##ID:003139##
+  mcset $l "Select main file - %s - MCU 8051 IDE" \
+           "Select main file - %s - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:003140##
+  mcset $l "New values saved." \
+           "New values saved." ;# <-- NOT TRANSLATED YET
+  ##ID:003141##
+  mcset $l "Requesting confirmation %s" \
+           "Requesting confirmation %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003142##
+  mcset $l "Are you sure want to close the project without saving changes ?" \
+           "Are you sure want to close the project without saving changes ?" ;# <-- NOT TRANSLATED YET
+  ##ID:003143##
+  mcset $l "Unable to run assembler" \
+           "Unable to run assembler" ;# <-- NOT TRANSLATED YET
+  ##ID:003144##
+  mcset $l "Something is already running in background." \
+           "Something is already running in background." ;# <-- NOT TRANSLATED YET
+  ##ID:003145##
+  mcset $l "Compiling ..." \
+           "正在编译 ..."
+  ##ID:003146##
+  mcset $l "Compiler not found" \
+           "没有找到编译器"
+  ##ID:003147##
+  mcset $l "Unable to find sdcc, please install sdcc and restart MCU 8051 IDE" \
+           "没有找到SDCC, 请安装SDCC和重新安装 MCU 8051 IDE"
+  ##ID:003148##
+  mcset $l "MCU 8051 IDE Native assembler" \
+           "MCU 8051 IDE Native assembler" ;# <-- NOT TRANSLATED YET
+  ##ID:003149##
+  mcset $l "%s assembler not found" \
+           "%s assembler not found" ;# <-- NOT TRANSLATED YET
+  ##ID:003150##
+  mcset $l "Unable to run program \"%s\". Please check if you have installed this assembler or choose a different one in compiler configuration dialog." \
+           "Unable to run program \"%s\". Please check if you have installed this assembler or choose a different one in compiler configuration dialog." ;# <-- NOT TRANSLATED YET
+  ##ID:003151##
+  mcset $l "Compiler crash - MCU 8051 IDE" \
+           "编译器崩溃 - MCU 8051 IDE"
+  ##ID:003152##
+  mcset $l "Compiler crashed, we are terribly sorry about that.\n\nPlease report this bug via project web or mail to author and please don't forget to include source code on which this error occurred." \
+           "Compiler crashed, we are terribly sorry about that.\n\nPlease report this bug via project web or mail to author and please don't forget to include source code on which this error occurred." ;# <-- NOT TRANSLATED YET
+  ##ID:003153##
+  mcset $l "Compilation successful" \
+           "编译成功"
+  ##ID:003154##
+  mcset $l "Compilation failed" \
+           "编译失败"
+  ##ID:003155##
+  mcset $l "Compilation failed, see messages for details." \
+           "编译失败,详见消息."
+  ##ID:003156##
+  mcset $l "Compilation: " \
+           "编辑:"
+  ##ID:003157##
+  mcset $l "Abort" \
+           "中止"
+  ##ID:003158##
+  mcset $l "This editor seems to be empty" \
+           "这个编辑器似乎是空的"
+  ##ID:003159##
+  mcset $l "Export dialog" \
+           "导出日志"
+  ##ID:003160##
+  mcset $l "Finishing syntax highlight ..." \
+           "正在完成语法高亮 ..."
+  ##ID:003161##
+  mcset $l "Export as %s - MCU 8051 IDE" \
+           "导出为 %s - MCU 8051 IDE"
+  ##ID:003162##
+  mcset $l "Permission denied" \
+           "没有权限"
+  ##ID:003163##
+  mcset $l "Unable to access file: %s" \
+           "无法访问文件: %s"
+  ##ID:003164##
+  mcset $l "Overwrite file" \
+           "覆盖文件"
+  ##ID:003165##
+  mcset $l "A file name '%s' already exists. Are you sure you want to overwrite it ?" \
+           "A file name '%s' already exists. Are you sure you want to overwrite it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:003166##
+  mcset $l "Unable to write to file: \"%s\"" \
+           "无法写入文件: \"%s\""
+  ##ID:003167##
+  mcset $l "\[lindex \$args 1\] - MCU 8051 IDE" \
+           "\[lindex \$args 1\] - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:003168##
+  mcset $l "Converting ..." \
+           "Converting ..." ;# <-- NOT TRANSLATED YET
+  ##ID:003169##
+  mcset $l "Exported data saved to %s" \
+           "Exported data saved to %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003170##
+  mcset $l "\nExiting program on user request ..." \
+           "\nExiting program on user request ..." ;# <-- NOT TRANSLATED YET
+  ##ID:003171##
+  mcset $l "An error occurred when saving the last session" \
+           "An error occurred when saving the last session" ;# <-- NOT TRANSLATED YET
+  ##ID:003172##
+  mcset $l "Saving project: %s" \
+           "Saving project: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003173##
+  mcset $l "Program terminated" \
+           "计划已终止"
+  ##ID:003174##
+  mcset $l "Unable to save running configuration" \
+           "无法保存正在运行的配置"
+  ##ID:003175##
+  mcset $l "Access denied" \
+           "拒绝访问"
+  ##ID:003176##
+  mcset $l "The following documents have been modified,\ndo you want to save them before closing ?" \
+           "The following documents have been modified,\ndo you want to save them before closing ?" ;# <-- NOT TRANSLATED YET
+  ##ID:003177##
+  mcset $l "Unsaved files" \
+           "未保存的文件"
+  ##ID:003178##
+  mcset $l "Project: \"%s\"" \
+           "项目: \"%s\""
+  ##ID:003179##
+  mcset $l "Save selected" \
+           "保存所选"
+  ##ID:003180##
+  mcset $l "Save all" \
+           "保存全部"
+  ##ID:003181##
+  mcset $l "Discard" \
+           "丢弃"
+  ##ID:003182##
+  mcset $l "Attention" \
+           "Attention" ;# <-- NOT TRANSLATED YET
+  ##ID:003183##
+  mcset $l "You have to chose one action" \
+           "You have to chose one action" ;# <-- NOT TRANSLATED YET
+  ##ID:003184##
+  mcset $l "Exit program - MCU 8051 IDE" \
+           "退出程序 - MCU 8051 IDE"
+  ##ID:003185##
+  mcset $l "Simulator is not started" \
+           "模拟器没有启动"
+  ##ID:003186##
+  mcset $l "Simulator is busy" \
+           "模拟器正在运行"
+  ##ID:003187##
+  mcset $l "Recompile ?" \
+           "重新编译>"
+  ##ID:003188##
+  mcset $l "MD5 hashes verification failed. That probably means than some source files have been modified since last compilation.\n\nDo you want to recompile the code ?" \
+           "MD5 hashes verification failed. That probably means than some source files have been modified since last compilation.\n\nDo you want to recompile the code ?" ;
+  ##ID:003189##
+  mcset $l "File not found" \
+           "无法找到文件"
+  ##ID:003190##
+  mcset $l "Simulator data file not found.\nDo you want create it ?" \
+           "Simulator data file not found.\nDo you want create it ?" ;# <-- NOT TRANSLATED YET
+  ##ID:003191##
+  mcset $l "Unable to start simulator" \
+           "Unable to start simulator" ;# <-- NOT TRANSLATED YET
+  ##ID:003192##
+  mcset $l "Unable to read simulator file. Possibly you have disabled generation of simulator file in compiler configuration dialog." \
+           "Unable to read simulator file. Possibly you have disabled generation of simulator file in compiler configuration dialog." ;# <-- NOT TRANSLATED YET
+  ##ID:003193##
+  mcset $l "Unable to find hex file" \
+           "Unable to find hex file" ;# <-- NOT TRANSLATED YET
+  ##ID:003194##
+  mcset $l "Unable to open:\n'%s'" \
+           "无法打开文件:\n'%s'"
+  ##ID:003195##
+  mcset $l "Unable to gain unlimited access to the given file" \
+           "Unable to gain unlimited access to the given file" ;# <-- NOT TRANSLATED YET
+  ##ID:003196##
+  mcset $l "Parsing file ..." \
+           "分析文件 ..."
+  ##ID:003197##
+  mcset $l "Unable to open file:\n\"%s\"\nfor writing" \
+           "Unable to open file:\n\"%s\"\nfor writing" ;# <-- NOT TRANSLATED YET
+  ##ID:003198##
+  mcset $l "Error(s) occurred while parsing IHEX file - %s" \
+           "Error(s) occurred while parsing IHEX file - %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003199##
+  mcset $l "grab release %s; destroy %s" \
+           "grab release %s; destroy %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003200##
+  mcset $l "Input file" \
+           "Input file" ;# <-- NOT TRANSLATED YET
+  ##ID:003201##
+  mcset $l "Output file" \
+           "Output file" ;# <-- NOT TRANSLATED YET
+  ##ID:003202##
+  mcset $l "File where to save result" \
+           "File where to save result" ;# <-- NOT TRANSLATED YET
+  ##ID:003203##
+  mcset $l "Invoke dialog to select output file" \
+           "调用界面,选择输出文件"
+  ##ID:003204##
+  mcset $l "Convert Binary file to Intel HEX 8 - MCU 8051 IDE" \
+           "Convert Binary file to Intel HEX 8 - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:003205##
+  mcset $l "Convert Intel HEX 8 to binary file - MCU 8051 IDE" \
+           "Convert Intel HEX 8 to binary file - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:003206##
+  mcset $l "Convert sim file to Intel HEX 8 - MCU 8051 IDE" \
+           "Convert sim file to Intel HEX 8 - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:003207##
+  mcset $l "Both entries must be filled" \
+           "这两个条目必须填写"
+  ##ID:003208##
+  mcset $l "Unable to open file '%s'" \
+           "无法打开文件 '%s'"
+  ##ID:003209##
+  mcset $l "Loading file ..." \
+           "正在打开文件 ..."
+  ##ID:003210##
+  mcset $l "Saving file ..." \
+           "正在保存文件 ..."
+  ##ID:003211##
+  mcset $l "Corrupted file - MCU 8051 IDE" \
+           "Corrupted file - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:003212##
+  mcset $l "IHEX 8" \
+           "IHEX 8" ;# <-- NOT TRANSLATED YET
+  ##ID:003213##
+  mcset $l "The selected file %s does not exist." \
+           "The selected file %s does not exist." ;# <-- NOT TRANSLATED YET
+  ##ID:003214##
+  mcset $l "Disassembly failed" \
+           "Decompilation failed" ;# <-- NOT TRANSLATED YET
+  ##ID:003215##
+  mcset $l "Decompilation failed -- see messages for details" \
+           "Decompilation failed -- see messages for details" ;# <-- NOT TRANSLATED YET
+  ##ID:003216##
+  mcset $l "\nLoading IHEX file ..." \
+           "\nLoading IHEX file ..." ;# <-- NOT TRANSLATED YET
+  ##ID:003217##
+  mcset $l "Unable to open file" \
+           "无法打开文件"
+  ##ID:003218##
+  mcset $l "Unable to read file '%s'" \
+           "无法读取文件 '%s'"
+  ##ID:003219##
+  mcset $l "Successful" \
+           "成功"
+  ##ID:003220##
+  mcset $l "FAILED" \
+           "失败"
+  ##ID:003221##
+  mcset $l "About dialog" \
+           "关于界面"
+  ##ID:003222##
+  mcset $l "About" \
+           "关于"
+  ##ID:003223##
+  mcset $l "An open source IDE for MCS-51 based microconrollers for POSIX Systems, this software is licenced under the GNU GPL v2 licence. You can find more at the project web page http://mcu8051ide.sourceforge.net\n" \
+           "An open source IDE for MCS-51 based microconrollers for POSIX Systems, this software is licenced under the GNU GPL v2 licence. You can find more at the project web page http://mcu8051ide.sourceforge.net\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003224##
+  mcset $l "You are currently using version for Microsoft® Windows®.\n" \
+           "You are currently using version for Microsoft® Windows®.\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003226##
+  mcset $l "Web: http://mcu8051ide.sourceforge.net\n" \
+           "Web: http://mcu8051ide.sourceforge.net\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003227##
+  mcset $l "Thanks to SDCC development team for their great work !\n" \
+           "Thanks to SDCC development team for their great work !\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003228##
+  mcset $l "Thanks to %s for their help during development\n" \
+           "Thanks to %s for their help during development\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003229##
+  mcset $l "Thanks to" \
+           "Thanks to" ;# <-- NOT TRANSLATED YET
+  ##ID:003230##
+  mcset $l "SDCC developers:\n" \
+           "SDCC developers:\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003231##
+  mcset $l "\n(Please post suggestions to %s)\n" \
+           "\n(Please post suggestions to %s)\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003232##
+  mcset $l "FILE \"license.txt\" WAS NOT FOUND\n\n" \
+           "FILE \"license.txt\" WAS NOT FOUND\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003233##
+  mcset $l "Text of the license agreement is not available,\n" \
+           "Text of the license agreement is not available,\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003234##
+  mcset $l "please check your installation." \
+           "please check your installation." ;# <-- NOT TRANSLATED YET
+  ##ID:003235##
+  mcset $l "About - MCU 8051 IDE" \
+           "关于 - MCU 8051 IDE"
+  ##ID:003236##
+  mcset $l "Unable to indent C source without program indent, please install indent and restart MCU 8051 IDE." \
+           "Unable to indent C source without program indent, please install indent and restart MCU 8051 IDE." ;# <-- NOT TRANSLATED YET
+  ##ID:003237##
+  mcset $l "Unable to indent C source code.\n\n%s" \
+           "无法缩进C源代码.\n\n%s"
+  ##ID:003238##
+  mcset $l "Reformatting code" \
+           "格式化代码"
+  ##ID:003239##
+  mcset $l "Options dialog" \
+           "选项界面"
+  ##ID:003240##
+  mcset $l "Backup files" \
+           "备份文件"
+  ##ID:003241##
+  mcset $l "Other files" \
+           "其他文件"
+  ##ID:003242##
+  mcset $l "Remove files" \
+           "删除文件"
+  ##ID:003243##
+  mcset $l "Cleanup project folder - MCU 8051 IDE" \
+           "清理项目文件夹 - MCU 8051 IDE"
+  ##ID:003244##
+  mcset $l "Cleanup project folder" \
+           "清理项目文件夹"
+  ##ID:003245##
+  mcset $l "Are you sure ?" \
+           "您确定吗?"
+  ##ID:003246##
+  mcset $l "These files will be removed" \
+           "These files will be removed" ;# <-- NOT TRANSLATED YET
+  ##ID:003247##
+  mcset $l "Proceed" \
+           "Proceed" ;# <-- NOT TRANSLATED YET
+  ##ID:003248##
+  mcset $l "%d file(s) removed." \
+           "%d file(s) removed." ;# <-- NOT TRANSLATED YET
+  ##ID:003249##
+  mcset $l "Confirm termination - MCU 8051 IDE" \
+           "终止确认 - MCU 8051 IDE"
+  ##ID:003250##
+  mcset $l "This process is already in progress. Do you want to terminate it ?" \
+           "这个过程已经在进行中,您想终止它吗?"
+  ##ID:003251##
+  mcset $l "Confirmation required" \
+           "需要确认"
+  ##ID:003252##
+  mcset $l "Do you really want to execute\ncustom command %s ?" \
+           "您真的要执行\n自定义命令 %s ?"
+  ##ID:003253##
+  mcset $l "Warning - Custom command" \
+           "警告 - 自定义命令"
+  ##ID:003254##
+  mcset $l "Some variables in user command could not be resolved." \
+           "Some variables in user command could not be resolved." ;# <-- NOT TRANSLATED YET
+  ##ID:003255##
+  mcset $l "Custom command finished" \
+           "自定义命令完成"
+  ##ID:003256##
+  mcset $l "Custom command failed" \
+           "自定义命令失败"
+  ##ID:003257##
+  mcset $l "Custom command %s - MCU 8051 IDE" \
+           "自定义命令 %s - MCU 8051 IDE"
+  ##ID:004500##
+  mcset $l "Unknow error" \
+           "Unknow error" ;# <-- NOT TRANSLATED YET
+  ##ID:004501##
+  mcset $l "Unable to execute your script in the urxvt terminal emulator." \
+           "Unable to execute your script in the urxvt terminal emulator." ;# <-- NOT TRANSLATED YET
+  ##ID:004502##
+  mcset $l "Kill the script?" \
+           "Kill the script?" ;# <-- NOT TRANSLATED YET
+  ##ID:004503##
+  mcset $l "Closing this window terminates all child processes of the terminal.\n\nDo you want to proceed?" \
+           "Closing this window terminates all child processes of the terminal.\n\nDo you want to proceed?" ;# <-- NOT TRANSLATED YET
+  ##ID:003258##
+  mcset $l "Welcome dialog" \
+           "欢迎界面"
+  ##ID:003259##
+  mcset $l "Welcome to MCU 8051 IDE !" \
+           "欢迎使用 8051 IDE !"
+  ##ID:003260##
+  mcset $l "Click here to open demonstration project." \
+           "Click here to open demonstration project." ;# <-- NOT TRANSLATED YET
+  ##ID:003261##
+  mcset $l "MCU 8051 IDE is a fully featured Integrated Development Environment" \
+           "MCU 8051 IDE is fully featured Integrated Development Environment" ;# <-- NOT TRANSLATED YET
+  ##ID:003262##
+  mcset $l " for MCS-51 based microcontrollers.  It's written for POSIX Operating Systems (GNU/Linux, etc.) " \
+           " for MCS-51 based microcontrollers.  It's written for POSIX Operating Systems (GNU/Linux, etc.) " ;# <-- NOT TRANSLATED YET
+  ##ID:003263##
+  mcset $l "and since version 1.3.5 it is also available for Microsoft® Windows® operating system." \
+           "and since version 1.3.5 it is also available for Microsoft® Windows® operating system." ;# <-- NOT TRANSLATED YET
+  ##ID:003264##
+  mcset $l "Main features:" \
+           "Main features:" ;# <-- NOT TRANSLATED YET
+  ##ID:003265##
+  mcset $l "Editor with syntax highlight, validation and popup-based completion\n\t" \
+           "Editor with syntax highlight, validation and popup-based completion\n\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003266##
+  mcset $l "MCS-51 Assembler and Disassembler\n\t" \
+           "MCS-51 Assembler and Disassembler\n\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003267##
+  mcset $l "MCS-51 Simulator (not all MCUs are fully supported !)\n\t" \
+           "MCS-51 Simulator (not all MCUs are fully supported !)\n\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003268##
+  mcset $l "Support for C language (using C compiler SDCC)\n\t" \
+           "Support for C language (using C compiler SDCC)\n\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003269##
+  mcset $l "Partial support for some HW tools\n\t" \
+           "Partial support for some HW tools\n\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003270##
+  mcset $l "Project management\n\t" \
+           "Project management\n\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003271##
+  mcset $l "Custom editable commands (using shell scripts)\n\t" \
+           "Custom editable commands (using shell scripts)\n\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003272##
+  mcset $l "Dynamic help for instruction at the current line\n\t" \
+           "Dynamic help for instruction at the current line\n\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003273##
+  mcset $l "Hexadecimal editor for eXternal RAM, Expanded RAM, Code memory, etc.\n\t" \
+           "Hexadecimal editor for eXternal RAM, Expanded RAM, Code memory, etc.\n\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003274##
+  mcset $l "Scientific calculator\n\t" \
+           "Scientific calculator\n\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003275##
+  mcset $l "Simple hardware simulation (LED's, etc.)\n\t" \
+           "Simple hardware simulation (LED's, etc.)\n\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003276##
+  mcset $l "Graph showing voltage levels on ports\n\n" \
+           "Graph showing voltage levels on ports\n\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003277##
+  mcset $l "Where to start:" \
+           "Where to start:" ;# <-- NOT TRANSLATED YET
+  ##ID:003278##
+  mcset $l "\n\t1. Create a new project" \
+           "\n\t1. Create a new project" ;# <-- NOT TRANSLATED YET
+  ##ID:003279##
+  mcset $l "Enter project name\n\t\t" \
+           "Enter project name\n\t\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003280##
+  mcset $l "Choose project directory\n\t\t" \
+           "Choose project directory\n\t\t" ;# <-- NOT TRANSLATED YET
+  ##ID:003281##
+  mcset $l "Choose microcontroller (e.g. AT89S52)\n" \
+           "Choose microcontroller (e.g. AT89S52)\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003282##
+  mcset $l "\t2. Write your code in the opened editor and click on " \
+           "\t2. Write your code in the opened editor and click on " ;# <-- NOT TRANSLATED YET
+  ##ID:003283##
+  mcset $l " to start the simulator\n" \
+           " to start the simulator\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003284##
+  mcset $l "\t3. Step through your program by clicking on " \
+           "\t3. Step through your program by clicking on " ;# <-- NOT TRANSLATED YET
+  ##ID:003285##
+  mcset $l "Web site:" \
+           "Web site:" ;# <-- NOT TRANSLATED YET
+  ##ID:003286##
+  mcset $l "Author:" \
+           "Author:" ;# <-- NOT TRANSLATED YET
+  ##ID:003287##
+  mcset $l "Thank you for using/trying MCU 8051 IDE." \
+           "Thank you for using/trying MCU 8051 IDE." ;# <-- NOT TRANSLATED YET
+  ##ID:003288##
+  mcset $l "Welcome to MCU 8051 IDE" \
+           "欢迎使用 MCU 8051 IDE"
+  ##ID:003289##
+  mcset $l "Change letter case" \
+           "变更字母大小写"
+  ##ID:003290##
+  mcset $l "U" \
+           "U" ;# <-- NOT TRANSLATED YET
+  ##ID:003291##
+  mcset $l "L" \
+           "L" ;# <-- NOT TRANSLATED YET
+  ##ID:003292##
+  mcset $l "All " \
+           "All " ;# <-- NOT TRANSLATED YET
+  ##ID:003293##
+  mcset $l "Change letter case - MCU 8051 IDE" \
+           "变更字母大小写 - MCU 8051 IDE"
+  ##ID:003294##
+  mcset $l "Formatting ..." \
+           "Formatting ..." ;# <-- NOT TRANSLATED YET
+  ##ID:003295##
+  mcset $l "File name:" \
+           "File name:" ;# <-- NOT TRANSLATED YET
+  ##ID:003296##
+  mcset $l "Path:" \
+           "Path:" ;# <-- NOT TRANSLATED YET
+  ##ID:003297##
+  mcset $l "MCU:" \
+           "MCU:" ;# <-- NOT TRANSLATED YET
+  ##ID:003298##
+  mcset $l "XDATA:" \
+           "XDATA:" ;# <-- NOT TRANSLATED YET
+  ##ID:003299##
+  mcset $l "XCODE:" \
+           "XCODE:" ;# <-- NOT TRANSLATED YET
+  ##ID:003300##
+  mcset $l "Clock:" \
+           "Clock:" ;# <-- NOT TRANSLATED YET
+  ##ID:003301##
+  mcset $l "Default clock used by simulator engine" \
+           "Default clock used by simulator engine" ;# <-- NOT TRANSLATED YET
+  ##ID:003302##
+  mcset $l "Version:" \
+           "Version:" ;# <-- NOT TRANSLATED YET
+  ##ID:003303##
+  mcset $l "Project version (any string)" \
+           "Project version (any string)" ;# <-- NOT TRANSLATED YET
+  ##ID:003304##
+  mcset $l "Date:" \
+           "Date:" ;# <-- NOT TRANSLATED YET
+  ##ID:003305##
+  mcset $l "Project last update" \
+           "Project last update" ;# <-- NOT TRANSLATED YET
+  ##ID:003306##
+  mcset $l "Fill date entry with the current date" \
+           "Fill date entry with the current date" ;# <-- NOT TRANSLATED YET
+  ##ID:003307##
+  mcset $l "License:" \
+           "License:" ;# <-- NOT TRANSLATED YET
+  ##ID:003308##
+  mcset $l "Name of the license" \
+           "Name of the license" ;# <-- NOT TRANSLATED YET
+  ##ID:003309##
+  mcset $l "Copyright:" \
+           "Copyright:" ;# <-- NOT TRANSLATED YET
+  ##ID:003310##
+  mcset $l "Copyright information" \
+           "Copyright information" ;# <-- NOT TRANSLATED YET
+  ##ID:003311##
+  mcset $l "< Undefined >" \
+           "< Undefined >" ;# <-- NOT TRANSLATED YET
+  ##ID:003312##
+  mcset $l "%s - EEPROM write buffer" \
+           "%s - EEPROM write buffer" ;# <-- NOT TRANSLATED YET
+  ##ID:003313##
+  mcset $l "OFFSET = " \
+           "OFFSET = " ;# <-- NOT TRANSLATED YET
+  ##ID:003314##
+  mcset $l "Cursor: " \
+           "光标"
+  ##ID:003315##
+  mcset $l "EEPROM write buffer - %s - MCU 8051 IDE" \
+           "EEPROM写缓冲区 - %s - MCU 8051 IDE"
+  ##ID:003316##
+  mcset $l "This operation cannot be performed on an untitled file" \
+           "此操作无法对一个未命名的文件执行"
+  ##ID:003317##
+  mcset $l "This file does not contain any part of the running program" \
+           "此文件正在被其他程序使用"
+  ##ID:003319##
+  mcset $l "Line to address" \
+           "Line to address" ;# <-- NOT TRANSLATED YET
+  ##ID:003320##
+  mcset $l "PC = " \
+           "PC = " ;# <-- NOT TRANSLATED YET
+  ##ID:003321##
+  mcset $l "Program jump" \
+           "程序跳转"
+  ##ID:003322##
+  mcset $l "Subprogram call" \
+           "子程序调用"
+  ##ID:003323##
+  mcset $l "Graphical representation of the line where to go" \
+           "Graphical representation of the line where to go" ;# <-- NOT TRANSLATED YET
+  ##ID:003324##
+  mcset $l "Line where to go" \
+           "Line where to go" ;# <-- NOT TRANSLATED YET
+  ##ID:003325##
+  mcset $l "Unable to resolve" \
+           "无法解释"
+  ##ID:003326##
+  mcset $l "Hibernate running program - MCU 8051 IDE" \
+           "Hibernate running program - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:003327##
+  mcset $l "Resume hibernated program - MCU 8051 IDE" \
+           "Resume hibernated program - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:003328##
+  mcset $l "Hibernation failed" \
+           "休眠失败"
+  ##ID:003329##
+  mcset $l "Unable to write to file:\n%s\nCheck your permissions." \
+           "Unable to write to file:\n%s\nCheck your permissions." ;# <-- NOT TRANSLATED YET
+  ##ID:003330##
+  mcset $l "Resumption failed" \
+           "恢复失败"
+  ##ID:003331##
+  mcset $l "Unable to read file:\n%s\nCheck your permissions." \
+           "Unable to read file:\n%s\nCheck your permissions." ;# <-- NOT TRANSLATED YET
+  ##ID:003332##
+  mcset $l "This hibernation is corrupted or it is not MCU 8051 IDE M5IHIB file." \
+           "This hibernation is corrupted or it is not MCU 8051 IDE M5IHIB file." ;# <-- NOT TRANSLATED YET
+  ##ID:003333##
+  mcset $l "Unable to change directory to '%s'." \
+           "无法更改目录 '%s'."
+  ##ID:003334##
+  mcset $l "\nUnable to change directory to '%s'\n" \
+           "\n无法更改目录 '%s'\n"
+  ##ID:003335##
+  mcset $l "Unable to find Doxygen" \
+           "无法找到 Doxygen"
+  ##ID:003336##
+  mcset $l "Unable to find Doxygen. Please install doxygen and restart MCU 8051 IDE." \
+           "Unable to find Doxygen. Please install doxygen and restart MCU 8051 IDE." ;# <-- NOT TRANSLATED YET
+  ##ID:003337##
+  mcset $l "Unable to find doxywizard" \
+           "无法找到 doxywizard"
+  ##ID:003338##
+  mcset $l "Unable to find doxywizard. Please install doxygen and restart MCU 8051 IDE." \
+           "Unable to find doxywizard. Please install doxygen and restart MCU 8051 IDE." ;# <-- NOT TRANSLATED YET
+  ##ID:003339##
+  mcset $l "\nError: Unable to change directory to '%s'\n" \
+           "\n错误: 无法更改目录 '%s'\n"
+  ##ID:003340##
+  mcset $l "Unable to gain file statistics while external editor is used" \
+           "Unable to gain file statistics while external editor is used" ;# <-- NOT TRANSLATED YET
+  ##ID:003341##
+  mcset $l "Characters" \
+           "字符"
+  ##ID:003342##
+  mcset $l "Words and numbers:" \
+           "文字和数字:"
+  ##ID:003343##
+  mcset $l "Alphanumeric characters and connector punctuation characters" \
+           "Alphanumeric characters and connector punctuation characters" ;# <-- NOT TRANSLATED YET
+  ##ID:003344##
+  mcset $l "Comments:" \
+           "Comments:" ;# <-- NOT TRANSLATED YET
+  ##ID:003345##
+  mcset $l "Characters highlighted as comments" \
+           "Characters highlighted as comments" ;# <-- NOT TRANSLATED YET
+  ##ID:003346##
+  mcset $l "Other characters:" \
+           "Other characters:" ;# <-- NOT TRANSLATED YET
+  ##ID:003347##
+  mcset $l "All other characters without EOLs (e.g. spaces and brackets)" \
+           "All other characters without EOLs (e.g. spaces and brackets)" ;# <-- NOT TRANSLATED YET
+  ##ID:003348##
+  mcset $l "Total characters:" \
+           "Total characters:" ;# <-- NOT TRANSLATED YET
+  ##ID:003349##
+  mcset $l "All characters in the text without EOLs" \
+           "All characters in the text without EOLs" ;# <-- NOT TRANSLATED YET
+  ##ID:003350##
+  mcset $l "Strings" \
+           "Strings" ;# <-- NOT TRANSLATED YET
+  ##ID:003351##
+  mcset $l "Words:" \
+           "Words:" ;# <-- NOT TRANSLATED YET
+  ##ID:003352##
+  mcset $l "Just normal words (not keywords and not comments)" \
+           "Just normal words (not keywords and not comments)" ;# <-- NOT TRANSLATED YET
+  ##ID:003353##
+  mcset $l "Keywords:" \
+           "Keywords:" ;# <-- NOT TRANSLATED YET
+  ##ID:003354##
+  mcset $l "Instructions, Assembler directives, C directives, C keywords" \
+           "Instructions, Assembler directives, C directives, C keywords" ;# <-- NOT TRANSLATED YET
+  ##ID:003355##
+  mcset $l "Words in comments" \
+           "Words in comments" ;# <-- NOT TRANSLATED YET
+  ##ID:003356##
+  mcset $l "Total strings:" \
+           "Total strings:" ;# <-- NOT TRANSLATED YET
+  ##ID:003357##
+  mcset $l "Total number of words in the text" \
+           "Total number of words in the text" ;# <-- NOT TRANSLATED YET
+  ##ID:003358##
+  mcset $l "Lines" \
+           "Lines" ;# <-- NOT TRANSLATED YET
+  ##ID:003359##
+  mcset $l "Empty lines:" \
+           "Empty lines:" ;# <-- NOT TRANSLATED YET
+  ##ID:003360##
+  mcset $l "Totally empty lines (without even spaces)" \
+           "Totally empty lines (without even spaces)" ;# <-- NOT TRANSLATED YET
+  ##ID:003361##
+  mcset $l "Commented lines:" \
+           "Commented lines:" ;# <-- NOT TRANSLATED YET
+  ##ID:003362##
+  mcset $l "Lines which are all commented" \
+           "Lines which are all commented" ;# <-- NOT TRANSLATED YET
+  ##ID:003363##
+  mcset $l "Normal lines:" \
+           "Normal lines:" ;# <-- NOT TRANSLATED YET
+  ##ID:003364##
+  mcset $l "Just normal code lines" \
+           "Just normal code lines" ;# <-- NOT TRANSLATED YET
+  ##ID:003365##
+  mcset $l "Total lines:" \
+           "Total lines:" ;# <-- NOT TRANSLATED YET
+  ##ID:003366##
+  mcset $l "Total number of lines in the text" \
+           "文本总行数"
+  ##ID:003367##
+  mcset $l "Copy" \
+           "复制"
+  ##ID:003368##
+  mcset $l "File statistics - MCU 8051 IDE" \
+           "文件统计 - MCU 8051 IDE"
+  ##ID:003369##
+  mcset $l "Statistics for: %s\n\n" \
+           "统计: %s\n\n"
+  ##ID:003370##
+  mcset $l "Characters:\n" \
+           "字符:\n"
+  ##ID:003371##
+  mcset $l "  Words and numbers:\t\t%s\n" \
+           "文字和数字:\t\t%s\n"
+  ##ID:003372##
+  mcset $l "  Comments:\t\t\t%s\n" \
+           "注释:\t\t\t%s\n"
+  ##ID:003373##
+  mcset $l "  Other characters:\t\t%s\n" \
+           "  其他字符:\t\t%s\n"
+  ##ID:003374##
+  mcset $l "                                  ------\n" \
+           "                                  ------\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003375##
+  mcset $l "  Total characters:\t\t%s\n\n" \
+           "  总字符:\t\t%s\n\n"
+  ##ID:003376##
+  mcset $l "Strings:\n" \
+           "Strings:\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003377##
+  mcset $l "  Words:\t\t\t%s\n" \
+           "  Words:\t\t\t%s\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003378##
+  mcset $l "  Keywords:\t\t\t%s\n" \
+           "  Keywords:\t\t\t%s\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003379##
+  mcset $l "  Total strings:\t\t%s\n" \
+           "  Total strings:\t\t%s\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003380##
+  mcset $l "Lines:\n" \
+           "Lines:\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003381##
+  mcset $l "  Empty lines:\t\t\t%s\n" \
+           "  Empty lines:\t\t\t%s\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003382##
+  mcset $l "  Commented lines:\t\t%s\n" \
+           "  Commented lines:\t\t%s\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003383##
+  mcset $l "  Normal lines:\t\t\t%s\n" \
+           "  Normal lines:\t\t\t%s\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003384##
+  mcset $l "  Total lines:\t\t\t%s\n" \
+           "  Total lines:\t\t\t%s\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003385##
+  mcset $l "Unable to read file:\n\"%s\"" \
+           "无法读取文件:\n\"%s\""
+  ##ID:003386##
+  mcset $l "File modified" \
+           "文件修改"
+  ##ID:003387##
+  mcset $l "The current VHW connections have been modified,\ndo you want to save them before closing ?" \
+           "目前VHW连接已被修改,\n您要关闭之前保存它们?"
+  ##ID:003388##
+  mcset $l "Open file - Virtual HW - MCU 8051 IDE" \
+           "打开文件 - Virtual HW - MCU 8051 IDE"
+  ##ID:003389##
+  mcset $l "Virtual HW" \
+           "虚拟硬件"
+  ##ID:003390##
+  mcset $l "VH component" \
+           "VH component" ;# <-- NOT TRANSLATED YET
+  ##ID:004525##
+  mcset $l "All relevant" \
+           "All relevant" ;# <-- NOT TRANSLATED YET
+  ##ID:003391##
+  mcset $l "Load file - Virtual HW - MCU 8051 IDE" \
+           "加载 - 虚拟硬件 - MCU 8051 IDE"
+  ##ID:003392##
+  mcset $l "Unable to save Virtual HW connections" \
+           "无法保存虚拟硬件连接"
+  ##ID:003393##
+  mcset $l "Save file - Virtual HW - MCU 8051 IDE" \
+           "保存文件 - 虚拟硬件 - MCU 8051 IDE"
+  ##ID:003394##
+  mcset $l "A file name '%s' already exists. Do you want to overwrite it ?" \
+           "文件名 '%s' 已经存在,您想覆盖它吗?"
+  ##ID:003395##
+  mcset $l "Unable to save file:\n\"%s\"" \
+           "无法保存文件:\n\"%s\""
+  ##ID:003396##
+  mcset $l "Do you really want to remove all virtual hardware from the current simulation scenario ?" \
+           "您真的想删除目前所有虚拟硬件的模拟场景？"
+  ##ID:003397##
+  mcset $l "Set display size" \
+           "Set display size" ;# <-- NOT TRANSLATED YET
+}
+# simulator_gui.tcl
+# ==============================================================================
+namespace eval Simulator_GUI {
+  set ::SFB_TRANSLATIONS {
+    ##ID:003398##
+    mcset $l "Bit address: 0xD7  --  Carry Flag" \
+             "Bit address: 0xD7  --  Carry Flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003399##
+    mcset $l "Bit address: 0xD6  --  Auxiliary Carry Flag" \
+             "Bit address: 0xD6  --  Auxiliary Carry Flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003400##
+    mcset $l "Bit address: 0xD5  --  Flag 0 available to the user for general purpose" \
+             "Bit address: 0xD5  --  Flag 0 available to the user for general purpose" ;# <-- NOT TRANSLATED YET
+    ##ID:003401##
+    mcset $l "Bit address: 0xD4  --  Register Bank selector bit 1" \
+             "Bit address: 0xD4  --  Register Bank selector bit 1" ;# <-- NOT TRANSLATED YET
+    ##ID:003402##
+    mcset $l "Bit address: 0xD3  --  Register Bank selector bit 0" \
+             "Bit address: 0xD3  --  Register Bank selector bit 0" ;# <-- NOT TRANSLATED YET
+    ##ID:003403##
+    mcset $l "Bit address: 0xD2  --  Overflow Flag" \
+             "Bit address: 0xD2  --  Overflow Flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003404##
+    mcset $l "Bit address: 0xD1  --  Usable as a general purpose flag" \
+             "Bit address: 0xD1  --  Usable as a general purpose flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003405##
+    mcset $l "Bit address: 0xD0  --  Parity flag" \
+             "Bit address: 0xD0  --  Parity flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003406##
+    mcset $l "Bit address: 0x9F  --  Framing Error bit" \
+             "Bit address: 0x9F  --  Framing Error bit" ;# <-- NOT TRANSLATED YET
+    ##ID:003407##
+    mcset $l "Bit address: 0x8F  --  Timer 1 overflow flag" \
+             "Bit address: 0x8F  --  Timer 1 overflow flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003408##
+    mcset $l "Bit address: 0x8E  --  Timer 1 run control bit" \
+             "Bit address: 0x8E  --  Timer 1 run control bit" ;# <-- NOT TRANSLATED YET
+    ##ID:003409##
+    mcset $l "Bit address: 0x8D  --  Timer 0 overflow flag" \
+             "Bit address: 0x8D  --  Timer 0 overflow flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003410##
+    mcset $l "Bit address: 0x8C  --  Timer 0 run control bit" \
+             "Bit address: 0x8C  --  Timer 0 run control bit" ;# <-- NOT TRANSLATED YET
+    ##ID:003411##
+    mcset $l "Bit address: 0x8B  --  External Interrupt 1 edge flag" \
+             "Bit address: 0x8B  --  External Interrupt 1 edge flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003412##
+    mcset $l "Bit address: 0x8A  --  Interrupt 1 type control bit" \
+             "Bit address: 0x8A  --  Interrupt 1 type control bit" ;# <-- NOT TRANSLATED YET
+    ##ID:003413##
+    mcset $l "Bit address: 0x89  --  External Interrupt 0 edge flag" \
+             "Bit address: 0x89  --  External Interrupt 0 edge flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003414##
+    mcset $l "Bit address: 0x88  --  Interrupt 0 type control bit" \
+             "Bit address: 0x88  --  Interrupt 0 type control bit" ;# <-- NOT TRANSLATED YET
+    ##ID:003415##
+    mcset $l "Bit address: 0xA8  --  Enable or disable External Interrupt 0" \
+             "Bit address: 0xA8  --  Enable or disable External Interrupt 0" ;# <-- NOT TRANSLATED YET
+    ##ID:003416##
+    mcset $l "Bit address: 0xA9  --  Enable or disable the Timer 0 overflow interrupt" \
+             "Bit address: 0xA9  --  Enable or disable the Timer 0 overflow interrupt" ;# <-- NOT TRANSLATED YET
+    ##ID:003417##
+    mcset $l "Bit address: 0xAA  --  Enable or disable External Interrupt 1" \
+             "Bit address: 0xAA  --  Enable or disable External Interrupt 1" ;# <-- NOT TRANSLATED YET
+    ##ID:003418##
+    mcset $l "Bit address: 0xAB  --  Enable or disable the Timer 1 overflow interrupt" \
+             "Bit address: 0xAB  --  Enable or disable the Timer 1 overflow interrupt" ;# <-- NOT TRANSLATED YET
+    ##ID:003419##
+    mcset $l "Bit address: 0xAC  --  Enable or disable the serial port interrupt" \
+             "Bit address: 0xAC  --  Enable or disable the serial port interrupt" ;# <-- NOT TRANSLATED YET
+    ##ID:003420##
+    mcset $l "Bit address: 0xAD  --  Enable or disable the Timer 2 overflow interrupt" \
+             "Bit address: 0xAD  --  Enable or disable the Timer 2 overflow interrupt" ;# <-- NOT TRANSLATED YET
+    ##ID:003421##
+    mcset $l "Bit address: 0xAE  --  Enable or disable the comparator interrupt" \
+             "Bit address: 0xAE  --  Enable or disable the comparator interrupt" ;# <-- NOT TRANSLATED YET
+    ##ID:003422##
+    mcset $l "Bit address: 0xB8  --  Defines the External Interrupt 0 priority level" \
+             "Bit address: 0xB8  --  Defines the External Interrupt 0 priority level" ;# <-- NOT TRANSLATED YET
+    ##ID:003423##
+    mcset $l "Bit address: 0xB9  --  Defines the Timer 0 interrupt priority level" \
+             "Bit address: 0xB9  --  Defines the Timer 0 interrupt priority level" ;# <-- NOT TRANSLATED YET
+    ##ID:003424##
+    mcset $l "Bit address: 0xBA  --  Defines External Interrupt 1 priority level" \
+             "Bit address: 0xBA  --  Defines External Interrupt 1 priority level" ;# <-- NOT TRANSLATED YET
+    ##ID:003425##
+    mcset $l "Bit address: 0xBB  --  Defines the Timer 1 interrupt priority level" \
+             "Bit address: 0xBB  --  Defines the Timer 1 interrupt priority level" ;# <-- NOT TRANSLATED YET
+    ##ID:003426##
+    mcset $l "Bit address: 0xBC  --  Defines the Serial Port interrupt priority level" \
+             "Bit address: 0xBC  --  Defines the Serial Port interrupt priority level" ;# <-- NOT TRANSLATED YET
+    ##ID:003427##
+    mcset $l "Bit address: 0xBD  --  Defines the Timer 2 interrupt priority level" \
+             "Bit address: 0xBD  --  Defines the Timer 2 interrupt priority level" ;# <-- NOT TRANSLATED YET
+    ##ID:003428##
+    mcset $l "Bit address: 0xBE  --  Defines the comparator interrupt priority level" \
+             "Bit address: 0xBE  --  Defines the comparator interrupt priority level" ;# <-- NOT TRANSLATED YET
+    ##ID:003429##
+    mcset $l "Bit address: 0x98  --  Receive interrupt flag" \
+             "Bit address: 0x98  --  Receive interrupt flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003430##
+    mcset $l "Bit address: 0x99  --  Transmit interrupt flag" \
+             "Bit address: 0x99  --  Transmit interrupt flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003431##
+    mcset $l "Bit address: 0xCF  --  Timer 2 overflow flag" \
+             "Bit address: 0xCF  --  Timer 2 overflow flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003432##
+    mcset $l "Bit address: 0xCE  --  Timer 2 external flag" \
+             "Bit address: 0xCE  --  Timer 2 external flag" ;# <-- NOT TRANSLATED YET
+    ##ID:003433##
+    mcset $l "Bit address: 0xBF  --  Not implemented" \
+             "Bit address: 0xBF  --  Not implemented" ;# <-- NOT TRANSLATED YET
+    ##ID:003434##
+    mcset $l "Bit address: 0xAF  --  Disables all interrupts" \
+             "Bit address: 0xAF  --  Disables all interrupts" ;# <-- NOT TRANSLATED YET
+    ##ID:003435##
+    mcset $l "Bit address: 0x9F  --  Serial Port mode specifier" \
+             "Bit address: 0x9F  --  Serial Port mode specifier" ;# <-- NOT TRANSLATED YET
+    ##ID:003436##
+    mcset $l "Bit address: 0x9E  --  Serial Port mode specifier" \
+             "Bit address: 0x9E  --  Serial Port mode specifier" ;# <-- NOT TRANSLATED YET
+    ##ID:003437##
+    mcset $l "Bit address: 0x9D  --  Enables the multiprocessor communication feature" \
+             "Bit address: 0x9D  --  Enables the multiprocessor communication feature" ;# <-- NOT TRANSLATED YET
+    ##ID:003438##
+    mcset $l "Bit address: 0x9C  --  Enable/Disable reception" \
+             "Bit address: 0x9C  --  Enable/Disable reception" ;# <-- NOT TRANSLATED YET
+    ##ID:003439##
+    mcset $l "Bit address: 0x9B  --  The 9th bit that will be transmitted in modes 2 and 3" \
+             "Bit address: 0x9B  --  The 9th bit that will be transmitted in modes 2 and 3" ;# <-- NOT TRANSLATED YET
+    ##ID:003440##
+    mcset $l "Bit address: 0x9A  --  Receiver Bit 8" \
+             "Bit address: 0x9A  --  Receiver Bit 8" ;# <-- NOT TRANSLATED YET
+    ##ID:003441##
+    mcset $l "Bit address: 0xCD  --  Receive clock enable" \
+             "Bit address: 0xCD  --  Receive clock enable" ;# <-- NOT TRANSLATED YET
+    ##ID:003442##
+    mcset $l "Bit address: 0xCC  --  Transmit clock enable" \
+             "Bit address: 0xCC  --  Transmit clock enable" ;# <-- NOT TRANSLATED YET
+    ##ID:003443##
+    mcset $l "Bit address: 0xCB  --  Timer 2 external enable" \
+             "Bit address: 0xCB  --  Timer 2 external enable" ;# <-- NOT TRANSLATED YET
+    ##ID:003444##
+    mcset $l "Bit address: 0xCA  --  Start/Stop control for Timer 2" \
+             "Bit address: 0xCA  --  Start/Stop control for Timer 2" ;# <-- NOT TRANSLATED YET
+    ##ID:003445##
+    mcset $l "Bit address: 0xC9  --  Timer or counter select for Timer 2" \
+             "Bit address: 0xC9  --  Timer or counter select for Timer 2" ;# <-- NOT TRANSLATED YET
+    ##ID:003446##
+    mcset $l "Bit address: 0xC8  --  Capture/Reload select" \
+             "Bit address: 0xC8  --  Capture/Reload select" ;# <-- NOT TRANSLATED YET
+  }
+  eval ${SFB_TRANSLATIONS}
+  ##ID:003447##
+  mcset $l "Set to 1" \
+           "Set to 1" ;# <-- NOT TRANSLATED YET
+  ##ID:003448##
+  mcset $l "Set this bit to 1" \
+           "Set this bit to 1" ;# <-- NOT TRANSLATED YET
+  ##ID:003449##
+  mcset $l "Set to 0" \
+           "Set to 0" ;# <-- NOT TRANSLATED YET
+  ##ID:003450##
+  mcset $l "Set this bit to 0" \
+           "Set this bit to 0" ;# <-- NOT TRANSLATED YET
+  ##ID:003451##
+  mcset $l "Start/Stop simulator" \
+           "启动/停止 模拟器" ;
+  ##ID:003452##
+  mcset $l "Load program into the simulator engine, or shutdown the MCU simulator." \
+           "加载SIM文件到模拟器" ;
+  ##ID:003453##
+  mcset $l "Reset" \
+           "复位"
+  ##ID:003454##
+  mcset $l "Perform HW reset" \
+           "执行硬件复位"
+  ##ID:003455##
+  mcset $l "Step back" \
+           "Step back" ;# <-- NOT TRANSLATED YET
+  ##ID:003456##
+  mcset $l "Take MCU back to state before the last instruction" \
+           "Take MCU back to state before the last instruction" ;# <-- NOT TRANSLATED YET
+  ##ID:003457##
+  mcset $l "Step program" \
+           "Step program" ;# <-- NOT TRANSLATED YET
+  ##ID:003458##
+  mcset $l "Step by 1 instruction" \
+           "Step by 1 instruction" ;# <-- NOT TRANSLATED YET
+  ##ID:003459##
+  mcset $l "Step over" \
+           "Step over" ;# <-- NOT TRANSLATED YET
+  ##ID:003460##
+  mcset $l "Step by 1 line of code" \
+           "Step by 1 line of code" ;# <-- NOT TRANSLATED YET
+  ##ID:003461##
+  mcset $l "Animate program" \
+           "Animate program" ;# <-- NOT TRANSLATED YET
+  ##ID:003462##
+  mcset $l "Run program and show results after each instruction" \
+           "Run program and show results after each instruction" ;# <-- NOT TRANSLATED YET
+  ##ID:003463##
+  mcset $l "Run program" \
+           "运行程序"
+  ##ID:003464##
+  mcset $l "Run program and show results after some time" \
+           "Run program and show results after some time" ;# <-- NOT TRANSLATED YET
+  ##ID:003465##
+  mcset $l "TIMERS 0 & 1" \
+           "TIMERS 0 & 1" ;# <-- NOT TRANSLATED YET
+  ##ID:003466##
+  mcset $l "INTERRUPTS" \
+           "INTERRUPTS" ;# <-- NOT TRANSLATED YET
+  ##ID:003467##
+  mcset $l "HEX DEC BIN OCT CHAR" \
+           "HEX DEC BIN OCT CHAR" ;# <-- NOT TRANSLATED YET
+  ##ID:003468##
+  mcset $l "SFR 0xE0: Primary Accumulator" \
+           "SFR 0xE0: Primary Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:003469##
+  mcset $l "SFR 0xF0: Secondary Accumulator" \
+           "SFR 0xF0: Secondary Accumulator" ;# <-- NOT TRANSLATED YET
+  ##ID:003470##
+  mcset $l "Address: %s" \
+           "Address: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003471##
+  mcset $l "SFR 0xD0: Program Status Word" \
+           "SFR 0xD0: Program Status Word" ;# <-- NOT TRANSLATED YET
+  ##ID:003472##
+  mcset $l "SFR 0x81: Stack pointer" \
+           "SFR 0x81: Stack pointer" ;# <-- NOT TRANSLATED YET
+  ##ID:003473##
+  mcset $l "Carry Flag" \
+           "Carry Flag" ;# <-- NOT TRANSLATED YET
+  ##ID:003474##
+  mcset $l "Auxiliary Carry flag.\n(For BCD operations.)" \
+           "Auxiliary Carry flag.\n(For BCD operations.)" ;# <-- NOT TRANSLATED YET
+  ##ID:003475##
+  mcset $l "Flag 0\n(Available to the user for general purposes.)" \
+           "Flag 0\n(Available to the user for general purposes.)" ;# <-- NOT TRANSLATED YET
+  ##ID:003476##
+  mcset $l "Register bank Select control bit 1. Set/cleared\nby software to determine working register bank." \
+           "Register bank Select control bit 1. Set/cleared\nby software to determine working register bank." ;# <-- NOT TRANSLATED YET
+  ##ID:003477##
+  mcset $l "Register bank Select control bit 0. Set/cleared\nby software to determine working register bank." \
+           "Register bank Select control bit 0. Set/cleared\nby software to determine working register bank." ;# <-- NOT TRANSLATED YET
+  ##ID:003478##
+  mcset $l "Overflow flag" \
+           "Overflow flag" ;# <-- NOT TRANSLATED YET
+  ##ID:003479##
+  mcset $l "(reserved)" \
+           "(reserved)" ;# <-- NOT TRANSLATED YET
+  ##ID:003480##
+  mcset $l "Parity flag.\nSet/cleared by hardware each instruction cycle to\nindicate and odd/even number of “one” bits in the\naccumulator, i.e., even parity." \
+           "Parity flag.\nSet/cleared by hardware each instruction cycle to\nindicate and odd/even number of “one” bits in the\naccumulator, i.e., even parity." ;# <-- NOT TRANSLATED YET
+  ##ID:003481##
+  mcset $l "SFR 0x88: Timer/Counter control register" \
+           "SFR 0x88: Timer/Counter control register" ;# <-- NOT TRANSLATED YET
+  ##ID:003482##
+  mcset $l "Timer 1 Overflow Flag\nCleared by hardware when processor vectors to interrupt routine.\nSet by hardware on timer/counter overflow, when the timer 1 register overflows." \
+           "Timer 1 Overflow Flag\nCleared by hardware when processor vectors to interrupt routine.\nSet by hardware on timer/counter overflow, when the timer 1 register overflows." ;# <-- NOT TRANSLATED YET
+  ##ID:003483##
+  mcset $l "Timer 1 Run Control Bit\nClear to turn off timer/counter 1.\nSet to turn on timer/counter 1." \
+           "Timer 1 Run Control Bit\nClear to turn off timer/counter 1.\nSet to turn on timer/counter 1." ;# <-- NOT TRANSLATED YET
+  ##ID:003484##
+  mcset $l "Timer 0 Overflow Flag\nCleared by hardware when processor vectors to interrupt routine.\nSet by hardware on timer/counter overflow, when the timer 0 register overflows." \
+           "Timer 0 Overflow Flag\nCleared by hardware when processor vectors to interrupt routine.\nSet by hardware on timer/counter overflow, when the timer 0 register overflows." ;# <-- NOT TRANSLATED YET
+  ##ID:003485##
+  mcset $l "Timer 0 Run Control Bit\nClear to turn off timer/counter 0.\nSet to turn on timer/counter 0." \
+           "Timer 0 Run Control Bit\nClear to turn off timer/counter 0.\nSet to turn on timer/counter 0." ;# <-- NOT TRANSLATED YET
+  ##ID:003486##
+  mcset $l "Interrupt 1 Edge Flag\nCleared by hardware when interrupt is processed if edge-triggered (see IT1).\nSet by hardware when external interrupt is detected on INT1# pin." \
+           "Interrupt 1 Edge Flag\nCleared by hardware when interrupt is processed if edge-triggered (see IT1).\nSet by hardware when external interrupt is detected on INT1# pin." ;# <-- NOT TRANSLATED YET
+  ##ID:003487##
+  mcset $l "Interrupt 1 Type Control Bit\nClear to select low level active (level triggered) for external interrupt 1 (INT1#).\nSet to select falling edge active (edge triggered) for external interrupt 1." \
+           "Interrupt 1 Type Control Bit\nClear to select low level active (level triggered) for external interrupt 1 (INT1#).\nSet to select falling edge active (edge triggered) for external interrupt 1." ;# <-- NOT TRANSLATED YET
+  ##ID:003488##
+  mcset $l "Interrupt 0 Edge Flag\nCleared by hardware when interrupt is processed if edge-triggered (see IT0).\nSet by hardware when external interrupt is detected on INT0# pin." \
+           "Interrupt 0 Edge Flag\nCleared by hardware when interrupt is processed if edge-triggered (see IT0).\nSet by hardware when external interrupt is detected on INT0# pin." ;# <-- NOT TRANSLATED YET
+  ##ID:003489##
+  mcset $l "Interrupt 0 Type Control Bit\nClear to select low level active (level triggered) for external interrupt 0 (INT0#).\nSet to select falling edge active (edge triggered) for external interrupt 0." \
+           "Interrupt 0 Type Control Bit\nClear to select low level active (level triggered) for external interrupt 0 (INT0#).\nSet to select falling edge active (edge triggered) for external interrupt 0." ;# <-- NOT TRANSLATED YET
+  ##ID:003490##
+  mcset $l "Timer 1 Gating Control Bit" \
+           "Timer 1 Gating Control Bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003491##
+  mcset $l "Timer 1 Counter/Timer Select Bit" \
+           "Timer 1 Counter/Timer Select Bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003492##
+  mcset $l "Timer 1 Mode Select Bit" \
+           "Timer 1 Mode Select Bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003493##
+  mcset $l "Timer 0 Gating Control Bit" \
+           "Timer 0 Gating Control Bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003494##
+  mcset $l "Timer 0 Counter/Timer Select Bit" \
+           "Timer 0 Counter/Timer Select Bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003495##
+  mcset $l "Timer 0 Mode Select Bit" \
+           "Timer 0 Mode Select Bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003496##
+  mcset $l "SFR 0x89: Timer/Counter mode control register" \
+           "SFR 0x89: Timer/Counter mode control register" ;# <-- NOT TRANSLATED YET
+  ##ID:003497##
+  mcset $l "Timer 1 Gating Control Bit\nClear to enable timer 1 whenever the TR1 bit is set.\nSet to enable timer 1 only while the INT1# pin is high and TR1 bit is set." \
+           "Timer 1 Gating Control Bit\nClear to enable timer 1 whenever the TR1 bit is set.\nSet to enable timer 1 only while the INT1# pin is high and TR1 bit is set." ;# <-- NOT TRANSLATED YET
+  ##ID:003498##
+  mcset $l "Timer 1 Counter/Timer Select Bit\nClear for timer operation: timer 1 counts the divided-down system clock.\nSet for Counter operation: timer 1 counts negative transitions on external pin T1." \
+           "Timer 1 Counter/Timer Select Bit\nClear for timer operation: timer 1 counts the divided-down system clock.\nSet for Counter operation: timer 1 counts negative transitions on external pin T1." ;# <-- NOT TRANSLATED YET
+  ##ID:003499##
+  mcset $l "Timer 1 Mode Select Bits\nM11\tM01\tOperating mode\n 0\t 0\tMode 0: 8-bit timer/counter (TH1) with 5-bit prescaler (TL1).\n 0\t 1\tMode 1: 16-bit timer/counter.\n 1\t 0\tMode 2: 8-bit auto-reload timer/counter (TL1). Reloaded from TH1 at overflow.\n 1\t 1\tMode 3: timer 1 halted. Retains count." \
+           "Timer 1 Mode Select Bits\nM11\tM01\tOperating mode\n 0\t 0\tMode 0: 8-bit timer/counter (TH1) with 5-bit prescaler (TL1).\n 0\t 1\tMode 1: 16-bit timer/counter.\n 1\t 0\tMode 2: 8-bit auto-reload timer/counter (TL1). Reloaded from TH1 at overflow.\n 1\t 1\tMode 3: timer 1 halted. Retains count." ;# <-- NOT TRANSLATED YET
+  ##ID:003500##
+  mcset $l "Timer 0 Gating Control Bit\nClear to enable timer 0 whenever the TR0 bit is set.\nSet to enable timer/counter 0 only while the INT0# pin is high and the TR0 bit is set." \
+           "Timer 0 Gating Control Bit\nClear to enable timer 0 whenever the TR0 bit is set.\nSet to enable timer/counter 0 only while the INT0# pin is high and the TR0 bit is set." ;# <-- NOT TRANSLATED YET
+  ##ID:003501##
+  mcset $l "Timer 0 Counter/Timer Select Bit\nClear for timer operation: timer 0 counts the divided-down system clock.\nSet for counter operation: timer 0 counts negative transitions on external pin T0." \
+           "Timer 0 Counter/Timer Select Bit\nClear for timer operation: timer 0 counts the divided-down system clock.\nSet for counter operation: timer 0 counts negative transitions on external pin T0." ;# <-- NOT TRANSLATED YET
+  ##ID:003502##
+  mcset $l "Timer 0 Mode Select Bit\nM1\tM0\tOperating mode\n 0\t 0\tMode 0: 8-bit timer/counter (TH0) with 5-bit prescaler (TL0).\n 0\t 1\tMode 1: 16-bit timer/counter.\n 1\t 0\tMode 2: 8-bit auto-reload timer/counter (TL0). Reloaded from TH0 at overflow.\n 1\t 1\tMode 3: TL0 is an 8-bit timer/counter.\nTH0 is an 8-bit timer using timer 1’s TR0 and TF0 bits." \
+           "Timer 0 Mode Select Bit\nM1\tM0\tOperating mode\n 0\t 0\tMode 0: 8-bit timer/counter (TH0) with 5-bit prescaler (TL0).\n 0\t 1\tMode 1: 16-bit timer/counter.\n 1\t 0\tMode 2: 8-bit auto-reload timer/counter (TL0). Reloaded from TH0 at overflow.\n 1\t 1\tMode 3: TL0 is an 8-bit timer/counter.\nTH0 is an 8-bit timer using timer 1’s TR0 and TF0 bits." ;# <-- NOT TRANSLATED YET
+  ##ID:003503##
+  mcset $l "Timer 0 Mode Select Bit\nM10\tM00\tOperating mode\n 0\t 0\tMode 0: 8-bit timer/counter (TH0) with 5-bit prescaler (TL0).\n 0\t 1\tMode 1: 16-bit timer/counter.\n 1\t 0\tMode 2: 8-bit auto-reload timer/counter (TL0). Reloaded from TH0 at overflow.\n 1\t 1\tMode 3: TL0 is an 8-bit timer/counter.\nTH0 is an 8-bit timer using timer 1’s TR0 and TF0 bits." \
+           "Timer 0 Mode Select Bit\nM10\tM00\tOperating mode\n 0\t 0\tMode 0: 8-bit timer/counter (TH0) with 5-bit prescaler (TL0).\n 0\t 1\tMode 1: 16-bit timer/counter.\n 1\t 0\tMode 2: 8-bit auto-reload timer/counter (TL0). Reloaded from TH0 at overflow.\n 1\t 1\tMode 3: TL0 is an 8-bit timer/counter.\nTH0 is an 8-bit timer using timer 1’s TR0 and TF0 bits." ;# <-- NOT TRANSLATED YET
+  ##ID:003504##
+  mcset $l "SFR 0xA8: Interrupt enable register" \
+           "SFR 0xA8: Interrupt enable register" ;# <-- NOT TRANSLATED YET
+  ##ID:003505##
+  mcset $l "Global disable bit. If EA = O, all Interrupts are disabled. If EA = 1, each interrupt can be\nindividually enabled or disabled by setting or clearing its enable bit." \
+           "Global disable bit. If EA = O, all Interrupts are disabled. If EA = 1, each interrupt can be\nindividually enabled or disabled by setting or clearing its enable bit." ;# <-- NOT TRANSLATED YET
+  ##ID:003506##
+  mcset $l "Timer 0 interrupt enable bit." \
+           "Timer 0 interrupt enable bit." ;# <-- NOT TRANSLATED YET
+  ##ID:003507##
+  mcset $l "Timer 1 interrupt enable bit." \
+           "Timer 1 interrupt enable bit." ;# <-- NOT TRANSLATED YET
+  ##ID:003508##
+  mcset $l "Timer 2 interrupt enable bit." \
+           "Timer 2 interrupt enable bit." ;# <-- NOT TRANSLATED YET
+  ##ID:003509##
+  mcset $l "External interrupt 1 enable bit." \
+           "External interrupt 1 enable bit." ;# <-- NOT TRANSLATED YET
+  ##ID:003510##
+  mcset $l "External interrupt O enable bit." \
+           "External interrupt O enable bit." ;# <-- NOT TRANSLATED YET
+  ##ID:003511##
+  mcset $l "SFR 0xB8: Interrupt priority register" \
+           "SFR 0xB8: Interrupt priority register" ;# <-- NOT TRANSLATED YET
+  ##ID:003512##
+  mcset $l "Not implemented" \
+           "Not implemented" ;# <-- NOT TRANSLATED YET
+  ##ID:003513##
+  mcset $l "Timer 1 interrupt priority bit" \
+           "Timer 1 interrupt priority bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003514##
+  mcset $l "External interrupt 1 priority bit" \
+           "External interrupt 1 priority bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003515##
+  mcset $l "Timer 0 interrupt priority bit" \
+           "Timer 0 interrupt priority bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003516##
+  mcset $l "External interrupt 0 priority bit" \
+           "External interrupt 0 priority bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003517##
+  mcset $l "SFR 0x98: Serial port control register" \
+           "SFR 0x98: Serial port control register" ;# <-- NOT TRANSLATED YET
+  ##ID:003518##
+  mcset $l "Serial port Mode bit 0\nRefer to SM1 for serial port mode selection.\nSMOD0 must be cleared to enable access to the SM0 bit" \
+           "Serial port Mode bit 0\nRefer to SM1 for serial port mode selection.\nSMOD0 must be cleared to enable access to the SM0 bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003519##
+  mcset $l "Serial port Mode bit 1\nSM0\tSM1\tMode\tDescription\t\tBaud Rate\n0\t0\t0\tShift Register\tFCPU PERIPH/6\n0\t1\t1\t8-bit UART\tVariable\n1\t0\t2\t9-bit UART\tFCPU PERIPH /32 or /16\n1\t1\t3\t9-bit UART\tVariable" \
+           "Serial port Mode bit 1\nSM0\tSM1\tMode\tDescription\t\tBaud Rate\n0\t0\t0\tShift Register\tFCPU PERIPH/6\n0\t1\t1\t8-bit UART\tVariable\n1\t0\t2\t9-bit UART\tFCPU PERIPH /32 or /16\n1\t1\t3\t9-bit UART\tVariable" ;# <-- NOT TRANSLATED YET
+  ##ID:003520##
+  mcset $l "Serial port Mode 2 bit / Multiprocessor Communication Enable bit\nClear to disable multiprocessor communication feature.\nSet to enable multiprocessor communication feature in mode 2 and 3, and eventually mode 1. This bit should be\ncleared in mode 0" \
+           "Serial port Mode 2 bit / Multiprocessor Communication Enable bit\nClear to disable multiprocessor communication feature.\nSet to enable multiprocessor communication feature in mode 2 and 3, and eventually mode 1. This bit should be\ncleared in mode 0" ;# <-- NOT TRANSLATED YET
+  ##ID:003521##
+  mcset $l "Reception Enable bit\nClear to disable serial reception.\nSet to enable serial reception." \
+           "Reception Enable bit\nClear to disable serial reception.\nSet to enable serial reception." ;# <-- NOT TRANSLATED YET
+  ##ID:003522##
+  mcset $l "Transmitter Bit 8 / Ninth bit to transmit in modes 2 and 3.\no transmit a logic 0 in the 9th bit.\nSet to transmit a logic 1 in the 9th bit." \
+           "Transmitter Bit 8 / Ninth bit to transmit in modes 2 and 3.\no transmit a logic 0 in the 9th bit.\nSet to transmit a logic 1 in the 9th bit." ;# <-- NOT TRANSLATED YET
+  ##ID:003523##
+  mcset $l "Receiver Bit 8 / Ninth bit received in modes 2 and 3\nCleared by hardware if 9th bit received is a logic 0.\nSet by hardware if 9th bit received is a logic 1.\nIn mode 1, if SM2 = 0, RB8 is the received stop bit. In mode 0 RB8 is not used." \
+           "Receiver Bit 8 / Ninth bit received in modes 2 and 3\nCleared by hardware if 9th bit received is a logic 0.\nSet by hardware if 9th bit received is a logic 1.\nIn mode 1, if SM2 = 0, RB8 is the received stop bit. In mode 0 RB8 is not used." ;# <-- NOT TRANSLATED YET
+  ##ID:003524##
+  mcset $l "Transmit Interrupt flag\nClear to acknowledge interrupt.\nSet by hardware at the end of the 8th bit time in mode 0 or at the beginning of the stop bit in the other modes." \
+           "Transmit Interrupt flag\nClear to acknowledge interrupt.\nSet by hardware at the end of the 8th bit time in mode 0 or at the beginning of the stop bit in the other modes." ;# <-- NOT TRANSLATED YET
+  ##ID:003525##
+  mcset $l "Receive Interrupt flag\nClear to acknowledge interrupt.\nSet by hardware at the end of the 8th bit time in mode 0, see Figure 2-26. and Figure 2-27. in the other modes." \
+           "Receive Interrupt flag\nClear to acknowledge interrupt.\nSet by hardware at the end of the 8th bit time in mode 0, see Figure 2-26. and Figure 2-27. in the other modes." ;# <-- NOT TRANSLATED YET
+  ##ID:003526##
+  mcset $l "Power Off Flag" \
+           "Power Off Flag" ;# <-- NOT TRANSLATED YET
+  ##ID:003527##
+  mcset $l "Power-Off Flag\nCleared to recognize next reset type.\nSet by hardware when VCC rises from 0 to its nominal voltage. Can also be set by software." \
+           "Power-Off Flag\nCleared to recognize next reset type.\nSet by hardware when VCC rises from 0 to its nominal voltage. Can also be set by software." ;# <-- NOT TRANSLATED YET
+  ##ID:003528##
+  mcset $l "General purpose flag bit" \
+           "General purpose flag bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003529##
+  mcset $l "General purpose Flag\nCleared by user for general purpose usage.\nSet by user for general purpose usage." \
+           "General purpose Flag\nCleared by user for general purpose usage.\nSet by user for general purpose usage." ;# <-- NOT TRANSLATED YET
+  ##ID:003530##
+  mcset $l "Power down bit" \
+           "Power down bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003531##
+  mcset $l "Power-Down mode bit\nCleared by hardware when reset occurs.\nSet to enter power-down mode." \
+           "Power-Down mode bit\nCleared by hardware when reset occurs.\nSet to enter power-down mode." ;# <-- NOT TRANSLATED YET
+  ##ID:003532##
+  mcset $l "Idle mode bit" \
+           "Idle mode bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003533##
+  mcset $l "Idle mode bit\nCleared by hardware when interrupt or reset occurs.\nSet to enter idle mode." \
+           "Idle mode bit\nCleared by hardware when interrupt or reset occurs.\nSet to enter idle mode." ;# <-- NOT TRANSLATED YET
+  ##ID:003534##
+  mcset $l "Double baud rate bit" \
+           "Double baud rate bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003535##
+  mcset $l "Serial port Mode bit 1 for UART\nSet to select double baud rate in mode 1, 2 or 3." \
+           "Serial port Mode bit 1 for UART\nSet to select double baud rate in mode 1, 2 or 3." ;# <-- NOT TRANSLATED YET
+  ##ID:003536##
+  mcset $l "Frame Error Select" \
+           "Frame Error Select" ;# <-- NOT TRANSLATED YET
+  ##ID:003537##
+  mcset $l "Frame Error Select. When SMOD0 = 0, SCON.7 is SM0. When SMOD0 = 1, SCON.7 is FE.\nNote that FE will be set after a frame error\nregardless of the state of SMOD0." \
+           "Frame Error Select. When SMOD0 = 0, SCON.7 is SM0. When SMOD0 = 1, SCON.7 is FE.\nNote that FE will be set after a frame error\nregardless of the state of SMOD0." ;# <-- NOT TRANSLATED YET
+  ##ID:003538##
+  mcset $l "Pulse Width Modulation Enable" \
+           "Pulse Width Modulation Enable" ;# <-- NOT TRANSLATED YET
+  ##ID:003539##
+  mcset $l "Pulse Width Modulation Enable. When PWMEN = 1, Timer 0 and Timer 1 are\nconfigured as an 8-bit PWM counter with 8-bit auto-reload prescaler.\nThe PWM outputs on T1 (P3.5)." \
+           "Pulse Width Modulation Enable. When PWMEN = 1, Timer 0 and Timer 1 are\nconfigured as an 8-bit PWM counter with 8-bit auto-reload prescaler.\nThe PWM outputs on T1 (P3.5)." ;# <-- NOT TRANSLATED YET
+  ##ID:003540##
+  mcset $l "SFR 0xC8: Timer/Counter 2 control register" \
+           "SFR 0xC8: Timer/Counter 2 control register" ;# <-- NOT TRANSLATED YET
+  ##ID:003541##
+  mcset $l "Timer 2 overflow Flag\nTF2 is not set if RCLK=1 or TCLK = 1.\nMust be cleared by software.\nSet by hardware on timer 2 overflow." \
+           "Timer 2 overflow Flag\nTF2 is not set if RCLK=1 or TCLK = 1.\nMust be cleared by software.\nSet by hardware on timer 2 overflow." ;# <-- NOT TRANSLATED YET
+  ##ID:003542##
+  mcset $l "Timer 2 External Flag\nSet when a capture or a reload is caused by a negative transition on T2EX pin if EXEN2=1.\nSet to cause the CPU to vector to timer 2 interrupt routine when timer 2 interrupt is enabled.\nMust be cleared by software." \
+           "Timer 2 External Flag\nSet when a capture or a reload is caused by a negative transition on T2EX pin if EXEN2=1.\nSet to cause the CPU to vector to timer 2 interrupt routine when timer 2 interrupt is enabled.\nMust be cleared by software." ;# <-- NOT TRANSLATED YET
+  ##ID:003543##
+  mcset $l "Receive Clock bit\nClear to use timer 1 overflow as receive clock for serial port in mode 1 or 3.\nSet to use timer 2 overflow as receive clock for serial port in mode 1 or 3." \
+           "Receive Clock bit\nClear to use timer 1 overflow as receive clock for serial port in mode 1 or 3.\nSet to use timer 2 overflow as receive clock for serial port in mode 1 or 3." ;# <-- NOT TRANSLATED YET
+  ##ID:003544##
+  mcset $l "Transmit Clock bit\nClear to use timer 1 overflow as transmit clock for serial port in mode 1 or 3.\nSet to use timer 2 overflow as transmit clock for serial port in mode 1 or 3." \
+           "Transmit Clock bit\nClear to use timer 1 overflow as transmit clock for serial port in mode 1 or 3.\nSet to use timer 2 overflow as transmit clock for serial port in mode 1 or 3." ;# <-- NOT TRANSLATED YET
+  ##ID:003545##
+  mcset $l "Timer 2 External Enable bit\nClear to ignore events on T2EX pin for timer 2 operation.\nSet to cause a capture or reload when a negative transition on T2EX pin is\ndetected, if timer 2 is not used to clock the serial port." \
+           "Timer 2 External Enable bit\nClear to ignore events on T2EX pin for timer 2 operation.\nSet to cause a capture or reload when a negative transition on T2EX pin is\ndetected, if timer 2 is not used to clock the serial port." ;# <-- NOT TRANSLATED YET
+  ##ID:003546##
+  mcset $l "Timer 2 Run control bit\nClear to turn off timer 2.\nSet to turn on timer 2." \
+           "Timer 2 Run control bit\nClear to turn off timer 2.\nSet to turn on timer 2." ;# <-- NOT TRANSLATED YET
+  ##ID:003547##
+  mcset $l "Timer/Counter 2 select bit\nClear for timer operation (input from internal clock system: FOSC).\nSet for counter operation (input from T2 input pin)." \
+           "Timer/Counter 2 select bit\nClear for timer operation (input from internal clock system: FOSC).\nSet for counter operation (input from T2 input pin)." ;# <-- NOT TRANSLATED YET
+  ##ID:003548##
+  mcset $l "Timer 2 Capture/Reload bit\nIf RCLK=1 or TCLK=1, CP/RL2# is ignored and timer is forced to auto-reload on timer 2 overflow.\nClear to auto-reload on timer 2 overflows or negative transitions on T2EX pin if EXEN2=1.\nSet to capture on negative transitions on T2EX pin if EXEN2=1." \
+           "Timer 2 Capture/Reload bit\nIf RCLK=1 or TCLK=1, CP/RL2# is ignored and timer is forced to auto-reload on timer 2 overflow.\nClear to auto-reload on timer 2 overflows or negative transitions on T2EX pin if EXEN2=1.\nSet to capture on negative transitions on T2EX pin if EXEN2=1." ;# <-- NOT TRANSLATED YET
+  ##ID:003549##
+  mcset $l "Reserved" \
+           "保留"
+  ##ID:003550##
+  mcset $l "Timer 2 Output Enable bit" \
+           "Timer 2 Output Enable bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003551##
+  mcset $l "Down Counter Enable bit" \
+           "Down Counter Enable bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003552##
+  mcset $l "SFR 0xC9: Timer/Counter 2 mode control register" \
+           "SFR 0xC9: Timer/Counter 2 mode control register" ;# <-- NOT TRANSLATED YET
+  ##ID:003553##
+  mcset $l "Reserved\nThe value read from this bit is indeterminate. Do not set this bit." \
+           "Reserved\nThe value read from this bit is indeterminate. Do not set this bit." ;# <-- NOT TRANSLATED YET
+  ##ID:003554##
+  mcset $l "Timer 2 Output Enable bit\nClear to program P1.0/T2 as clock input or I/O port.\nSet to program P1.0/T2 as clock output." \
+           "Timer 2 Output Enable bit\nClear to program P1.0/T2 as clock input or I/O port.\nSet to program P1.0/T2 as clock output." ;# <-- NOT TRANSLATED YET
+  ##ID:003555##
+  mcset $l "Down Counter Enable bit\nClear to disable timer 2 as up/down counter.\nSet to enable timer 2 as up/down counter." \
+           "Down Counter Enable bit\nClear to disable timer 2 as up/down counter.\nSet to enable timer 2 as up/down counter." ;# <-- NOT TRANSLATED YET
+  ##ID:003556##
+  mcset $l "Defines the Timer 2 interrupt priority level" \
+           "Defines the Timer 2 interrupt priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003557##
+  mcset $l "Timer 2 interrupt priority bit" \
+           "Timer 2 interrupt priority bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003558##
+  mcset $l "Defines the Serial Port interrupt priority level" \
+           "Defines the Serial Port interrupt priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003559##
+  mcset $l "Serial Port interrupt enable bit" \
+           "Serial Port interrupt enable bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003560##
+  mcset $l "Serial Port interrupt priority bit" \
+           "Serial Port interrupt priority bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003561##
+  mcset $l "Defines the comparator interrupt priority level" \
+           "Defines the comparator interrupt priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003562##
+  mcset $l "Comparator Interrupt Priority bit" \
+           "Comparator Interrupt Priority bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003563##
+  mcset $l "Power-down Exit Mode" \
+           "Power-down Exit Mode" ;# <-- NOT TRANSLATED YET
+  ##ID:003564##
+  mcset $l "Power-down Exit Mode. When PWDEX = 1, wake up from Power-down is externally controlled.\nWhen PWDEX = 0, wake up from Power-down is internally timed." \
+           "Power-down Exit Mode. When PWDEX = 1, wake up from Power-down is externally controlled.\nWhen PWDEX = 0, wake up from Power-down is internally timed." ;# <-- NOT TRANSLATED YET
+  ##ID:003565##
+  mcset $l "Internal/External RAM access using MOVX" \
+           "Internal/External RAM access using MOVX" ;# <-- NOT TRANSLATED YET
+  ##ID:003566##
+  mcset $l "Internal/External RAM access using MOVX @ Ri/@DPTR\nEXTRAM\tOperating Mode\n0\tInternal ERAM (00H-FFH) access using MOVX @ Ri/@DPTR\n1\tExternal data memory access" \
+           "Internal/External RAM access using MOVX @ Ri/@DPTR\nEXTRAM\tOperating Mode\n0\tInternal ERAM (00H-FFH) access using MOVX @ Ri/@DPTR\n1\tExternal data memory access" ;# <-- NOT TRANSLATED YET
+  ##ID:003567##
+  mcset $l "When set, this bit configures the interrupt driven exit from power-down\nto resume execution on the rising edge of the interrupt signal. When\nthis bit is cleared, the execution resumes after a self-timed interval\n(nominal 2 ms) referenced from the falling edge of the interrupt signal." \
+           "When set, this bit configures the interrupt driven exit from power-down\nto resume execution on the rising edge of the interrupt signal. When\nthis bit is cleared, the execution resumes after a self-timed interval\n(nominal 2 ms) referenced from the falling edge of the interrupt signal." ;# <-- NOT TRANSLATED YET
+  ##ID:003568##
+  mcset $l "Reserved for future expansion" \
+           "Reserved for future expansion" ;# <-- NOT TRANSLATED YET
+  ##ID:003569##
+  mcset $l "Disable/Enable Reset out" \
+           "Disable/Enable Reset out" ;# <-- NOT TRANSLATED YET
+  ##ID:003570##
+  mcset $l "Disable/Enable Reset out\nDISRTO\tOperating Mode\n0\tReset pin is driven High after WDT times out\n1\tReset pin is input only" \
+           "Disable/Enable Reset out\nDISRTO\tOperating Mode\n0\tReset pin is driven High after WDT times out\n1\tReset pin is input only" ;# <-- NOT TRANSLATED YET
+  ##ID:003571##
+  mcset $l "Disable/Enable WDT in IDLE mode" \
+           "Disable/Enable WDT in IDLE mode" ;# <-- NOT TRANSLATED YET
+  ##ID:003572##
+  mcset $l "Disable/Enable WDT in IDLE mode\nWDIDLE\tOperating Mode\n0\tWDT continues to count in IDLE mode\n1\tWDT halts counting in IDLE mode" \
+           "Disable/Enable WDT in IDLE mode\nWDIDLE\tOperating Mode\n0\tWDT continues to count in IDLE mode\n1\tWDT halts counting in IDLE mode" ;# <-- NOT TRANSLATED YET
+  ##ID:003573##
+  mcset $l "General purpose user flag" \
+           "General purpose user flag" ;# <-- NOT TRANSLATED YET
+  ##ID:003574##
+  mcset $l "SFR 0x8E: Auxiliary Register" \
+           "SFR 0x8E: Auxiliary Register" ;# <-- NOT TRANSLATED YET
+  ##ID:003575##
+  mcset $l "SFR 0xA2: Auxiliary Register 1" \
+           "SFR 0xA2: Auxiliary Register 1" ;# <-- NOT TRANSLATED YET
+  ##ID:003576##
+  mcset $l "SFR 0x97: Analog Comparator Control and Status Register" \
+           "SFR 0x97: Analog Comparator Control and Status Register" ;# <-- NOT TRANSLATED YET
+  ##ID:003577##
+  mcset $l "SFR 0x96: Data EEPROM Control Register" \
+           "SFR 0x96: Data EEPROM Control Register" ;# <-- NOT TRANSLATED YET
+  ##ID:003578##
+  mcset $l "SFR 0xD5: SPI Control Register" \
+           "SFR 0xD5: SPI Control Register" ;# <-- NOT TRANSLATED YET
+  ##ID:003579##
+  mcset $l "SFR 0xAA: SPI Status Register" \
+           "SFR 0xAA: SPI Status Register" ;# <-- NOT TRANSLATED YET
+  ##ID:003580##
+  mcset $l "SFR 0xA7: Watchdog Control Register" \
+           "SFR 0xA7: Watchdog Control Register" ;# <-- NOT TRANSLATED YET
+  ##ID:003581##
+  mcset $l "SFR 0xA7: Watchdog Prescaler Control Register" \
+           "SFR 0xA7: Watchdog Prescaler Control Register" ;# <-- NOT TRANSLATED YET
+  ##ID:003582##
+  mcset $l "SFR 0xB7: Interrupt Priority High Register" \
+           "SFR 0xB7: Interrupt Priority High Register" ;# <-- NOT TRANSLATED YET
+  ##ID:003583##
+  mcset $l "SFR 0x8F: Clock Register" \
+           "SFR 0x8F: Clock Register" ;# <-- NOT TRANSLATED YET
+  ##ID:003584##
+  mcset $l "Defines the Timer 1 interrupt priority level" \
+           "Defines the Timer 1 interrupt priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003585##
+  mcset $l "Defines External Interrupt 1 priority level" \
+           "Defines External Interrupt 1 priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003586##
+  mcset $l "Defines the Timer 0 interrupt priority level" \
+           "Defines the Timer 0 interrupt priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003587##
+  mcset $l "Defines the External Interrupt 0 priority level" \
+           "Defines the External Interrupt 0 priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003588##
+  mcset $l "X2 mode flag" \
+           "X2 mode flag" ;# <-- NOT TRANSLATED YET
+  ##ID:003589##
+  mcset $l "When X2 = 0, the frequency (at XTAL1 pin) is internally divided by 2 before it is used as the device system frequency.\nWhen X2 = 1, the divide by 2 is no longer used and the XTAL1 frequency becomes the device system frequency. This\nenables the user to use a 6 MHz crystal instead of a 12 MHz crystal in order to reduce EMI." \
+           "When X2 = 0, the frequency (at XTAL1 pin) is internally divided by 2 before it is used as the device system frequency.\nWhen X2 = 1, the divide by 2 is no longer used and the XTAL1 frequency becomes the device system frequency. This\nenables the user to use a 6 MHz crystal instead of a 12 MHz crystal in order to reduce EMI." ;# <-- NOT TRANSLATED YET
+  ##ID:003590##
+  mcset $l "EEPROM data memory load enable bit" \
+           "EEPROM data memory load enable bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003591##
+  mcset $l "EEPROM data memory write enable bit" \
+           "EEPROM data memory write enable bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003592##
+  mcset $l "Internal EEPROM access enable" \
+           "Internal EEPROM access enable" ;# <-- NOT TRANSLATED YET
+  ##ID:003593##
+  mcset $l "Data pointer register select" \
+           "Data pointer register select" ;# <-- NOT TRANSLATED YET
+  ##ID:003594##
+  mcset $l "RDY/BSY (Ready/Busy) flag for the data EEPROM memory (read-only)" \
+           "RDY/BSY (Ready/Busy) flag for the data EEPROM memory (read-only)" ;# <-- NOT TRANSLATED YET
+  ##ID:003595##
+  mcset $l "Write Inhibit (read-only)" \
+           "Write Inhibit (read-only)" ;# <-- NOT TRANSLATED YET
+  ##ID:003596##
+  mcset $l "EEPROM data memory load enable bit. Used to implement Page Mode Write. A MOVX\ninstruction writing into the data EEPROM will not initiate the programming cycle\nif this bit is set, rather it will just load data into the volatile data buffer\nof the data EEPROM memory. Before the last MOVX, reset this bit and the data\nEEPROM will program all the bytes previously loaded on the same page of the\naddress given by the last MOVX instruction." \
+           "EEPROM data memory load enable bit. Used to implement Page Mode Write. A MOVX\ninstruction writing into the data EEPROM will not initiate the programming cycle\nif this bit is set, rather it will just load data into the volatile data buffer\nof the data EEPROM memory. Before the last MOVX, reset this bit and the data\nEEPROM will program all the bytes previously loaded on the same page of the\naddress given by the last MOVX instruction." ;# <-- NOT TRANSLATED YET
+  ##ID:003597##
+  mcset $l "EEPROM data memory write enable bit. Set this bit to 1 before initiating byte\nwrite to on-chip EEPROM with the MOVX instruction. User software should set\nthis bit to 0 after EEPROM write is completed." \
+           "EEPROM data memory write enable bit. Set this bit to 1 before initiating byte\nwrite to on-chip EEPROM with the MOVX instruction. User software should set\nthis bit to 0 after EEPROM write is completed." ;# <-- NOT TRANSLATED YET
+  ##ID:003598##
+  mcset $l "Internal EEPROM access enable. When EEMEN = 1, the MOVX instruction with DPTR\nwill access on-chip EEPROM instead of external data memory if the address used\nis less than 2K. When EEMEN = 0 or the address used is ≥ 2K," \
+           "Internal EEPROM access enable. When EEMEN = 1, the MOVX instruction with DPTR\nwill access on-chip EEPROM instead of external data memory if the address used\nis less than 2K. When EEMEN = 0 or the address used is ≥ 2K," ;# <-- NOT TRANSLATED YET
+  ##ID:003599##
+  mcset $l "MOVX with DPTR accesses external data memory.\nData pointer register select. DPS = 0 selects the first bank of data pointer\nregister, DP0, and DPS = 1 selects the second bank, DP1." \
+           "MOVX with DPTR accesses external data memory.\nData pointer register select. DPS = 0 selects the first bank of data pointer\nregister, DP0, and DPS = 1 selects the second bank, DP1." ;# <-- NOT TRANSLATED YET
+  ##ID:003600##
+  mcset $l "RDY/BSY (Ready/Busy) flag for the data EEPROM memory. This is a read-only bit\nwhich is cleared by hardware during the programming cycle of the on-chip EEPROM.\nIt is also set by hardware when the programming is completed. Note that RDY/BSY\nwill be cleared long after the completion of the MOVX instruction which has\ninitiated the programming cycle." \
+           "RDY/BSY (Ready/Busy) flag for the data EEPROM memory. This is a read-only bit\nwhich is cleared by hardware during the programming cycle of the on-chip EEPROM.\nIt is also set by hardware when the programming is completed. Note that RDY/BSY\nwill be cleared long after the completion of the MOVX instruction which has\ninitiated the programming cycle." ;# <-- NOT TRANSLATED YET
+  ##ID:003601##
+  mcset $l "WRTINH (Write Inhibit) is a READ-ONLY bit which is cleared by hardware when Vcc is\ntoo low for the programming cycle of the on-chip EEPROM to be executed. When this\nbit is cleared, an ongoing programming cycle will be aborted or a new programming\ncycle will not start." \
+           "WRTINH (Write Inhibit) is a READ-ONLY bit which is cleared by hardware when Vcc is\ntoo low for the programming cycle of the on-chip EEPROM to be executed. When this\nbit is cleared, an ongoing programming cycle will be aborted or a new programming\ncycle will not start." ;# <-- NOT TRANSLATED YET
+  ##ID:003602##
+  mcset $l "Prescaler bit for the watchdog timer" \
+           "Prescaler bit for the watchdog timer" ;# <-- NOT TRANSLATED YET
+  ##ID:003603##
+  mcset $l "Enable/disable the Watchdog Timer in IDLE mode" \
+           "Enable/disable the Watchdog Timer in IDLE mode" ;# <-- NOT TRANSLATED YET
+  ##ID:003604##
+  mcset $l "Enable/disable the WDT-driven Reset Out" \
+           "Enable/disable the WDT-driven Reset Out" ;# <-- NOT TRANSLATED YET
+  ##ID:003605##
+  mcset $l "Hardware mode select for the WDT" \
+           "Hardware mode select for the WDT" ;# <-- NOT TRANSLATED YET
+  ##ID:003606##
+  mcset $l "Watchdog software reset bit" \
+           "Watchdog software reset bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003607##
+  mcset $l "Watchdog software enable bit" \
+           "Watchdog software enable bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003608##
+  mcset $l "Enable/disable the Watchdog Timer in IDLE mode. When WDIDLE = 0, WDT\ncontinues to count in IDLE mode. When WDIDLE = 1, WDT freezes while\nthe device is in IDLE mode." \
+           "Enable/disable the Watchdog Timer in IDLE mode. When WDIDLE = 0, WDT\ncontinues to count in IDLE mode. When WDIDLE = 1, WDT freezes while\nthe device is in IDLE mode." ;# <-- NOT TRANSLATED YET
+  ##ID:003609##
+  mcset $l "Enable/disable the WDT-driven Reset Out (WDT drives the RST pin). When\nDISRTO = 0, the RST pin is driven high after WDT times out and the entire\nboard is reset. When DISRTO = 1, the RST pin remains only as an input and the\nWDT resets only the microcontroller internally after WDT times out." \
+           "Enable/disable the WDT-driven Reset Out (WDT drives the RST pin). When\nDISRTO = 0, the RST pin is driven high after WDT times out and the entire\nboard is reset. When DISRTO = 1, the RST pin remains only as an input and the\nWDT resets only the microcontroller internally after WDT times out." ;# <-- NOT TRANSLATED YET
+  ##ID:003610##
+  mcset $l "Hardware mode select for the WDT. When HWDT = 0, the WDT can be turned on/off\nby simply setting or clearing WDTEN in the same register (this is the software\nmode for WDT). When HWDT = 1, the WDT has to be set by writing the sequence\n1EH/E1H to the WDTRST register (with address 0A6H) and after being set in this\nway, WDT cannot be turned off except by reset, warm or cold (this is the hardware\nmode for WDT). To prevent the hardware WDT from resetting the entire device,\nthe same sequence 1EH/E1H must be written to the same WDTRST SFR before the\ntimeout interval." \
+           "Hardware mode select for the WDT. When HWDT = 0, the WDT can be turned on/off\nby simply setting or clearing WDTEN in the same register (this is the software\nmode for WDT). When HWDT = 1, the WDT has to be set by writing the sequence\n1EH/E1H to the WDTRST register (with address 0A6H) and after being set in this\nway, WDT cannot be turned off except by reset, warm or cold (this is the hardware\nmode for WDT). To prevent the hardware WDT from resetting the entire device,\nthe same sequence 1EH/E1H must be written to the same WDTRST SFR before the\ntimeout interval." ;# <-- NOT TRANSLATED YET
+  ##ID:003611##
+  mcset $l "Watchdog software reset bit. If HWDT = 0 (i.e. WDT is in software controlled mode),\nwhen set by software, this bit resets WDT. After being set by software, WSWRST is\nreset by hardware during the next machine cycle. If HWDT = 1, this bit has no effect,\nand if set by software, it will not be cleared by hardware." \
+           "Watchdog software reset bit. If HWDT = 0 (i.e. WDT is in software controlled mode),\nwhen set by software, this bit resets WDT. After being set by software, WSWRST is\nreset by hardware during the next machine cycle. If HWDT = 1, this bit has no effect,\nand if set by software, it will not be cleared by hardware." ;# <-- NOT TRANSLATED YET
+  ##ID:003612##
+  mcset $l "Watchdog software enable bit. When HWDT = 0 (i.e. WDT is in software-controlled mode),\nthis bit enables WDT when set to 1 and disables WDT when cleared to 0 (it does not\nreset WDT in this case, but just freezes the existing counter state). If HWDT = 1, this\nbit is READ-ONLY and reflects the status of the WDT (whether it is running or not)." \
+           "Watchdog software enable bit. When HWDT = 0 (i.e. WDT is in software-controlled mode),\nthis bit enables WDT when set to 1 and disables WDT when cleared to 0 (it does not\nreset WDT in this case, but just freezes the existing counter state). If HWDT = 1, this\nbit is READ-ONLY and reflects the status of the WDT (whether it is running or not)." ;# <-- NOT TRANSLATED YET
+  ##ID:003613##
+  mcset $l "Do not try to set or clear this bit" \
+           "Do not try to set or clear this bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003614##
+  mcset $l "WDT Time-out select bit" \
+           "WDT Time-out select bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003615##
+  mcset $l "Prescaler bits for the watchdog timer (WDT). When all three bits are cleared\nto 0, the watchdog timer has a nominal period of 16K machine cycles,\n(i.e. 16 ms at a XTAL frequency of 12 MHz in normal mode or 6 MHz in x2 mode).\nWhen all three bits are set to 1, the nominal period is 2048K machine cycles,\n(i.e. 2048 ms at 12 MHz clock frequency in normal mode or 6 MHz in x2 mode)." \
+           "Prescaler bits for the watchdog timer (WDT). When all three bits are cleared\nto 0, the watchdog timer has a nominal period of 16K machine cycles,\n(i.e. 16 ms at a XTAL frequency of 12 MHz in normal mode or 6 MHz in x2 mode).\nWhen all three bits are set to 1, the nominal period is 2048K machine cycles,\n(i.e. 2048 ms at 12 MHz clock frequency in normal mode or 6 MHz in x2 mode)." ;# <-- NOT TRANSLATED YET
+  ##ID:003616##
+  mcset $l "SPI interrupt flag" \
+           "SPI interrupt flag" ;# <-- NOT TRANSLATED YET
+  ##ID:003617##
+  mcset $l "Write collision flag" \
+           "Write collision flag" ;# <-- NOT TRANSLATED YET
+  ##ID:003618##
+  mcset $l "Load enable" \
+           "Load enable" ;# <-- NOT TRANSLATED YET
+  ##ID:003619##
+  mcset $l "Disable slave output bit" \
+           "Disable slave output bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003620##
+  mcset $l "Enhanced SPI mode select bit" \
+           "Enhanced SPI mode select bit" ;# <-- NOT TRANSLATED YET
+  ##ID:003621##
+  mcset $l "SPI interrupt flag. When a serial transfer is complete, the SPIF bit is set and an interrupt is generated if SPIE = 1 and ES\n= 1. The SPIF bit is cleared by reading the SPI status register followed by reading/writing the SPI data register." \
+           "SPI interrupt flag. When a serial transfer is complete, the SPIF bit is set and an interrupt is generated if SPIE = 1 and ES\n= 1. The SPIF bit is cleared by reading the SPI status register followed by reading/writing the SPI data register." ;# <-- NOT TRANSLATED YET
+  ##ID:003622##
+  mcset $l "When ENH = 0: Write collision flag. The WCOL bit is set if the SPI data register is written during a data transfer. During\ndata transfer, the result of reading the SPDR register may be incorrect, and writing to it has no effect. The WCOL bit (and\nthe SPIF bit) are cleared by reading the SPI status register followed by reading/writing the SPI data register.\nWhen ENH = 1: WCOL works in Enhanced mode as Tx Buffer Full. Writing during WCOL = 1 in enhanced mode will\noverwrite the waiting data already present in the Tx Buffer. In this mode, WCOL is no longer reset by the SPIF reset but\nis reset when the write buffer has been unloaded into the serial shift register." \
+           "When ENH = 0: Write collision flag. The WCOL bit is set if the SPI data register is written during a data transfer. During\ndata transfer, the result of reading the SPDR register may be incorrect, and writing to it has no effect. The WCOL bit (and\nthe SPIF bit) are cleared by reading the SPI status register followed by reading/writing the SPI data register.\nWhen ENH = 1: WCOL works in Enhanced mode as Tx Buffer Full. Writing during WCOL = 1 in enhanced mode will\noverwrite the waiting data already present in the Tx Buffer. In this mode, WCOL is no longer reset by the SPIF reset but\nis reset when the write buffer has been unloaded into the serial shift register." ;# <-- NOT TRANSLATED YET
+  ##ID:003623##
+  mcset $l "Load enable for the Tx buffer in enhanced SPI mode.\nWhen ENH is set, it is safe to load the Tx Buffer while LDEN = 1 and WCOL = 0. LDEN is high during bits 0 - 3 and is low\nduring bits 4 - 7 of the SPI serial byte transmission time frame." \
+           "Load enable for the Tx buffer in enhanced SPI mode.\nWhen ENH is set, it is safe to load the Tx Buffer while LDEN = 1 and WCOL = 0. LDEN is high during bits 0 - 3 and is low\nduring bits 4 - 7 of the SPI serial byte transmission time frame." ;# <-- NOT TRANSLATED YET
+  ##ID:003624##
+  mcset $l "Disable slave output bit.\nWhen set, this bit causes the MISO pin to be tri-stated so more than one slave device can share the same interface with\na single master. Normally, the first byte in a transmission could be the slave address and only the selected slave should\nclear its DISSO bit." \
+           "Disable slave output bit.\nWhen set, this bit causes the MISO pin to be tri-stated so more than one slave device can share the same interface with\na single master. Normally, the first byte in a transmission could be the slave address and only the selected slave should\nclear its DISSO bit." ;# <-- NOT TRANSLATED YET
+  ##ID:003625##
+  mcset $l "Enhanced SPI mode select bit. When ENH = 0, SPI is in normal mode, i.e. without write double buffering.\nWhen ENH = 1, SPI is in enhanced mode with write double buffering. The Tx buffer shares the same address with the\nSPDR register." \
+           "Enhanced SPI mode select bit. When ENH = 0, SPI is in normal mode, i.e. without write double buffering.\nWhen ENH = 1, SPI is in enhanced mode with write double buffering. The Tx buffer shares the same address with the\nSPDR register." ;# <-- NOT TRANSLATED YET
+  ##ID:003626##
+  mcset $l "SPI interrupt enable" \
+           "SPI interrupt enable" ;# <-- NOT TRANSLATED YET
+  ##ID:003627##
+  mcset $l "SPI enable" \
+           "SPI enable" ;# <-- NOT TRANSLATED YET
+  ##ID:003628##
+  mcset $l "Data order" \
+           "Data order" ;# <-- NOT TRANSLATED YET
+  ##ID:003629##
+  mcset $l "Master/slave select" \
+           "Master/slave select" ;# <-- NOT TRANSLATED YET
+  ##ID:003630##
+  mcset $l "Clock polarity" \
+           "Clock polarity" ;# <-- NOT TRANSLATED YET
+  ##ID:003631##
+  mcset $l "Clock phase" \
+           "Clock phase" ;# <-- NOT TRANSLATED YET
+  ##ID:003632##
+  mcset $l "SPI clock rate select" \
+           "SPI clock rate select" ;# <-- NOT TRANSLATED YET
+  ##ID:003633##
+  mcset $l "SPI interrupt enable.\nThis bit, in conjunction with the ES bit in the IE register,\nenables SPI interrupts: SPIE = 1 and ES = 1 enable SPI interrupts. SPIE = 0 disables SPI interrupts." \
+           "SPI interrupt enable.\nThis bit, in conjunction with the ES bit in the IE register,\nenables SPI interrupts: SPIE = 1 and ES = 1 enable SPI interrupts. SPIE = 0 disables SPI interrupts." ;# <-- NOT TRANSLATED YET
+  ##ID:003634##
+  mcset $l "SPI enable. SPI = 1 enables the SPI channel and connects\nSS, MOSI, MISO and SCK to pins P1.4, P1.5, P1.6, and P1.7.\nSPI = 0 disables the SPI channel." \
+           "SPI enable. SPI = 1 enables the SPI channel and connects\nSS, MOSI, MISO and SCK to pins P1.4, P1.5, P1.6, and P1.7.\nSPI = 0 disables the SPI channel." ;# <-- NOT TRANSLATED YET
+  ##ID:003635##
+  mcset $l "Data order. DORD = 1 selects LSB first data transmission.\nDORD = 0 selects MSB first data transmission." \
+           "Data order. DORD = 1 selects LSB first data transmission.\nDORD = 0 selects MSB first data transmission." ;# <-- NOT TRANSLATED YET
+  ##ID:003636##
+  mcset $l "Master/slave select. MSTR = 1 selects Master SPI mode.\nMSTR = 0 selects slave SPI mode." \
+           "Master/slave select. MSTR = 1 selects Master SPI mode.\nMSTR = 0 selects slave SPI mode." ;# <-- NOT TRANSLATED YET
+  ##ID:003637##
+  mcset $l "Clock polarity. When CPOL = 1, SCK is high when idle. When CPOL = 0,\nSCK of the master device is low when not transmitting. Please refer to\nfigure on SPI clock phase and polarity control." \
+           "Clock polarity. When CPOL = 1, SCK is high when idle. When CPOL = 0,\nSCK of the master device is low when not transmitting. Please refer to\nfigure on SPI clock phase and polarity control." ;# <-- NOT TRANSLATED YET
+  ##ID:003638##
+  mcset $l "Clock phase. The CPHA bit together with the CPOL bit controls the\nclock and data relationship between master and slave. Please refer\nto figure on SPI clock phase and polarity control." \
+           "Clock phase. The CPHA bit together with the CPOL bit controls the\nclock and data relationship between master and slave. Please refer\nto figure on SPI clock phase and polarity control." ;# <-- NOT TRANSLATED YET
+  ##ID:003639##
+  mcset $l "SPI clock rate select.\nThese two bits control the SCK rate of the device configured as master.\nSPR1 and SPR0 have no effect on the slave. The relationship between SCK and the\noscillator frequency, FOSC., is as follows:\n  SPR1\tSPR0\tSCK\n  0\t0\tf/4 (f/2 in x2mode)\n  0\t1\tf/16 (f/8 in x2 mode)\n  1\t0\tf/64 (f/32 in x2 mode)\n  1\t1\tf/128 (f/64 in x2 mode)" \
+           "SPI clock rate select.\nThese two bits control the SCK rate of the device configured as master.\nSPR1 and SPR0 have no effect on the slave. The relationship between SCK and the\noscillator frequency, FOSC., is as follows:\n  SPR1\tSPR0\tSCK\n  0\t0\tf/4 (f/2 in x2mode)\n  0\t1\tf/16 (f/8 in x2 mode)\n  1\t0\tf/64 (f/32 in x2 mode)\n  1\t1\tf/128 (f/64 in x2 mode)" ;# <-- NOT TRANSLATED YET
+  ##ID:003640##
+  mcset $l "Comparator Interrupt" \
+           "Comparator Interrupt" ;# <-- NOT TRANSLATED YET
+  ##ID:003641##
+  mcset $l "Comparator Enable" \
+           "Comparator Enable" ;# <-- NOT TRANSLATED YET
+  ##ID:003642##
+  mcset $l "Comparator Interrupt Mode" \
+           "Comparator Interrupt Mode" ;# <-- NOT TRANSLATED YET
+  ##ID:003643##
+  mcset $l "Comparator Interrupt Flag. Set when the comparator output meets the conditions specified by the CM \[2:0\] bits and CEN\nis set. The flag must be cleared by software. The interrupt may be enabled/disabled by setting/clearing bit 6 of IE." \
+           "Comparator Interrupt Flag. Set when the comparator output meets the conditions specified by the CM \[2:0\] bits and CEN\nis set. The flag must be cleared by software. The interrupt may be enabled/disabled by setting/clearing bit 6 of IE." ;# <-- NOT TRANSLATED YET
+  ##ID:003644##
+  mcset $l "Comparator Enable. Set this bit to enable the comparator. Clearing this bit will force the comparator output low and\nprevent further events from setting CF." \
+           "Comparator Enable. Set this bit to enable the comparator. Clearing this bit will force the comparator output low and\nprevent further events from setting CF." ;# <-- NOT TRANSLATED YET
+  ##ID:003645##
+  mcset $l "Comparator Interrupt Mode\n 2   1   0\tInterrupt Mode\n--- --- ---\t---------------------------------------\n 0   0   0\tNegative (Low) level\n 0   0   1\tPositive edge\n 0   1   0\tToggle with debounce\n 0   1   1\tPositive edge with debounce\n 1   0   0\tNegative edge\n 1   0   1\tToggle\n 1   1   0\tNegative edge with debounce\n 1   1   1\tPositive (High) level" \
+           "Comparator Interrupt Mode\n 2   1   0\tInterrupt Mode\n--- --- ---\t---------------------------------------\n 0   0   0\tNegative (Low) level\n 0   0   1\tPositive edge\n 0   1   0\tToggle with debounce\n 0   1   1\tPositive edge with debounce\n 1   0   0\tNegative edge\n 1   0   1\tToggle\n 1   1   0\tNegative edge with debounce\n 1   1   1\tPositive (High) level" ;# <-- NOT TRANSLATED YET
+  ##ID:003646##
+  mcset $l "Data Pointer Register Select" \
+           "Data Pointer Register Select" ;# <-- NOT TRANSLATED YET
+  ##ID:003647##
+  mcset $l "DPS\tData Pointer Register Select\n0\tSelects DPTR Registers DP0L, DP0H\n1\tSelects DPTR Registers DP1L, DP1H\n" \
+           "DPS\tData Pointer Register Select\n0\tSelects DPTR Registers DP0L, DP0H\n1\tSelects DPTR Registers DP1L, DP1H\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003648##
+  mcset $l "Disable/Enable ALE" \
+           "Disable/Enable ALE" ;# <-- NOT TRANSLATED YET
+  ##ID:003649##
+  mcset $l "Disable/Enable ALE\nDISALE\tOperating Mode\n0\tALE is emitted at a constant rate of 1/6 the oscillator frequency\n1\tALE is active only during a MOVX or MOVC instruction" \
+           "Disable/Enable ALE\nDISALE\tOperating Mode\n0\tALE is emitted at a constant rate of 1/6 the oscillator frequency\n1\tALE is active only during a MOVX or MOVC instruction" ;# <-- NOT TRANSLATED YET
+  ##ID:003650##
+  mcset $l "Register %s: Located in IDATA, address depends on bits RS0 and RS1 in PSW" \
+           "Register %s: Located in IDATA, address depends on bits RS0 and RS1 in PSW" ;# <-- NOT TRANSLATED YET
+  ##ID:003651##
+  mcset $l "SFR 0x8D: 2nd part of 16-bit counting register for timer 1" \
+           "SFR 0x8D: 2nd part of 16-bit counting register for timer 1" ;# <-- NOT TRANSLATED YET
+  ##ID:003652##
+  mcset $l "SFR 0x8B: 1st part of 16-bit counting register for timer 1" \
+           "SFR 0x8B: 1st part of 16-bit counting register for timer 1" ;# <-- NOT TRANSLATED YET
+  ##ID:003653##
+  mcset $l "SFR 0x8C: 2nd part of 16-bit counting register for timer 0" \
+           "SFR 0x8C: 2nd part of 16-bit counting register for timer 0" ;# <-- NOT TRANSLATED YET
+  ##ID:003654##
+  mcset $l "SFR 0x8A: 1nd part of 16-bit counting register for timer 0" \
+           "SFR 0x8A: 1nd part of 16-bit counting register for timer 0" ;# <-- NOT TRANSLATED YET
+  ##ID:003655##
+  mcset $l "SFR 0x8D..0x8B: 16-bit counting register for timer 1" \
+           "SFR 0x8D..0x8B: 16-bit counting register for timer 1" ;# <-- NOT TRANSLATED YET
+  ##ID:003656##
+  mcset $l "SFR 0x8C..0x8A: 16-bit counting register for timer 0" \
+           "SFR 0x8C..0x8A: 16-bit counting register for timer 0" ;# <-- NOT TRANSLATED YET
+  ##ID:003657##
+  mcset $l "SFR 0x%s: Latch of port %s" \
+           "SFR 0x%s: Latch of port %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003658##
+  mcset $l "SFR 0x87: Power control register" \
+           "SFR 0x87: Power control register" ;# <-- NOT TRANSLATED YET
+  ##ID:003659##
+  mcset $l "SFR 0x83: Data pointer register" \
+           "SFR 0x83: Data pointer register" ;# <-- NOT TRANSLATED YET
+  ##ID:003660##
+  mcset $l "SFR 0x82: Data pointer register" \
+           "SFR 0x82: Data pointer register" ;# <-- NOT TRANSLATED YET
+  ##ID:003661##
+  mcset $l "SFR 0x85: Data pointer register" \
+           "SFR 0x85: Data pointer register" ;# <-- NOT TRANSLATED YET
+  ##ID:003662##
+  mcset $l "SFR 0x84: Data pointer register" \
+           "SFR 0x84: Data pointer register" ;# <-- NOT TRANSLATED YET
+  ##ID:003663##
+  mcset $l "Clock:" \
+           "Clock:" ;# <-- NOT TRANSLATED YET
+  ##ID:003664##
+  mcset $l "Processor clock in kHz" \
+           "Processor clock in kHz" ;# <-- NOT TRANSLATED YET
+  ##ID:003665##
+  mcset $l "SFR 0x99: Serial Data Buffer - RECEIVE buffer" \
+           "SFR 0x99: Serial Data Buffer - RECEIVE buffer" ;# <-- NOT TRANSLATED YET
+  ##ID:003666##
+  mcset $l "SFR 0x99: Serial Data Buffer - TRANSMIT buffer" \
+           "SFR 0x99: Serial Data Buffer - TRANSMIT buffer" ;# <-- NOT TRANSLATED YET
+  ##ID:003667##
+  mcset $l "Program counter" \
+           "Program counter" ;# <-- NOT TRANSLATED YET
+  ##ID:003668##
+  mcset $l "Set PC (Program Counter) according to\nline number in source code" \
+           "Set PC (Program Counter) according to\nline number in source code" ;# <-- NOT TRANSLATED YET
+  ##ID:003669##
+  mcset $l "Set PC by line number" \
+           "Set PC by line number" ;# <-- NOT TRANSLATED YET
+  ##ID:003670##
+  mcset $l "HEX" \
+           "HEX" ;# <-- NOT TRANSLATED YET
+  ##ID:003671##
+  mcset $l "DEC" \
+           "DEC" ;# <-- NOT TRANSLATED YET
+  ##ID:003672##
+  mcset $l "Time:" \
+           "Time:" ;# <-- NOT TRANSLATED YET
+  ##ID:003673##
+  mcset $l "Overall time" \
+           "Overall time" ;# <-- NOT TRANSLATED YET
+  ##ID:003674##
+  mcset $l "SFR 0xCD: Part of 16-bit counting register for Timer/Counter 2" \
+           "SFR 0xCD: Part of 16-bit counting register for Timer/Counter 2" ;# <-- NOT TRANSLATED YET
+  ##ID:003675##
+  mcset $l "SFR 0xCC: Part of 16-bit counting register for Timer/Counter 2" \
+           "SFR 0xCC: Part of 16-bit counting register for Timer/Counter 2" ;# <-- NOT TRANSLATED YET
+  ##ID:003676##
+  mcset $l "SFR 0xCB: Part of 16-bit capture register for Timer/Counter 2" \
+           "SFR 0xCB: Part of 16-bit capture register for Timer/Counter 2" ;# <-- NOT TRANSLATED YET
+  ##ID:003677##
+  mcset $l "SFR 0xCA: Part of 16-bit capture register for Timer/Counter 2" \
+           "SFR 0xCA: Part of 16-bit capture register for Timer/Counter 2" ;# <-- NOT TRANSLATED YET
+  ##ID:003678##
+  mcset $l "SFR 0xCC..0xCD: 16-bit counting register for Timer/Counter 2" \
+           "SFR 0xCC..0xCD: 16-bit counting register for Timer/Counter 2" ;# <-- NOT TRANSLATED YET
+  ##ID:003679##
+  mcset $l "SFR 0xCA..0xCB: 16-bit capture register for Timer/Counter 2" \
+           "SFR 0xCA..0xCB: 16-bit capture register for Timer/Counter 2" ;# <-- NOT TRANSLATED YET
+  ##ID:003680##
+  mcset $l "Watchdog timer" \
+           "看门狗定时器"
+  ##ID:003681##
+  mcset $l "OFF" \
+           "关"
+  ##ID:003682##
+  mcset $l "ON " \
+           "开 "
+  ##ID:003683##
+  mcset $l "Simulator" \
+           "模拟器"
+  ##ID:003684##
+  mcset $l "Watchdog:" \
+           "看门狗:"
+  ##ID:003685##
+  mcset $l "Watchdog timer ON/OFF switch" \
+           "看门狗定时器 开/关 选项"
+  ##ID:003686##
+  mcset $l "Watchdog Prescaler (0-7 bits)" \
+           "看门狗预分频器 (0-7 bits)"
+  ##ID:003687##
+  mcset $l "Reset watchdog timer" \
+           "复位看门狗定时器"
+  ##ID:003688##
+  mcset $l "Reset Watchdog" \
+           "复位看门狗"
+  ##ID:003689##
+  mcset $l "SFR 0xB9: Used to define which bits in the SADDR are to be used" \
+           "SFR 0xB9: Used to define which bits in the SADDR are to be used" ;# <-- NOT TRANSLATED YET
+  ##ID:003690##
+  mcset $l "SFR 0xA9: Define the slave's address" \
+           "SFR 0xA9: Define the slave's address" ;# <-- NOT TRANSLATED YET
+  ##ID:003691##
+  mcset $l "SFR 0x86: SPI Data Register" \
+           "SFR 0x86: SPI Data Register" ;# <-- NOT TRANSLATED YET
+  ##ID:003692##
+  mcset $l "SFR 0xA6: Watchdog reset" \
+           "SFR 0xA6: Watchdog reset" ;# <-- NOT TRANSLATED YET
+  ##ID:003693##
+  mcset $l "Writing to EEPROM" \
+           "Writing to EEPROM" ;# <-- NOT TRANSLATED YET
+  ##ID:003694##
+  mcset $l "Finalize data EEPROM write cycle" \
+           "Finalize data EEPROM write cycle" ;# <-- NOT TRANSLATED YET
+  ##ID:003695##
+  mcset $l "Finalize write cycle" \
+           "Finalize write cycle" ;# <-- NOT TRANSLATED YET
+  ##ID:003696##
+  mcset $l "Cancel data EEPROM write cycle" \
+           "Cancel data EEPROM write cycle" ;# <-- NOT TRANSLATED YET
+  ##ID:003697##
+  mcset $l "Cancel write cycle" \
+           "Cancel write cycle" ;# <-- NOT TRANSLATED YET
+  ##ID:003698##
+  mcset $l "EEPROM write cycle progress" \
+           "EEPROM write cycle progress" ;# <-- NOT TRANSLATED YET
+}
+# interruptmonitor.tcl
+# ==============================================================================
+namespace eval InterruptMonitor {
+  eval ${SFB_TRANSLATIONS}
+  ##ID:003699##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:003700##
+  mcset $l "Interrupt monitor" \
+           "中断监控"
+  ##ID:003701##
+  mcset $l "Close this dialog window" \
+           "关闭此对话框窗口"
+  ##ID:003702##
+  mcset $l {Vector:} \
+           {Vector:} ;# <-- NOT TRANSLATED YET
+  ##ID:003703##
+  mcset $l {Enable bit:} \
+           {Enable bit:} ;# <-- NOT TRANSLATED YET
+  ##ID:003704##
+  mcset $l {Flag bit:} \
+           {Flag bit:} ;# <-- NOT TRANSLATED YET
+  ##ID:003705##
+  mcset $l {Priority bits:} \
+           {Priority bits:} ;# <-- NOT TRANSLATED YET
+  ##ID:003706##
+  mcset $l {    Line:} \
+           {    Line:} ;# <-- NOT TRANSLATED YET
+  ##ID:003707##
+  mcset $l {    File:} \
+           {    文件:}
+  ##ID:003708##
+  mcset $l {    PC:} \
+           {    PC:} ;# <-- NOT TRANSLATED YET
+  ##ID:003709##
+  mcset $l "Increase priority level" \
+           "增加优先级"
+  ##ID:003710##
+  mcset $l "Decrease priority level" \
+           "减少优先级"
+  ##ID:003711##
+  mcset $l "Invoke this interrupt" \
+           "调用此中断"
+  ##ID:003712##
+  mcset $l "Priority level" \
+           "优先级"
+  ##ID:003713##
+  mcset $l "SPSR.7             --  SPI interrupt flag" \
+           "SPSR.7             --  SPI interrupt flag" ;# <-- NOT TRANSLATED YET
+  ##ID:003714##
+  mcset $l "ACSR.4             --  Comparator Interrupt" \
+           "ACSR.4             --  Comparator Interrupt" ;# <-- NOT TRANSLATED YET
+  ##ID:003715##
+  mcset $l "IPH.0              --  Defines the External Interrupt 0 priority level" \
+           "IPH.0              --  Defines the External Interrupt 0 priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003716##
+  mcset $l "IPH.1              --  Defines the Timer 0 interrupt priority level" \
+           "IPH.1              --  Defines the Timer 0 interrupt priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003717##
+  mcset $l "IPH.2              --  Defines External Interrupt 1 priority level" \
+           "IPH.2              --  Defines External Interrupt 1 priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003718##
+  mcset $l "IPH.3              --  Defines the Timer 1 interrupt priority level" \
+           "IPH.3              --  Defines the Timer 1 interrupt priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003719##
+  mcset $l "IPH.4              --  Defines the Serial Port interrupt priority level" \
+           "IPH.4              --  Defines the Serial Port interrupt priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003720##
+  mcset $l "IPH.5              --  Defines the Timer 2 interrupt priority level" \
+           "IPH.5              --  Defines the Timer 2 interrupt priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003721##
+  mcset $l "IPH.6              --  Defines the comparator interrupt priority level" \
+           "IPH.6              --  Defines the comparator interrupt priority level" ;# <-- NOT TRANSLATED YET
+  ##ID:003722##
+  mcset $l "Interrupts in progress" \
+           "Interrupts in progress" ;# <-- NOT TRANSLATED YET
+  ##ID:003723##
+  mcset $l "Pending interrupts" \
+           "Pending interrupts" ;# <-- NOT TRANSLATED YET
+  ##ID:003724##
+  mcset $l "Interrupt priorities" \
+           "Interrupt priorities" ;# <-- NOT TRANSLATED YET
+  ##ID:003725##
+  mcset $l "Expand all" \
+           "Expand all" ;# <-- NOT TRANSLATED YET
+  ##ID:003726##
+  mcset $l "Collapse all" \
+           "Collapse all" ;# <-- NOT TRANSLATED YET
+  ##ID:003727##
+  mcset $l "Priority:" \
+           "Priority:" ;# <-- NOT TRANSLATED YET
+  ##ID:003728##
+  mcset $l "Invoked from:" \
+           "Invoked from:" ;# <-- NOT TRANSLATED YET
+}
+# rs232debugger.tcl
+# ==============================================================================
+namespace eval RS232Debugger {
+  ##ID:003729##
+  mcset $l "Special character file representing the target physical device" \
+           "Special character file representing the target physical device" ;# <-- NOT TRANSLATED YET
+  ##ID:003730##
+  mcset $l "Refresh list of relevant devices" \
+           "Refresh list of relevant devices" ;# <-- NOT TRANSLATED YET
+  ##ID:003731##
+  mcset $l "Connection speed in bps" \
+           "Connection speed in bps" ;# <-- NOT TRANSLATED YET
+  ##ID:003732##
+  mcset $l "Parity" \
+           "Parity" ;# <-- NOT TRANSLATED YET
+  ##ID:003733##
+  mcset $l "none" \
+           "none" ;# <-- NOT TRANSLATED YET
+  ##ID:003734##
+  mcset $l "odd" \
+           "odd" ;# <-- NOT TRANSLATED YET
+  ##ID:003735##
+  mcset $l "even" \
+           "even" ;# <-- NOT TRANSLATED YET
+  ##ID:003736##
+  mcset $l "mark" \
+           "mark" ;# <-- NOT TRANSLATED YET
+  ##ID:003737##
+  mcset $l "space" \
+           "space" ;# <-- NOT TRANSLATED YET
+  ##ID:003738##
+  mcset $l "Number of data bits" \
+           "Number of data bits" ;# <-- NOT TRANSLATED YET
+  ##ID:003739##
+  mcset $l "Number of stop bits" \
+           "Number of stop bits" ;# <-- NOT TRANSLATED YET
+  ##ID:003740##
+  mcset $l "Display incoming data or discard them" \
+           "Display incoming data or discard them" ;# <-- NOT TRANSLATED YET
+  ##ID:003741##
+  mcset $l "Remove selected data" \
+           "删除选定的数据"
+  ##ID:003742##
+  mcset $l "Send selected data" \
+           "发送选定的数据"
+  ##ID:003743##
+  mcset $l "Error message" \
+           "错误消息"
+  ##ID:003744##
+  mcset $l "Receive data on current cursor position" \
+           "Receive data on current cursor position" ;# <-- NOT TRANSLATED YET
+  ##ID:003745##
+  mcset $l "RS232 DBG: Invalid baud rate, setting to default: %s" \
+           "RS232 DBG: Invalid baud rate, setting to default: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003746##
+  mcset $l "RS232 DBG: Invalid parity, setting to default: %s" \
+           "RS232 DBG: Invalid parity, setting to default: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003747##
+  mcset $l "RS232 DBG: Invalid data length, setting to default: %s" \
+           "RS232 DBG: Invalid data length, setting to default: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003748##
+  mcset $l "RS232 DBG: Invalid stop bit length, setting to default: %s" \
+           "RS232 DBG: Invalid stop bit length, setting to default: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003749##
+  mcset $l "RS232 DBG: Invalid flag reception_enabled, setting to default: %s" \
+           "RS232 DBG: Invalid flag reception_enabled, setting to default: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003750##
+  mcset $l "RS232 DBG: Invalid reception address, setting to default: %s" \
+           "RS232 DBG: Invalid reception address, setting to default: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003751##
+  mcset $l "RS232 DBG: Invalid current cell address, setting to default: %s" \
+           "RS232 DBG: Invalid current cell address, setting to default: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:003752##
+  mcset $l "RS232 Debugger" \
+           "RS232 Debugger" ;# <-- NOT TRANSLATED YET
+  ##ID:003753##
+  mcset $l "UART/RS232 Debugger - MCU 8051 IDE" \
+           "UART/RS232调试 - MCU 8051 IDE"
+  ##ID:003754##
+  mcset $l "RS-232\nDTE" \
+           "RS-232\nDTE" ;# <-- NOT TRANSLATED YET
+  ##ID:003755##
+  mcset $l "DE-9" \
+           "DE-9" ;# <-- NOT TRANSLATED YET
+  ##ID:003756##
+  mcset $l "DCD" \
+           "DCD" ;# <-- NOT TRANSLATED YET
+  ##ID:003757##
+  mcset $l "DSR" \
+           "DSR" ;# <-- NOT TRANSLATED YET
+  ##ID:003758##
+  mcset $l "CTS" \
+           "CTS" ;# <-- NOT TRANSLATED YET
+  ##ID:003759##
+  mcset $l "RI" \
+           "RI" ;# <-- NOT TRANSLATED YET
+  ##ID:003760##
+  mcset $l "DTR" \
+           "DTR" ;# <-- NOT TRANSLATED YET
+  ##ID:003761##
+  mcset $l "RTS" \
+           "RTS" ;# <-- NOT TRANSLATED YET
+  ##ID:003762##
+  mcset $l "Break" \
+           "Break" ;# <-- NOT TRANSLATED YET
+  ##ID:003763##
+  mcset $l "Port configuration" \
+           "Port configuration" ;# <-- NOT TRANSLATED YET
+  ##ID:003764##
+  mcset $l "Physical port" \
+           "Physical port" ;# <-- NOT TRANSLATED YET
+  ##ID:003765##
+  mcset $l "Baud rate" \
+           "Baud rate" ;# <-- NOT TRANSLATED YET
+  ##ID:003766##
+  mcset $l "Data bits" \
+           "Data bits" ;# <-- NOT TRANSLATED YET
+  ##ID:003767##
+  mcset $l "Stop bits" \
+           "Stop bits" ;# <-- NOT TRANSLATED YET
+  ##ID:003768##
+  mcset $l "Enable reception" \
+           "Enable reception" ;# <-- NOT TRANSLATED YET
+  ##ID:003769##
+  mcset $l "Terminate connection" \
+           "Terminate connection" ;# <-- NOT TRANSLATED YET
+  ##ID:003770##
+  mcset $l "Data to send" \
+           "Data to send" ;# <-- NOT TRANSLATED YET
+  ##ID:003771##
+  mcset $l "Received data" \
+           "Received data" ;# <-- NOT TRANSLATED YET
+  ##ID:003772##
+  mcset $l "Send selected" \
+           "Send selected" ;# <-- NOT TRANSLATED YET
+  ##ID:003773##
+  mcset $l "Clear selected" \
+           "Clear selected" ;# <-- NOT TRANSLATED YET
+  ##ID:003774##
+  mcset $l "Receive here" \
+           "Receive here" ;# <-- NOT TRANSLATED YET
+  ##ID:003775##
+  mcset $l "Unknown failure" \
+           "Unknown failure" ;# <-- NOT TRANSLATED YET
+  ##ID:003776##
+  mcset $l "Unable to change port configuration" \
+           "Unable to change port configuration" ;# <-- NOT TRANSLATED YET
+  ##ID:003777##
+  mcset $l "IO Error" \
+           "IO Error" ;# <-- NOT TRANSLATED YET
+  ##ID:003778##
+  mcset $l "No port opened." \
+           "No port opened." ;# <-- NOT TRANSLATED YET
+  ##ID:003779##
+  mcset $l "Unable to send the data\n\n%s" \
+           "Unable to send the data\n\n%s" ;# <-- NOT TRANSLATED YET
+  ##ID:003780##
+  mcset $l "Not enough space in the receive buffer !" \
+           "Not enough space in the receive buffer !" ;# <-- NOT TRANSLATED YET
+  ##ID:003781##
+  mcset $l "Ok" \
+           "Ok" ;# <-- NOT TRANSLATED YET
+  ##ID:003782##
+  mcset $l "Keep reception enabled" \
+           "Keep reception enabled" ;# <-- NOT TRANSLATED YET
+  ##ID:003783##
+  mcset $l "Data lost" \
+           "Data lost" ;# <-- NOT TRANSLATED YET
+  ##ID:003784##
+  mcset $l "There is something wrong with the port. Closing connection and disabling reception on this channel !" \
+           "There is something wrong with the port. Closing connection and disabling reception on this channel !" ;# <-- NOT TRANSLATED YET
+  ##ID:003785##
+  mcset $l "Access Error" \
+           "Access Error" ;# <-- NOT TRANSLATED YET
+  ##ID:003786##
+  mcset $l "Unable to open the specified file" \
+           "Unable to open the specified file" ;# <-- NOT TRANSLATED YET
+  ##ID:003787##
+  mcset $l "Unable to use the specified file" \
+           "Unable to use the specified file" ;# <-- NOT TRANSLATED YET
+  ##ID:003788##
+  mcset $l "RS232 pin: GND -- Common ground" \
+           "RS232 pin: GND -- Common ground" ;# <-- NOT TRANSLATED YET
+  ##ID:003789##
+  mcset $l "RS232 pin: DCD -- Carrier Detect" \
+           "RS232 pin: DCD -- Carrier Detect" ;# <-- NOT TRANSLATED YET
+  ##ID:003790##
+  mcset $l "RS232 pin: DSR -- Data Set Ready" \
+           "RS232 pin: DSR -- Data Set Ready" ;# <-- NOT TRANSLATED YET
+  ##ID:003791##
+  mcset $l "RS232 pin: CTS -- Clear To Send" \
+           "RS232 pin: CTS -- Clear To Send" ;# <-- NOT TRANSLATED YET
+  ##ID:003792##
+  mcset $l "RS232 pin: RI  -- Ring Indicator" \
+           "RS232 pin: RI  -- Ring Indicator" ;# <-- NOT TRANSLATED YET
+  ##ID:003793##
+  mcset $l "RS232 pin: DTR -- Data Terminal Ready" \
+           "RS232 pin: DTR -- Data Terminal Ready" ;# <-- NOT TRANSLATED YET
+  ##ID:003794##
+  mcset $l "RS232 pin: RTS -- Request To Send" \
+           "RS232 pin: RTS -- Request To Send" ;# <-- NOT TRANSLATED YET
+  ##ID:003795##
+  mcset $l "RS232 pin: TxD -- Transmitted Data" \
+           "RS232 pin: TxD -- Transmitted Data" ;# <-- NOT TRANSLATED YET
+  ##ID:003796##
+  mcset $l "RS232 pin: RxD -- Received Data" \
+           "RS232 pin: RxD -- Received Data" ;# <-- NOT TRANSLATED YET
+}
+# speccalc.tcl
+# ==============================================================================
+namespace eval SpecCalc {
+  ##ID:003797##
+  mcset $l "Loops" \
+           "Loops" ;# <-- NOT TRANSLATED YET
+  ##ID:003798##
+  mcset $l "Timer 0/1" \
+           "定时器 0/1"
+  ##ID:003799##
+  mcset $l "Timer 2" \
+           "定时器 2"
+  ##ID:003800##
+  mcset $l "SPI" \
+           "SPI" ;# <-- NOT TRANSLATED YET
+  ##ID:003801##
+  mcset $l "Calculate timer preset" \
+           "计算定时器的预置"
+  ##ID:003802##
+  mcset $l "Preset" \
+           "预设"
+  ##ID:003803##
+  mcset $l "Clock out" \
+           "Clock out" ;# <-- NOT TRANSLATED YET
+  ##ID:003804##
+  mcset $l "Special Calculator - MCU 8051 IDE" \
+           "特殊计算器 - MCU 8051 IDE"
+  ##ID:003805##
+  mcset $l "Time" \
+           "Time" ;# <-- NOT TRANSLATED YET
+  ##ID:003806##
+  mcset $l "Time unit" \
+           "Time unit" ;# <-- NOT TRANSLATED YET
+  ##ID:003807##
+  mcset $l "Clock \[kHz\]" \
+           "Clock \[kHz\]" ;# <-- NOT TRANSLATED YET
+  ##ID:003808##
+  mcset $l "MCU clock" \
+           "MCU clock" ;# <-- NOT TRANSLATED YET
+  ##ID:003809##
+  mcset $l "Clock cycles per machine cycle\n  12 - Common 8051\n   6 - Core 51X2\n   1 - Single cycle core" \
+           "Clock cycles per machine cycle\n  12 - Common 8051\n   6 - Core 51X2\n   1 - Single cycle core" ;# <-- NOT TRANSLATED YET
+  ##ID:003810##
+  mcset $l "Clock cycles per machine cycle" \
+           "Clock cycles per machine cycle" ;# <-- NOT TRANSLATED YET
+  ##ID:003811##
+  mcset $l "Registers to use" \
+           "使用寄存器"
+  ##ID:003812##
+  mcset $l "Source code:" \
+           "Source code:" ;# <-- NOT TRANSLATED YET
+  ##ID:003813##
+  mcset $l "Evaluate" \
+           "Evaluate" ;# <-- NOT TRANSLATED YET
+  ##ID:003814##
+  mcset $l "Copy" \
+           "复制"
+  ##ID:003815##
+  mcset $l "Create a wait loop" \
+           "Create a wait loop" ;# <-- NOT TRANSLATED YET
+  ##ID:003816##
+  mcset $l "Mode" \
+           "模式"
+  ##ID:003817##
+  mcset $l "Timer mode" \
+           "定时器模式"
+  ##ID:003818##
+  mcset $l "Show functional block diagram" \
+           "Show functional block diagram" ;# <-- NOT TRANSLATED YET
+  ##ID:003819##
+  mcset $l "Enhanced timer/counter" \
+           "Enhanced timer/counter" ;# <-- NOT TRANSLATED YET
+  ##ID:003820##
+  mcset $l "Calculate for enhanced timers" \
+           "Calculate for enhanced timers" ;# <-- NOT TRANSLATED YET
+  ##ID:003821##
+  mcset $l "The number of active bits in TL1 minus 1" \
+           "The number of active bits in TL1 minus 1" ;# <-- NOT TRANSLATED YET
+  ##ID:003822##
+  mcset $l "Results:" \
+           "结果:"
+  ##ID:003823##
+  mcset $l "TH" \
+           "TH" ;# <-- NOT TRANSLATED YET
+  ##ID:003824##
+  mcset $l "TL" \
+           "TL" ;# <-- NOT TRANSLATED YET
+  ##ID:003825##
+  mcset $l "RH" \
+           "RH" ;# <-- NOT TRANSLATED YET
+  ##ID:003826##
+  mcset $l "RL" \
+           "RL" ;# <-- NOT TRANSLATED YET
+  ##ID:003827##
+  mcset $l "Repeats" \
+           "重复"
+  ##ID:003828##
+  mcset $l "Rest" \
+           "休息"
+  ##ID:003829##
+  mcset $l "Do not change" \
+           "不要更改"
+  ##ID:003830##
+  mcset $l "Zero" \
+           "Zero" ;# <-- NOT TRANSLATED YET
+  ##ID:003831##
+  mcset $l "none" \
+           "无"
+  ##ID:003832##
+  mcset $l "Calculate timer 0/1 preset" \
+           "Calculate timer 0/1 preset" ;# <-- NOT TRANSLATED YET
+  ##ID:003833##
+  mcset $l "RCAL2H" \
+           "RCAL2H" ;# <-- NOT TRANSLATED YET
+  ##ID:003834##
+  mcset $l "RCAL2L" \
+           "RCAL2L" ;# <-- NOT TRANSLATED YET
+  ##ID:003835##
+  mcset $l "T2H" \
+           "T2H" ;# <-- NOT TRANSLATED YET
+  ##ID:003836##
+  mcset $l "T2L" \
+           "T2L" ;# <-- NOT TRANSLATED YET
+  ##ID:003837##
+  mcset $l "Calculate timer 2 preset" \
+           "Calculate timer 2 preset" ;# <-- NOT TRANSLATED YET
+  ##ID:003838##
+  mcset $l "Frequency" \
+           "Frequency" ;# <-- NOT TRANSLATED YET
+  ##ID:003839##
+  mcset $l "F osc" \
+           "F osc" ;# <-- NOT TRANSLATED YET
+  ##ID:003840##
+  mcset $l "X2" \
+           "X2" ;# <-- NOT TRANSLATED YET
+  ##ID:003841##
+  mcset $l "HEX" \
+           "HEX" ;# <-- NOT TRANSLATED YET
+  ##ID:003842##
+  mcset $l "DEC" \
+           "DEC" ;# <-- NOT TRANSLATED YET
+  ##ID:003843##
+  mcset $l "RCAP2H" \
+           "RCAP2H" ;# <-- NOT TRANSLATED YET
+  ##ID:003844##
+  mcset $l "RCAP2L" \
+           "RCAP2L" ;# <-- NOT TRANSLATED YET
+  ##ID:003845##
+  mcset $l "Error" \
+           "错误"
+  ##ID:003846##
+  mcset $l "Calculate clock output" \
+           "Calculate clock output" ;# <-- NOT TRANSLATED YET
+  ##ID:003847##
+  mcset $l "Baud rate" \
+           "波特率"
+  ##ID:003848##
+  mcset $l "UART mode" \
+           "UART模式"
+  ##ID:003849##
+  mcset $l "Generator" \
+           "Generator" ;# <-- NOT TRANSLATED YET
+  ##ID:003850##
+  mcset $l "Baud rate generator" \
+           "Baud rate generator" ;# <-- NOT TRANSLATED YET
+  ##ID:003851##
+  mcset $l "Bit PCON.7 -- Double baud rate" \
+           "Bit PCON.7 -- Double baud rate" ;# <-- NOT TRANSLATED YET
+  ##ID:003852##
+  mcset $l "SPD (SPeeD) in BDRCON register" \
+           "SPD (SPeeD) in BDRCON register" ;# <-- NOT TRANSLATED YET
+  ##ID:003853##
+  mcset $l "Calculate for enhanced timer 1" \
+           "Calculate for enhanced timer 1" ;# <-- NOT TRANSLATED YET
+  ##ID:003854##
+  mcset $l "T1 mode" \
+           "T1模式"
+  ##ID:003855##
+  mcset $l "Timer 1 mode" \
+           "Timer 1 mode" ;# <-- NOT TRANSLATED YET
+  ##ID:003856##
+  mcset $l "UART baud rate" \
+           "UART baud rate" ;# <-- NOT TRANSLATED YET
+  ##ID:003857##
+  mcset $l "Mode X2 or single cycle core" \
+           "Mode X2 or single cycle core" ;# <-- NOT TRANSLATED YET
+  ##ID:003858##
+  mcset $l "SCK \[kHz\]" \
+           "SCK \[kHz\]" ;# <-- NOT TRANSLATED YET
+  ##ID:003859##
+  mcset $l "Set MCU oscillator to " \
+           "设置MCU振荡器 "
+  ##ID:003860##
+  mcset $l " kHz" \
+           " kHz" ;# <-- NOT TRANSLATED YET
+  ##ID:003861##
+  mcset $l "Calculate oscillator frequency" \
+           "振荡频率计算"
+  ##ID:003862##
+  mcset $l "Unable to evaluate" \
+           "Unable to evaluate" ;# <-- NOT TRANSLATED YET
+  ##ID:003863##
+  mcset $l "ERROR: Missing time\n" \
+           "ERROR: Missing time\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003864##
+  mcset $l "ERROR: Time rate cannot be 0\n" \
+           "ERROR: Time rate cannot be 0\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003865##
+  mcset $l "ERROR: Missing MCU clock rate\n" \
+           "ERROR: Missing MCU clock rate\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003866##
+  mcset $l "ERROR: MCU clock rate cannot be 0\n" \
+           "ERROR: MCU clock rate cannot be 0\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003867##
+  mcset $l "ERROR: Missing register name %s\n" \
+           "ERROR: Missing register name %s\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003868##
+  mcset $l "ERROR: Ambiguous register name %s\n" \
+           "ERROR: Ambiguous register name %s\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003869##
+  mcset $l "; START: Wait loop, time: %s %s\n; Clock: %s kHz (%s)\n; Used registers: " \
+           "; START: Wait loop, time: %s %s\n; Clock: %s kHz (%s)\n; Used registers: " ;# <-- NOT TRANSLATED YET
+  ##ID:003870##
+  mcset $l "; Rest: %s\n" \
+           "; Rest: %s\n" ;# <-- NOT TRANSLATED YET
+  ##ID:003871##
+  mcset $l "; END: Wait loop" \
+           "; END: Wait loop" ;# <-- NOT TRANSLATED YET
+  ##ID:003872##
+  mcset $l "Invalid time" \
+           "无效的时间"
+  ##ID:003873##
+  mcset $l "Invalid clock rate" \
+           "无效的时钟频率"
+  ##ID:003874##
+  mcset $l "Value is too high" \
+           "值过高"
+  ##ID:003875##
+  mcset $l "One" \
+           "One" ;# <-- NOT TRANSLATED YET
+  ##ID:003876##
+  mcset $l "Timer 0/1 in mode 0" \
+           "Timer 0/1 in mode 0" ;# <-- NOT TRANSLATED YET
+  ##ID:003877##
+  mcset $l "Timer 0/1 in mode 1" \
+           "Timer 0/1 in mode 1" ;# <-- NOT TRANSLATED YET
+  ##ID:003878##
+  mcset $l "Timer 0/1 in mode 2" \
+           "Timer 0/1 in mode 2" ;# <-- NOT TRANSLATED YET
+  ##ID:003879##
+  mcset $l "Timer 2 as up/down counter" \
+           "Timer 2 as up/down counter" ;# <-- NOT TRANSLATED YET
+  ##ID:003880##
+  mcset $l "Timer 1/2 as UART baud rate generator" \
+           "Timer 1/2 as UART baud rate generator" ;# <-- NOT TRANSLATED YET
+  ##ID:003881##
+  mcset $l "Internal baud rate generator" \
+           "Internal baud rate generator" ;# <-- NOT TRANSLATED YET
+  ##ID:003882##
+  mcset $l "Diagram or formula" \
+           "Diagram or formula" ;# <-- NOT TRANSLATED YET
+  ##ID:003883##
+  mcset $l "UART baud rate generator" \
+           "UART baud rate generator" ;# <-- NOT TRANSLATED YET
+  ##ID:003884##
+  mcset $l "All files" \
+           "所有文件"
+  ##ID:003885##
+  mcset $l "Text files" \
+           "文本文件"
+  ##ID:003886##
+  mcset $l "HTML files" \
+           "HTML文件"
+}
+# table_of_instructions.tcl
+# ==============================================================================
+namespace eval TableOfInstructions {
+  ##ID:003887##
+  mcset $l "Exit" \
+           "退出"
+  ##ID:003888##
+  mcset $l "OP code (hex): " \
+           "OP code (hex): " ;# <-- NOT TRANSLATED YET
+  ##ID:003889##
+  mcset $l "Class: " \
+           "Class: " ;# <-- NOT TRANSLATED YET
+  ##ID:003890##
+  mcset $l "Description: " \
+           "Description: " ;# <-- NOT TRANSLATED YET
+  ##ID:003891##
+  mcset $l "Length: " \
+           "Length: " ;# <-- NOT TRANSLATED YET
+  ##ID:003892##
+  mcset $l "Time: " \
+           "Time: " ;# <-- NOT TRANSLATED YET
+  ##ID:003893##
+  mcset $l "Flags: " \
+           "Flags: " ;# <-- NOT TRANSLATED YET
+  ##ID:003894##
+  mcset $l "Note: " \
+           "Note: " ;# <-- NOT TRANSLATED YET
+  ##ID:003895##
+  mcset $l "OP code not defined" \
+           "OP code not defined" ;# <-- NOT TRANSLATED YET
+  ##ID:003896##
+  mcset $l "This instruction does not exist on 8051" \
+           "This instruction does not exist on 8051" ;# <-- NOT TRANSLATED YET
+  ##ID:003897##
+  mcset $l "Operands" \
+           "Operands" ;# <-- NOT TRANSLATED YET
+  ##ID:003898##
+  mcset $l "Length" \
+           "Length" ;# <-- NOT TRANSLATED YET
+  ##ID:003899##
+  mcset $l "Time" \
+           "Time" ;# <-- NOT TRANSLATED YET
+  ##ID:003900##
+  mcset $l "Mnemonics" \
+           "Mnemonics" ;# <-- NOT TRANSLATED YET
+}
+# spell_check.tcl
+# ==============================================================================
+namespace eval Editor {
+  ##ID:003901##
+  mcset $l "Hunspell error" \
+           "Hunspell error" ;# <-- NOT TRANSLATED YET
+  ##ID:003902##
+  mcset $l "Unable to start the spell checker. Please try to re-install the hunspell. Spell checking function will not be available" \
+           "Unable to start the spell checker. Please try to re-install the hunspell. Spell checking function will not be available" ;# <-- NOT TRANSLATED YET
+  ##ID:003903##
+  mcset $l "Refresh list of dictionaries" \
+           "Refresh list of dictionaries" ;# <-- NOT TRANSLATED YET
+  ##ID:003904##
+  mcset $l "Turn off spell checking" \
+           "Turn off spell checking" ;# <-- NOT TRANSLATED YET
+  ##ID:003905##
+  mcset $l "Set dictionary by language" \
+           "Set dictionary by language" ;# <-- NOT TRANSLATED YET
+  ##ID:003906##
+  mcset $l "Set dictionary by country" \
+           "Set dictionary by country" ;# <-- NOT TRANSLATED YET
+  ##ID:003907##
+  mcset $l "File changed on disk" \
+           "File changed on disk" ;# <-- NOT TRANSLATED YET
+  ##ID:003908##
+  mcset $l "The file '%s' was modified from outside of this program.\n\nWhat do you want to do with the modified file" \
+           "The file '%s' was modified from outside of this program.\n\nWhat do you want to do with the modified file" ;# <-- NOT TRANSLATED YET
+  ##ID:003909##
+  mcset $l "Reload in editor" \
+           "Reload in editor" ;# <-- NOT TRANSLATED YET
+  ##ID:003910##
+  mcset $l "Overwrite on disk" \
+           "Overwrite on disk" ;# <-- NOT TRANSLATED YET
+  ##ID:003911##
+  mcset $l "Do nothing" \
+           "Do nothing" ;# <-- NOT TRANSLATED YET
+  # Names of languages
+  ##ID:003912##
+  mcset $l "Abkhazian" \
+           "Abkhazian" ;# <-- NOT TRANSLATED YET
+  ##ID:003913##
+  mcset $l "Afar" \
+           "Afar" ;# <-- NOT TRANSLATED YET
+  ##ID:003914##
+  mcset $l "Afrikaans" \
+           "Afrikaans" ;# <-- NOT TRANSLATED YET
+  ##ID:003915##
+  mcset $l "Akan" \
+           "Akan" ;# <-- NOT TRANSLATED YET
+  ##ID:003916##
+  mcset $l "Albanian" \
+           "Albanian" ;# <-- NOT TRANSLATED YET
+  ##ID:003917##
+  mcset $l "Amharic" \
+           "Amharic" ;# <-- NOT TRANSLATED YET
+  ##ID:003918##
+  mcset $l "Arabic" \
+           "Arabic" ;# <-- NOT TRANSLATED YET
+  ##ID:003919##
+  mcset $l "Aragonese" \
+           "Aragonese" ;# <-- NOT TRANSLATED YET
+  ##ID:003920##
+  mcset $l "Armenian" \
+           "Armenian" ;# <-- NOT TRANSLATED YET
+  ##ID:003921##
+  mcset $l "Assamese" \
+           "Assamese" ;# <-- NOT TRANSLATED YET
+  ##ID:003922##
+  mcset $l "Avaric" \
+           "Avaric" ;# <-- NOT TRANSLATED YET
+  ##ID:003923##
+  mcset $l "Avestan" \
+           "Avestan" ;# <-- NOT TRANSLATED YET
+  ##ID:003924##
+  mcset $l "Aymara" \
+           "Aymara" ;# <-- NOT TRANSLATED YET
+  ##ID:003925##
+  mcset $l "Azerbaijani" \
+           "Azerbaijani" ;# <-- NOT TRANSLATED YET
+  ##ID:003926##
+  mcset $l "Bambara" \
+           "Bambara" ;# <-- NOT TRANSLATED YET
+  ##ID:003927##
+  mcset $l "Bashkir" \
+           "Bashkir" ;# <-- NOT TRANSLATED YET
+  ##ID:003928##
+  mcset $l "Basque" \
+           "Basque" ;# <-- NOT TRANSLATED YET
+  ##ID:003929##
+  mcset $l "Belarusian" \
+           "Belarusian" ;# <-- NOT TRANSLATED YET
+  ##ID:003930##
+  mcset $l "Bengali" \
+           "Bengali" ;# <-- NOT TRANSLATED YET
+  ##ID:003931##
+  mcset $l "Bihari languages" \
+           "Bihari languages" ;# <-- NOT TRANSLATED YET
+  ##ID:003932##
+  mcset $l "Bislama" \
+           "Bislama" ;# <-- NOT TRANSLATED YET
+  ##ID:003933##
+  mcset $l "Bokmål, Norwegian" \
+           "Bokmål, Norwegian" ;# <-- NOT TRANSLATED YET
+  ##ID:003934##
+  mcset $l "Bosnian" \
+           "Bosnian" ;# <-- NOT TRANSLATED YET
+  ##ID:003935##
+  mcset $l "Breton" \
+           "Breton" ;# <-- NOT TRANSLATED YET
+  ##ID:003936##
+  mcset $l "Bulgarian" \
+           "Bulgarian" ;# <-- NOT TRANSLATED YET
+  ##ID:003937##
+  mcset $l "Burmese" \
+           "Burmese" ;# <-- NOT TRANSLATED YET
+  ##ID:003938##
+  mcset $l "Castilian" \
+           "Castilian" ;# <-- NOT TRANSLATED YET
+  ##ID:003939##
+  mcset $l "Catalan" \
+           "Catalan" ;# <-- NOT TRANSLATED YET
+  ##ID:003940##
+  mcset $l "Central Khmer" \
+           "Central Khmer" ;# <-- NOT TRANSLATED YET
+  ##ID:003941##
+  mcset $l "Chamorro" \
+           "Chamorro" ;# <-- NOT TRANSLATED YET
+  ##ID:003942##
+  mcset $l "Chechen" \
+           "Chechen" ;# <-- NOT TRANSLATED YET
+  ##ID:003943##
+  mcset $l "Chewa" \
+           "Chewa" ;# <-- NOT TRANSLATED YET
+  ##ID:003944##
+  mcset $l "Chichewa" \
+           "Chichewa" ;# <-- NOT TRANSLATED YET
+  ##ID:003945##
+  mcset $l "Chinese" \
+           "Chinese" ;# <-- NOT TRANSLATED YET
+  ##ID:003946##
+  mcset $l "Chuang" \
+           "Chuang" ;# <-- NOT TRANSLATED YET
+  ##ID:003947##
+  mcset $l "Church Slavic" \
+           "Church Slavic" ;# <-- NOT TRANSLATED YET
+  ##ID:003948##
+  mcset $l "Church Slavonic" \
+           "Church Slavonic" ;# <-- NOT TRANSLATED YET
+  ##ID:003949##
+  mcset $l "Chuvash" \
+           "Chuvash" ;# <-- NOT TRANSLATED YET
+  ##ID:003950##
+  mcset $l "Cornish" \
+           "Cornish" ;# <-- NOT TRANSLATED YET
+  ##ID:003951##
+  mcset $l "Corsican" \
+           "Corsican" ;# <-- NOT TRANSLATED YET
+  ##ID:003952##
+  mcset $l "Cree" \
+           "Cree" ;# <-- NOT TRANSLATED YET
+  ##ID:003953##
+  mcset $l "Croatian" \
+           "Croatian" ;# <-- NOT TRANSLATED YET
+  ##ID:003954##
+  mcset $l "Czech" \
+           "Czech" ;# <-- NOT TRANSLATED YET
+  ##ID:003955##
+  mcset $l "Danish" \
+           "Danish" ;# <-- NOT TRANSLATED YET
+  ##ID:003956##
+  mcset $l "Dhivehi" \
+           "Dhivehi" ;# <-- NOT TRANSLATED YET
+  ##ID:003957##
+  mcset $l "Divehi" \
+           "Divehi" ;# <-- NOT TRANSLATED YET
+  ##ID:003958##
+  mcset $l "Dutch" \
+           "Dutch" ;# <-- NOT TRANSLATED YET
+  ##ID:003959##
+  mcset $l "Dzongkha" \
+           "Dzongkha" ;# <-- NOT TRANSLATED YET
+  ##ID:003960##
+  mcset $l "English" \
+           "English" ;# <-- NOT TRANSLATED YET
+  ##ID:003961##
+  mcset $l "Esperanto" \
+           "Esperanto" ;# <-- NOT TRANSLATED YET
+  ##ID:003962##
+  mcset $l "Estonian" \
+           "Estonian" ;# <-- NOT TRANSLATED YET
+  ##ID:003963##
+  mcset $l "Ewe" \
+           "Ewe" ;# <-- NOT TRANSLATED YET
+  ##ID:003964##
+  mcset $l "Faroese" \
+           "Faroese" ;# <-- NOT TRANSLATED YET
+  ##ID:003965##
+  mcset $l "Fijian" \
+           "Fijian" ;# <-- NOT TRANSLATED YET
+  ##ID:003966##
+  mcset $l "Finnish" \
+           "Finnish" ;# <-- NOT TRANSLATED YET
+  ##ID:003967##
+  mcset $l "Flemish" \
+           "Flemish" ;# <-- NOT TRANSLATED YET
+  ##ID:003968##
+  mcset $l "French" \
+           "French" ;# <-- NOT TRANSLATED YET
+  ##ID:003969##
+  mcset $l "Fulah" \
+           "Fulah" ;# <-- NOT TRANSLATED YET
+  ##ID:003970##
+  mcset $l "Gaelic" \
+           "Gaelic" ;# <-- NOT TRANSLATED YET
+  ##ID:003971##
+  mcset $l "Galician" \
+           "Galician" ;# <-- NOT TRANSLATED YET
+  ##ID:003972##
+  mcset $l "Ganda" \
+           "Ganda" ;# <-- NOT TRANSLATED YET
+  ##ID:003973##
+  mcset $l "Georgian" \
+           "Georgian" ;# <-- NOT TRANSLATED YET
+  ##ID:003974##
+  mcset $l "German" \
+           "German" ;# <-- NOT TRANSLATED YET
+  ##ID:003975##
+  mcset $l "Gikuyu" \
+           "Gikuyu" ;# <-- NOT TRANSLATED YET
+  ##ID:003976##
+  mcset $l "Greek, Modern" \
+           "Greek, Modern" ;# <-- NOT TRANSLATED YET
+  ##ID:003977##
+  mcset $l "Greenlandic" \
+           "Greenlandic" ;# <-- NOT TRANSLATED YET
+  ##ID:003978##
+  mcset $l "Guarani" \
+           "Guarani" ;# <-- NOT TRANSLATED YET
+  ##ID:003979##
+  mcset $l "Gujarati" \
+           "Gujarati" ;# <-- NOT TRANSLATED YET
+  ##ID:003980##
+  mcset $l "Haitian" \
+           "Haitian" ;# <-- NOT TRANSLATED YET
+  ##ID:003981##
+  mcset $l "Haitian Creole" \
+           "Haitian Creole" ;# <-- NOT TRANSLATED YET
+  ##ID:003982##
+  mcset $l "Hausa" \
+           "Hausa" ;# <-- NOT TRANSLATED YET
+  ##ID:003983##
+  mcset $l "Hebrew" \
+           "Hebrew" ;# <-- NOT TRANSLATED YET
+  ##ID:003984##
+  mcset $l "Herero" \
+           "Herero" ;# <-- NOT TRANSLATED YET
+  ##ID:003985##
+  mcset $l "Hindi" \
+           "Hindi" ;# <-- NOT TRANSLATED YET
+  ##ID:003986##
+  mcset $l "Hiri Motu" \
+           "Hiri Motu" ;# <-- NOT TRANSLATED YET
+  ##ID:003987##
+  mcset $l "Hungarian" \
+           "Hungarian" ;# <-- NOT TRANSLATED YET
+  ##ID:003988##
+  mcset $l "Icelandic" \
+           "Icelandic" ;# <-- NOT TRANSLATED YET
+  ##ID:003989##
+  mcset $l "Ido" \
+           "Ido" ;# <-- NOT TRANSLATED YET
+  ##ID:003990##
+  mcset $l "Igbo" \
+           "Igbo" ;# <-- NOT TRANSLATED YET
+  ##ID:003991##
+  mcset $l "Indonesian" \
+           "Indonesian" ;# <-- NOT TRANSLATED YET
+  ##ID:003992##
+  mcset $l "Interlingue" \
+           "Interlingue" ;# <-- NOT TRANSLATED YET
+  ##ID:003993##
+  mcset $l "Inuktitut" \
+           "Inuktitut" ;# <-- NOT TRANSLATED YET
+  ##ID:003994##
+  mcset $l "Inupiaq" \
+           "Inupiaq" ;# <-- NOT TRANSLATED YET
+  ##ID:003995##
+  mcset $l "Irish" \
+           "Irish" ;# <-- NOT TRANSLATED YET
+  ##ID:003996##
+  mcset $l "Italian" \
+           "Italian" ;# <-- NOT TRANSLATED YET
+  ##ID:003997##
+  mcset $l "Japanese" \
+           "Japanese" ;# <-- NOT TRANSLATED YET
+  ##ID:003998##
+  mcset $l "Javanese" \
+           "Javanese" ;# <-- NOT TRANSLATED YET
+  ##ID:003999##
+  mcset $l "Kalaallisut" \
+           "Kalaallisut" ;# <-- NOT TRANSLATED YET
+  ##ID:004000##
+  mcset $l "Kannada" \
+           "Kannada" ;# <-- NOT TRANSLATED YET
+  ##ID:004001##
+  mcset $l "Kanuri" \
+           "Kanuri" ;# <-- NOT TRANSLATED YET
+  ##ID:004002##
+  mcset $l "Kashmiri" \
+           "Kashmiri" ;# <-- NOT TRANSLATED YET
+  ##ID:004003##
+  mcset $l "Kazakh" \
+           "Kazakh" ;# <-- NOT TRANSLATED YET
+  ##ID:004004##
+  mcset $l "Kikuyu" \
+           "Kikuyu" ;# <-- NOT TRANSLATED YET
+  ##ID:004005##
+  mcset $l "Kinyarwanda" \
+           "Kinyarwanda" ;# <-- NOT TRANSLATED YET
+  ##ID:004006##
+  mcset $l "Kirghiz" \
+           "Kirghiz" ;# <-- NOT TRANSLATED YET
+  ##ID:004007##
+  mcset $l "Komi" \
+           "Komi" ;# <-- NOT TRANSLATED YET
+  ##ID:004008##
+  mcset $l "Kongo" \
+           "Kongo" ;# <-- NOT TRANSLATED YET
+  ##ID:004009##
+  mcset $l "Korean" \
+           "Korean" ;# <-- NOT TRANSLATED YET
+  ##ID:004010##
+  mcset $l "Kuanyama" \
+           "Kuanyama" ;# <-- NOT TRANSLATED YET
+  ##ID:004011##
+  mcset $l "Kurdish" \
+           "Kurdish" ;# <-- NOT TRANSLATED YET
+  ##ID:004012##
+  mcset $l "Kwanyama" \
+           "Kwanyama" ;# <-- NOT TRANSLATED YET
+  ##ID:004013##
+  mcset $l "Kyrgyz" \
+           "Kyrgyz" ;# <-- NOT TRANSLATED YET
+  ##ID:004014##
+  mcset $l "Lao" \
+           "Lao" ;# <-- NOT TRANSLATED YET
+  ##ID:004015##
+  mcset $l "Latin" \
+           "Latin" ;# <-- NOT TRANSLATED YET
+  ##ID:004016##
+  mcset $l "Latvian" \
+           "Latvian" ;# <-- NOT TRANSLATED YET
+  ##ID:004017##
+  mcset $l "Letzeburgesch" \
+           "Letzeburgesch" ;# <-- NOT TRANSLATED YET
+  ##ID:004018##
+  mcset $l "Limburgan" \
+           "Limburgan" ;# <-- NOT TRANSLATED YET
+  ##ID:004019##
+  mcset $l "Limburger" \
+           "Limburger" ;# <-- NOT TRANSLATED YET
+  ##ID:004020##
+  mcset $l "Limburgish" \
+           "Limburgish" ;# <-- NOT TRANSLATED YET
+  ##ID:004021##
+  mcset $l "Lingala" \
+           "Lingala" ;# <-- NOT TRANSLATED YET
+  ##ID:004022##
+  mcset $l "Lithuanian" \
+           "Lithuanian" ;# <-- NOT TRANSLATED YET
+  ##ID:004023##
+  mcset $l "Luba-Katanga" \
+           "Luba-Katanga" ;# <-- NOT TRANSLATED YET
+  ##ID:004024##
+  mcset $l "Luxembourgish" \
+           "Luxembourgish" ;# <-- NOT TRANSLATED YET
+  ##ID:004025##
+  mcset $l "Macedonian" \
+           "Macedonian" ;# <-- NOT TRANSLATED YET
+  ##ID:004026##
+  mcset $l "Malagasy" \
+           "Malagasy" ;# <-- NOT TRANSLATED YET
+  ##ID:004027##
+  mcset $l "Malay" \
+           "Malay" ;# <-- NOT TRANSLATED YET
+  ##ID:004028##
+  mcset $l "Malayalam" \
+           "Malayalam" ;# <-- NOT TRANSLATED YET
+  ##ID:004029##
+  mcset $l "Maldivian" \
+           "Maldivian" ;# <-- NOT TRANSLATED YET
+  ##ID:004030##
+  mcset $l "Maltese" \
+           "Maltese" ;# <-- NOT TRANSLATED YET
+  ##ID:004031##
+  mcset $l "Manx" \
+           "Manx" ;# <-- NOT TRANSLATED YET
+  ##ID:004032##
+  mcset $l "Maori" \
+           "Maori" ;# <-- NOT TRANSLATED YET
+  ##ID:004033##
+  mcset $l "Marathi" \
+           "Marathi" ;# <-- NOT TRANSLATED YET
+  ##ID:004034##
+  mcset $l "Marshallese" \
+           "Marshallese" ;# <-- NOT TRANSLATED YET
+  ##ID:004035##
+  mcset $l "Moldavian" \
+           "Moldavian" ;# <-- NOT TRANSLATED YET
+  ##ID:004036##
+  mcset $l "Moldovan" \
+           "Moldovan" ;# <-- NOT TRANSLATED YET
+  ##ID:004037##
+  mcset $l "Mongolian" \
+           "Mongolian" ;# <-- NOT TRANSLATED YET
+  ##ID:004038##
+  mcset $l "Nauru" \
+           "Nauru" ;# <-- NOT TRANSLATED YET
+  ##ID:004039##
+  mcset $l "Navaho" \
+           "Navaho" ;# <-- NOT TRANSLATED YET
+  ##ID:004040##
+  mcset $l "Navajo" \
+           "Navajo" ;# <-- NOT TRANSLATED YET
+  ##ID:004041##
+  mcset $l "Ndebele, North" \
+           "Ndebele, North" ;# <-- NOT TRANSLATED YET
+  ##ID:004042##
+  mcset $l "Ndebele, South" \
+           "Ndebele, South" ;# <-- NOT TRANSLATED YET
+  ##ID:004043##
+  mcset $l "Ndonga" \
+           "Ndonga" ;# <-- NOT TRANSLATED YET
+  ##ID:004044##
+  mcset $l "Nepali" \
+           "Nepali" ;# <-- NOT TRANSLATED YET
+  ##ID:004045##
+  mcset $l "North Ndebele" \
+           "North Ndebele" ;# <-- NOT TRANSLATED YET
+  ##ID:004046##
+  mcset $l "Northern Sami" \
+           "Northern Sami" ;# <-- NOT TRANSLATED YET
+  ##ID:004047##
+  mcset $l "Norwegian" \
+           "Norwegian" ;# <-- NOT TRANSLATED YET
+  ##ID:004048##
+  mcset $l "Norwegian Bokmål" \
+           "Norwegian Bokmål" ;# <-- NOT TRANSLATED YET
+  ##ID:004049##
+  mcset $l "Norwegian Nynorsk" \
+           "Norwegian Nynorsk" ;# <-- NOT TRANSLATED YET
+  ##ID:004050##
+  mcset $l "Nuosu" \
+           "Nuosu" ;# <-- NOT TRANSLATED YET
+  ##ID:004051##
+  mcset $l "Nyanja" \
+           "Nyanja" ;# <-- NOT TRANSLATED YET
+  ##ID:004052##
+  mcset $l "Nynorsk, Norwegian" \
+           "Nynorsk, Norwegian" ;# <-- NOT TRANSLATED YET
+  ##ID:004053##
+  mcset $l "Occidental" \
+           "Occidental" ;# <-- NOT TRANSLATED YET
+  ##ID:004054##
+  mcset $l "Occitan" \
+           "Occitan" ;# <-- NOT TRANSLATED YET
+  ##ID:004055##
+  mcset $l "Ojibwa" \
+           "Ojibwa" ;# <-- NOT TRANSLATED YET
+  ##ID:004056##
+  mcset $l "Old Bulgarian" \
+           "Old Bulgarian" ;# <-- NOT TRANSLATED YET
+  ##ID:004057##
+  mcset $l "Old Church Slavonic" \
+           "Old Church Slavonic" ;# <-- NOT TRANSLATED YET
+  ##ID:004058##
+  mcset $l "Old Slavonic" \
+           "Old Slavonic" ;# <-- NOT TRANSLATED YET
+  ##ID:004059##
+  mcset $l "Oriya" \
+           "Oriya" ;# <-- NOT TRANSLATED YET
+  ##ID:004060##
+  mcset $l "Oromo" \
+           "Oromo" ;# <-- NOT TRANSLATED YET
+  ##ID:004061##
+  mcset $l "Ossetian" \
+           "Ossetian" ;# <-- NOT TRANSLATED YET
+  ##ID:004062##
+  mcset $l "Ossetic" \
+           "Ossetic" ;# <-- NOT TRANSLATED YET
+  ##ID:004063##
+  mcset $l "Pali" \
+           "Pali" ;# <-- NOT TRANSLATED YET
+  ##ID:004064##
+  mcset $l "Panjabi" \
+           "Panjabi" ;# <-- NOT TRANSLATED YET
+  ##ID:004065##
+  mcset $l "Pashto" \
+           "Pashto" ;# <-- NOT TRANSLATED YET
+  ##ID:004066##
+  mcset $l "Persian" \
+           "Persian" ;# <-- NOT TRANSLATED YET
+  ##ID:004067##
+  mcset $l "Polish" \
+           "Polish" ;# <-- NOT TRANSLATED YET
+  ##ID:004068##
+  mcset $l "Portuguese" \
+           "Portuguese" ;# <-- NOT TRANSLATED YET
+  ##ID:004069##
+  mcset $l "Punjabi" \
+           "Punjabi" ;# <-- NOT TRANSLATED YET
+  ##ID:004070##
+  mcset $l "Pushto" \
+           "Pushto" ;# <-- NOT TRANSLATED YET
+  ##ID:004071##
+  mcset $l "Quechua" \
+           "Quechua" ;# <-- NOT TRANSLATED YET
+  ##ID:004072##
+  mcset $l "Romanian" \
+           "Romanian" ;# <-- NOT TRANSLATED YET
+  ##ID:004073##
+  mcset $l "Romansh" \
+           "Romansh" ;# <-- NOT TRANSLATED YET
+  ##ID:004074##
+  mcset $l "Rundi" \
+           "Rundi" ;# <-- NOT TRANSLATED YET
+  ##ID:004075##
+  mcset $l "Russian" \
+           "Russian" ;# <-- NOT TRANSLATED YET
+  ##ID:004076##
+  mcset $l "Samoan" \
+           "Samoan" ;# <-- NOT TRANSLATED YET
+  ##ID:004077##
+  mcset $l "Sango" \
+           "Sango" ;# <-- NOT TRANSLATED YET
+  ##ID:004078##
+  mcset $l "Sanskrit" \
+           "Sanskrit" ;# <-- NOT TRANSLATED YET
+  ##ID:004079##
+  mcset $l "Sardinian" \
+           "Sardinian" ;# <-- NOT TRANSLATED YET
+  ##ID:004080##
+  mcset $l "Scottish Gaelic" \
+           "Scottish Gaelic" ;# <-- NOT TRANSLATED YET
+  ##ID:004081##
+  mcset $l "Serbian" \
+           "Serbian" ;# <-- NOT TRANSLATED YET
+  ##ID:004082##
+  mcset $l "Shona" \
+           "Shona" ;# <-- NOT TRANSLATED YET
+  ##ID:004083##
+  mcset $l "Sichuan Yi" \
+           "Sichuan Yi" ;# <-- NOT TRANSLATED YET
+  ##ID:004084##
+  mcset $l "Sindhi" \
+           "Sindhi" ;# <-- NOT TRANSLATED YET
+  ##ID:004085##
+  mcset $l "Sinhala" \
+           "Sinhala" ;# <-- NOT TRANSLATED YET
+  ##ID:004086##
+  mcset $l "Sinhalese" \
+           "Sinhalese" ;# <-- NOT TRANSLATED YET
+  ##ID:004087##
+  mcset $l "Slovak" \
+           "Slovak" ;# <-- NOT TRANSLATED YET
+  ##ID:004088##
+  mcset $l "Slovenian" \
+           "Slovenian" ;# <-- NOT TRANSLATED YET
+  ##ID:004089##
+  mcset $l "Somali" \
+           "Somali" ;# <-- NOT TRANSLATED YET
+  ##ID:004090##
+  mcset $l "Sotho, Southern" \
+           "Sotho, Southern" ;# <-- NOT TRANSLATED YET
+  ##ID:004091##
+  mcset $l "South Ndebele" \
+           "South Ndebele" ;# <-- NOT TRANSLATED YET
+  ##ID:004092##
+  mcset $l "Spanish" \
+           "Spanish" ;# <-- NOT TRANSLATED YET
+  ##ID:004093##
+  mcset $l "Sundanese" \
+           "Sundanese" ;# <-- NOT TRANSLATED YET
+  ##ID:004094##
+  mcset $l "Swahili" \
+           "Swahili" ;# <-- NOT TRANSLATED YET
+  ##ID:004095##
+  mcset $l "Swati" \
+           "Swati" ;# <-- NOT TRANSLATED YET
+  ##ID:004096##
+  mcset $l "Swedish" \
+           "Swedish" ;# <-- NOT TRANSLATED YET
+  ##ID:004097##
+  mcset $l "Tagalog" \
+           "Tagalog" ;# <-- NOT TRANSLATED YET
+  ##ID:004098##
+  mcset $l "Tahitian" \
+           "Tahitian" ;# <-- NOT TRANSLATED YET
+  ##ID:004099##
+  mcset $l "Tajik" \
+           "Tajik" ;# <-- NOT TRANSLATED YET
+  ##ID:004100##
+  mcset $l "Tamil" \
+           "Tamil" ;# <-- NOT TRANSLATED YET
+  ##ID:004101##
+  mcset $l "Tatar" \
+           "Tatar" ;# <-- NOT TRANSLATED YET
+  ##ID:004102##
+  mcset $l "Telugu" \
+           "Telugu" ;# <-- NOT TRANSLATED YET
+  ##ID:004103##
+  mcset $l "Thai" \
+           "Thai" ;# <-- NOT TRANSLATED YET
+  ##ID:004104##
+  mcset $l "Tibetan" \
+           "Tibetan" ;# <-- NOT TRANSLATED YET
+  ##ID:004105##
+  mcset $l "Tigrinya" \
+           "Tigrinya" ;# <-- NOT TRANSLATED YET
+  ##ID:004106##
+  mcset $l "Tonga" \
+           "Tonga" ;# <-- NOT TRANSLATED YET
+  ##ID:004107##
+  mcset $l "Tsonga" \
+           "Tsonga" ;# <-- NOT TRANSLATED YET
+  ##ID:004108##
+  mcset $l "Tswana" \
+           "Tswana" ;# <-- NOT TRANSLATED YET
+  ##ID:004109##
+  mcset $l "Turkish" \
+           "Turkish" ;# <-- NOT TRANSLATED YET
+  ##ID:004110##
+  mcset $l "Turkmen" \
+           "Turkmen" ;# <-- NOT TRANSLATED YET
+  ##ID:004111##
+  mcset $l "Twi" \
+           "Twi" ;# <-- NOT TRANSLATED YET
+  ##ID:004112##
+  mcset $l "Uighur" \
+           "Uighur" ;# <-- NOT TRANSLATED YET
+  ##ID:004113##
+  mcset $l "Ukrainian" \
+           "Ukrainian" ;# <-- NOT TRANSLATED YET
+  ##ID:004114##
+  mcset $l "Urdu" \
+           "Urdu" ;# <-- NOT TRANSLATED YET
+  ##ID:004115##
+  mcset $l "Uyghur" \
+           "Uyghur" ;# <-- NOT TRANSLATED YET
+  ##ID:004116##
+  mcset $l "Uzbek" \
+           "Uzbek" ;# <-- NOT TRANSLATED YET
+  ##ID:004117##
+  mcset $l "Valencian" \
+           "Valencian" ;# <-- NOT TRANSLATED YET
+  ##ID:004118##
+  mcset $l "Venda" \
+           "Venda" ;# <-- NOT TRANSLATED YET
+  ##ID:004119##
+  mcset $l "Vietnamese" \
+           "Vietnamese" ;# <-- NOT TRANSLATED YET
+  ##ID:004120##
+  mcset $l "Volapük" \
+           "Volapük" ;# <-- NOT TRANSLATED YET
+  ##ID:004121##
+  mcset $l "Walloon" \
+           "Walloon" ;# <-- NOT TRANSLATED YET
+  ##ID:004122##
+  mcset $l "Welsh" \
+           "Welsh" ;# <-- NOT TRANSLATED YET
+  ##ID:004123##
+  mcset $l "Western Frisian" \
+           "Western Frisian" ;# <-- NOT TRANSLATED YET
+  ##ID:004124##
+  mcset $l "Wolof" \
+           "Wolof" ;# <-- NOT TRANSLATED YET
+  ##ID:004125##
+  mcset $l "Xhosa" \
+           "Xhosa" ;# <-- NOT TRANSLATED YET
+  ##ID:004126##
+  mcset $l "Yiddish" \
+           "Yiddish" ;# <-- NOT TRANSLATED YET
+  ##ID:004127##
+  mcset $l "Yoruba" \
+           "Yoruba" ;# <-- NOT TRANSLATED YET
+  ##ID:004128##
+  mcset $l "Zhuang" \
+           "Zhuang" ;# <-- NOT TRANSLATED YET
+  ##ID:004129##
+  mcset $l "Zulu" \
+           "Zulu" ;# <-- NOT TRANSLATED YET
+  # Names of countries
+  ##ID:004130##
+  mcset $l "Afghanistan" \
+           "Afghanistan" ;# <-- NOT TRANSLATED YET
+  ##ID:004131##
+  mcset $l "Åland Islands" \
+           "Åland Islands" ;# <-- NOT TRANSLATED YET
+  ##ID:004132##
+  mcset $l "Albania" \
+           "Albania" ;# <-- NOT TRANSLATED YET
+  ##ID:004133##
+  mcset $l "Algeria" \
+           "Algeria" ;# <-- NOT TRANSLATED YET
+  ##ID:004134##
+  mcset $l "American Samoa" \
+           "American Samoa" ;# <-- NOT TRANSLATED YET
+  ##ID:004135##
+  mcset $l "Andorra" \
+           "Andorra" ;# <-- NOT TRANSLATED YET
+  ##ID:004136##
+  mcset $l "Angola" \
+           "Angola" ;# <-- NOT TRANSLATED YET
+  ##ID:004137##
+  mcset $l "Anguilla" \
+           "Anguilla" ;# <-- NOT TRANSLATED YET
+  ##ID:004138##
+  mcset $l "Antarctica" \
+           "Antarctica" ;# <-- NOT TRANSLATED YET
+  ##ID:004139##
+  mcset $l "Antigua And Barbuda" \
+           "Antigua And Barbuda" ;# <-- NOT TRANSLATED YET
+  ##ID:004140##
+  mcset $l "Argentina" \
+           "Argentina" ;# <-- NOT TRANSLATED YET
+  ##ID:004141##
+  mcset $l "Armenia" \
+           "Armenia" ;# <-- NOT TRANSLATED YET
+  ##ID:004142##
+  mcset $l "Aruba" \
+           "Aruba" ;# <-- NOT TRANSLATED YET
+  ##ID:004143##
+  mcset $l "Australia" \
+           "Australia" ;# <-- NOT TRANSLATED YET
+  ##ID:004144##
+  mcset $l "Austria" \
+           "Austria" ;# <-- NOT TRANSLATED YET
+  ##ID:004145##
+  mcset $l "Azerbaijan" \
+           "Azerbaijan" ;# <-- NOT TRANSLATED YET
+  ##ID:004146##
+  mcset $l "Bahamas" \
+           "Bahamas" ;# <-- NOT TRANSLATED YET
+  ##ID:004147##
+  mcset $l "Bahrain" \
+           "Bahrain" ;# <-- NOT TRANSLATED YET
+  ##ID:004148##
+  mcset $l "Bangladesh" \
+           "Bangladesh" ;# <-- NOT TRANSLATED YET
+  ##ID:004149##
+  mcset $l "Barbados" \
+           "Barbados" ;# <-- NOT TRANSLATED YET
+  ##ID:004150##
+  mcset $l "Belarus" \
+           "Belarus" ;# <-- NOT TRANSLATED YET
+  ##ID:004151##
+  mcset $l "Belgium" \
+           "Belgium" ;# <-- NOT TRANSLATED YET
+  ##ID:004152##
+  mcset $l "Belize" \
+           "Belize" ;# <-- NOT TRANSLATED YET
+  ##ID:004153##
+  mcset $l "Benin" \
+           "Benin" ;# <-- NOT TRANSLATED YET
+  ##ID:004154##
+  mcset $l "Bermuda" \
+           "Bermuda" ;# <-- NOT TRANSLATED YET
+  ##ID:004155##
+  mcset $l "Bhutan" \
+           "Bhutan" ;# <-- NOT TRANSLATED YET
+  ##ID:004156##
+  mcset $l "Bolivia, Plurinational State Of" \
+           "Bolivia, Plurinational State Of" ;# <-- NOT TRANSLATED YET
+  ##ID:004157##
+  mcset $l "Bosnia And Herzegovina" \
+           "Bosnia And Herzegovina" ;# <-- NOT TRANSLATED YET
+  ##ID:004158##
+  mcset $l "Botswana" \
+           "Botswana" ;# <-- NOT TRANSLATED YET
+  ##ID:004159##
+  mcset $l "Bouvet Island" \
+           "Bouvet Island" ;# <-- NOT TRANSLATED YET
+  ##ID:004160##
+  mcset $l "Brazil" \
+           "Brazil" ;# <-- NOT TRANSLATED YET
+  ##ID:004161##
+  mcset $l "British Indian Ocean Territory" \
+           "British Indian Ocean Territory" ;# <-- NOT TRANSLATED YET
+  ##ID:004162##
+  mcset $l "Brunei Darussalam" \
+           "Brunei Darussalam" ;# <-- NOT TRANSLATED YET
+  ##ID:004163##
+  mcset $l "Bulgaria" \
+           "Bulgaria" ;# <-- NOT TRANSLATED YET
+  ##ID:004164##
+  mcset $l "Burkina Faso" \
+           "Burkina Faso" ;# <-- NOT TRANSLATED YET
+  ##ID:004165##
+  mcset $l "Burundi" \
+           "Burundi" ;# <-- NOT TRANSLATED YET
+  ##ID:004166##
+  mcset $l "Cambodia" \
+           "Cambodia" ;# <-- NOT TRANSLATED YET
+  ##ID:004167##
+  mcset $l "Cameroon" \
+           "Cameroon" ;# <-- NOT TRANSLATED YET
+  ##ID:004168##
+  mcset $l "Canada" \
+           "Canada" ;# <-- NOT TRANSLATED YET
+  ##ID:004169##
+  mcset $l "Cape Verde" \
+           "Cape Verde" ;# <-- NOT TRANSLATED YET
+  ##ID:004170##
+  mcset $l "Cayman Islands" \
+           "Cayman Islands" ;# <-- NOT TRANSLATED YET
+  ##ID:004171##
+  mcset $l "Central African Republic" \
+           "Central African Republic" ;# <-- NOT TRANSLATED YET
+  ##ID:004172##
+  mcset $l "Chad" \
+           "Chad" ;# <-- NOT TRANSLATED YET
+  ##ID:004173##
+  mcset $l "Chile" \
+           "Chile" ;# <-- NOT TRANSLATED YET
+  ##ID:004174##
+  mcset $l "China" \
+           "China" ;# <-- NOT TRANSLATED YET
+  ##ID:004175##
+  mcset $l "Christmas Island" \
+           "Christmas Island" ;# <-- NOT TRANSLATED YET
+  ##ID:004176##
+  mcset $l "Cocos (Keeling) Islands" \
+           "Cocos (Keeling) Islands" ;# <-- NOT TRANSLATED YET
+  ##ID:004177##
+  mcset $l "Colombia" \
+           "Colombia" ;# <-- NOT TRANSLATED YET
+  ##ID:004178##
+  mcset $l "Comoros" \
+           "Comoros" ;# <-- NOT TRANSLATED YET
+  ##ID:004179##
+  mcset $l "Congo" \
+           "Congo" ;# <-- NOT TRANSLATED YET
+  ##ID:004180##
+  mcset $l "Congo, The Democratic Republic Of The" \
+           "Congo, The Democratic Republic Of The" ;# <-- NOT TRANSLATED YET
+  ##ID:004181##
+  mcset $l "Cook Islands" \
+           "Cook Islands" ;# <-- NOT TRANSLATED YET
+  ##ID:004182##
+  mcset $l "Costa Rica" \
+           "Costa Rica" ;# <-- NOT TRANSLATED YET
+  ##ID:004183##
+  mcset $l "Côte D'Ivoire" \
+           "Côte D'Ivoire" ;# <-- NOT TRANSLATED YET
+  ##ID:004184##
+  mcset $l "Croatia" \
+           "Croatia" ;# <-- NOT TRANSLATED YET
+  ##ID:004185##
+  mcset $l "Cuba" \
+           "Cuba" ;# <-- NOT TRANSLATED YET
+  ##ID:004186##
+  mcset $l "Cyprus" \
+           "Cyprus" ;# <-- NOT TRANSLATED YET
+  ##ID:004187##
+  mcset $l "Czech Republic" \
+           "Czech Republic" ;# <-- NOT TRANSLATED YET
+  ##ID:004188##
+  mcset $l "Denmark" \
+           "Denmark" ;# <-- NOT TRANSLATED YET
+  ##ID:004189##
+  mcset $l "Djibouti" \
+           "Djibouti" ;# <-- NOT TRANSLATED YET
+  ##ID:004190##
+  mcset $l "Dominica" \
+           "Dominica" ;# <-- NOT TRANSLATED YET
+  ##ID:004191##
+  mcset $l "Dominican Republic" \
+           "Dominican Republic" ;# <-- NOT TRANSLATED YET
+  ##ID:004192##
+  mcset $l "Ecuador" \
+           "Ecuador" ;# <-- NOT TRANSLATED YET
+  ##ID:004193##
+  mcset $l "Egypt" \
+           "Egypt" ;# <-- NOT TRANSLATED YET
+  ##ID:004194##
+  mcset $l "El Salvador" \
+           "El Salvador" ;# <-- NOT TRANSLATED YET
+  ##ID:004195##
+  mcset $l "Equatorial Guinea" \
+           "Equatorial Guinea" ;# <-- NOT TRANSLATED YET
+  ##ID:004196##
+  mcset $l "Eritrea" \
+           "Eritrea" ;# <-- NOT TRANSLATED YET
+  ##ID:004197##
+  mcset $l "Estonia" \
+           "Estonia" ;# <-- NOT TRANSLATED YET
+  ##ID:004198##
+  mcset $l "Ethiopia" \
+           "Ethiopia" ;# <-- NOT TRANSLATED YET
+  ##ID:004199##
+  mcset $l "Falkland Islands (Malvinas)" \
+           "Falkland Islands (Malvinas)" ;# <-- NOT TRANSLATED YET
+  ##ID:004200##
+  mcset $l "Faroe Islands" \
+           "Faroe Islands" ;# <-- NOT TRANSLATED YET
+  ##ID:004201##
+  mcset $l "Fiji" \
+           "Fiji" ;# <-- NOT TRANSLATED YET
+  ##ID:004202##
+  mcset $l "Finland" \
+           "Finland" ;# <-- NOT TRANSLATED YET
+  ##ID:004203##
+  mcset $l "France" \
+           "France" ;# <-- NOT TRANSLATED YET
+  ##ID:004204##
+  mcset $l "French Guiana" \
+           "French Guiana" ;# <-- NOT TRANSLATED YET
+  ##ID:004205##
+  mcset $l "French Polynesia" \
+           "French Polynesia" ;# <-- NOT TRANSLATED YET
+  ##ID:004206##
+  mcset $l "French Southern Territories" \
+           "French Southern Territories" ;# <-- NOT TRANSLATED YET
+  ##ID:004207##
+  mcset $l "Gabon" \
+           "Gabon" ;# <-- NOT TRANSLATED YET
+  ##ID:004208##
+  mcset $l "Gambia" \
+           "Gambia" ;# <-- NOT TRANSLATED YET
+  ##ID:004209##
+  mcset $l "Georgia" \
+           "Georgia" ;# <-- NOT TRANSLATED YET
+  ##ID:004210##
+  mcset $l "Germany" \
+           "Germany" ;# <-- NOT TRANSLATED YET
+  ##ID:004211##
+  mcset $l "Ghana" \
+           "Ghana" ;# <-- NOT TRANSLATED YET
+  ##ID:004212##
+  mcset $l "Gibraltar" \
+           "Gibraltar" ;# <-- NOT TRANSLATED YET
+  ##ID:004213##
+  mcset $l "Greece" \
+           "Greece" ;# <-- NOT TRANSLATED YET
+  ##ID:004214##
+  mcset $l "Greenland" \
+           "Greenland" ;# <-- NOT TRANSLATED YET
+  ##ID:004215##
+  mcset $l "Grenada" \
+           "Grenada" ;# <-- NOT TRANSLATED YET
+  ##ID:004216##
+  mcset $l "Guadeloupe" \
+           "Guadeloupe" ;# <-- NOT TRANSLATED YET
+  ##ID:004217##
+  mcset $l "Guam" \
+           "Guam" ;# <-- NOT TRANSLATED YET
+  ##ID:004218##
+  mcset $l "Guatemala" \
+           "Guatemala" ;# <-- NOT TRANSLATED YET
+  ##ID:004219##
+  mcset $l "Guernsey" \
+           "Guernsey" ;# <-- NOT TRANSLATED YET
+  ##ID:004220##
+  mcset $l "Guinea" \
+           "Guinea" ;# <-- NOT TRANSLATED YET
+  ##ID:004221##
+  mcset $l "Guinea-Bissau" \
+           "Guinea-Bissau" ;# <-- NOT TRANSLATED YET
+  ##ID:004222##
+  mcset $l "Guyana" \
+           "Guyana" ;# <-- NOT TRANSLATED YET
+  ##ID:004223##
+  mcset $l "Haiti" \
+           "Haiti" ;# <-- NOT TRANSLATED YET
+  ##ID:004224##
+  mcset $l "Heard Island And Mcdonald Islands" \
+           "Heard Island And Mcdonald Islands" ;# <-- NOT TRANSLATED YET
+  ##ID:004225##
+  mcset $l "Holy See (Vatican City State)" \
+           "Holy See (Vatican City State)" ;# <-- NOT TRANSLATED YET
+  ##ID:004226##
+  mcset $l "Honduras" \
+           "Honduras" ;# <-- NOT TRANSLATED YET
+  ##ID:004227##
+  mcset $l "Hong Kong" \
+           "Hong Kong" ;# <-- NOT TRANSLATED YET
+  ##ID:004228##
+  mcset $l "Hungary" \
+           "Hungary" ;# <-- NOT TRANSLATED YET
+  ##ID:004229##
+  mcset $l "Iceland" \
+           "Iceland" ;# <-- NOT TRANSLATED YET
+  ##ID:004230##
+  mcset $l "India" \
+           "India" ;# <-- NOT TRANSLATED YET
+  ##ID:004231##
+  mcset $l "Indonesia" \
+           "Indonesia" ;# <-- NOT TRANSLATED YET
+  ##ID:004232##
+  mcset $l "Iran, Islamic Republic Of" \
+           "Iran, Islamic Republic Of" ;# <-- NOT TRANSLATED YET
+  ##ID:004233##
+  mcset $l "Iraq" \
+           "Iraq" ;# <-- NOT TRANSLATED YET
+  ##ID:004234##
+  mcset $l "Ireland" \
+           "Ireland" ;# <-- NOT TRANSLATED YET
+  ##ID:004235##
+  mcset $l "Isle Of Man" \
+           "Isle Of Man" ;# <-- NOT TRANSLATED YET
+  ##ID:004236##
+  mcset $l "Israel" \
+           "Israel" ;# <-- NOT TRANSLATED YET
+  ##ID:004237##
+  mcset $l "Italy" \
+           "Italy" ;# <-- NOT TRANSLATED YET
+  ##ID:004238##
+  mcset $l "Jamaica" \
+           "Jamaica" ;# <-- NOT TRANSLATED YET
+  ##ID:004239##
+  mcset $l "Japan" \
+           "Japan" ;# <-- NOT TRANSLATED YET
+  ##ID:004240##
+  mcset $l "Jersey" \
+           "Jersey" ;# <-- NOT TRANSLATED YET
+  ##ID:004241##
+  mcset $l "Jordan" \
+           "Jordan" ;# <-- NOT TRANSLATED YET
+  ##ID:004242##
+  mcset $l "Kazakhstan" \
+           "Kazakhstan" ;# <-- NOT TRANSLATED YET
+  ##ID:004243##
+  mcset $l "Kenya" \
+           "Kenya" ;# <-- NOT TRANSLATED YET
+  ##ID:004244##
+  mcset $l "Kiribati" \
+           "Kiribati" ;# <-- NOT TRANSLATED YET
+  ##ID:004245##
+  mcset $l "Korea, Democratic People'S Republic Of" \
+           "Korea, Democratic People'S Republic Of" ;# <-- NOT TRANSLATED YET
+  ##ID:004246##
+  mcset $l "Korea, Republic Of" \
+           "Korea, Republic Of" ;# <-- NOT TRANSLATED YET
+  ##ID:004247##
+  mcset $l "Kuwait" \
+           "Kuwait" ;# <-- NOT TRANSLATED YET
+  ##ID:004248##
+  mcset $l "Kyrgyzstan" \
+           "Kyrgyzstan" ;# <-- NOT TRANSLATED YET
+  ##ID:004249##
+  mcset $l "Lao People'S Democratic Republic" \
+           "Lao People'S Democratic Republic" ;# <-- NOT TRANSLATED YET
+  ##ID:004250##
+  mcset $l "Latvia" \
+           "Latvia" ;# <-- NOT TRANSLATED YET
+  ##ID:004251##
+  mcset $l "Lebanon" \
+           "Lebanon" ;# <-- NOT TRANSLATED YET
+  ##ID:004252##
+  mcset $l "Lesotho" \
+           "Lesotho" ;# <-- NOT TRANSLATED YET
+  ##ID:004253##
+  mcset $l "Liberia" \
+           "Liberia" ;# <-- NOT TRANSLATED YET
+  ##ID:004254##
+  mcset $l "Libyan Arab Jamahiriya" \
+           "Libyan Arab Jamahiriya" ;# <-- NOT TRANSLATED YET
+  ##ID:004255##
+  mcset $l "Liechtenstein" \
+           "Liechtenstein" ;# <-- NOT TRANSLATED YET
+  ##ID:004256##
+  mcset $l "Lithuania" \
+           "Lithuania" ;# <-- NOT TRANSLATED YET
+  ##ID:004257##
+  mcset $l "Luxembourg" \
+           "Luxembourg" ;# <-- NOT TRANSLATED YET
+  ##ID:004258##
+  mcset $l "Macao" \
+           "Macao" ;# <-- NOT TRANSLATED YET
+  ##ID:004259##
+  mcset $l "Macedonia, The Former Yugoslav Republic Of" \
+           "Macedonia, The Former Yugoslav Republic Of" ;# <-- NOT TRANSLATED YET
+  ##ID:004260##
+  mcset $l "Madagascar" \
+           "Madagascar" ;# <-- NOT TRANSLATED YET
+  ##ID:004261##
+  mcset $l "Malawi" \
+           "Malawi" ;# <-- NOT TRANSLATED YET
+  ##ID:004262##
+  mcset $l "Malaysia" \
+           "Malaysia" ;# <-- NOT TRANSLATED YET
+  ##ID:004263##
+  mcset $l "Maldives" \
+           "Maldives" ;# <-- NOT TRANSLATED YET
+  ##ID:004264##
+  mcset $l "Mali" \
+           "Mali" ;# <-- NOT TRANSLATED YET
+  ##ID:004265##
+  mcset $l "Malta" \
+           "Malta" ;# <-- NOT TRANSLATED YET
+  ##ID:004266##
+  mcset $l "Marshall Islands" \
+           "Marshall Islands" ;# <-- NOT TRANSLATED YET
+  ##ID:004267##
+  mcset $l "Martinique" \
+           "Martinique" ;# <-- NOT TRANSLATED YET
+  ##ID:004268##
+  mcset $l "Mauritania" \
+           "Mauritania" ;# <-- NOT TRANSLATED YET
+  ##ID:004269##
+  mcset $l "Mauritius" \
+           "Mauritius" ;# <-- NOT TRANSLATED YET
+  ##ID:004270##
+  mcset $l "Mayotte" \
+           "Mayotte" ;# <-- NOT TRANSLATED YET
+  ##ID:004271##
+  mcset $l "Mexico" \
+           "Mexico" ;# <-- NOT TRANSLATED YET
+  ##ID:004272##
+  mcset $l "Micronesia, Federated States Of" \
+           "Micronesia, Federated States Of" ;# <-- NOT TRANSLATED YET
+  ##ID:004273##
+  mcset $l "Moldova, Republic Of" \
+           "Moldova, Republic Of" ;# <-- NOT TRANSLATED YET
+  ##ID:004274##
+  mcset $l "Monaco" \
+           "Monaco" ;# <-- NOT TRANSLATED YET
+  ##ID:004275##
+  mcset $l "Mongolia" \
+           "Mongolia" ;# <-- NOT TRANSLATED YET
+  ##ID:004276##
+  mcset $l "Montenegro" \
+           "Montenegro" ;# <-- NOT TRANSLATED YET
+  ##ID:004277##
+  mcset $l "Montserrat" \
+           "Montserrat" ;# <-- NOT TRANSLATED YET
+  ##ID:004278##
+  mcset $l "Morocco" \
+           "Morocco" ;# <-- NOT TRANSLATED YET
+  ##ID:004279##
+  mcset $l "Mozambique" \
+           "Mozambique" ;# <-- NOT TRANSLATED YET
+  ##ID:004280##
+  mcset $l "Myanmar" \
+           "Myanmar" ;# <-- NOT TRANSLATED YET
+  ##ID:004281##
+  mcset $l "Namibia" \
+           "Namibia" ;# <-- NOT TRANSLATED YET
+  ##ID:004282##
+  mcset $l "Nepal" \
+           "Nepal" ;# <-- NOT TRANSLATED YET
+  ##ID:004283##
+  mcset $l "Netherlands" \
+           "Netherlands" ;# <-- NOT TRANSLATED YET
+  ##ID:004284##
+  mcset $l "Netherlands Antilles" \
+           "Netherlands Antilles" ;# <-- NOT TRANSLATED YET
+  ##ID:004285##
+  mcset $l "New Caledonia" \
+           "New Caledonia" ;# <-- NOT TRANSLATED YET
+  ##ID:004286##
+  mcset $l "New Zealand" \
+           "New Zealand" ;# <-- NOT TRANSLATED YET
+  ##ID:004287##
+  mcset $l "Nicaragua" \
+           "Nicaragua" ;# <-- NOT TRANSLATED YET
+  ##ID:004288##
+  mcset $l "Niger" \
+           "Niger" ;# <-- NOT TRANSLATED YET
+  ##ID:004289##
+  mcset $l "Nigeria" \
+           "Nigeria" ;# <-- NOT TRANSLATED YET
+  ##ID:004290##
+  mcset $l "Niue" \
+           "Niue" ;# <-- NOT TRANSLATED YET
+  ##ID:004291##
+  mcset $l "Norfolk Island" \
+           "Norfolk Island" ;# <-- NOT TRANSLATED YET
+  ##ID:004292##
+  mcset $l "Northern Mariana Islands" \
+           "Northern Mariana Islands" ;# <-- NOT TRANSLATED YET
+  ##ID:004293##
+  mcset $l "Norway" \
+           "Norway" ;# <-- NOT TRANSLATED YET
+  ##ID:004294##
+  mcset $l "Oman" \
+           "Oman" ;# <-- NOT TRANSLATED YET
+  ##ID:004295##
+  mcset $l "Pakistan" \
+           "Pakistan" ;# <-- NOT TRANSLATED YET
+  ##ID:004296##
+  mcset $l "Palau" \
+           "Palau" ;# <-- NOT TRANSLATED YET
+  ##ID:004297##
+  mcset $l "Palestinian Territory, Occupied" \
+           "Palestinian Territory, Occupied" ;# <-- NOT TRANSLATED YET
+  ##ID:004298##
+  mcset $l "Panama" \
+           "Panama" ;# <-- NOT TRANSLATED YET
+  ##ID:004299##
+  mcset $l "Papua New Guinea" \
+           "Papua New Guinea" ;# <-- NOT TRANSLATED YET
+  ##ID:004300##
+  mcset $l "Paraguay" \
+           "Paraguay" ;# <-- NOT TRANSLATED YET
+  ##ID:004301##
+  mcset $l "Peru" \
+           "Peru" ;# <-- NOT TRANSLATED YET
+  ##ID:004302##
+  mcset $l "Philippines" \
+           "Philippines" ;# <-- NOT TRANSLATED YET
+  ##ID:004303##
+  mcset $l "Pitcairn" \
+           "Pitcairn" ;# <-- NOT TRANSLATED YET
+  ##ID:004304##
+  mcset $l "Poland" \
+           "Poland" ;# <-- NOT TRANSLATED YET
+  ##ID:004305##
+  mcset $l "Portugal" \
+           "Portugal" ;# <-- NOT TRANSLATED YET
+  ##ID:004306##
+  mcset $l "Puerto Rico" \
+           "Puerto Rico" ;# <-- NOT TRANSLATED YET
+  ##ID:004307##
+  mcset $l "Qatar" \
+           "Qatar" ;# <-- NOT TRANSLATED YET
+  ##ID:004308##
+  mcset $l "Réunion" \
+           "Réunion" ;# <-- NOT TRANSLATED YET
+  ##ID:004309##
+  mcset $l "Romania" \
+           "Romania" ;# <-- NOT TRANSLATED YET
+  ##ID:004310##
+  mcset $l "Russian Federation" \
+           "Russian Federation" ;# <-- NOT TRANSLATED YET
+  ##ID:004311##
+  mcset $l "Rwanda" \
+           "Rwanda" ;# <-- NOT TRANSLATED YET
+  ##ID:004312##
+  mcset $l "Saint Barthélemy" \
+           "Saint Barthélemy" ;# <-- NOT TRANSLATED YET
+  ##ID:004313##
+  mcset $l "Saint Helena, Ascension And Tristan Da Cunha" \
+           "Saint Helena, Ascension And Tristan Da Cunha" ;# <-- NOT TRANSLATED YET
+  ##ID:004314##
+  mcset $l "Saint Kitts And Nevis" \
+           "Saint Kitts And Nevis" ;# <-- NOT TRANSLATED YET
+  ##ID:004315##
+  mcset $l "Saint Lucia" \
+           "Saint Lucia" ;# <-- NOT TRANSLATED YET
+  ##ID:004316##
+  mcset $l "Saint Martin" \
+           "Saint Martin" ;# <-- NOT TRANSLATED YET
+  ##ID:004317##
+  mcset $l "Saint Pierre And Miquelon" \
+           "Saint Pierre And Miquelon" ;# <-- NOT TRANSLATED YET
+  ##ID:004318##
+  mcset $l "Saint Vincent And The Grenadines" \
+           "Saint Vincent And The Grenadines" ;# <-- NOT TRANSLATED YET
+  ##ID:004319##
+  mcset $l "Samoa" \
+           "Samoa" ;# <-- NOT TRANSLATED YET
+  ##ID:004320##
+  mcset $l "San Marino" \
+           "San Marino" ;# <-- NOT TRANSLATED YET
+  ##ID:004321##
+  mcset $l "Sao Tome And Principe" \
+           "Sao Tome And Principe" ;# <-- NOT TRANSLATED YET
+  ##ID:004322##
+  mcset $l "Saudi Arabia" \
+           "Saudi Arabia" ;# <-- NOT TRANSLATED YET
+  ##ID:004323##
+  mcset $l "Senegal" \
+           "Senegal" ;# <-- NOT TRANSLATED YET
+  ##ID:004324##
+  mcset $l "Serbia" \
+           "Serbia" ;# <-- NOT TRANSLATED YET
+  ##ID:004325##
+  mcset $l "Seychelles" \
+           "Seychelles" ;# <-- NOT TRANSLATED YET
+  ##ID:004326##
+  mcset $l "Sierra Leone" \
+           "Sierra Leone" ;# <-- NOT TRANSLATED YET
+  ##ID:004327##
+  mcset $l "Singapore" \
+           "Singapore" ;# <-- NOT TRANSLATED YET
+  ##ID:004328##
+  mcset $l "Slovakia" \
+           "Slovakia" ;# <-- NOT TRANSLATED YET
+  ##ID:004329##
+  mcset $l "Slovenia" \
+           "Slovenia" ;# <-- NOT TRANSLATED YET
+  ##ID:004330##
+  mcset $l "Solomon Islands" \
+           "Solomon Islands" ;# <-- NOT TRANSLATED YET
+  ##ID:004331##
+  mcset $l "Somalia" \
+           "Somalia" ;# <-- NOT TRANSLATED YET
+  ##ID:004332##
+  mcset $l "South Africa" \
+           "South Africa" ;# <-- NOT TRANSLATED YET
+  ##ID:004333##
+  mcset $l "South Georgia And The South Sandwich Islands" \
+           "South Georgia And The South Sandwich Islands" ;# <-- NOT TRANSLATED YET
+  ##ID:004334##
+  mcset $l "Spain" \
+           "Spain" ;# <-- NOT TRANSLATED YET
+  ##ID:004335##
+  mcset $l "Sri Lanka" \
+           "Sri Lanka" ;# <-- NOT TRANSLATED YET
+  ##ID:004336##
+  mcset $l "Sudan" \
+           "Sudan" ;# <-- NOT TRANSLATED YET
+  ##ID:004337##
+  mcset $l "Suriname" \
+           "Suriname" ;# <-- NOT TRANSLATED YET
+  ##ID:004338##
+  mcset $l "Svalbard And Jan Mayen" \
+           "Svalbard And Jan Mayen" ;# <-- NOT TRANSLATED YET
+  ##ID:004339##
+  mcset $l "Swaziland" \
+           "Swaziland" ;# <-- NOT TRANSLATED YET
+  ##ID:004340##
+  mcset $l "Sweden" \
+           "Sweden" ;# <-- NOT TRANSLATED YET
+  ##ID:004341##
+  mcset $l "Switzerland" \
+           "Switzerland" ;# <-- NOT TRANSLATED YET
+  ##ID:004342##
+  mcset $l "Syrian Arab Republic" \
+           "Syrian Arab Republic" ;# <-- NOT TRANSLATED YET
+  ##ID:004343##
+  mcset $l "Taiwan, Province Of China" \
+           "Taiwan, Province Of China" ;# <-- NOT TRANSLATED YET
+  ##ID:004344##
+  mcset $l "Tajikistan" \
+           "Tajikistan" ;# <-- NOT TRANSLATED YET
+  ##ID:004345##
+  mcset $l "Tanzania, United Republic Of" \
+           "Tanzania, United Republic Of" ;# <-- NOT TRANSLATED YET
+  ##ID:004346##
+  mcset $l "Thailand" \
+           "Thailand" ;# <-- NOT TRANSLATED YET
+  ##ID:004347##
+  mcset $l "Timor-Leste" \
+           "Timor-Leste" ;# <-- NOT TRANSLATED YET
+  ##ID:004348##
+  mcset $l "Togo" \
+           "Togo" ;# <-- NOT TRANSLATED YET
+  ##ID:004349##
+  mcset $l "Tokelau" \
+           "Tokelau" ;# <-- NOT TRANSLATED YET
+  ##ID:004350##
+  mcset $l "Trinidad And Tobago" \
+           "Trinidad And Tobago" ;# <-- NOT TRANSLATED YET
+  ##ID:004351##
+  mcset $l "Tunisia" \
+           "Tunisia" ;# <-- NOT TRANSLATED YET
+  ##ID:004352##
+  mcset $l "Turkey" \
+           "Turkey" ;# <-- NOT TRANSLATED YET
+  ##ID:004353##
+  mcset $l "Turkmenistan" \
+           "Turkmenistan" ;# <-- NOT TRANSLATED YET
+  ##ID:004354##
+  mcset $l "Turks And Caicos Islands" \
+           "Turks And Caicos Islands" ;# <-- NOT TRANSLATED YET
+  ##ID:004355##
+  mcset $l "Tuvalu" \
+           "Tuvalu" ;# <-- NOT TRANSLATED YET
+  ##ID:004356##
+  mcset $l "Uganda" \
+           "Uganda" ;# <-- NOT TRANSLATED YET
+  ##ID:004357##
+  mcset $l "Ukraine" \
+           "Ukraine" ;# <-- NOT TRANSLATED YET
+  ##ID:004358##
+  mcset $l "United Arab Emirates" \
+           "United Arab Emirates" ;# <-- NOT TRANSLATED YET
+  ##ID:004359##
+  mcset $l "United Kingdom" \
+           "United Kingdom" ;# <-- NOT TRANSLATED YET
+  ##ID:004360##
+  mcset $l "United States" \
+           "United States" ;# <-- NOT TRANSLATED YET
+  ##ID:004361##
+  mcset $l "United States Minor Outlying Islands" \
+           "United States Minor Outlying Islands" ;# <-- NOT TRANSLATED YET
+  ##ID:004362##
+  mcset $l "Uruguay" \
+           "Uruguay" ;# <-- NOT TRANSLATED YET
+  ##ID:004363##
+  mcset $l "Uzbekistan" \
+           "Uzbekistan" ;# <-- NOT TRANSLATED YET
+  ##ID:004364##
+  mcset $l "Vanuatu" \
+           "Vanuatu" ;# <-- NOT TRANSLATED YET
+  ##ID:004365##
+  mcset $l "Vatican City State" \
+           "Vatican City State" ;# <-- NOT TRANSLATED YET
+  ##ID:004366##
+  mcset $l "Venezuela, Bolivarian Republic Of" \
+           "Venezuela, Bolivarian Republic Of" ;# <-- NOT TRANSLATED YET
+  ##ID:004367##
+  mcset $l "Viet Nam" \
+           "Viet Nam" ;# <-- NOT TRANSLATED YET
+  ##ID:004368##
+  mcset $l "Virgin Islands, British" \
+           "Virgin Islands, British" ;# <-- NOT TRANSLATED YET
+  ##ID:004369##
+  mcset $l "Virgin Islands, U.S." \
+           "Virgin Islands, U.S." ;# <-- NOT TRANSLATED YET
+  ##ID:004370##
+  mcset $l "Wallis And Futuna" \
+           "Wallis And Futuna" ;# <-- NOT TRANSLATED YET
+  ##ID:004371##
+  mcset $l "Western Sahara" \
+           "Western Sahara" ;# <-- NOT TRANSLATED YET
+  ##ID:004372##
+  mcset $l "Yemen" \
+           "Yemen" ;# <-- NOT TRANSLATED YET
+  ##ID:004373##
+  mcset $l "Zambia" \
+           "Zambia" ;# <-- NOT TRANSLATED YET
+  ##ID:004374##
+  mcset $l "Zimbabwe" \
+           "Zimbabwe" ;# <-- NOT TRANSLATED YET
+}
+# lcd_hd44780.tcl
+# ==============================================================================
+namespace eval LcdHD44780 {
+  ##ID:004375##
+  mcset $l "LCD display" \
+           "LCD 显示屏" ;
+  ##ID:004376##
+  mcset $l "NOTE" \
+           "NOTE" ;# <-- NOT TRANSLATED YET
+  ##ID:004377##
+  mcset $l "BIT" \
+           "BIT" ;# <-- NOT TRANSLATED YET
+  ##ID:004378##
+  mcset $l "PORT" \
+           "PORT" ;# <-- NOT TRANSLATED YET
+  ##ID:004379##
+  mcset $l "Set font" \
+           "设置字体"
+  ##ID:004380##
+  mcset $l "ROM code A00" \
+           "ROM code A00" ;# <-- NOT TRANSLATED YET
+  ##ID:004381##
+  mcset $l "ROM code A02" \
+           "ROM code A02" ;# <-- NOT TRANSLATED YET
+  ##ID:004382##
+  mcset $l "Set character size" \
+           "设置字符大小"
+  ##ID:004383##
+  mcset $l "hd44780" \
+           "hd44780" ;# <-- NOT TRANSLATED YET
+  ##ID:004384##
+  mcset $l "Disable delays" \
+           "禁止延迟"
+  ##ID:004385##
+  mcset $l "Ignore errors" \
+           "忽略错误"
+  ##ID:004386##
+  mcset $l "Show HD44780 log" \
+           "显示 HD44780 日志"
+  ##ID:004387##
+  mcset $l "Display the log of events which are currently happening in the simulated HD44780 chip" \
+           "Display the log of events which are currently happening in the simulated HD44780 chip" ;# <-- NOT TRANSLATED YET
+  ##ID:004388##
+  mcset $l "Show CGROM" \
+           "Show CGROM" ;# <-- NOT TRANSLATED YET
+  ##ID:004389##
+  mcset $l "Display content of HD44780 Character Generator ROM" \
+           "Display content of HD44780 Character Generator ROM" ;# <-- NOT TRANSLATED YET
+  ##ID:004390##
+  mcset $l "Show CGRAM" \
+           "Show CGRAM" ;# <-- NOT TRANSLATED YET
+  ##ID:004391##
+  mcset $l "Display content of HD44780 Character Generator RAM" \
+           "Display content of HD44780 Character Generator RAM" ;# <-- NOT TRANSLATED YET
+  ##ID:004392##
+  mcset $l "Show DDRAM" \
+           "Show DDRAM" ;# <-- NOT TRANSLATED YET
+  ##ID:004393##
+  mcset $l "Display content of HD44780 Display data RAM" \
+           "Display content of HD44780 Display data RAM" ;# <-- NOT TRANSLATED YET
+  ##ID:004394##
+  mcset $l "Reset HD44780" \
+           "复位 HD44780"
+  ##ID:004395##
+  mcset $l "Reinitialize the simulated HD44780, but do not affect DDRAM and CGRAM" \
+           "Reinitialize the simulated HD44780, but do not affect DDRAM and CGRAM" ;# <-- NOT TRANSLATED YET
+  ##ID:004396##
+  mcset $l "Clear DDRAM & CGRAM" \
+           "Clear DDRAM & CGRAM" ;# <-- NOT TRANSLATED YET
+  ##ID:004397##
+  mcset $l "Clear the entire Display Data RAM and Character Generator RAM" \
+           "Clear the entire Display Data RAM and Character Generator RAM" ;# <-- NOT TRANSLATED YET
+  ##ID:004398##
+  mcset $l "Show help" \
+           "显示帮助"
+  ##ID:004399##
+  mcset $l "Show brief help" \
+           "Show brief help" ;# <-- NOT TRANSLATED YET
+  ##ID:004400##
+  mcset $l "Save configuration" \
+           "保存设置"
+  ##ID:004401##
+  mcset $l "Save configuration into a file" \
+           "保存设置至文件"
+  ##ID:004402##
+  mcset $l "Load configuration" \
+           "加载配置"
+  ##ID:004403##
+  mcset $l "Load configuration from a file" \
+           "从文件加载配置" ;
+  ##ID:004404##
+  mcset $l "Cursor blinking" \
+           "光标闪烁"
+  ##ID:004405##
+  mcset $l "Accompanies display shift" \
+           "Accompanies display shift" ;# <-- NOT TRANSLATED YET
+  ##ID:004406##
+  mcset $l "Display ON/OFF" \
+           "显示 开/关"
+  ##ID:004407##
+  mcset $l "Cursor ON/OFF" \
+           "光标 开/关"
+  ##ID:004408##
+  mcset $l "2 lines display / 1 line display" \
+           "2 lines display / 1 line display" ;# <-- NOT TRANSLATED YET
+  ##ID:004409##
+  mcset $l "5 × 10 dots / 5 × 8 dots" \
+           "5 × 10 dots / 5 × 8 dots" ;# <-- NOT TRANSLATED YET
+  ##ID:004410##
+  mcset $l "Increment AC / Decrement AC" \
+           "Increment AC / Decrement AC" ;# <-- NOT TRANSLATED YET
+  ##ID:004411##
+  mcset $l "8-bit data transfer / 4-bit data transfer" \
+           "8-bit data transfer / 4-bit data transfer" ;# <-- NOT TRANSLATED YET
+  ##ID:004412##
+  mcset $l "One More Nibble to transfer / data transfer complete" \
+           "One More Nibble to transfer / data transfer complete" ;# <-- NOT TRANSLATED YET
+  ##ID:004413##
+  mcset $l "Internally operating / Instructions acceptable" \
+           "Internally operating / Instructions acceptable" ;# <-- NOT TRANSLATED YET
+  ##ID:004414##
+  mcset $l "Show or hide the bottom part" \
+           "Show or hide the bottom part" ;# <-- NOT TRANSLATED YET
+  ##ID:004415##
+  mcset $l "Show or hide the right part" \
+           "Show or hide the right part" ;# <-- NOT TRANSLATED YET
+  ##ID:004416##
+  mcset $l "Turn HW simulation on/off" \
+           "Turn HW simulation on/off" ;# <-- NOT TRANSLATED YET
+  ##ID:004417##
+  mcset $l "Configure" \
+           "配置"
+  ##ID:004418##
+  mcset $l "Shift:" \
+           "Shift:" ;# <-- NOT TRANSLATED YET
+  ##ID:004419##
+  mcset $l "Close" \
+           "关闭"
+  ##ID:004420##
+  mcset $l "Cursor: " \
+           "光标: "
+  ##ID:004421##
+  mcset $l "HD44780 Character Generator ROM (ROM Code: A0%d) - MCU 8051 IDE" \
+           "HD44780 Character Generator ROM (ROM Code: A0%d) - MCU 8051 IDE" ;# <-- NOT TRANSLATED YET
+  ##ID:004422##
+  mcset $l "Clear log" \
+           "清除日志"
+  ##ID:004423##
+  mcset $l "HD44780 log - MCU 8051 IDE" \
+           "HD44780 日志 - MCU 8051 IDE"
+  ##ID:004424##
+  mcset $l "\[INFO\] " \
+           "\[信息\] "
+  ##ID:004425##
+  mcset $l "\[WARNING\] " \
+           "\[警告\] "
+  ##ID:004426##
+  mcset $l "\[ERROR\] " \
+           "\[错误\] "
+  ##ID:004427##
+  mcset $l "HD44780 ERROR" \
+           "HD44780 错误"
+  ##ID:004428##
+  mcset $l "Received instruction: %s" \
+           "Received instruction: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:004429##
+  mcset $l "Clear Display" \
+           "Clear Display" ;# <-- NOT TRANSLATED YET
+  ##ID:004430##
+  mcset $l "Return Home" \
+           "Return Home" ;# <-- NOT TRANSLATED YET
+  ##ID:004431##
+  mcset $l "Entry Mode Set" \
+           "Entry Mode Set" ;# <-- NOT TRANSLATED YET
+  ##ID:004432##
+  mcset $l "Display On Off Control" \
+           "Display On Off Control" ;# <-- NOT TRANSLATED YET
+  ##ID:004433##
+  mcset $l "Cursor Or Display Shift" \
+           "Cursor Or Display Shift" ;# <-- NOT TRANSLATED YET
+  ##ID:004434##
+  mcset $l "Function Set" \
+           "Function Set" ;# <-- NOT TRANSLATED YET
+  ##ID:004435##
+  mcset $l "Set CGRAM Address" \
+           "Set CGRAM Address" ;# <-- NOT TRANSLATED YET
+  ##ID:004436##
+  mcset $l "Set DDRAM Address" \
+           "Set DDRAM Address" ;# <-- NOT TRANSLATED YET
+  ##ID:004437##
+  mcset $l "Read Busy Flag & Address" \
+           "Read Busy Flag & Address" ;# <-- NOT TRANSLATED YET
+  ##ID:004438##
+  mcset $l "Write Data To CG Or DDRAM" \
+           "Write Data To CG Or DDRAM" ;# <-- NOT TRANSLATED YET
+  ##ID:004439##
+  mcset $l "Neither \"Set DDRAM Address\" nor \"Set CGRAM Address\" instruction was issued prior to the write instruction" \
+           "Neither \"Set DDRAM Address\" nor \"Set CGRAM Address\" instruction was issued prior to the write instruction" ;# <-- NOT TRANSLATED YET
+  ##ID:004440##
+  mcset $l "Read Data From CG Or DDRAM" \
+           "Read Data From CG Or DDRAM" ;# <-- NOT TRANSLATED YET
+  ##ID:004441##
+  mcset $l "Neither \"Set DDRAM Address\" nor \"Set CGRAM Address\" instruction was issued prior to the read instruction" \
+           "Neither \"Set DDRAM Address\" nor \"Set CGRAM Address\" instruction was issued prior to the read instruction" ;# <-- NOT TRANSLATED YET
+  ##ID:004442##
+  mcset $l "Controller is busy, unable to execute requested instruction." \
+           "Controller is busy, unable to execute requested instruction." ;# <-- NOT TRANSLATED YET
+  ##ID:004443##
+  mcset $l "Commencing execution, this action will take %d micro-seonds to comply." \
+           "Commencing execution, this action will take %d micro-seonds to comply." ;# <-- NOT TRANSLATED YET
+  ##ID:004444##
+  mcset $l "Operation finished" \
+           "操作完成"
+  ##ID:004445##
+  mcset $l "Skipping delay" \
+           "跳过延迟"
+  ##ID:004446##
+  mcset $l "Device reset" \
+           "复位设备"
+  ##ID:004447##
+  mcset $l "DDRAM address is too high: %d" \
+           "DDRAM address is too high: %d" ;# <-- NOT TRANSLATED YET
+  ##ID:004448##
+  mcset $l "CGRAM address is too high: %d" \
+           "CGRAM address is too high: %d" ;# <-- NOT TRANSLATED YET
+  ##ID:004449##
+  mcset $l "Value is too high: 0x%X" \
+           "Value is too high: 0x%X" ;# <-- NOT TRANSLATED YET
+  ##ID:004450##
+  mcset $l "Input is corrupted: %s" \
+           "Input is corrupted: %s" ;# <-- NOT TRANSLATED YET
+  ##ID:004451##
+  mcset $l "Invalid instruction: %2Xh" \
+           "无效的指令: %2Xh"
+  ##ID:004452##
+  mcset $l "Received an invalid input on signal %s" \
+           "收到无效的信号输入 %s"
+  ##ID:004453##
+  mcset $l "LCD display controled by HD44780 driver\n\n" \
+           "LCD HD44780 显示屏驱动程序\n\n"
+  ##ID:004454##
+  mcset $l "Starting the HD44780 boot-up sequence." \
+           "Starting the HD44780 boot-up sequence." ;# <-- NOT TRANSLATED YET
+  ##ID:004455##
+  mcset $l "Receiving the Most Significant Nibble (%02Xh)" \
+           "Receiving the Most Significant Nibble (%02Xh)" ;# <-- NOT TRANSLATED YET
+  ##ID:004456##
+  mcset $l "Receiving the Less Significant Nibble (%02Xh)" \
+           "Receiving the Less Significant Nibble (%02Xh)" ;# <-- NOT TRANSLATED YET
+}
+

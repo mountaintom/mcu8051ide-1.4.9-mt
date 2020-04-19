@@ -1,0 +1,11 @@
+#
+# This file contains names of languages corresponding to their codes
+#
+# Encoding: UTF-8
+# End of line character: LF (0x0a) (\n) (^J)
+#
+
+"en"		"English language"	# English
+"cs"		"Český jazyk"		# Czech
+"ru"		"Pусский язык"		# Russian
+"zh_CN"		"简体中文"		# chinese

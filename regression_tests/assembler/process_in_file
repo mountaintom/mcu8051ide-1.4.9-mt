@@ -1,0 +1,30 @@
+#! /bin/bash
+
+# --------------------------------------------------------------------------
+# Auxiliary script for regression testing environment
+#
+# This script transforms .in files for assembler regression testing into a list
+# of command line switches, which are then passed to the assembler. This
+# process is done in this way, all comments and empty lines are removed and the
+# rest in then concatenated to from a single line. After this all white space
+# is shortened.
+#
+# Software requirements:
+# 	- gawk
+# --------------------------------------------------------------------------
+
+gawk '
+	BEGIN {
+		ORS=" "
+	}
+
+	{
+		sub(/#.*$/, "", $0)
+		print($0)
+	}
+' "${1}" | gawk '
+	{
+		gsub(/[[:space:]]+/, " ", $0)
+		printf("%s", $0)
+	}
+'

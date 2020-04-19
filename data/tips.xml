@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+
+<!--
+	This is the file containing "Tip of the Day" messages. Format of the
+	file is XML (eXtensible Markup Language) and is described on the inline
+	DTD (Document Type Definition).
+-->
+
+<!DOCTYPE tips [
+	<!-- ROOT ELEMENT -->
+	<!ELEMENT tips (tip)*>
+
+	<!-- Tip text (Text must be in CDATA section)
+		Available formatting tags:
+		<b>Bold text</b>
+		<c>Source code</c>
+
+		Note that if you want ``<'' or ``>'' character in the text, all
+		you have to do is just write it there. No HTML entities or
+		anything like that is used here.
+	-->
+	<!ELEMENT tip EMPTY>
+
+	<!-- Parameters for tag "tip":
+		lang	- Language of the text
+	-->
+	<!ATTLIST tip
+		lang	CDATA	#REQUIRED
+	>
+]>
+<tips>
+	<tip lang="en">
+		<![CDATA[
+			You can cycle through all opened documents by pressing <b>Alt+Left</b> or <b>Alt+Right</b>.  The next/previous document will immediately be displayed in the active frame.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			Graph ("IO Ports" tab) significantly slows down MCU simulation!  It is a good idea to keep it off unless you need it.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can repeat your last search by just pressing <b>F3</b>, or <b>Shift+F3</b>, if you want to search backwards.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can swap the characters on each side of the cursor just by pressing <b>Ctrl+T</b>.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can configure syntax highlighting in the <b>Editor configuration dialog</b>.
+			<b>Configure</b> -> <b>Editor Configuration</b>
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can easily switch between tabs on Bottom and Right panel.
+			  <b>Ctrl+1</b> -> <b>Simulator</b>	(Bottom panel)
+			  <b>Ctrl+2</b> -> <b>Graph</b>		(Bottom panel)
+			  <b>Ctrl+3</b> -> <b>Messages</b>	(Bottom panel)
+			  <b>Ctrl+4</b> -> <b>Todo</b>		(Bottom panel)
+			  <b>Ctrl+5</b> -> <b>Calculator</b>	(Bottom panel)
+			  <b>Ctrl+6</b> -> <b>Graph</b>		(Bottom panel)
+			  <b>Ctrl+7</b> -> <b>Bookmarks</b>	(Right panel)
+			  <b>Ctrl+8</b> -> <b>Breakpoints</b>	(Right panel)
+			  <b>Ctrl+9</b> -> <b>Register watches</b>	(Right panel)
+			  <b>Ctrl+0</b> -> <b>Instruction</b>	(Right panel)
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			Sometimes you can make your work easier with the editor command line.  Invoke it with <b>F10</b> and type <b>help list</b> to get a list of available commands.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			Use <b>quick search bars</b>.  For instance, you need to find a file in list of opened file. Write the name of that file to entrybox below the list and it's done.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			Burn your MSC51 manual (or better, colleague's manual).  Tab <b>"Instruction details"</b> (<b>Ctrl+0</b>) in the right panel gives you a list of all possible operands for the instruction on the current line in the editor.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can use function <b>Auto-indent</b> to make badly formated code more readable.
+
+			<c>   main: mov    A, #55h</c>
+			<c>         mov    R0, #20h</c>
+			<c>         movx   @R0, A</c>
+			<c>         sjmp   main</c>
+
+			<b>Tools</b> -> <b>Auto indent</b>
+
+			<c>   main: mov     A, #55h</c>
+			<c>         mov     R0, #20h</c>
+			<c>         movx    @R0, A</c>
+			<c>         sjmp    main</c>
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			Almost all shortcuts can be redefined in <b>Shortcuts configuration</b> dialog
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can edit the content of external data memory and program memory with the embedded hexadecimal editor.  <b>Simulator</b> -> <b>Show ... memory</b>.  You can write programs directly in machine code, (but it's better to use the compiler).
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can quickly open files using <b>Filesystem browser</b> on left panel.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			This program also has support for a command line interface (CLI).  Run <b>mcu8051ide --help</b> to get a list of possible options.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			Sometimes you might need to run an external program (e.g program uploader).  In MCU 8051 IDE, it can be accomplished by <b>Custom commands</b> ( <b>Configure</b> -> <b>Custom commands</b> ).
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can export the current document (assembly language source) as XHTML-1.1 or LaTeX.
+			<b>Tools</b> -> <b>Export as ...</b>
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can convert between Intel® HEX 8 and binary files.
+			<b>Tools</b> -> <b>... -> ...</b>
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			The right panel provides a list of bookmarks and breakpoints defined in the editor.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can use various encodings and EOLs (End Of Line).
+			<b>Tools</b> -> <b>Encoding/EOL</b>
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			<b>Register watches</b> can make your work much easier.  You can define them in the Right panel.  Enter the hexadecimal address of the register you want to watch in the text box at the bottom of the right panel with the label "Addr" and press Enter.  (1 or 2 hexadecimal digits means <b>IDATA</b> and 3 or 4 digits means <b>XDATA</b>).
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can discuss this project at <b>http://mcu8051ide.sourceforge.net</b>.
+
+			If you do find a bug, please report it via <b>http://sourceforge.net/tracker/?func=add&group_id=185864&atid=914981</b>
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can customize compiler behavior in the <b>Compiler config</b> dialog.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can enable/disable <b>popup-based completion</b> in the editor configuration dialog.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can significantly improve simulator speed by:
+			  <b>1)</b> Disabling <b>Step back function</b>
+			  <b>2)</b> Disabling <b>Graph</b>
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			The editor can be split vertically or horizontally.  Right click on the editor status bar and choose split.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can step your program back using the default key shortcut <b>Ctrl+F7</b>.  Behavior of this capability can be modified in the simulator configuration dialog.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			MCU 8051 IDE can "hibernate" the running program into a file.  Later you can resume the hibernated program exactly from the same point where it was hibernated.
+			<b>Simulator</b> -> <b> Hibernate program </b>
+			<b>Simulator</b> -> <b> Resume hibernated program </b>
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			You can navigate the simulator to a certain line in your source code.  Press <b>Ctrl+G</b> in simulator mode and choose line.  The simulator will set the PC (Program Counter) to the address in program memory corresponding to your chosen line.
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			MCU 8051 IDE assembler can perform certain code optimizations.  They are enabled by default but you can disable them in the compiler configuration dialog.
+
+			More about optimizations:
+			  <c>LJMP code11    </c>-->   <c>AJMP code11</c>
+			  <c>LJMP code8     </c>-->   <c>SJMP code11</c>
+			  <c>LJMP code8     </c>-->   <c>SJMP code8</c>
+			  <c>AJMP code8     </c>-->   <c>SJMP code8</c>
+			  <c>LCALL code11   </c>-->   <c>ACALL code11</c>
+			  <c>MOV 224d, ...  </c>-->   <c>MOV A, ...</c>
+			  <c>MOV ..., 224d  </c>-->   <c>MOV ..., A</c>
+			  <c>SETB 215       </c>-->   <c>SETB C</c>
+			  <c>CLR 215        </c>-->   <c>CLR C</c>
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			Sometimes it is not easy to track subprograms and interrupt invocations.  In this IDE, you can track them quite easily using the "Interrupt monitor" (<b>Simulator -> Interrupt Monitor</b>) and "List of subprograms" (<b>Ctrl+0</b>).
+		]]>
+	</tip><tip lang="en">
+		<![CDATA[
+			<b>Map of SFR</b> (<b>Simulator -> Map of SFR</b>) can provide a transparent view of all special function registers available on your chosen MCU.
+		]]>
+	</tip>
+<!--
+	<tip lang="en">
+		<![CDATA[
+		]]>
+	</tip>
+-->
+</tips>

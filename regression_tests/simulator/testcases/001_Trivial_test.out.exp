@@ -1,0 +1,66 @@
+MCU8051IDE SIM-ENGINE
+READY
+OK
+> set-mcu at89S52
+OK
+> set-clock 12000
+OK
+> load-code-adf ../testcases/001_Trivial_test.adf
+OK
+> read-sfr-by-name A
+0
+OK
+> step
+OK
+> read-pc
+2
+OK
+> read-sfr-by-name A
+85
+OK
+> step
+OK
+> read-position
+F: "./001_Trivial_test.asm"
+L: 5
+V: 0
+B: 0
+OK
+> read-pc
+3
+OK
+> read-sfr 224
+170
+OK
+> step
+OK
+> read-pc
+0
+OK
+> read-sfr 224
+170
+OK
+> step
+OK
+> read-pc
+2
+OK
+> read-sfr 224
+85
+OK
+> step-back
+1
+OK
+> read-pc
+0
+OK
+> step-back
+1
+OK
+> read-pc
+3
+OK
+> read-pc
+3
+OK
+EXITING

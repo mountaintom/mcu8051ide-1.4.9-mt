@@ -1,0 +1,37 @@
+================================================================================
+==                   MCU 8051 IDE - ebuild for Gentoo Linux                   ==
+================================================================================
+
+=== Installation steps ===
+  - Get superuser rights.
+      # su
+  - Create directory for local portage overlay, if you haven't it yet.
+      # mkdir /usr/local/portage/
+  - Modify /etc/make.conf to make portage work with your new overlay.
+      ...
+      PORTDIR_OVERLAY="... /usr/local/portage" <-- Don't copy the "..." there.
+      ...
+  - Create category "dev-embedded" in the overlay.
+      # mkdir /usr/local/portage/dev-embedded
+  - Create directory for mcu8051ide ebuilds in your local overlay.
+      # mkdir /usr/local/portage/dev-embedded/mcu8051ide
+  - Copy the ebuild there.
+      # cp mcu8051ide-0.0.0.ebuild /usr/local/portage/dev-embedded/mcu8051ide/
+  - Create ebuild manifest to let the portage know about the new ebuild.
+      # ebuild /usr/local/portage/dev-embedded/mcu8051ide/mcu8051ide-0.0.0.ebuild digest
+  - Install the software.
+      # emerge mcu8051ide
+  - Run it (as normal user).
+      $ mcu8051ide
+
+=== Useful links ===
+  * Writing Ebuilds: http://en.gentoo-wiki.com/wiki/Writing_Ebuilds
+  * MCU 8051 IDE project web page: http://mcu8051ide.sf.net
+
+=== Author(s) of the ebuild ===
+  * Martin Ošmera <mailto:martin.osmera@gmail.com>
+
+=== Notes ===
+  * If you have found bug in the ebuild, or you just want to report any issue,
+    or just write anything to the author, please don't hesitate to contact me
+    at mailto:martin.osmera@gmail.com.

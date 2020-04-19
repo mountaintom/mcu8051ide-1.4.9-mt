@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=Development;
+Comment=Graphical IDE for MCS-51 based microcontrollers
+Comment[en_US]=Graphical IDE for MCS-51 based microcontrollers
+Exec=mcu8051ide
+GenericName=MCU 8051 IDE
+GenericName[en_US]=MCU 8051 IDE
+Icon=mcu8051ide
+MimeType=application/x-mcu8051ide-project
+Name=MCU 8051 IDE
+Name[en_US]=MCU 8051 IDE
+StartupNotify=false
+Terminal=false
+TryExec=mcu8051ide
+Type=Application
+Version=1.0
+X-DCOP-ServiceType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

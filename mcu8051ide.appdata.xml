@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Martin Ošmera <martin.osmera@moravia-microsystems.com> -->
+<application>
+ <id type="desktop">mcu8051ide.desktop</id>
+ <metadata_license>CC0-1.0</metadata_license>
+ <project_license>GPL-2.0+</project_license>
+ <name>MCU 8051 IDE</name>
+ <summary>Graphical IDE for MCS-51 based microcontrollers</summary>
+ <description>
+  <p>
+   MCU 8051 IDE is a modern graphical integrated development environment for microcontrollers based on 8051. For those who believe 8051 is a great piece of technology this IDE is a new way how to see and feel these still famous microcontrollers. MCU 8051 IDE is noncommercial open-source software. You can use this IDE for education, business, hobby, or something else completely free of charge.
+  </p><p>
+   Supported programming languages are C language and assembly. It has its own assembler and support for 2 external assemblers. For C language it uses SDCC compiler. This IDE contains simulator, source code editor, assembler, HW programmer and much other tools. Simulator supports over 79 MCU primarily from Atmel. There is also support for simple hardware simulation (like LEDs, keys, etc.).
+  </p>
+ </description>
+ <screenshots>
+  <screenshot type="default">http://www.moravia-microsystems.com/images/upload/mcu8051ide_screenshot.png</screenshot>
+ </screenshots>
+ <url type="homepage">http://www.moravia-microsystems.com/mcu-8051-ide/</url>
+ <updatecontact>martin.osmera@moravia-microsystems.com</updatecontact>
+ <project_group>Development</project_group>
+</application>

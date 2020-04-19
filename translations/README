@@ -1,0 +1,42 @@
+This directory contains translation files for the MCU 8051 IDE.
+
+== What is this directory good for ==
+
+Each file is named after the locale. The locale is specified by a locale string.
+The locale string consists of a language code, an optional country code, and an
+optional system-specific code, each separated by `_'. The country and language
+codes are specified in standards ISO-639 and ISO-3166. For example, the locale
+`en' specifies English and `en_US' specifies U.S. English.
+
+Please see file template.txt for more details. Also note that a complete
+translation comprise also translation of this file: "../data/tips.xml",
+documentation translation is also possible.
+
+
+== Note to the Tip of the day ==
+
+Some people wonder why the Tip of the day stops working when they start using
+their translation, well, the cause of this is that the tips are stored file
+named tips.xml, the file is located in the "data" directory located in that
+directory where you have installed the IDE, on Linux it's usually
+"/usr/share/mcu8051ide/data", on Windows it's usually
+"C:\Program Files\MCU 8051 IDE\data". The problem is that the tips won't work
+until they are all translated, or rewritten, however there is a simple solution,
+just copy all the tips in English and change "<tip lang="en">" to
+"<tip lang="my_language">". This solution apparently doesn't do anything else
+than making the tips in English appear as they have been already translated, so
+you get the Tip of the day working again but with English tips in it.
+
+
+== The translation manipulation tool ==
+
+You should see file named tool.tcl in this directory, it's a tool which might
+help with maintenance of the translation files. Since the template.txt might get
+updated every now and then, we need to keep the translation files updated as
+well, the tool.tcl was written in order to make that a lot easier, here are the
+instructions how to use it:
+  - (This applies to Windows users only.) Make sure you can run Tcl scripts, you
+    might need to install some Tcl distribution, e.g. ActiveTcl.
+  - Go to this directory.
+  - Run "./tool.tcl -m my_translation_file.msg".
+  - Wait a moment, and it's done. :)

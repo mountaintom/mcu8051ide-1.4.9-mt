@@ -1,0 +1,12 @@
+MCU 8051 IDE simulator engine regression testing
+------------------------------------------------
+
+Each .in file in the testcases directory is used by RTE (Regression Testing
+Environment) to run specific test on the simulator. The .in file is first
+processed by m4 macro-processor and then passed to the simulator command line
+interface. Commands contained in the .in file are processed by the engine and
+generated output is redirected into a file with the same base name as the .in
+file has, but with extension .out . This .out file is located in directory named
+results for comparison with an .exp file located in the same directory as the
+.in file. See MCU 8051 IDE handbook for information about the simulator command
+line interface and its commands, it is a long list.

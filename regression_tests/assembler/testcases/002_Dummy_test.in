@@ -1,0 +1,4 @@
+    #    --no-sim   #             Do not generate SIM file (for MCU 8051 IDE simulator)
+   #     --no-bin   #             Do not generate binary object code
+   #     --no-lst    #            Do not generate code listing
+#        --no-hex   #             Do not generate IHEX8 object code

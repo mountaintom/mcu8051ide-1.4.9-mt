@@ -1,0 +1,7 @@
+                         1             org     0
+                         2
+0000 7455                3     m:      mov     A, #55h
+0002 F4                  4             cpl     A
+0003 80FB                5             sjmp    m
+                         6
+                         7             end

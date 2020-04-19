@@ -1,0 +1,76 @@
+This directory contains files for building various installation packages, the
+create_installation_packages.sh script can these files to create:
+  - RPM package
+  - Debian package
+  - Windows installer
+  - tarball with the source code
+  - ebuild for Gentoo Linux
+  - PKGBUILD file for Arch Linux
+  - freeBSD port
+
+Microsoft Windows specific requiremens:
+---------------------------------------
+
+1) This part of te directory structure is NOT included in source tarball, nor
+it's in the project's GIT repository, however, it is required in order to build
+package for Windows. If you want to build the installer package for MS Windows,
+you have to obtain these files somewhere, freewrap can be just downloaded from
+the Internet, but the you would probably have to build all those .dll files. All
+version and file names must be met exactly!
+Windows/
+├── freewrap
+│   ├── docs
+│   │   ├── freeWrapDocs.pdf
+│   │   ├── license.winico
+│   │   ├── readme.txt
+│   │   ├── readme.winico
+│   │   └── winico.html
+│   ├── freewrap                 <-- Linux version of freeWrap
+│   ├── freewrap.exe             <-- Windows version freeWrap
+│   └── tclpip85s.dll
+├── lib_pkg_dir                  <-- Some of the MCU 8051 IDE dependencies
+│   ├── img_png1.4.0.4           <-- tkimg library
+│   │   ├── pngtcl143.dll
+│   │   ├── tkimg1404.dll
+│   │   ├── tkimgpng1404.dll
+│   │   └── zlibtcl12503.dll
+│   ├── Itcl3.4                  <-- [Incr Tcl] (itcl) library
+│   │   ├── itcl34.dll
+│   │   ├── itcl.tcl
+│   │   └── pkgIndex.tcl
+│   ├── Tclx8.4                  <-- TclX library
+│   │   ├── arrayprocs.tcl
+│   │   ├── autoload.tcl
+│   │   ├── buildhelp.tcl
+│   │   ├── compat.tcl
+│   │   ├── convlib.tcl
+│   │   ├── edprocs.tcl
+│   │   ├── events.tcl
+│   │   ├── fmath.tcl
+│   │   ├── forfile.tcl
+│   │   ├── globrecur.tcl
+│   │   ├── help.tcl
+│   │   ├── pkgIndex.tcl
+│   │   ├── profrep.tcl
+│   │   ├── pushd.tcl
+│   │   ├── setfuncs.tcl
+│   │   ├── showproc.tcl
+│   │   ├── stringfile.tcl
+│   │   ├── tcllib.tcl
+│   │   ├── tclx84.dll
+│   │   └── tclx.tcl
+│   └── tdom0.8.3                <-- tdom library
+│       ├── pkgIndex.tcl
+│       ├── tdom083.dll
+│       └── tdom.tcl
+:
+:
+
+2) Inno Setup and the final Windows package: you can build even the Windows
+installer file (an .exe file) directly from GNU/Linux, the script can so this
+automatically, but you have to install Wine and Inno Setup in Wine (both can be
+easily obtained from the Internet). Run winecfg and set "W:" drive to the
+directory where you have located your local mcu8051ide development directory
+(it might/should be different from the installation directory),
+e.g. "/home/some_user_name/" (in case there is
+"/home/some_user_name/mcu8051ide/pkg/create_installation_packages.sh", ...)

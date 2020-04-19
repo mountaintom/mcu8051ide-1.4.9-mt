@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE tk_mcuide_project [
+
+	<!-- Declare entities -->
+	<!ENTITY quot    "&#34;">
+	<!ENTITY amp     "&#38;">
+	<!ENTITY lt      "&#60;">
+	<!ENTITY gt      "&#62;">
+
+	<!-- ROOT ELEMENT -->
+	<!ELEMENT tk_mcuide_project (general, other_options, compiler_options, files)>
+	<!-- Root element Parameters:
+		version		- Project version	(user defined)
+		date		- Project last update	(user defined)
+		creator_ver	- MCU 8051 IDE version	(hardcoded in the program)
+	-->
+	<!ATTLIST tk_mcuide_project
+		version		CDATA	#IMPLIED
+		date		CDATA	#IMPLIED
+		creator_ver	CDATA	#IMPLIED
+	>
+
+	<!-- General information about the project -->
+	<!ELEMENT general (authors, copyright, licence, processor, options, graph, description, todo, calculator)>
+
+	<!-- List of project authors, one name per line -->
+	<!ELEMENT authors	(#PCDATA)>
+
+	<!-- Copyrigh information -->
+	<!ELEMENT copyright	(#PCDATA)>
+
+	<!-- Project licence -->
+	<!ELEMENT licence	(#PCDATA)>
+
+	<!-- Processor type and configuration -->
+	<!ELEMENT processor	EMPTY>
+
+	<!-- Parameters of tag "processor":
+		type		- Processor type (e.g. AT89C51RC or 80C51)
+		clock		- Clock frequency in kHz
+		xdata		- Size of connected XDATA memory (0 means disconnected)
+		xcode		- Size of connected XCODE memory (0 means disconnected)
+	-->
+	<!ATTLIST processor
+		type		CDATA	#IMPLIED
+		clock		CDATA	#IMPLIED
+		xdata		CDATA	#IMPLIED
+		xcode		CDATA	#IMPLIED
+	>
+
+	<!-- Various project options -->
+	<!ELEMENT options	EMPTY>
+
+	<!-- Parameters of tag "options":
+		watches_file	- Relative or absolute path to definition file of register watches
+		scheme		- Relative or absolute path to scheme file
+		main_file	- Main project source code file (e.g. main.c)
+		auto_sw_enabled	- Automatic file switching during simulation locked
+	-->
+	<!ATTLIST options
+		watches_file	CDATA	#IMPLIED
+		scheme		CDATA	#IMPLIED
+		main_file	CDATA	#IMPLIED
+		auto_sw_enabled	(0|1)	#IMPLIED
+	>
+
+	<!-- Ports graph definition -->
+	<!ELEMENT graph		EMPTY>
+
+	<!-- Parameters of tag "graph":
+		grid		- Grid mode
+		magnification	- Magnification level	(must be an integer between 0 and 3)
+		enabled		- Graph enable flag	(Boolean value 0 or 1)
+		marks_s		- List of state graph marks	(String of zeros and ones perfixed with 'X', and converted to hexadecimal)
+		marks_l		- List of laches graph marks	(String of zeros and ones perfixed with 'X', and converted to hexadecimal)
+		marks_o		- List of output graph marks	(String of zeros and ones perfixed with 'X', and converted to hexadecimal)
+		active_page	- Active page
+	-->
+	<!ATTLIST graph
+		grid		(n|b|x|y)	#IMPLIED
+		magnification	(0|1|2|3)	#IMPLIED
+		enabled		(0|1)		#IMPLIED
+		marks_s		CDATA		#IMPLIED
+		marks_l		CDATA		#IMPLIED
+		marks_o		CDATA		#IMPLIED
+		active_page	CDATA		#IMPLIED
+	>
+
+	<!-- Project description text (plain text only) -->
+	<!ELEMENT description	(#PCDATA)>
+
+	<!-- Project to do list (SGML format) -->
+	<!ELEMENT todo		(#PCDATA)>
+
+	<!-- Calculator configuration -->
+	<!ELEMENT calculator	EMPTY>
+
+	<!-- Parameters of tag "calculator":
+		radix		- Radix (one of {Dec Hex Bin Oct})
+		angle_unit	- Angle unit (one of {deg rad grad})
+		display0	- Primary display
+		display1	- Opereator display
+		display2	- Secondary display
+		memory0		- Content of memory bank 0
+		memory1		- Content of memory bank 1
+		memory2		- Content of memory bank 2
+		freq		- Timers preset calculator: Frequency
+		time		- Timers preset calculator: Desired time
+		mode		- Timers preset calculator: Timer mode (one of {0 1 2})
+	-->
+	<!ATTLIST calculator
+		radix		(Dec|Hex|Bin|Oct)	#IMPLIED
+		angle_unit	(deg|rad|grad)		#IMPLIED
+		display0	CDATA			#IMPLIED
+		display1	CDATA			#IMPLIED
+		display2	CDATA			#IMPLIED
+		memory0		CDATA			#IMPLIED
+		memory1		CDATA			#IMPLIED
+		memory2		CDATA			#IMPLIED
+		freq		CDATA			#IMPLIED
+		time		CDATA			#IMPLIED
+		mode		(0|1|2)			#IMPLIED
+	>
+
+	<!-- Other options (it can contain anything) -->
+	<!ELEMENT other_options	(#PCDATA)>
+
+	<!-- Compiler options -->
+	<!ELEMENT compiler_options	(#PCDATA)>
+
+	<!-- Project files -->
+	<!ELEMENT files	(file)*>
+
+	<!-- Parameters of tag "files":
+		count		- Number of project files
+		current_file	- Current file in left/top view
+		current_file2	- Current file in right/bottom view (if it's less than zero then editor won't be splitted)
+		pwin_sash	- Position of paned window sash (has meaning only if editor was splitted)
+		selected_view	- Active view; 0 == left/top, 1 == right/bottom
+		pwin_orient	- Orientation of paned window for multiview (one of {horizontal vertical})
+	-->
+	<!ATTLIST files
+		count		CDATA			#IMPLIED
+		current_file	CDATA			#IMPLIED
+		current_file2	CDATA			#IMPLIED
+		pwin_sash	CDATA			#IMPLIED
+		selected_view	(0|1)			#IMPLIED
+		pwin_orient	(horizontal|vertical)	#IMPLIED
+	>
+
+	<!-- Project file description -->
+	<!ELEMENT file	(actual_line, md5_hash, path, bookmarks, breakpoints, eol, encoding, notes)>
+
+	<!-- Parameters of tag "file":
+		name		- File name without path
+		active		- "yes" == opended; "no" == closed
+		o_bookmark	- Bookmark in list of opened files
+		p_bookmark	- Bookmark in list of project files
+		file_index	- File index in the list
+		read_only	- Read only flag
+		highlight	- Syntax highlight
+	-->
+	<!ATTLIST file
+		name		CDATA		#IMPLIED
+		active		(yes|no)	#IMPLIED
+		o_bookmark	(1|0)		#IMPLIED
+		p_bookmark	(1|0)		#IMPLIED
+		file_index	CDATA		#IMPLIED
+		read_only	(1|0)		#IMPLIED
+		highlight	CDATA		#IMPLIED
+	>
+
+	<!-- Current line -->
+	<!ELEMENT actual_line	EMPTY>
+
+	<!-- Parameters of tag "actual_line":
+		value		- Current line in the file
+	-->
+	<!ATTLIST actual_line
+		value		CDATA	#IMPLIED
+	>
+
+	<!-- MD5 hash for the file -->
+	<!ELEMENT md5_hash	EMPTY>
+
+	<!-- Parameters of tag "md5_hash":
+		value		- Last MD5 hash
+	-->
+	<!ATTLIST md5_hash
+		value		CDATA	#IMPLIED
+	>
+
+	<!-- File path -->
+	<!ELEMENT path		(#PCDATA)>
+
+	<!-- Bookmarks: list of line numbers -->
+	<!ELEMENT bookmarks	(#PCDATA)>
+
+	<!-- Breakpoints: list of line numbers -->
+	<!ELEMENT breakpoints	(#PCDATA)>
+
+	<!-- End Of Line character name -->
+	<!ELEMENT eol		EMPTY>
+
+	<!-- Parameters of tag "eol":
+		value		- EOL character (lf == "Line feed" 0x0A; cr == "Carriage return" 0x0D)
+	-->
+	<!ATTLIST eol
+		value		(lf|cr|crlf)	#IMPLIED
+	>
+
+	<!-- File encoding (we strongly recomend to use utf-8 only) -->
+	<!ELEMENT encoding	EMPTY>
+
+	<!-- File notes -->
+	<!ELEMENT notes		(#PCDATA)>
+
+	<!-- Parameters of tag "encoding":
+		value		- Name of choosen encoding
+	-->
+	<!ATTLIST encoding
+		value		CDATA	#IMPLIED
+	>
+]>
+<tk_mcuide_project version="1.0" date="11/28/2011" creator_ver="1.4.3">
+	<general>
+		<authors><![CDATA[Martin Osmera &lt;martin.osmera@gmail.com&gt;
+]]></authors>
+		<copyright><![CDATA[]]></copyright>
+		<license><![CDATA[GPLv2]]></license>
+		<processor type="AT89S2051" clock="12000" xdata="0" xcode="0"/>
+		<options
+			watches_file="demo.wtc"
+			scheme=""
+			main_file=""
+			auto_sw_enabled="1"
+			/>
+		<graph
+			grid="y"
+			magnification="0"
+			enabled="0"
+			marks_s="X0000000000000000000000000000000000000000000"
+			marks_l="X0000000000000000000000000000000000000000000"
+			marks_o="X0000000000000000000000000000000000000000000"
+			active_page="output"
+		/>
+		<description><![CDATA[This is demonstration project for MCU 8051 IDE and nothing less, nothing more.
+
+Thank you for using MCU 8051 IDE.
+]]></description>
+		<todo><![CDATA[				<u><b>WELCOME TO MCU 8051 IDE</u></b>
+
+<u>What does it consist of:</u>			<u>Basic key shortcuts:</u>
+	LEFT:						<b>F2</b>	- <i>Initialize simulator</i>
+<i>	  1. List of opened files			</i><b>F7</b>	- <i>Step program</i>
+<i>	  2. List of project files			</i><b>F6</b>	- <i>Animate program</i>
+<i>	  3. Filesystem browser				</i><b>F4</b>	- <i>Reset simulator</i>
+<i>	  4. SFR watches				</i><b>CTRL+F7</b>	- Step back
+	RIGHT:					<bookmark/>  Thank you for trying MCU 8051 IDE
+<i>	  1. Bookmarks
+	  2. Breakpoints
+	  3. Symbol list
+	  4. Instruction details
+	  5. Register watches
+	  6. Subprograms monitor
+</i>	  7. HW plug-ins
+	BOTTOM:
+<i>	  1. Simulator panel
+	  2. C code debugger
+	  3. Graph of voltage levels on processor ports
+	  4. Messages text (Compiler output)
+	  5. This text editor
+	  6. Scientific calculator and calculator for computing timer preset
+	  7. Terminal emulator
+</i>	  8. Tool for searching in files
+
+]]></todo>
+		<calculator
+			radix="Dec"
+			angle_unit="rad"
+			display0="88"
+			display1="add"
+			display2="99"
+			memory0="88"
+			memory1="66"
+			memory2="45"
+			freq="12000"
+			time="565"
+			mode="0"
+		/>
+	</general>
+	<other_options><![CDATA[]]></other_options>
+	<compiler_options><![CDATA[{_title 0 _list 0 _print 0 _nomod 0 max_ihex_rec_length 255 _object 0 _pagelength 0 QUIET 0 _symbols 0 CREATE_SIM_FILE 1 CREATE_BIN_FILE 1 optim_ena 0 _pagewidth 0 WARNING_LEVEL 0 _paging 0 _date 0} 0 {--verbose 1 -i {} --omf-51 0 --columns 0 custom {}} {adf 1} {-L 1 -M 0 custom {} -n 0 -P 0 -A 0 -a 0 -r {} -C 0 -c 0 -s 1 -u 0 -U 0 -w 0 -g MAP -quiet 0 -h 0 -x 0 -cpu 8051 -I 1 -i {}} {ihex 1 adf 1} {--out-fmt-s19 0 --fdollars-in-identifiers 0 --nogcse 0 --nooverlay 1 --no-peep-comments 0 --no-c-code-in-asm 0 --print-search-dirs 0 --nostdlib 0 --compile-only 0 --peep-asm 0 --nolabelopt 0 --short-is-8bits 0 --cyclomatic 0 --profile 0 --noinvariant 0 --no-reg-params 0 --noinduction 1 --out-fmt-ihx 0 --nojtbound 0 --opt-code-size 0 --less-pedantic 0 --no-peep 0 -S 0 --verbose 1 --funsigned-char 0 --xstack 0 --no-xinit-opt 0 --debug 1 --preprocessonly 0 --c1mode 0 -V 1 --float-reent 0 --parms-in-bank1 0 --opt-code-speed 0 --nostdinc 0 --main-return 0 --xram-movc 0 --fommit-frame-pointer 0 --fverbose-asm 0 --int-long-reent 0 --all-callee-saves 0 --stack-probe 0 --noloopreverse 0 --stack-auto 0 --use-stdout 0} {model --model-small standard --std-sdcc89 stack {} custom {}} {--codeseg {} --constseg {} --code-loc {} --stack-size {} --xram-loc {} --lib-path {} --xstack-loc {} --stack-loc {} --data-loc {}} {-l {} -L {} --disable-warning {} -I {}} {-l 1 -A {} -F hex custom {}} {adf 1}]]></compiler_options>
+	<files
+		count="10"
+		current_file="0"
+		current_file2="-1"
+		pwin_sash="304"
+		selected_view="0"
+		pwin_orient="horizontal">
+
+		<file name="demo0.asm" active="yes" o_bookmark="0" p_bookmark="0" file_index="0" read_only="1" highlight="0">
+			<actual_line value="1"/>
+			<md5_hash value="477C5C6C6472852B9BCD48A6D3A103DF"/>
+			<path><![CDATA[]]></path>
+			<bookmarks>
+				16
+			</bookmarks>
+			<breakpoints>
+				17
+			</breakpoints>
+			<eol value="lf"/>
+			<encoding value="utf-8"/>
+			<notes><![CDATA[Basic demonstration code ...
+]]></notes>
+		</file>
+
+		<file name="demo1.asm" active="yes" o_bookmark="0" p_bookmark="0" file_index="1" read_only="1" highlight="0">
+			<actual_line value="1"/>
+			<md5_hash value="2078A8D0F7F402380D20B396DE54ECD6"/>
+			<path><![CDATA[]]></path>
+			<bookmarks>
+				0
+			</bookmarks>
+			<breakpoints>
+				0
+			</breakpoints>
+			<eol value="lf"/>
+			<encoding value="utf-8"/>
+			<notes><![CDATA[A little more advanced demonstration code ...
+]]></notes>
+		</file>
+
+		<file name="demo2.asm" active="yes" o_bookmark="0" p_bookmark="0" file_index="2" read_only="1" highlight="0">
+			<actual_line value="1"/>
+			<md5_hash value="37AFD8BE8D1F3D6436C93B0B9616E95A"/>
+			<path><![CDATA[]]></path>
+			<bookmarks>
+				0
+			</bookmarks>
+			<breakpoints>
+				0
+			</breakpoints>
+			<eol value="lf"/>
+			<encoding value="utf-8"/>
+			<notes><![CDATA[Next demonstration code ...
+]]></notes>
+		</file>
+
+		<file name="demo3.asm" active="yes" o_bookmark="0" p_bookmark="0" file_index="3" read_only="1" highlight="0">
+			<actual_line value="1"/>
+			<md5_hash value="5B8A70E1D6517500E2AE4F4FA5B98BC5"/>
+			<path><![CDATA[]]></path>
+			<bookmarks>
+				0
+			</bookmarks>
+			<breakpoints>
+				0
+			</breakpoints>
+			<eol value="lf"/>
+			<encoding value="utf-8"/>
+			<notes><![CDATA[]]></notes>
+		</file>
+
+		<file name="demo5.asm" active="yes" o_bookmark="0" p_bookmark="0" file_index="4" read_only="1" highlight="0">
+			<actual_line value="1"/>
+			<md5_hash value="83FBE8C57ABDDCD92CDD70B3C5326563"/>
+			<path><![CDATA[]]></path>
+			<bookmarks>
+				0
+			</bookmarks>
+			<breakpoints>
+				0
+			</breakpoints>
+			<eol value="lf"/>
+			<encoding value="utf-8"/>
+			<notes><![CDATA[]]></notes>
+		</file>
+
+		<file name="demo_c_0.c" active="yes" o_bookmark="0" p_bookmark="0" file_index="5" read_only="1" highlight="1">
+			<actual_line value="1"/>
+			<md5_hash value="A958F84B552CBBD6CB8D8FA776FEB327"/>
+			<path><![CDATA[]]></path>
+			<bookmarks>
+				0
+			</bookmarks>
+			<breakpoints>
+				0
+			</breakpoints>
+			<eol value="lf"/>
+			<encoding value="utf-8"/>
+			<notes><![CDATA[]]></notes>
+		</file>
+
+		<file name="ledmatrix.c" active="yes" o_bookmark="0" p_bookmark="0" file_index="6" read_only="1" highlight="1">
+			<actual_line value="1"/>
+			<md5_hash value="517133F895352F3918C3E1250EA990A5"/>
+			<path><![CDATA[]]></path>
+			<bookmarks>
+				0
+			</bookmarks>
+			<breakpoints>
+				0
+			</breakpoints>
+			<eol value="lf"/>
+			<encoding value="utf-8"/>
+			<notes><![CDATA[]]></notes>
+		</file>
+
+		<file name="keypad_display.c" active="yes" o_bookmark="0" p_bookmark="0" file_index="7" read_only="1" highlight="1">
+			<actual_line value="1"/>
+			<md5_hash value="250BC76DCCF444C4F982EB733E057F5E"/>
+			<path><![CDATA[]]></path>
+			<bookmarks>
+				0
+			</bookmarks>
+			<breakpoints>
+				0
+			</breakpoints>
+			<eol value="lf"/>
+			<encoding value="utf-8"/>
+			<notes><![CDATA[]]></notes>
+		</file>
+
+		<file name="mleddisplay.asm" active="yes" o_bookmark="0" p_bookmark="0" file_index="8" read_only="1" highlight="0">
+			<actual_line value="1"/>
+			<md5_hash value="8BF7EBDCE29A2FCF7D73079108BBAD39"/>
+			<path><![CDATA[]]></path>
+			<bookmarks>
+				0
+			</bookmarks>
+			<breakpoints>
+				0
+			</breakpoints>
+			<eol value="lf"/>
+			<encoding value="utf-8"/>
+			<notes><![CDATA[]]></notes>
+		</file>
+
+		<file name="LCD.asm" active="yes" o_bookmark="0" p_bookmark="0" file_index="9" read_only="1" highlight="0">
+			<actual_line value="1"/>
+			<md5_hash value="03C83A56F6DD9B68A2D385DD90C81D42"/>
+			<path><![CDATA[]]></path>
+			<bookmarks>
+				0
+			</bookmarks>
+			<breakpoints>
+				0
+			</breakpoints>
+			<eol value="lf"/>
+			<encoding value="utf-8"/>
+			<notes><![CDATA[]]></notes>
+		</file>
+
+	</files>
+</tk_mcuide_project>

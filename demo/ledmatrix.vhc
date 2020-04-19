@@ -1,0 +1,6 @@
+# MCU 8051 IDE: Virtual HW component configuration file
+# Date: 02/27/09
+# Project: Demo-project
+# Component: LED matrix
+
+LedMatrix {{C5 0 C6 0 C7 0 R0 1 R1 1 R2 1 R3 1 R4 1 R5 1 R6 1 R7 1 C0 0 C1 0 C2 0 C3 0 C4 0} {C5 2 C6 1 C7 0 R0 7 R1 6 R2 5 R3 4 R4 3 R5 2 R6 1 R7 0 C0 7 C1 6 C2 5 C3 4 C4 3} {} {Some user note ...} blue 500 {0 0}}

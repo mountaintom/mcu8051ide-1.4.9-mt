@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-mcu8051ide-project">
+    <sub-class-of type="text/plain"/>
+    <comment xml:lang="en">MCU 8051 IDE project</comment>
+    <comment xml:lang="cs">Projekt MCU 8051 IDE</comment>
+    <icon name="mcu8051ide"/>
+    <glob-deleteall/>
+    <glob pattern="*.mcu8051ide" />
+  </mime-type>
+</mime-info>

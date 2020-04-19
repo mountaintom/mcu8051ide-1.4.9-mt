@@ -1,0 +1,16 @@
+TODO list for MCU 8051 IDE
+
+* ADC (Analogue to Digital Converter)
+* Full simulation of UART (including tools)
+* Simulation of SPI
+* Simulation of MCU power down modes
+* PCA (Programmable Counter Array)
+* New virtual HW: stepper motors, new displays, digital potentiometers
+* New MCUs, possibly some from NXP and Mentor Graphics
+* I2C based RTC(DS1307)
+* EEPROM(AT24C02)
+* ADC(MAX1036/11600)
+* SPI based MAX7219
+* CAN BASED PROTOCOLS
+
+Comments and suggestions: http://mcu8051ide.sf.net or mailto:martin.osmera@gmail.com

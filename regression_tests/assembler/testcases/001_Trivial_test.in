@@ -1,0 +1,20 @@
+#        --compile asm_file      Compile asm file and exit
+#        --iram-size size        Set size of internal data memory        (eg. 1K or 1024) (default: 0x100)
+ #       --code-size size        Set size of program memory              (eg. 1K or 1024) (default: 0x10000)
+#        --xram-size size        Set size of external data memory        (eg. 1K or 1024) (default: 0x10000)
+ #       --no-opt                Disable optimalizations
+  #      --comp-quiet            Suppress compiler console output
+   #     --no-sim                Do not generate SIM file (for MCU 8051 IDE simulator)
+    #    --no-bin                Do not generate binary object code
+     #   --no-lst                Do not generate code listing
+#        --no-hex                Do not generate IHEX8 object code
+ #       --warning-level N       Set compiler warning level
+  #              3 - Nothing
+   #             2 - Errros only
+    #            1 - Errors + Warnings
+     #           0 - All (Default)
+
+
+
+	#--no-sim	# sdfsdf
+

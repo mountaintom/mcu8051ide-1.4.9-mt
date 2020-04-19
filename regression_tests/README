@@ -1,0 +1,129 @@
+Regression testing environment
+==============================
+
+== THIS IS MERELY A PRELIMINARY DOCUMENT DRAFT ==
+
+
+What is regression testing
+---------------------------
+"Regression testing is any type of software testing that seeks to uncover
+software errors by partially retesting a modified program. The intent of
+regression testing is to provide a general assurance that no additional errors
+were introduced in the process of fixing other problems."
+                                               – Wikipedia, Regression testing –
+
+Implementation of this regression testing environment
+-----------------------------------------------------
+Each test have its own directory, like 'test_of_something' or 'another_test',
+let's call this directory the test directory. Each test consist of a set of test
+cases. Each test case should test one and only one specific function of the
+tested software. Test cases are represented by files with extension '.in'
+located in directory named 'testcases' inside the test directory. Directory
+'results' inside the test directory should be left empty, it is used by the
+testing environment for storing temporary files generated during the test. The
+'testcases' directory should also contain files intended for comparison with
+files generated during the test and stored in the 'results' directory, these
+files must have extension '.<x>.exp'. Where '<x>' must be substituted with
+extension of a file which this file is supposed to be compared to. In another
+words, if I want to check whether for example './results/something.abc' was
+generated as it should be, I have to create file './testcases/something.abc.exp'
+and this file will be automatically compared with './results/something.abc'. And
+that's it! This is simple, isn't it? It's just about comparing files. But are
+the tests run and how the files in the 'results' directory gets generated? For
+that we need some Bash script, which is used to run the test, let's call this
+script the runtest script. The runtest script must be located in the test
+directory and must include the 'rte.lib.sh' file, using the 'source' command
+(or '.' command). this script should have set permissions to be executable and
+this script specifies how exactly should be the test performed and also runs the
+test itself. When the script is about to exit, this condition is trapped and the
+'rte.lib.sh' reacts by starting the test. So there is no need to explicitly run
+the test by invocing some function or something like that. It runs the test
+automatically when there is nothing else to do.
+
+
+How to write the runtest script -- and example of such script
+-------------------------------------------------------------
+	#! /bin/bash
+
+	cd "somewhere"
+
+	# Load regression test environment
+	source "rte.lib.sh"
+	# Set name of the tested subject
+	RTE_TEST_NAME="Some software"
+
+	# Function to performing the test
+	function rte_perform_test() {
+		# This is will be executed in the 'results' directory
+		the_program_which_I_need_to_test --option something || return 1
+	}
+
+
+An example output from the runtest script
+-----------------------------------------
+	===========================================================
+	Starting Assembler regression testing ... 3 testcases to go
+	===========================================================
+	Testcase: "001_Trivial_test"                           [OK]
+	Testcase: "002_Dummy_test"                             [OK]
+	Testcase: "003 dummy test"                             [OK]
+	-----------------------------------------------------------
+	Statistic:
+		TOTAL:        3
+		SUCCESSFUL:   3
+		FAILED:       0
+	===========================================================
+
+
+More about the runtest scripts
+------------------------------
+All client (user accessible) functions and variables are prefixed with either
+'rte_' or 'RTE_' meaning Regression Testing Environment. And there are a few
+other functions like 'rte_perform_test', note that all these functions runs in
+the 'results' directory. Let's take a look at them:
+
+* function 'rte_before_test':
+	Do something which has to be done prior to the test itself
+* function 'rte_perform_test':
+	Perform the test
+* function 'rte_after_test':
+	Do something which has to be done after the test case had been done
+* function 'rte_modify_output_files':
+	Do something which has to be done with the test case output files, for
+	instance remove certain line from certain files
+* function 'rte_check_result':
+	Compare output files with expected results in order to determinate
+	whether it
+
+You can also set these variables:
+RTE_TEST_NAME		- String: Name of the tested program or functionality
+RTE_LINE_WIDTH		- Integer: Width of the terminal window
+RTE_ALLOW_BINKING_TEXT	- Boolean: Display '[IN PROGRESS]' as blinking text
+
+Note that, if you won't set RTE_LINE_WIDTH, the runtest script will use output
+from command 'tput cols' to determinate actual width of the terminal window.
+
+
+Command line options to the runtest script
+------------------------------------------
+Run './runtest -h' for more details ...
+
+  -t testcase     Run specific test case
+  -V              Print version information
+  -n              Disable color output
+  -h              Show help message
+
+* When run without any options it will run all found test cases.
+
+
+Software requirements
+---------------------
+  - Bash
+  - gawk
+  - m4
+
+
+Notes
+-----
+
+See the 'rte.lib.sh' file for more details.

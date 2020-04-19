@@ -1,0 +1,29 @@
+echo-on
+set-mcu at89S52
+set-clock 12000
+
+# Load program code
+load-code-adf `../testcases/'TESTCASE()`.adf'
+
+read-sfr-by-name A
+
+step
+read-pc
+read-sfr-by-name A
+
+step
+read-position
+read-pc
+read-sfr 224
+step
+read-pc
+read-sfr 224
+step
+read-pc
+read-sfr 224
+
+step-back
+read-pc
+step-back
+read-pc
+read-pc

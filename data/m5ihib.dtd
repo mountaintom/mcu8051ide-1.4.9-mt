@@ -1,0 +1,103 @@
+<!-- ROOT ELEMENT -->
+<!ELEMENT m5ihib	(currentstate, subprograms, stepback)>
+<!-- Root element Parameters:
+	version		- File version
+	datetime	- Date and time of creation
+	source_file	- Souce code compiled and loaded in simulator before hibernation
+	processor	- Processor type
+	xdata		- Size of External data memory
+	eeprom		- Size of data EEPROM
+	md5		- MD5 hash of the source code file
+-->
+<!ATTLIST m5ihib
+	version		CDATA	#REQUIRED
+	datetime	CDATA	#REQUIRED
+	source_file	CDATA	#REQUIRED
+	processor	CDATA	#REQUIRED
+	xdata		CDATA	#REQUIRED
+	eeprom		CDATA	#REQUIRED
+	md5		CDATA	#REQUIRED
+>
+
+
+<!-- Current state of MCU -->
+<!ELEMENT currentstate	(iram, eram, xram, eeprom, sfr, special)>
+
+<!-- Internal data memory in decimal -->
+<!ELEMENT iram		(#PCDATA)>
+
+<!-- Expanded data memory in decimal -->
+<!ELEMENT eram		(#PCDATA)>
+
+<!-- External data memory in decimal -->
+<!ELEMENT xram		(#PCDATA)>
+
+<!-- Data EEPROM in decimal -->
+<!ELEMENT eeprom	(#PCDATA)>
+
+<!-- Special function registers -->
+<!ELEMENT sfr		(addresses, values)>
+
+<!-- SFR decimal addresses in the same order as in tag values -->
+<!ELEMENT addresses	(#PCDATA)>
+
+<!-- SFR decimal values in the same order as in tag values -->
+<!ELEMENT values	(#PCDATA)>
+
+<!-- Special engine variables -->
+<!ELEMENT special	(#PCDATA)>
+
+
+<!-- Content of list of active interrupts -->
+<!ELEMENT subprograms	(sub)*>
+<!-- Parameters of tag "subprograms":
+	count	- Number of recorded subprograms
+-->
+<!ATTLIST subprograms
+	count		CDATA	#REQUIRED
+>
+
+<!-- Active interrupt -->
+<!ELEMENT sub	EMPTY>
+<!-- Parameters of tag "sub":
+	source	- Source address
+	target	- Target address
+	type	- Type
+-->
+<!ATTLIST sub
+	source		CDATA	#REQUIRED
+	target		CDATA	#REQUIRED
+	type		CDATA	#REQUIRED
+>
+
+
+<!-- Stack for stepback function (backward stepping) -->
+<!ELEMENT stepback	(step)*>
+<!-- Parameters of tag "stepback":
+	stacklength	- Number of recorded program steps
+-->
+<!ATTLIST stepback
+	stacklength	CDATA	#REQUIRED
+>
+
+<!-- One program step -->
+<!ELEMENT step		(spec, normal)>
+
+<!-- Special engine variables -->
+<!ELEMENT spec		(#PCDATA)>
+
+<!-- Ordinary registers -->
+<!ELEMENT normal	(reg)*>
+
+<!-- One register -->
+<!ELEMENT reg		EMPTY>
+<!-- Parameters of tag "reg":
+	type		- Memory type (E == ERAM; I == IDATA; X == XDATA; S == SFR)
+	addr		- Register address
+	val		- Previous register value
+-->
+<!ATTLIST reg
+	type		CDATA	#REQUIRED
+	addr		CDATA	#REQUIRED
+	val		CDATA	#REQUIRED
+>

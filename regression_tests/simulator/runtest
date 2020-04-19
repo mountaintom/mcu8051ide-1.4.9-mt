@@ -1,0 +1,23 @@
+#! /bin/bash
+
+# --------------------------------------------------------------------------
+#
+# MCU 8051 IDE assembler regression testing
+#
+# This script defines what and how is suppose to be tested and runs the tests.
+# See README files for more information.
+#
+# --------------------------------------------------------------------------
+
+
+## Prepare regression testing environment
+source "$(dirname $0)/../rte.lib.sh"	# Load regression test environment
+RTE_TEST_NAME="Simulator engine"	# Set name of the tested subject
+
+# Set other things ...
+readonly SIMULATOR_COMMAND="tclsh ../../../lib/main.tcl --simulator"
+set -o pipefail
+
+function rte_perform_test() {
+	m4 -D TESTCASE="${1}" "../testcases/${1}.in" | $SIMULATOR_COMMAND &> "${1}.out" || return 1
+}

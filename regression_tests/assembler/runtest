@@ -1,0 +1,32 @@
+#! /bin/bash
+
+# --------------------------------------------------------------------------
+#
+# MCU 8051 IDE assembler regression testing
+#
+# This script defines what and how is suppose to be tested and runs the tests.
+# See README files for more information.
+#
+# --------------------------------------------------------------------------
+
+
+## Prepare regression tests environment
+source "$(dirname $0)/../rte.lib.sh"	# Load regression test environment
+RTE_TEST_NAME="Assembler"		# Set name of the tested subject
+
+
+readonly ASSEMBLER_COMMAND="tclsh ../../../lib/main.tcl --assemble"
+
+function rte_before_test() {
+	# Create symbolic link to the source code file
+	ln -fs "../testcases/${1}.asm" . || return 1
+}
+
+function rte_perform_test() {
+	$ASSEMBLER_COMMAND "${1}.asm" $(bash ../process_in_file "../testcases/${1}.in") --nocolor || return 1
+}
+
+function rte_after_test() {
+	# Remove symbolic link to the source code file
+	rm -f "${1}.asm" || return 1
+}

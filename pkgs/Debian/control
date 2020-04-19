@@ -1,0 +1,11 @@
+Package: mcu8051ide
+Version: 0.0.0
+Installed-Size: 0
+Priority: optional
+Architecture: all
+Homepage: http://www.moravia-microsystems.com/mcu8051ide
+Section: Development
+Depends: bwidget (>= 1.8.0), itcl3, tk8.5, tdom (>= 0.8), tcllib (>= 1.10), tk8.5, tclx8.4, libtk-img, rxvt-unicode, sdcc, doxygen, hunspell, make
+Maintainer: Martin Osmera <martin.osmera@moravia-microsystems.com>
+Description:	Graphical Integrated Development Enviroment for 8051.
+		MCU 8051 IDE is integrated development enviroment for microcontrollers based on 8051. Supported programming languages are C and assembly. It has its own assembler and support for 2 external assemblers. For C language it uses the SDCC compiler.
