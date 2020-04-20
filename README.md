@@ -1,10 +1,10 @@
 # mcu8051ide-1.4.9-mt
 
-A place to experiment, and possibility update and add some processors to this amazing app 
+A place to experiment, and possibility update and add some processors to this amazing app.
 
-#### Check dev branch(es) for updated code.
+#### Check releases or branch(es) for updated code.
 
-I'm testing on a Raspberry Pi. This version is run with the command ./main.tcl while inside the mcu8051ide-1.4.9-mt/lib directory. 
+This code is being tested on a Raspberry Pi. This version is run with the command ./main.tcl while inside the mcu8051ide-1.4.9-mt/lib directory.
 
 If not all the supporting libraries are installed on your system, try installing mcu8051ide from a package (sudo apt-get install mcu8051ide). This will install an older version, however it should install the dependencies needed for this newer version to work.
 
