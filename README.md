@@ -4,6 +4,15 @@ A place to experiment, and possibility update and add some processors to this am
 
 This version has the option for the c11 code standard added to the compilier configuration menu.
 
+#### Check releases or branch(es) for updated code.
+
+This code is being tested on a Raspberry Pi. This version is run with the command ./main.tcl while inside the mcu8051ide-1.4.9-mt/lib directory.
+
+If not all the supporting libraries are installed on your system, try installing mcu8051ide from a package (sudo apt-get install mcu8051ide). This will install an older version, however it should install the dependencies needed for this newer version to work.
+
+Will try to get this running on a Mac, also.
+
+
 ---- Orginal Readme for MCU8051ide ----
 
 MCU 8051 IDE v1.4.9
